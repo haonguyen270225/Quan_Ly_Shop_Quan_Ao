@@ -24,10 +24,5 @@ namespace Store_Mamager
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
