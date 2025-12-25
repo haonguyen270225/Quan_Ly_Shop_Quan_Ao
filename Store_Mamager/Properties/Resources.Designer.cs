@@ -63,6 +63,16 @@ namespace Store_Mamager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24", resourceCulture);
