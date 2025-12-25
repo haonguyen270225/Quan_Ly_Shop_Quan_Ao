@@ -21,8 +21,32 @@ namespace Store_Mamager
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme
+            (
+            Primary.Blue700,     // Thanh tiêu đề
+            Primary.Blue900,     // Thanh trên khi focus
+            Primary.Blue500,     // Màu phụ
+            Accent.LightBlue200, // Accent (button, checkbox)
+            TextShade.WHITE      // Màu chữ
+            );
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Heello ");
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
