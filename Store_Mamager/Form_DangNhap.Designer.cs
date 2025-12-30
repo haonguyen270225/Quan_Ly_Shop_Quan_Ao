@@ -1,6 +1,6 @@
 ﻿namespace Store_Mamager
 {
-    partial class Form1
+    partial class Form_DangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DangNhap));
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -81,6 +81,7 @@
             // groupBox1
             // 
             this.groupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock;
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.M_TB_Thoat);
             this.groupBox1.Controls.Add(this.M_TB_DangNhap);
             this.groupBox1.Controls.Add(this.M_TB_PassWord);
@@ -90,8 +91,8 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(3, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(996, 920);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.Size = new System.Drawing.Size(689, 920);
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // M_TB_Thoat
@@ -103,7 +104,7 @@
             this.M_TB_Thoat.Depth = 0;
             this.M_TB_Thoat.HighEmphasis = true;
             this.M_TB_Thoat.Icon = global::Store_Mamager.Properties.Resources.cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24;
-            this.M_TB_Thoat.Location = new System.Drawing.Point(207, 568);
+            this.M_TB_Thoat.Location = new System.Drawing.Point(78, 568);
             this.M_TB_Thoat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.M_TB_Thoat.MouseState = MaterialSkin.MouseState.HOVER;
             this.M_TB_Thoat.Name = "M_TB_Thoat";
@@ -124,7 +125,7 @@
             this.M_TB_DangNhap.Depth = 0;
             this.M_TB_DangNhap.HighEmphasis = true;
             this.M_TB_DangNhap.Icon = global::Store_Mamager.Properties.Resources.login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz242;
-            this.M_TB_DangNhap.Location = new System.Drawing.Point(535, 568);
+            this.M_TB_DangNhap.Location = new System.Drawing.Point(445, 568);
             this.M_TB_DangNhap.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.M_TB_DangNhap.MouseState = MaterialSkin.MouseState.HOVER;
             this.M_TB_DangNhap.Name = "M_TB_DangNhap";
@@ -151,7 +152,7 @@
             this.M_TB_PassWord.HideSelection = true;
             this.M_TB_PassWord.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.M_TB_PassWord.LeadingIcon = null;
-            this.M_TB_PassWord.Location = new System.Drawing.Point(283, 385);
+            this.M_TB_PassWord.Location = new System.Drawing.Point(184, 384);
             this.M_TB_PassWord.Mask = "";
             this.M_TB_PassWord.MaxLength = 32767;
             this.M_TB_PassWord.MouseState = MaterialSkin.MouseState.OUT;
@@ -195,7 +196,7 @@
             this.M_TB_UserName.HideSelection = true;
             this.M_TB_UserName.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.M_TB_UserName.LeadingIcon = null;
-            this.M_TB_UserName.Location = new System.Drawing.Point(283, 299);
+            this.M_TB_UserName.Location = new System.Drawing.Point(184, 298);
             this.M_TB_UserName.Mask = "";
             this.M_TB_UserName.MaxLength = 32767;
             this.M_TB_UserName.MouseState = MaterialSkin.MouseState.OUT;
@@ -230,7 +231,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel1.Location = new System.Drawing.Point(412, 191);
+            this.materialLabel1.Location = new System.Drawing.Point(313, 190);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(202, 41);
@@ -241,7 +242,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Store_Mamager.Properties.Resources.padlock_9821260;
-            this.pictureBox1.Location = new System.Drawing.Point(379, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(280, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(265, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -260,18 +261,18 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = global::Store_Mamager.Properties.Resources.logo_shop_quan_ao_nam_9;
-            this.pictureBox3.Location = new System.Drawing.Point(941, 64);
+            this.pictureBox3.Location = new System.Drawing.Point(672, 64);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(530, 920);
+            this.pictureBox3.Size = new System.Drawing.Size(781, 920);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // Form1
+            // Form_DangNhap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1477, 990);
+            this.ClientSize = new System.Drawing.Size(1459, 990);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.materialCard1);
@@ -281,9 +282,9 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Form_DangNhap";
             this.Padding = new System.Windows.Forms.Padding(3, 64, 6, 6);
-            this.Text = "Đăng Nhập !";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.materialCard1.ResumeLayout(false);
@@ -294,6 +295,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EP_CheckLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

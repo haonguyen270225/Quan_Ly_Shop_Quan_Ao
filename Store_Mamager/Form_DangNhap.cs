@@ -14,11 +14,11 @@ using BLL;
 namespace Store_Mamager
 {
     
-    public partial class Form1 : MaterialForm
+    public partial class Form_DangNhap : MaterialForm
     {
         TaiKhoan taiKhoan = new TaiKhoan();
         BLL_TaiKhoan bLLTaiKhoa = new BLL_TaiKhoan();
-        public Form1()
+        public Form_DangNhap()
         {
             //InitializeComponent();
             InitializeComponent();
