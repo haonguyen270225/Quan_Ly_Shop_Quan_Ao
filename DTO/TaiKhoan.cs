@@ -15,4 +15,5 @@ namespace DTO
 
         public int IDNhanVien { get; set; }
     }
+
 }

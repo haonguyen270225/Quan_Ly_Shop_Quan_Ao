@@ -33,11 +33,43 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_TabC_ChucNang = new MaterialSkin.Controls.MaterialTabControl();
             this.tab_TrangChu = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.B_Phai = new System.Windows.Forms.Button();
+            this.B_Trai = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.GB_3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
+            this.M_L_ChucVu3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
+            this.M_L_HTLViec3 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_MaNhanVien3 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_HoVaTen3 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_SDT3 = new MaterialSkin.Controls.MaterialLabel();
+            this.GB_2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.M_L_MaNhanVien2 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_SDT2 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_HoVaTen2 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_HTLViec2 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_ChucVu2 = new MaterialSkin.Controls.MaterialLabel();
+            this.GB_1 = new System.Windows.Forms.GroupBox();
+            this.M_L_SDT1 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_HTLViec1 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_ChucVu1 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_HoVaTen1 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_MaNhanVien1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.M_CB_ThoiGianLam = new MaterialSkin.Controls.MaterialComboBox();
             this.M_CB_ChucVu = new MaterialSkin.Controls.MaterialComboBox();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
@@ -50,48 +82,17 @@
             this.tab_KhuyenMai = new System.Windows.Forms.TabPage();
             this.tab_DangXuat = new System.Windows.Forms.TabPage();
             this.sqlDataAdapter1 = new Microsoft.Data.SqlClient.SqlDataAdapter();
-            this.M_CB_ThoiGianLam = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.M_L_MaNhanVien1 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_HoVaTen1 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_ChucVu1 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_HTLViec1 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_SDT1 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_SDT2 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_HTLViec2 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_ChucVu2 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_HoVaTen2 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_MaNhanVien2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
-            this.M_L_MaNhanVien3 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_SDT3 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_HoVaTen3 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_HTLViec3 = new MaterialSkin.Controls.MaterialLabel();
-            this.M_L_ChucVu3 = new MaterialSkin.Controls.MaterialLabel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.L_KetQua = new System.Windows.Forms.Label();
             this.m_TabC_ChucNang.SuspendLayout();
             this.tab_TrangChu.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.GB_3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.GB_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.GB_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -120,80 +121,395 @@
             this.m_TabC_ChucNang.Multiline = true;
             this.m_TabC_ChucNang.Name = "m_TabC_ChucNang";
             this.m_TabC_ChucNang.SelectedIndex = 0;
-            this.m_TabC_ChucNang.Size = new System.Drawing.Size(1914, 5470);
+            this.m_TabC_ChucNang.Size = new System.Drawing.Size(1914, 8548);
             this.m_TabC_ChucNang.TabIndex = 0;
             this.m_TabC_ChucNang.SelectedIndexChanged += new System.EventHandler(this.m_TabC_ChucNang_SelectedIndexChanged);
             // 
             // tab_TrangChu
             // 
             this.tab_TrangChu.BackColor = System.Drawing.Color.Silver;
+            this.tab_TrangChu.Controls.Add(this.L_KetQua);
             this.tab_TrangChu.Controls.Add(this.groupBox5);
             this.tab_TrangChu.Controls.Add(this.button3);
             this.tab_TrangChu.Controls.Add(this.button2);
-            this.tab_TrangChu.Controls.Add(this.groupBox4);
-            this.tab_TrangChu.Controls.Add(this.groupBox3);
-            this.tab_TrangChu.Controls.Add(this.groupBox2);
+            this.tab_TrangChu.Controls.Add(this.GB_3);
+            this.tab_TrangChu.Controls.Add(this.GB_2);
+            this.tab_TrangChu.Controls.Add(this.GB_1);
             this.tab_TrangChu.Controls.Add(this.groupBox1);
             this.tab_TrangChu.Controls.Add(this.materialProgressBar1);
+            this.tab_TrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_TrangChu.ImageKey = "Trang_Chu_01.png";
             this.tab_TrangChu.Location = new System.Drawing.Point(4, 39);
             this.tab_TrangChu.Name = "tab_TrangChu";
             this.tab_TrangChu.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_TrangChu.Size = new System.Drawing.Size(1906, 5427);
+            this.tab_TrangChu.Size = new System.Drawing.Size(1906, 8505);
             this.tab_TrangChu.TabIndex = 0;
             this.tab_TrangChu.Text = "Trang Chủ";
             // 
-            // groupBox4
+            // groupBox5
             // 
-            this.groupBox4.Controls.Add(this.pictureBox3);
-            this.groupBox4.Controls.Add(this.materialButton7);
-            this.groupBox4.Controls.Add(this.M_L_ChucVu3);
-            this.groupBox4.Controls.Add(this.materialButton8);
-            this.groupBox4.Controls.Add(this.M_L_HTLViec3);
-            this.groupBox4.Controls.Add(this.M_L_MaNhanVien3);
-            this.groupBox4.Controls.Add(this.M_L_HoVaTen3);
-            this.groupBox4.Controls.Add(this.M_L_SDT3);
-            this.groupBox4.Location = new System.Drawing.Point(3, 568);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1894, 212);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin";
+            this.groupBox5.Controls.Add(this.B_Phai);
+            this.groupBox5.Controls.Add(this.B_Trai);
+            this.groupBox5.Location = new System.Drawing.Point(712, 786);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(397, 71);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
             // 
-            // groupBox3
+            // B_Phai
             // 
-            this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Controls.Add(this.materialButton6);
-            this.groupBox3.Controls.Add(this.materialButton3);
-            this.groupBox3.Controls.Add(this.M_L_MaNhanVien2);
-            this.groupBox3.Controls.Add(this.M_L_SDT2);
-            this.groupBox3.Controls.Add(this.M_L_HoVaTen2);
-            this.groupBox3.Controls.Add(this.M_L_HTLViec2);
-            this.groupBox3.Controls.Add(this.M_L_ChucVu2);
-            this.groupBox3.Location = new System.Drawing.Point(6, 341);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1894, 212);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông tin";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.B_Phai.Image = global::Store_Mamager.Properties.Resources.arrow_menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.B_Phai.Location = new System.Drawing.Point(277, 21);
+            this.B_Phai.Name = "B_Phai";
+            this.B_Phai.Size = new System.Drawing.Size(114, 44);
+            this.B_Phai.TabIndex = 1;
+            this.B_Phai.UseVisualStyleBackColor = true;
+            this.B_Phai.Click += new System.EventHandler(this.B_Phai_Click);
             // 
-            // groupBox2
+            // B_Trai
             // 
-            this.groupBox2.Controls.Add(this.M_L_SDT1);
-            this.groupBox2.Controls.Add(this.M_L_HTLViec1);
-            this.groupBox2.Controls.Add(this.M_L_ChucVu1);
-            this.groupBox2.Controls.Add(this.M_L_HoVaTen1);
-            this.groupBox2.Controls.Add(this.M_L_MaNhanVien1);
-            this.groupBox2.Controls.Add(this.materialButton5);
-            this.groupBox2.Controls.Add(this.materialButton4);
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 112);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1894, 212);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin";
+            this.B_Trai.Image = global::Store_Mamager.Properties.Resources.arrow_menu_close_24dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.B_Trai.Location = new System.Drawing.Point(15, 21);
+            this.B_Trai.Name = "B_Trai";
+            this.B_Trai.Size = new System.Drawing.Size(114, 44);
+            this.B_Trai.TabIndex = 0;
+            this.B_Trai.UseVisualStyleBackColor = true;
+            this.B_Trai.Click += new System.EventHandler(this.B_Trai_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(914, 2701);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 40);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(906, 2693);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 40);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // GB_3
+            // 
+            this.GB_3.Controls.Add(this.pictureBox3);
+            this.GB_3.Controls.Add(this.materialButton7);
+            this.GB_3.Controls.Add(this.M_L_ChucVu3);
+            this.GB_3.Controls.Add(this.materialButton8);
+            this.GB_3.Controls.Add(this.M_L_HTLViec3);
+            this.GB_3.Controls.Add(this.M_L_MaNhanVien3);
+            this.GB_3.Controls.Add(this.M_L_HoVaTen3);
+            this.GB_3.Controls.Add(this.M_L_SDT3);
+            this.GB_3.Location = new System.Drawing.Point(3, 568);
+            this.GB_3.Name = "GB_3";
+            this.GB_3.Size = new System.Drawing.Size(1894, 212);
+            this.GB_3.TabIndex = 4;
+            this.GB_3.TabStop = false;
+            this.GB_3.Text = "Thông tin";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Store_Mamager.Properties.Resources.Trang_Chu_03;
+            this.pictureBox3.Location = new System.Drawing.Point(28, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(192, 176);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            // 
+            // materialButton7
+            // 
+            this.materialButton7.AutoSize = false;
+            this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton7.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton7.Depth = 0;
+            this.materialButton7.HighEmphasis = true;
+            this.materialButton7.Icon = null;
+            this.materialButton7.Location = new System.Drawing.Point(246, 43);
+            this.materialButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton7.Name = "materialButton7";
+            this.materialButton7.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton7.Size = new System.Drawing.Size(158, 38);
+            this.materialButton7.TabIndex = 22;
+            this.materialButton7.Text = "Mặc định";
+            this.materialButton7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton7.UseAccentColor = false;
+            this.materialButton7.UseVisualStyleBackColor = true;
+            // 
+            // M_L_ChucVu3
+            // 
+            this.M_L_ChucVu3.Depth = 0;
+            this.M_L_ChucVu3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_ChucVu3.Location = new System.Drawing.Point(963, 112);
+            this.M_L_ChucVu3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_ChucVu3.Name = "M_L_ChucVu3";
+            this.M_L_ChucVu3.Size = new System.Drawing.Size(331, 28);
+            this.M_L_ChucVu3.TabIndex = 26;
+            this.M_L_ChucVu3.Text = "Chức vụ :";
+            // 
+            // materialButton8
+            // 
+            this.materialButton8.AutoSize = false;
+            this.materialButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton8.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton8.Depth = 0;
+            this.materialButton8.HighEmphasis = true;
+            this.materialButton8.Icon = null;
+            this.materialButton8.Location = new System.Drawing.Point(246, 112);
+            this.materialButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton8.Name = "materialButton8";
+            this.materialButton8.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton8.Size = new System.Drawing.Size(158, 36);
+            this.materialButton8.TabIndex = 23;
+            this.materialButton8.Text = "Trên Máy";
+            this.materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton8.UseAccentColor = false;
+            this.materialButton8.UseVisualStyleBackColor = true;
+            // 
+            // M_L_HTLViec3
+            // 
+            this.M_L_HTLViec3.Depth = 0;
+            this.M_L_HTLViec3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_HTLViec3.Location = new System.Drawing.Point(1306, 112);
+            this.M_L_HTLViec3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_HTLViec3.Name = "M_L_HTLViec3";
+            this.M_L_HTLViec3.Size = new System.Drawing.Size(300, 28);
+            this.M_L_HTLViec3.TabIndex = 27;
+            this.M_L_HTLViec3.Text = "Hình thức làm việc :";
+            // 
+            // M_L_MaNhanVien3
+            // 
+            this.M_L_MaNhanVien3.Depth = 0;
+            this.M_L_MaNhanVien3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_MaNhanVien3.Location = new System.Drawing.Point(571, 43);
+            this.M_L_MaNhanVien3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_MaNhanVien3.Name = "M_L_MaNhanVien3";
+            this.M_L_MaNhanVien3.Size = new System.Drawing.Size(386, 28);
+            this.M_L_MaNhanVien3.TabIndex = 24;
+            this.M_L_MaNhanVien3.Text = "Mã nhân viên :";
+            // 
+            // M_L_HoVaTen3
+            // 
+            this.M_L_HoVaTen3.Depth = 0;
+            this.M_L_HoVaTen3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_HoVaTen3.Location = new System.Drawing.Point(571, 112);
+            this.M_L_HoVaTen3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_HoVaTen3.Name = "M_L_HoVaTen3";
+            this.M_L_HoVaTen3.Size = new System.Drawing.Size(386, 28);
+            this.M_L_HoVaTen3.TabIndex = 25;
+            this.M_L_HoVaTen3.Text = "Họ và tên :";
+            // 
+            // M_L_SDT3
+            // 
+            this.M_L_SDT3.Depth = 0;
+            this.M_L_SDT3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_SDT3.Location = new System.Drawing.Point(963, 43);
+            this.M_L_SDT3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_SDT3.Name = "M_L_SDT3";
+            this.M_L_SDT3.Size = new System.Drawing.Size(331, 28);
+            this.M_L_SDT3.TabIndex = 28;
+            this.M_L_SDT3.Text = "SDT :";
+            // 
+            // GB_2
+            // 
+            this.GB_2.Controls.Add(this.pictureBox2);
+            this.GB_2.Controls.Add(this.materialButton6);
+            this.GB_2.Controls.Add(this.materialButton3);
+            this.GB_2.Controls.Add(this.M_L_MaNhanVien2);
+            this.GB_2.Controls.Add(this.M_L_SDT2);
+            this.GB_2.Controls.Add(this.M_L_HoVaTen2);
+            this.GB_2.Controls.Add(this.M_L_HTLViec2);
+            this.GB_2.Controls.Add(this.M_L_ChucVu2);
+            this.GB_2.Location = new System.Drawing.Point(6, 341);
+            this.GB_2.Name = "GB_2";
+            this.GB_2.Size = new System.Drawing.Size(1894, 212);
+            this.GB_2.TabIndex = 3;
+            this.GB_2.TabStop = false;
+            this.GB_2.Text = "Thông tin";
+           
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Store_Mamager.Properties.Resources.Trang_Chu_03;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(192, 176);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // materialButton6
+            // 
+            this.materialButton6.AutoSize = false;
+            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton6.Depth = 0;
+            this.materialButton6.HighEmphasis = true;
+            this.materialButton6.Icon = null;
+            this.materialButton6.Location = new System.Drawing.Point(243, 47);
+            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton6.Name = "materialButton6";
+            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton6.Size = new System.Drawing.Size(158, 38);
+            this.materialButton6.TabIndex = 14;
+            this.materialButton6.Text = "Mặc định";
+            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton6.UseAccentColor = false;
+            this.materialButton6.UseVisualStyleBackColor = true;
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSize = false;
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(243, 116);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton3.Size = new System.Drawing.Size(158, 36);
+            this.materialButton3.TabIndex = 15;
+            this.materialButton3.Text = "Trên Máy";
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton3.UseAccentColor = false;
+            this.materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // M_L_MaNhanVien2
+            // 
+            this.M_L_MaNhanVien2.Depth = 0;
+            this.M_L_MaNhanVien2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_MaNhanVien2.Location = new System.Drawing.Point(568, 47);
+            this.M_L_MaNhanVien2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_MaNhanVien2.Name = "M_L_MaNhanVien2";
+            this.M_L_MaNhanVien2.Size = new System.Drawing.Size(386, 28);
+            this.M_L_MaNhanVien2.TabIndex = 16;
+            this.M_L_MaNhanVien2.Text = "Mã nhân viên :";
+            // 
+            // M_L_SDT2
+            // 
+            this.M_L_SDT2.Depth = 0;
+            this.M_L_SDT2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_SDT2.Location = new System.Drawing.Point(960, 47);
+            this.M_L_SDT2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_SDT2.Name = "M_L_SDT2";
+            this.M_L_SDT2.Size = new System.Drawing.Size(331, 28);
+            this.M_L_SDT2.TabIndex = 20;
+            this.M_L_SDT2.Text = "SDT :";
+            // 
+            // M_L_HoVaTen2
+            // 
+            this.M_L_HoVaTen2.Depth = 0;
+            this.M_L_HoVaTen2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_HoVaTen2.Location = new System.Drawing.Point(568, 116);
+            this.M_L_HoVaTen2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_HoVaTen2.Name = "M_L_HoVaTen2";
+            this.M_L_HoVaTen2.Size = new System.Drawing.Size(386, 28);
+            this.M_L_HoVaTen2.TabIndex = 17;
+            this.M_L_HoVaTen2.Text = "Họ và tên :";
+            // 
+            // M_L_HTLViec2
+            // 
+            this.M_L_HTLViec2.Depth = 0;
+            this.M_L_HTLViec2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_HTLViec2.Location = new System.Drawing.Point(1303, 116);
+            this.M_L_HTLViec2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_HTLViec2.Name = "M_L_HTLViec2";
+            this.M_L_HTLViec2.Size = new System.Drawing.Size(300, 28);
+            this.M_L_HTLViec2.TabIndex = 19;
+            this.M_L_HTLViec2.Text = "Hình thức làm việc :";
+            // 
+            // M_L_ChucVu2
+            // 
+            this.M_L_ChucVu2.Depth = 0;
+            this.M_L_ChucVu2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_ChucVu2.Location = new System.Drawing.Point(960, 116);
+            this.M_L_ChucVu2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_ChucVu2.Name = "M_L_ChucVu2";
+            this.M_L_ChucVu2.Size = new System.Drawing.Size(331, 28);
+            this.M_L_ChucVu2.TabIndex = 18;
+            this.M_L_ChucVu2.Text = "Chức vụ :";
+            // 
+            // GB_1
+            // 
+            this.GB_1.Controls.Add(this.M_L_SDT1);
+            this.GB_1.Controls.Add(this.M_L_HTLViec1);
+            this.GB_1.Controls.Add(this.M_L_ChucVu1);
+            this.GB_1.Controls.Add(this.M_L_HoVaTen1);
+            this.GB_1.Controls.Add(this.M_L_MaNhanVien1);
+            this.GB_1.Controls.Add(this.materialButton5);
+            this.GB_1.Controls.Add(this.materialButton4);
+            this.GB_1.Controls.Add(this.pictureBox1);
+            this.GB_1.Location = new System.Drawing.Point(6, 112);
+            this.GB_1.Name = "GB_1";
+            this.GB_1.Size = new System.Drawing.Size(1894, 212);
+            this.GB_1.TabIndex = 2;
+            this.GB_1.TabStop = false;
+            this.GB_1.Text = "Thông tin";
+            // 
+            // M_L_SDT1
+            // 
+            this.M_L_SDT1.Depth = 0;
+            this.M_L_SDT1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_SDT1.Location = new System.Drawing.Point(915, 44);
+            this.M_L_SDT1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_SDT1.Name = "M_L_SDT1";
+            this.M_L_SDT1.Size = new System.Drawing.Size(284, 28);
+            this.M_L_SDT1.TabIndex = 7;
+            this.M_L_SDT1.Text = "SDT :";
+            // 
+            // M_L_HTLViec1
+            // 
+            this.M_L_HTLViec1.Depth = 0;
+            this.M_L_HTLViec1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_HTLViec1.Location = new System.Drawing.Point(1303, 113);
+            this.M_L_HTLViec1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_HTLViec1.Name = "M_L_HTLViec1";
+            this.M_L_HTLViec1.Size = new System.Drawing.Size(357, 28);
+            this.M_L_HTLViec1.TabIndex = 6;
+            this.M_L_HTLViec1.Text = "Hình thức làm việc :";
+            // 
+            // M_L_ChucVu1
+            // 
+            this.M_L_ChucVu1.Depth = 0;
+            this.M_L_ChucVu1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_ChucVu1.Location = new System.Drawing.Point(915, 113);
+            this.M_L_ChucVu1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_ChucVu1.Name = "M_L_ChucVu1";
+            this.M_L_ChucVu1.Size = new System.Drawing.Size(284, 28);
+            this.M_L_ChucVu1.TabIndex = 5;
+            this.M_L_ChucVu1.Text = "Chức vụ :";
+            // 
+            // M_L_HoVaTen1
+            // 
+            this.M_L_HoVaTen1.Depth = 0;
+            this.M_L_HoVaTen1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_HoVaTen1.Location = new System.Drawing.Point(568, 113);
+            this.M_L_HoVaTen1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_HoVaTen1.Name = "M_L_HoVaTen1";
+            this.M_L_HoVaTen1.Size = new System.Drawing.Size(341, 28);
+            this.M_L_HoVaTen1.TabIndex = 4;
+            this.M_L_HoVaTen1.Text = "Họ và tên :";
+            // 
+            // M_L_MaNhanVien1
+            // 
+            this.M_L_MaNhanVien1.Depth = 0;
+            this.M_L_MaNhanVien1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_MaNhanVien1.Location = new System.Drawing.Point(568, 44);
+            this.M_L_MaNhanVien1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_MaNhanVien1.Name = "M_L_MaNhanVien1";
+            this.M_L_MaNhanVien1.Size = new System.Drawing.Size(341, 28);
+            this.M_L_MaNhanVien1.TabIndex = 3;
+            this.M_L_MaNhanVien1.Text = "Mã nhân viên :";
             // 
             // materialButton5
             // 
@@ -215,6 +531,36 @@
             this.materialButton5.UseAccentColor = false;
             this.materialButton5.UseVisualStyleBackColor = true;
             // 
+            // materialButton4
+            // 
+            this.materialButton4.AutoSize = false;
+            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton4.Depth = 0;
+            this.materialButton4.HighEmphasis = true;
+            this.materialButton4.Icon = null;
+            this.materialButton4.Location = new System.Drawing.Point(243, 44);
+            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton4.Size = new System.Drawing.Size(158, 38);
+            this.materialButton4.TabIndex = 1;
+            this.materialButton4.Text = "Mặc định";
+            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton4.UseAccentColor = false;
+            this.materialButton4.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Store_Mamager.Properties.Resources.Trang_Chu_03;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.materialTextBox2);
@@ -233,6 +579,77 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhân viên !";
+            // 
+            // materialTextBox2
+            // 
+            this.materialTextBox2.AnimateReadOnly = false;
+            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox2.Depth = 0;
+            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox2.LeadingIcon = null;
+            this.materialTextBox2.Location = new System.Drawing.Point(596, 38);
+            this.materialTextBox2.MaxLength = 50;
+            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox2.Multiline = false;
+            this.materialTextBox2.Name = "materialTextBox2";
+            this.materialTextBox2.Size = new System.Drawing.Size(284, 36);
+            this.materialTextBox2.TabIndex = 18;
+            this.materialTextBox2.Text = "";
+            this.materialTextBox2.TrailingIcon = null;
+            this.materialTextBox2.UseAccent = false;
+            this.materialTextBox2.UseTallSize = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(471, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Họ và Tên :";
+            // 
+            // materialTextBox1
+            // 
+            this.materialTextBox1.AnimateReadOnly = false;
+            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox1.Depth = 0;
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.LeadingIcon = null;
+            this.materialTextBox1.Location = new System.Drawing.Point(146, 39);
+            this.materialTextBox1.MaxLength = 50;
+            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox1.Multiline = false;
+            this.materialTextBox1.Name = "materialTextBox1";
+            this.materialTextBox1.Size = new System.Drawing.Size(284, 36);
+            this.materialTextBox1.TabIndex = 16;
+            this.materialTextBox1.Text = "";
+            this.materialTextBox1.TrailingIcon = null;
+            this.materialTextBox1.UseAccent = false;
+            this.materialTextBox1.UseTallSize = false;
+            // 
+            // M_CB_ThoiGianLam
+            // 
+            this.M_CB_ThoiGianLam.AutoResize = false;
+            this.M_CB_ThoiGianLam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.M_CB_ThoiGianLam.Depth = 0;
+            this.M_CB_ThoiGianLam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.M_CB_ThoiGianLam.DropDownHeight = 118;
+            this.M_CB_ThoiGianLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.M_CB_ThoiGianLam.DropDownWidth = 121;
+            this.M_CB_ThoiGianLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.M_CB_ThoiGianLam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.M_CB_ThoiGianLam.FormattingEnabled = true;
+            this.M_CB_ThoiGianLam.IntegralHeight = false;
+            this.M_CB_ThoiGianLam.ItemHeight = 29;
+            this.M_CB_ThoiGianLam.Location = new System.Drawing.Point(966, 61);
+            this.M_CB_ThoiGianLam.MaxDropDownItems = 4;
+            this.M_CB_ThoiGianLam.MouseState = MaterialSkin.MouseState.OUT;
+            this.M_CB_ThoiGianLam.Name = "M_CB_ThoiGianLam";
+            this.M_CB_ThoiGianLam.Size = new System.Drawing.Size(265, 35);
+            this.M_CB_ThoiGianLam.StartIndex = 0;
+            this.M_CB_ThoiGianLam.TabIndex = 15;
+            this.M_CB_ThoiGianLam.UseTallSize = false;
             // 
             // M_CB_ChucVu
             // 
@@ -350,7 +767,7 @@
             this.tab_DonHang.Size = new System.Drawing.Size(1906, 5427);
             this.tab_DonHang.TabIndex = 1;
             this.tab_DonHang.Text = "Đơn Hàng";
-            this.tab_DonHang.Click += new System.EventHandler(this.tab_DonHang_Click);
+           
             // 
             // tab_KhoHang
             // 
@@ -392,417 +809,14 @@
             this.tab_DangXuat.Text = "Đăng xuất !";
             this.tab_DangXuat.UseVisualStyleBackColor = true;
             // 
-            // M_CB_ThoiGianLam
+            // L_KetQua
             // 
-            this.M_CB_ThoiGianLam.AutoResize = false;
-            this.M_CB_ThoiGianLam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.M_CB_ThoiGianLam.Depth = 0;
-            this.M_CB_ThoiGianLam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.M_CB_ThoiGianLam.DropDownHeight = 118;
-            this.M_CB_ThoiGianLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.M_CB_ThoiGianLam.DropDownWidth = 121;
-            this.M_CB_ThoiGianLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.M_CB_ThoiGianLam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.M_CB_ThoiGianLam.FormattingEnabled = true;
-            this.M_CB_ThoiGianLam.IntegralHeight = false;
-            this.M_CB_ThoiGianLam.ItemHeight = 29;
-            this.M_CB_ThoiGianLam.Location = new System.Drawing.Point(966, 61);
-            this.M_CB_ThoiGianLam.MaxDropDownItems = 4;
-            this.M_CB_ThoiGianLam.MouseState = MaterialSkin.MouseState.OUT;
-            this.M_CB_ThoiGianLam.Name = "M_CB_ThoiGianLam";
-            this.M_CB_ThoiGianLam.Size = new System.Drawing.Size(265, 35);
-            this.M_CB_ThoiGianLam.StartIndex = 0;
-            this.M_CB_ThoiGianLam.TabIndex = 15;
-            this.M_CB_ThoiGianLam.UseTallSize = false;
-            // 
-            // materialTextBox1
-            // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(146, 39);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(284, 36);
-            this.materialTextBox1.TabIndex = 16;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.UseAccent = false;
-            this.materialTextBox1.UseTallSize = false;
-            // 
-            // materialTextBox2
-            // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(596, 38);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(284, 36);
-            this.materialTextBox2.TabIndex = 18;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
-            this.materialTextBox2.UseAccent = false;
-            this.materialTextBox2.UseTallSize = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(471, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Họ và Tên :";
-            // 
-            // materialButton4
-            // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(243, 44);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(158, 38);
-            this.materialButton4.TabIndex = 1;
-            this.materialButton4.Text = "Mặc định";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
-            // 
-            // M_L_MaNhanVien1
-            // 
-            this.M_L_MaNhanVien1.Depth = 0;
-            this.M_L_MaNhanVien1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_MaNhanVien1.Location = new System.Drawing.Point(568, 44);
-            this.M_L_MaNhanVien1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_MaNhanVien1.Name = "M_L_MaNhanVien1";
-            this.M_L_MaNhanVien1.Size = new System.Drawing.Size(143, 28);
-            this.M_L_MaNhanVien1.TabIndex = 3;
-            this.M_L_MaNhanVien1.Text = "Mã nhân viên :";
-            // 
-            // M_L_HoVaTen1
-            // 
-            this.M_L_HoVaTen1.Depth = 0;
-            this.M_L_HoVaTen1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HoVaTen1.Location = new System.Drawing.Point(568, 113);
-            this.M_L_HoVaTen1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_HoVaTen1.Name = "M_L_HoVaTen1";
-            this.M_L_HoVaTen1.Size = new System.Drawing.Size(143, 28);
-            this.M_L_HoVaTen1.TabIndex = 4;
-            this.M_L_HoVaTen1.Text = "Họ và tên :";
-            // 
-            // M_L_ChucVu1
-            // 
-            this.M_L_ChucVu1.Depth = 0;
-            this.M_L_ChucVu1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_ChucVu1.Location = new System.Drawing.Point(960, 113);
-            this.M_L_ChucVu1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_ChucVu1.Name = "M_L_ChucVu1";
-            this.M_L_ChucVu1.Size = new System.Drawing.Size(143, 28);
-            this.M_L_ChucVu1.TabIndex = 5;
-            this.M_L_ChucVu1.Text = "Chức vụ :";
-            // 
-            // M_L_HTLViec1
-            // 
-            this.M_L_HTLViec1.Depth = 0;
-            this.M_L_HTLViec1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HTLViec1.Location = new System.Drawing.Point(1303, 113);
-            this.M_L_HTLViec1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_HTLViec1.Name = "M_L_HTLViec1";
-            this.M_L_HTLViec1.Size = new System.Drawing.Size(143, 28);
-            this.M_L_HTLViec1.TabIndex = 6;
-            this.M_L_HTLViec1.Text = "Hình thức làm việc :";
-            // 
-            // M_L_SDT1
-            // 
-            this.M_L_SDT1.Depth = 0;
-            this.M_L_SDT1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_SDT1.Location = new System.Drawing.Point(960, 44);
-            this.M_L_SDT1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_SDT1.Name = "M_L_SDT1";
-            this.M_L_SDT1.Size = new System.Drawing.Size(143, 28);
-            this.M_L_SDT1.TabIndex = 7;
-            this.M_L_SDT1.Text = "SDT :";
-            // 
-            // M_L_SDT2
-            // 
-            this.M_L_SDT2.Depth = 0;
-            this.M_L_SDT2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_SDT2.Location = new System.Drawing.Point(960, 47);
-            this.M_L_SDT2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_SDT2.Name = "M_L_SDT2";
-            this.M_L_SDT2.Size = new System.Drawing.Size(143, 28);
-            this.M_L_SDT2.TabIndex = 20;
-            this.M_L_SDT2.Text = "SDT :";
-            // 
-            // M_L_HTLViec2
-            // 
-            this.M_L_HTLViec2.Depth = 0;
-            this.M_L_HTLViec2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HTLViec2.Location = new System.Drawing.Point(1303, 116);
-            this.M_L_HTLViec2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_HTLViec2.Name = "M_L_HTLViec2";
-            this.M_L_HTLViec2.Size = new System.Drawing.Size(143, 28);
-            this.M_L_HTLViec2.TabIndex = 19;
-            this.M_L_HTLViec2.Text = "Hình thức làm việc :";
-            // 
-            // M_L_ChucVu2
-            // 
-            this.M_L_ChucVu2.Depth = 0;
-            this.M_L_ChucVu2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_ChucVu2.Location = new System.Drawing.Point(960, 116);
-            this.M_L_ChucVu2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_ChucVu2.Name = "M_L_ChucVu2";
-            this.M_L_ChucVu2.Size = new System.Drawing.Size(143, 28);
-            this.M_L_ChucVu2.TabIndex = 18;
-            this.M_L_ChucVu2.Text = "Chức vụ :";
-            // 
-            // M_L_HoVaTen2
-            // 
-            this.M_L_HoVaTen2.Depth = 0;
-            this.M_L_HoVaTen2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HoVaTen2.Location = new System.Drawing.Point(568, 116);
-            this.M_L_HoVaTen2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_HoVaTen2.Name = "M_L_HoVaTen2";
-            this.M_L_HoVaTen2.Size = new System.Drawing.Size(143, 28);
-            this.M_L_HoVaTen2.TabIndex = 17;
-            this.M_L_HoVaTen2.Text = "Họ và tên :";
-            // 
-            // M_L_MaNhanVien2
-            // 
-            this.M_L_MaNhanVien2.Depth = 0;
-            this.M_L_MaNhanVien2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_MaNhanVien2.Location = new System.Drawing.Point(568, 47);
-            this.M_L_MaNhanVien2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_MaNhanVien2.Name = "M_L_MaNhanVien2";
-            this.M_L_MaNhanVien2.Size = new System.Drawing.Size(143, 28);
-            this.M_L_MaNhanVien2.TabIndex = 16;
-            this.M_L_MaNhanVien2.Text = "Mã nhân viên :";
-            // 
-            // materialButton3
-            // 
-            this.materialButton3.AutoSize = false;
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(243, 116);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(158, 36);
-            this.materialButton3.TabIndex = 15;
-            this.materialButton3.Text = "Trên Máy";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
-            // 
-            // materialButton6
-            // 
-            this.materialButton6.AutoSize = false;
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(243, 47);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton6.Size = new System.Drawing.Size(158, 38);
-            this.materialButton6.TabIndex = 14;
-            this.materialButton6.Text = "Mặc định";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseVisualStyleBackColor = true;
-            // 
-            // materialButton7
-            // 
-            this.materialButton7.AutoSize = false;
-            this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton7.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton7.Depth = 0;
-            this.materialButton7.HighEmphasis = true;
-            this.materialButton7.Icon = null;
-            this.materialButton7.Location = new System.Drawing.Point(246, 43);
-            this.materialButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton7.Name = "materialButton7";
-            this.materialButton7.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton7.Size = new System.Drawing.Size(158, 38);
-            this.materialButton7.TabIndex = 22;
-            this.materialButton7.Text = "Mặc định";
-            this.materialButton7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton7.UseAccentColor = false;
-            this.materialButton7.UseVisualStyleBackColor = true;
-            // 
-            // materialButton8
-            // 
-            this.materialButton8.AutoSize = false;
-            this.materialButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton8.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton8.Depth = 0;
-            this.materialButton8.HighEmphasis = true;
-            this.materialButton8.Icon = null;
-            this.materialButton8.Location = new System.Drawing.Point(246, 112);
-            this.materialButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton8.Name = "materialButton8";
-            this.materialButton8.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton8.Size = new System.Drawing.Size(158, 36);
-            this.materialButton8.TabIndex = 23;
-            this.materialButton8.Text = "Trên Máy";
-            this.materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton8.UseAccentColor = false;
-            this.materialButton8.UseVisualStyleBackColor = true;
-            // 
-            // M_L_MaNhanVien3
-            // 
-            this.M_L_MaNhanVien3.Depth = 0;
-            this.M_L_MaNhanVien3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_MaNhanVien3.Location = new System.Drawing.Point(571, 43);
-            this.M_L_MaNhanVien3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_MaNhanVien3.Name = "M_L_MaNhanVien3";
-            this.M_L_MaNhanVien3.Size = new System.Drawing.Size(143, 28);
-            this.M_L_MaNhanVien3.TabIndex = 24;
-            this.M_L_MaNhanVien3.Text = "Mã nhân viên :";
-            // 
-            // M_L_SDT3
-            // 
-            this.M_L_SDT3.Depth = 0;
-            this.M_L_SDT3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_SDT3.Location = new System.Drawing.Point(963, 43);
-            this.M_L_SDT3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_SDT3.Name = "M_L_SDT3";
-            this.M_L_SDT3.Size = new System.Drawing.Size(143, 28);
-            this.M_L_SDT3.TabIndex = 28;
-            this.M_L_SDT3.Text = "SDT :";
-            // 
-            // M_L_HoVaTen3
-            // 
-            this.M_L_HoVaTen3.Depth = 0;
-            this.M_L_HoVaTen3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HoVaTen3.Location = new System.Drawing.Point(571, 112);
-            this.M_L_HoVaTen3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_HoVaTen3.Name = "M_L_HoVaTen3";
-            this.M_L_HoVaTen3.Size = new System.Drawing.Size(143, 28);
-            this.M_L_HoVaTen3.TabIndex = 25;
-            this.M_L_HoVaTen3.Text = "Họ và tên :";
-            // 
-            // M_L_HTLViec3
-            // 
-            this.M_L_HTLViec3.Depth = 0;
-            this.M_L_HTLViec3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HTLViec3.Location = new System.Drawing.Point(1306, 112);
-            this.M_L_HTLViec3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_HTLViec3.Name = "M_L_HTLViec3";
-            this.M_L_HTLViec3.Size = new System.Drawing.Size(143, 28);
-            this.M_L_HTLViec3.TabIndex = 27;
-            this.M_L_HTLViec3.Text = "Hình thức làm việc :";
-            // 
-            // M_L_ChucVu3
-            // 
-            this.M_L_ChucVu3.Depth = 0;
-            this.M_L_ChucVu3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_ChucVu3.Location = new System.Drawing.Point(963, 112);
-            this.M_L_ChucVu3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.M_L_ChucVu3.Name = "M_L_ChucVu3";
-            this.M_L_ChucVu3.Size = new System.Drawing.Size(143, 28);
-            this.M_L_ChucVu3.TabIndex = 26;
-            this.M_L_ChucVu3.Text = "Chức vụ :";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(906, 2693);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 40);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(914, 2701);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 40);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Location = new System.Drawing.Point(712, 786);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(397, 71);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::Store_Mamager.Properties.Resources.arrow_menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.button4.Location = new System.Drawing.Point(277, 21);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 44);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Store_Mamager.Properties.Resources.arrow_menu_close_24dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.button1.Location = new System.Drawing.Point(15, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 44);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Store_Mamager.Properties.Resources.Trang_Chu_03;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(192, 176);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Store_Mamager.Properties.Resources.Trang_Chu_03;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(192, 176);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Store_Mamager.Properties.Resources.Trang_Chu_03;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 176);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.L_KetQua.AutoSize = true;
+            this.L_KetQua.Location = new System.Drawing.Point(1561, 817);
+            this.L_KetQua.Name = "L_KetQua";
+            this.L_KetQua.Size = new System.Drawing.Size(114, 28);
+            this.L_KetQua.TabIndex = 9;
+            this.L_KetQua.Text = "Kết quả :";
             // 
             // Form_TrangChu
             // 
@@ -822,15 +836,16 @@
             this.Load += new System.EventHandler(this.Form_TrangChu_Load);
             this.m_TabC_ChucNang.ResumeLayout(false);
             this.tab_TrangChu.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.tab_TrangChu.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.GB_3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.GB_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.GB_1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -852,9 +867,9 @@
         private MaterialSkin.Controls.MaterialButton M_B_TimKiem;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox GB_3;
+        private System.Windows.Forms.GroupBox GB_2;
+        private System.Windows.Forms.GroupBox GB_1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private MaterialSkin.Controls.MaterialComboBox M_CB_ChucVu;
@@ -887,7 +902,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button B_Phai;
+        private System.Windows.Forms.Button B_Trai;
+        private System.Windows.Forms.Label L_KetQua;
     }
 }
