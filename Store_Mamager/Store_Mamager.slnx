@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="../BLL/BLL.csproj" Id="042d094e-1af6-4176-a907-30eb61e6d257" />
+  <Project Path="../DAL/DAL.csproj" Id="6abb2be0-9300-4e7b-a09c-b90b4943cfde" />
+  <Project Path="../DTO/DTO.csproj" Id="e7b3efda-6028-4de5-b1c4-bc28f72b618b" />
   <Project Path="Store_Mamager.csproj" Id="5d385344-0cc6-4664-b9e5-cf933d3e661f" />
 </Solution>
