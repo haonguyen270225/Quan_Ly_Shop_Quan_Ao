@@ -16,7 +16,7 @@ namespace DAL
             SqlConnection conn = DAL_DataAccess.Connec();
             conn.Open();
 
-            SqlCommand sqlCommand = new SqlCommand("SELECT [ID], [MaNhanVien], [HoVaTen], [SDT], [Email], [CCCD], [DiaChi], [ChucVu], [GioiTinh] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[NhanVien]" , conn);
+            SqlCommand sqlCommand = new SqlCommand("SELECT [ID], [MaNhanVien], [HoVaTen], [SDT], [Email], [CCCD], [DiaChi], [ChucVu], [GioiTinh] , [HinhThucLamViec] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[NhanVien]" , conn);
 
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
 
@@ -35,6 +35,7 @@ namespace DAL
                     tmp.DiaChi = dataReader.GetValue(6).ToString();
                     tmp.ChucVu = dataReader.GetValue(7).ToString();
                     tmp.GioiTinh = dataReader.GetInt32(8);
+                    tmp.HinhThucLamViec = dataReader.GetInt32(9);
                     listNhanVienTmp.Add(tmp);
                 }
             }

@@ -19,6 +19,7 @@ namespace DTO
         public string ChucVu { get; set; }
         public int GioiTinh { get; set; }
 
+        public int HinhThucLamViec { get; set; }
         public NhanVien()
         {
             ID = 0;
@@ -30,6 +31,7 @@ namespace DTO
             DiaChi = "";
             ChucVu = "";
             GioiTinh = 0;
+            HinhThucLamViec = 0;
         }
     }
 

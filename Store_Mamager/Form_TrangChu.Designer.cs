@@ -33,6 +33,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_TabC_ChucNang = new MaterialSkin.Controls.MaterialTabControl();
             this.tab_TrangChu = new System.Windows.Forms.TabPage();
+            this.L_KetQua = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.B_Phai = new System.Windows.Forms.Button();
             this.B_Trai = new System.Windows.Forms.Button();
@@ -66,9 +67,10 @@
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.M_TB_HoVaTen = new MaterialSkin.Controls.MaterialTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.M_TB_MaNhanVien = new MaterialSkin.Controls.MaterialTextBox();
             this.M_CB_ThoiGianLam = new MaterialSkin.Controls.MaterialComboBox();
             this.M_CB_ChucVu = new MaterialSkin.Controls.MaterialComboBox();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
@@ -82,7 +84,13 @@
             this.tab_KhuyenMai = new System.Windows.Forms.TabPage();
             this.tab_DangXuat = new System.Windows.Forms.TabPage();
             this.sqlDataAdapter1 = new Microsoft.Data.SqlClient.SqlDataAdapter();
-            this.L_KetQua = new System.Windows.Forms.Label();
+            this.L_UserName = new System.Windows.Forms.Label();
+            this.M_L_UserName1 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_PassWord1 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_PassWord2 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_UserName2 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_PassWord3 = new MaterialSkin.Controls.MaterialLabel();
+            this.M_L_UserName3 = new MaterialSkin.Controls.MaterialLabel();
             this.m_TabC_ChucNang.SuspendLayout();
             this.tab_TrangChu.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -146,6 +154,15 @@
             this.tab_TrangChu.TabIndex = 0;
             this.tab_TrangChu.Text = "Trang Chủ";
             // 
+            // L_KetQua
+            // 
+            this.L_KetQua.AutoSize = true;
+            this.L_KetQua.Location = new System.Drawing.Point(1561, 817);
+            this.L_KetQua.Name = "L_KetQua";
+            this.L_KetQua.Size = new System.Drawing.Size(91, 22);
+            this.L_KetQua.TabIndex = 9;
+            this.L_KetQua.Text = "Kết quả :";
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.B_Phai);
@@ -196,7 +213,9 @@
             // 
             // GB_3
             // 
+            this.GB_3.Controls.Add(this.M_L_PassWord3);
             this.GB_3.Controls.Add(this.pictureBox3);
+            this.GB_3.Controls.Add(this.M_L_UserName3);
             this.GB_3.Controls.Add(this.materialButton7);
             this.GB_3.Controls.Add(this.M_L_ChucVu3);
             this.GB_3.Controls.Add(this.materialButton8);
@@ -276,7 +295,7 @@
             // 
             this.M_L_HTLViec3.Depth = 0;
             this.M_L_HTLViec3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HTLViec3.Location = new System.Drawing.Point(1306, 112);
+            this.M_L_HTLViec3.Location = new System.Drawing.Point(571, 168);
             this.M_L_HTLViec3.MouseState = MaterialSkin.MouseState.HOVER;
             this.M_L_HTLViec3.Name = "M_L_HTLViec3";
             this.M_L_HTLViec3.Size = new System.Drawing.Size(300, 28);
@@ -318,7 +337,9 @@
             // 
             // GB_2
             // 
+            this.GB_2.Controls.Add(this.M_L_PassWord2);
             this.GB_2.Controls.Add(this.pictureBox2);
+            this.GB_2.Controls.Add(this.M_L_UserName2);
             this.GB_2.Controls.Add(this.materialButton6);
             this.GB_2.Controls.Add(this.materialButton3);
             this.GB_2.Controls.Add(this.M_L_MaNhanVien2);
@@ -332,7 +353,6 @@
             this.GB_2.TabIndex = 3;
             this.GB_2.TabStop = false;
             this.GB_2.Text = "Thông tin";
-           
             // 
             // pictureBox2
             // 
@@ -421,7 +441,7 @@
             // 
             this.M_L_HTLViec2.Depth = 0;
             this.M_L_HTLViec2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HTLViec2.Location = new System.Drawing.Point(1303, 116);
+            this.M_L_HTLViec2.Location = new System.Drawing.Point(568, 172);
             this.M_L_HTLViec2.MouseState = MaterialSkin.MouseState.HOVER;
             this.M_L_HTLViec2.Name = "M_L_HTLViec2";
             this.M_L_HTLViec2.Size = new System.Drawing.Size(300, 28);
@@ -441,6 +461,8 @@
             // 
             // GB_1
             // 
+            this.GB_1.Controls.Add(this.M_L_PassWord1);
+            this.GB_1.Controls.Add(this.M_L_UserName1);
             this.GB_1.Controls.Add(this.M_L_SDT1);
             this.GB_1.Controls.Add(this.M_L_HTLViec1);
             this.GB_1.Controls.Add(this.M_L_ChucVu1);
@@ -471,7 +493,7 @@
             // 
             this.M_L_HTLViec1.Depth = 0;
             this.M_L_HTLViec1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.M_L_HTLViec1.Location = new System.Drawing.Point(1303, 113);
+            this.M_L_HTLViec1.Location = new System.Drawing.Point(568, 157);
             this.M_L_HTLViec1.MouseState = MaterialSkin.MouseState.HOVER;
             this.M_L_HTLViec1.Name = "M_L_HTLViec1";
             this.M_L_HTLViec1.Size = new System.Drawing.Size(357, 28);
@@ -563,9 +585,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.materialTextBox2);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.M_TB_HoVaTen);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.materialTextBox1);
+            this.groupBox1.Controls.Add(this.M_TB_MaNhanVien);
             this.groupBox1.Controls.Add(this.M_CB_ThoiGianLam);
             this.groupBox1.Controls.Add(this.M_CB_ChucVu);
             this.groupBox1.Controls.Add(this.materialButton2);
@@ -580,24 +603,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhân viên !";
             // 
-            // materialTextBox2
+            // panel1
             // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(596, 38);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(284, 36);
-            this.materialTextBox2.TabIndex = 18;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
-            this.materialTextBox2.UseAccent = false;
-            this.materialTextBox2.UseTallSize = false;
+            this.panel1.Location = new System.Drawing.Point(596, 102);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(680, 559);
+            this.panel1.TabIndex = 8;
+            // 
+            // M_TB_HoVaTen
+            // 
+            this.M_TB_HoVaTen.AnimateReadOnly = false;
+            this.M_TB_HoVaTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.M_TB_HoVaTen.Depth = 0;
+            this.M_TB_HoVaTen.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_TB_HoVaTen.LeadingIcon = null;
+            this.M_TB_HoVaTen.Location = new System.Drawing.Point(596, 38);
+            this.M_TB_HoVaTen.MaxLength = 50;
+            this.M_TB_HoVaTen.MouseState = MaterialSkin.MouseState.OUT;
+            this.M_TB_HoVaTen.Multiline = false;
+            this.M_TB_HoVaTen.Name = "M_TB_HoVaTen";
+            this.M_TB_HoVaTen.Size = new System.Drawing.Size(284, 36);
+            this.M_TB_HoVaTen.TabIndex = 18;
+            this.M_TB_HoVaTen.Text = "";
+            this.M_TB_HoVaTen.TrailingIcon = null;
+            this.M_TB_HoVaTen.UseAccent = false;
+            this.M_TB_HoVaTen.UseTallSize = false;
             // 
             // label2
             // 
@@ -609,24 +639,24 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Họ và Tên :";
             // 
-            // materialTextBox1
+            // M_TB_MaNhanVien
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(146, 39);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(284, 36);
-            this.materialTextBox1.TabIndex = 16;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.UseAccent = false;
-            this.materialTextBox1.UseTallSize = false;
+            this.M_TB_MaNhanVien.AnimateReadOnly = false;
+            this.M_TB_MaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.M_TB_MaNhanVien.Depth = 0;
+            this.M_TB_MaNhanVien.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_TB_MaNhanVien.LeadingIcon = null;
+            this.M_TB_MaNhanVien.Location = new System.Drawing.Point(146, 39);
+            this.M_TB_MaNhanVien.MaxLength = 50;
+            this.M_TB_MaNhanVien.MouseState = MaterialSkin.MouseState.OUT;
+            this.M_TB_MaNhanVien.Multiline = false;
+            this.M_TB_MaNhanVien.Name = "M_TB_MaNhanVien";
+            this.M_TB_MaNhanVien.Size = new System.Drawing.Size(284, 36);
+            this.M_TB_MaNhanVien.TabIndex = 16;
+            this.M_TB_MaNhanVien.Text = "";
+            this.M_TB_MaNhanVien.TrailingIcon = null;
+            this.M_TB_MaNhanVien.UseAccent = false;
+            this.M_TB_MaNhanVien.UseTallSize = false;
             // 
             // M_CB_ThoiGianLam
             // 
@@ -694,6 +724,7 @@
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = false;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // materialButton1
             // 
@@ -715,6 +746,7 @@
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = false;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // M_B_TimKiem
             // 
@@ -736,6 +768,7 @@
             this.M_B_TimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.M_B_TimKiem.UseAccentColor = false;
             this.M_B_TimKiem.UseVisualStyleBackColor = false;
+            this.M_B_TimKiem.Click += new System.EventHandler(this.M_B_TimKiem_Click);
             // 
             // label1
             // 
@@ -764,10 +797,9 @@
             this.tab_DonHang.Location = new System.Drawing.Point(4, 39);
             this.tab_DonHang.Name = "tab_DonHang";
             this.tab_DonHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DonHang.Size = new System.Drawing.Size(1906, 5427);
+            this.tab_DonHang.Size = new System.Drawing.Size(1906, 8505);
             this.tab_DonHang.TabIndex = 1;
             this.tab_DonHang.Text = "Đơn Hàng";
-           
             // 
             // tab_KhoHang
             // 
@@ -775,7 +807,7 @@
             this.tab_KhoHang.Location = new System.Drawing.Point(4, 39);
             this.tab_KhoHang.Name = "tab_KhoHang";
             this.tab_KhoHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_KhoHang.Size = new System.Drawing.Size(1906, 5427);
+            this.tab_KhoHang.Size = new System.Drawing.Size(1906, 8505);
             this.tab_KhoHang.TabIndex = 2;
             this.tab_KhoHang.Text = "Kho Hàng";
             this.tab_KhoHang.UseVisualStyleBackColor = true;
@@ -785,7 +817,7 @@
             this.tab_DoanhThu.ImageKey = "Trang_Chu_07.png";
             this.tab_DoanhThu.Location = new System.Drawing.Point(4, 39);
             this.tab_DoanhThu.Name = "tab_DoanhThu";
-            this.tab_DoanhThu.Size = new System.Drawing.Size(1906, 5427);
+            this.tab_DoanhThu.Size = new System.Drawing.Size(1906, 8505);
             this.tab_DoanhThu.TabIndex = 3;
             this.tab_DoanhThu.Text = "Doanh Thu";
             this.tab_DoanhThu.UseVisualStyleBackColor = true;
@@ -795,7 +827,7 @@
             this.tab_KhuyenMai.ImageKey = "approval_delegation_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png";
             this.tab_KhuyenMai.Location = new System.Drawing.Point(4, 39);
             this.tab_KhuyenMai.Name = "tab_KhuyenMai";
-            this.tab_KhuyenMai.Size = new System.Drawing.Size(1906, 5427);
+            this.tab_KhuyenMai.Size = new System.Drawing.Size(1906, 8505);
             this.tab_KhuyenMai.TabIndex = 4;
             this.tab_KhuyenMai.Text = "Khuyến mãi";
             this.tab_KhuyenMai.UseVisualStyleBackColor = true;
@@ -804,19 +836,92 @@
             // 
             this.tab_DangXuat.Location = new System.Drawing.Point(4, 39);
             this.tab_DangXuat.Name = "tab_DangXuat";
-            this.tab_DangXuat.Size = new System.Drawing.Size(1906, 5427);
+            this.tab_DangXuat.Size = new System.Drawing.Size(1906, 8505);
             this.tab_DangXuat.TabIndex = 5;
             this.tab_DangXuat.Text = "Đăng xuất !";
             this.tab_DangXuat.UseVisualStyleBackColor = true;
             // 
-            // L_KetQua
+            // L_UserName
             // 
-            this.L_KetQua.AutoSize = true;
-            this.L_KetQua.Location = new System.Drawing.Point(1561, 817);
-            this.L_KetQua.Name = "L_KetQua";
-            this.L_KetQua.Size = new System.Drawing.Size(114, 28);
-            this.L_KetQua.TabIndex = 9;
-            this.L_KetQua.Text = "Kết quả :";
+            this.L_UserName.AutoSize = true;
+            this.L_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_UserName.Location = new System.Drawing.Point(1676, 45);
+            this.L_UserName.Name = "L_UserName";
+            this.L_UserName.Size = new System.Drawing.Size(89, 20);
+            this.L_UserName.TabIndex = 19;
+            this.L_UserName.Text = "UserName";
+            // 
+            // M_L_UserName1
+            // 
+            this.M_L_UserName1.Depth = 0;
+            this.M_L_UserName1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_UserName1.Location = new System.Drawing.Point(1235, 54);
+            this.M_L_UserName1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_UserName1.Name = "M_L_UserName1";
+            this.M_L_UserName1.Size = new System.Drawing.Size(395, 28);
+            this.M_L_UserName1.TabIndex = 8;
+            this.M_L_UserName1.Text = "UserName :";
+            this.M_L_UserName1.Visible = false;
+            // 
+            // M_L_PassWord1
+            // 
+            this.M_L_PassWord1.Depth = 0;
+            this.M_L_PassWord1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_PassWord1.Location = new System.Drawing.Point(1235, 113);
+            this.M_L_PassWord1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_PassWord1.Name = "M_L_PassWord1";
+            this.M_L_PassWord1.Size = new System.Drawing.Size(395, 28);
+            this.M_L_PassWord1.TabIndex = 9;
+            this.M_L_PassWord1.Text = "Pass Word :";
+            this.M_L_PassWord1.Visible = false;
+            // 
+            // M_L_PassWord2
+            // 
+            this.M_L_PassWord2.Depth = 0;
+            this.M_L_PassWord2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_PassWord2.Location = new System.Drawing.Point(1235, 106);
+            this.M_L_PassWord2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_PassWord2.Name = "M_L_PassWord2";
+            this.M_L_PassWord2.Size = new System.Drawing.Size(395, 28);
+            this.M_L_PassWord2.TabIndex = 11;
+            this.M_L_PassWord2.Text = "Pass Word :";
+            this.M_L_PassWord2.Visible = false;
+            // 
+            // M_L_UserName2
+            // 
+            this.M_L_UserName2.Depth = 0;
+            this.M_L_UserName2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_UserName2.Location = new System.Drawing.Point(1235, 47);
+            this.M_L_UserName2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_UserName2.Name = "M_L_UserName2";
+            this.M_L_UserName2.Size = new System.Drawing.Size(395, 28);
+            this.M_L_UserName2.TabIndex = 10;
+            this.M_L_UserName2.Text = "UserName :";
+            this.M_L_UserName2.Visible = false;
+            // 
+            // M_L_PassWord3
+            // 
+            this.M_L_PassWord3.Depth = 0;
+            this.M_L_PassWord3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_PassWord3.Location = new System.Drawing.Point(1238, 102);
+            this.M_L_PassWord3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_PassWord3.Name = "M_L_PassWord3";
+            this.M_L_PassWord3.Size = new System.Drawing.Size(395, 28);
+            this.M_L_PassWord3.TabIndex = 22;
+            this.M_L_PassWord3.Text = "Pass Word :";
+            this.M_L_PassWord3.Visible = false;
+            // 
+            // M_L_UserName3
+            // 
+            this.M_L_UserName3.Depth = 0;
+            this.M_L_UserName3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.M_L_UserName3.Location = new System.Drawing.Point(1238, 43);
+            this.M_L_UserName3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.M_L_UserName3.Name = "M_L_UserName3";
+            this.M_L_UserName3.Size = new System.Drawing.Size(395, 28);
+            this.M_L_UserName3.TabIndex = 21;
+            this.M_L_UserName3.Text = "UserName :";
+            this.M_L_UserName3.Visible = false;
             // 
             // Form_TrangChu
             // 
@@ -825,6 +930,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1920, 990);
+            this.Controls.Add(this.L_UserName);
             this.Controls.Add(this.m_TabC_ChucNang);
             this.DrawerTabControl = this.m_TabC_ChucNang;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
@@ -847,6 +953,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -874,8 +981,8 @@
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private MaterialSkin.Controls.MaterialComboBox M_CB_ChucVu;
         private MaterialSkin.Controls.MaterialComboBox M_CB_ThoiGianLam;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox M_TB_MaNhanVien;
+        private MaterialSkin.Controls.MaterialTextBox M_TB_HoVaTen;
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialButton materialButton4;
         private MaterialSkin.Controls.MaterialLabel M_L_MaNhanVien1;
@@ -905,5 +1012,13 @@
         private System.Windows.Forms.Button B_Phai;
         private System.Windows.Forms.Button B_Trai;
         private System.Windows.Forms.Label L_KetQua;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label L_UserName;
+        private MaterialSkin.Controls.MaterialLabel M_L_UserName1;
+        private MaterialSkin.Controls.MaterialLabel M_L_PassWord1;
+        private MaterialSkin.Controls.MaterialLabel M_L_PassWord3;
+        private MaterialSkin.Controls.MaterialLabel M_L_UserName3;
+        private MaterialSkin.Controls.MaterialLabel M_L_PassWord2;
+        private MaterialSkin.Controls.MaterialLabel M_L_UserName2;
     }
 }
