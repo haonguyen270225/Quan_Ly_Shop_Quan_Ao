@@ -16,7 +16,7 @@ namespace Store_Mamager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_TrangChu());
+            Application.Run(new from_DangNhapReaLTaiizor());
         }
     }
 }

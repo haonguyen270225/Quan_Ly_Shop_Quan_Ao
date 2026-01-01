@@ -123,6 +123,16 @@ namespace Store_Mamager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_shop_quan_ao_nam_14 {
+            get {
+                object obj = ResourceManager.GetObject("logo-shop-quan-ao-nam-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_shop_quan_ao_nam_9 {
             get {
                 object obj = ResourceManager.GetObject("logo-shop-quan-ao-nam-9", resourceCulture);
@@ -166,6 +176,16 @@ namespace Store_Mamager.Properties {
         internal static System.Drawing.Bitmap Trang_Chu_03 {
             get {
                 object obj = ResourceManager.GetObject("Trang_Chu_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trang_tri_shop_quan_ao_1 {
+            get {
+                object obj = ResourceManager.GetObject("trang-tri-shop-quan-ao-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,11 +15,11 @@ namespace BLL
         public int BLL_CheckLogin(TaiKhoan taiKhoan)
         {
 
-            if (taiKhoan.PassWord == "" || taiKhoan.UserName == "UserName")
+            if (taiKhoan.UserName == "")
             {
                 return -1;
             }
-            if(taiKhoan.PassWord == "" || taiKhoan.PassWord == "PassWord")
+            if(taiKhoan.PassWord == "")
             {
                 return -2;
             }
