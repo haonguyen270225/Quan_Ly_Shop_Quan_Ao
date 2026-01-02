@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5D385344-0CC6-4664-B9E5-CF933D3E661F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Store_Mamager</RootNamespace>
+    <RootNamespace>Store_Manager</RootNamespace>
     <AssemblyName>Store_Mamager</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -173,17 +173,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_DangNhapReaLTaiizor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_DangNhapReaLTaiizor.Designer.cs">
+      <DependentUpon>frm_DangNhapReaLTaiizor.cs</DependentUpon>
     </Compile>
-    <Compile Include="from_DangNhapReaLTaiizor.cs">
+    <Compile Include="frm_TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="from_DangNhapReaLTaiizor.Designer.cs">
-      <DependentUpon>from_DangNhapReaLTaiizor.cs</DependentUpon>
+    <Compile Include="frm_TrangChu.Designer.cs">
+      <DependentUpon>frm_TrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -192,8 +192,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Quan_Ly_Shop_Quan_AoDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="from_DangNhapReaLTaiizor.resx">
-      <DependentUpon>from_DangNhapReaLTaiizor.cs</DependentUpon>
+    <EmbeddedResource Include="frm_DangNhapReaLTaiizor.resx">
+      <DependentUpon>frm_DangNhapReaLTaiizor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TrangChu.resx">
+      <DependentUpon>frm_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Store_Mamager
+namespace Store_Manager
 {
-    public partial class Form1 : Form
+    public partial class frm_TrangChu : Form
     {
-        public Form1()
+        public frm_TrangChu()
         {
             InitializeComponent();
         }
+
+
     }
 }

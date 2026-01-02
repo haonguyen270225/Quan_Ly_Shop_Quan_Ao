@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Store_Mamager
+namespace Store_Manager
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Store_Mamager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new from_DangNhapReaLTaiizor());
+            Application.Run(new frm_TrangChu());
         }
     }
 }

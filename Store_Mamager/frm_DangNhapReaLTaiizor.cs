@@ -11,11 +11,11 @@ using ReaLTaiizor.Forms;
 using DTO;
 using BLL;
 using System.Security.Cryptography;
-namespace Store_Mamager
+namespace Store_Manager
 {
-    public partial class from_DangNhapReaLTaiizor : LostForm
+    public partial class frm_DangNhapReaLTaiizor : LostForm
     {
-        public from_DangNhapReaLTaiizor()
+        public frm_DangNhapReaLTaiizor()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace Store_Mamager
         BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
 
         
-        private void from_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
+        private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
             TB_MatKhau.UseSystemPasswordChar = true;
             FCB_HienThiMatKhau.Checked = false;
@@ -52,12 +52,21 @@ namespace Store_Mamager
             }
             else if(bll_TaiKhoan.BLL_CheckLogin(taiKhoan) >= 1)
             {
+                this.Hide();
                 MessageBox.Show("Đăng nhập thành công !");
+               // Store_Manager.frm_TrangChu frm = new Store_Manager.frm_TrangChu();
+                //frm.ShowDialog();
+               // frm_TrangChu  frm_TrangChu = new frm_TrangChu();
+                //form_TrangChu.Show();
+                //frm_TrangChu.ShowDialog();
+                 Application.Exit(); //this.Show();
+                //this.Show();
             }
             else
             {
                 LB_ThongBao.Visible = true;
             }
+            
         }
 
         private void FCB_HienThiMatKhau_CheckedChanged(object sender, EventArgs e)
@@ -69,6 +78,14 @@ namespace Store_Mamager
             else
             {
                 TB_MatKhau.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void LB_ThongBao_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(LB_ThongBao.Visible == true)
+            {
+                LB_ThongBao.Visible = false;
             }
         }
     }

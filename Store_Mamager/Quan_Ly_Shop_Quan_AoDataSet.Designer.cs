@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Store_Mamager {
+namespace Store_Manager {
     
     
     /// <summary>
@@ -4210,7 +4210,7 @@ namespace Store_Mamager {
         }
     }
 }
-namespace Store_Mamager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters {
+namespace Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters {
     
     
     /// <summary>
@@ -4507,7 +4507,7 @@ SELECT ID, SoLuong, TongTien, IDMaHang, IDHoaDon FROM ChiTietHoaDon WHERE (ID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5017,7 +5017,7 @@ SELECT ID, MaHoaDon, Ngay, Gio, TongThu, IDNhanVien, IDKhachHang FROM HoaDon WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5461,7 +5461,7 @@ SELECT ID, MaKhachHang, HoVaTen, SDT FROM KhachHang WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6023,7 +6023,7 @@ SELECT ID, MaHang, TenHang, SoLuongTon, Gia, IDSize, IDLoaiSanPham FROM KhoHang 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6456,7 +6456,7 @@ SELECT ID, MaLoaiSanPham, TenLoai FROM LoaiSanPham WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7066,7 +7066,7 @@ SELECT ID, MaNhanVien, HoVaTen, SDT, Email, CCCD, DiaChi, ChucVu, GioiTinh FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7618,7 +7618,7 @@ SELECT ID, MaNhanVien, HoVaTen, SDT, Email, CCCD, DiaChi, ChucVu, GioiTinh FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8046,7 +8046,7 @@ SELECT ID, UserName, PassWord, IDNhanVien FROM TaiKhoan WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
+            this._connection.ConnectionString = global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8268,7 +8268,7 @@ SELECT ID, UserName, PassWord, IDNhanVien FROM TaiKhoan WHERE (ID = @ID)";
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.IDbCommand[1];
             this._commandCollection[0] = new global::Microsoft.Data.SqlClient.SqlCommand();
-            ((global::Microsoft.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::Microsoft.Data.SqlClient.SqlConnection(global::Store_Mamager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString);
+            ((global::Microsoft.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::Microsoft.Data.SqlClient.SqlConnection(global::Store_Manager.Properties.Settings.Default.Quan_Ly_Shop_Quan_AoConnectionString);
             ((global::Microsoft.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.SP_ThemChiTietHoaDon";
             ((global::Microsoft.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             global::Microsoft.Data.SqlClient.SqlParameter param = new global::Microsoft.Data.SqlClient.SqlParameter();

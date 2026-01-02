@@ -1,6 +1,6 @@
-﻿namespace Store_Mamager
+﻿namespace Store_Manager
 {
-    partial class from_DangNhapReaLTaiizor
+    partial class frm_DangNhapReaLTaiizor
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,8 @@
         {
             this.hopePictureBox1 = new ReaLTaiizor.Controls.HopePictureBox();
             this.nightPanel1 = new ReaLTaiizor.Controls.NightPanel();
+            this.TB_MatKhau = new ReaLTaiizor.Controls.ForeverTextBox();
+            this.TB_TenDangNhap = new ReaLTaiizor.Controls.ForeverTextBox();
             this.dungeonLinkLabel1 = new ReaLTaiizor.Controls.DungeonLinkLabel();
             this.FCB_HienThiMatKhau = new ReaLTaiizor.Controls.FoxCheckBox();
             this.LB_ThongBao = new ReaLTaiizor.Controls.DungeonLinkLabel();
@@ -38,8 +40,6 @@
             this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox2 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.TB_TenDangNhap = new ReaLTaiizor.Controls.ForeverTextBox();
-            this.TB_MatKhau = new ReaLTaiizor.Controls.ForeverTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
             this.nightPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox2)).BeginInit();
@@ -49,7 +49,7 @@
             // 
             this.hopePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
             this.hopePictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hopePictureBox1.Image = global::Store_Mamager.Properties.Resources.trang_tri_shop_quan_ao_1;
+            this.hopePictureBox1.Image = global::Store_Manager.Properties.Resources.trang_tri_shop_quan_ao_1;
             this.hopePictureBox1.Location = new System.Drawing.Point(2, 36);
             this.hopePictureBox1.Name = "hopePictureBox1";
             this.hopePictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
@@ -81,6 +81,42 @@
             this.nightPanel1.Side = ReaLTaiizor.Controls.NightPanel.PanelSide.Left;
             this.nightPanel1.Size = new System.Drawing.Size(520, 610);
             this.nightPanel1.TabIndex = 1;
+            // 
+            // TB_MatKhau
+            // 
+            this.TB_MatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.TB_MatKhau.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.TB_MatKhau.BorderColor = System.Drawing.Color.Gray;
+            this.TB_MatKhau.FocusOnHover = false;
+            this.TB_MatKhau.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.TB_MatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TB_MatKhau.Location = new System.Drawing.Point(30, 352);
+            this.TB_MatKhau.MaxLength = 32767;
+            this.TB_MatKhau.Multiline = false;
+            this.TB_MatKhau.Name = "TB_MatKhau";
+            this.TB_MatKhau.ReadOnly = false;
+            this.TB_MatKhau.Size = new System.Drawing.Size(411, 45);
+            this.TB_MatKhau.TabIndex = 12;
+            this.TB_MatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TB_MatKhau.UseSystemPasswordChar = false;
+            // 
+            // TB_TenDangNhap
+            // 
+            this.TB_TenDangNhap.BackColor = System.Drawing.Color.Transparent;
+            this.TB_TenDangNhap.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.TB_TenDangNhap.BorderColor = System.Drawing.Color.Gray;
+            this.TB_TenDangNhap.FocusOnHover = false;
+            this.TB_TenDangNhap.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.TB_TenDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TB_TenDangNhap.Location = new System.Drawing.Point(30, 258);
+            this.TB_TenDangNhap.MaxLength = 32767;
+            this.TB_TenDangNhap.Multiline = false;
+            this.TB_TenDangNhap.Name = "TB_TenDangNhap";
+            this.TB_TenDangNhap.ReadOnly = false;
+            this.TB_TenDangNhap.Size = new System.Drawing.Size(411, 45);
+            this.TB_TenDangNhap.TabIndex = 11;
+            this.TB_TenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TB_TenDangNhap.UseSystemPasswordChar = false;
             // 
             // dungeonLinkLabel1
             // 
@@ -139,6 +175,7 @@
             this.LB_ThongBao.Text = "Tên đăng nhập hoặc mật khẩu không đúng !";
             this.LB_ThongBao.Visible = false;
             this.LB_ThongBao.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(119)))), ((int)(((byte)(70)))));
+            this.LB_ThongBao.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LB_ThongBao_LinkClicked);
             // 
             // B_DangNhap
             // 
@@ -208,7 +245,7 @@
             // hopePictureBox2
             // 
             this.hopePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
-            this.hopePictureBox2.Image = global::Store_Mamager.Properties.Resources.logo_shop_quan_ao_nam_14;
+            this.hopePictureBox2.Image = global::Store_Manager.Properties.Resources.logo_shop_quan_ao_nam_14;
             this.hopePictureBox2.Location = new System.Drawing.Point(133, 9);
             this.hopePictureBox2.Margin = new System.Windows.Forms.Padding(9);
             this.hopePictureBox2.Name = "hopePictureBox2";
@@ -219,42 +256,6 @@
             this.hopePictureBox2.TabIndex = 0;
             this.hopePictureBox2.TabStop = false;
             this.hopePictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // TB_TenDangNhap
-            // 
-            this.TB_TenDangNhap.BackColor = System.Drawing.Color.Transparent;
-            this.TB_TenDangNhap.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.TB_TenDangNhap.BorderColor = System.Drawing.Color.Gray;
-            this.TB_TenDangNhap.FocusOnHover = false;
-            this.TB_TenDangNhap.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.TB_TenDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.TB_TenDangNhap.Location = new System.Drawing.Point(30, 258);
-            this.TB_TenDangNhap.MaxLength = 32767;
-            this.TB_TenDangNhap.Multiline = false;
-            this.TB_TenDangNhap.Name = "TB_TenDangNhap";
-            this.TB_TenDangNhap.ReadOnly = false;
-            this.TB_TenDangNhap.Size = new System.Drawing.Size(411, 45);
-            this.TB_TenDangNhap.TabIndex = 11;
-            this.TB_TenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TB_TenDangNhap.UseSystemPasswordChar = false;
-            // 
-            // TB_MatKhau
-            // 
-            this.TB_MatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.TB_MatKhau.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.TB_MatKhau.BorderColor = System.Drawing.Color.Gray;
-            this.TB_MatKhau.FocusOnHover = false;
-            this.TB_MatKhau.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.TB_MatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.TB_MatKhau.Location = new System.Drawing.Point(30, 352);
-            this.TB_MatKhau.MaxLength = 32767;
-            this.TB_MatKhau.Multiline = false;
-            this.TB_MatKhau.Name = "TB_MatKhau";
-            this.TB_MatKhau.ReadOnly = false;
-            this.TB_MatKhau.Size = new System.Drawing.Size(411, 45);
-            this.TB_MatKhau.TabIndex = 12;
-            this.TB_MatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TB_MatKhau.UseSystemPasswordChar = false;
             // 
             // from_DangNhapReaLTaiizor
             // 
@@ -267,7 +268,7 @@
             this.Name = "from_DangNhapReaLTaiizor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập !";
-            this.Load += new System.EventHandler(this.from_DangNhapReaLTaiizor_Load);
+            this.Load += new System.EventHandler(this.frm_DangNhapReaLTaiizor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).EndInit();
             this.nightPanel1.ResumeLayout(false);
             this.nightPanel1.PerformLayout();
