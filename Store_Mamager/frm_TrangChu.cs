@@ -17,6 +17,23 @@ namespace Store_Manager
             InitializeComponent();
         }
 
+        
+        private void foreverForm1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void tab_DangXuat_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabPage1_Selected(object sender, TabControlEventArgs e)
+        {
+            if(tabPage1.SelectedTab == tab_DangXuat)
+            {
+                this.Close();
+            }
+        }
     }
 }

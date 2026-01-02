@@ -33,13 +33,13 @@
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
             this.foreverForm1 = new ReaLTaiizor.Forms.ForeverForm();
             this.tabPage1 = new ReaLTaiizor.Controls.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tab_TrangChu = new System.Windows.Forms.TabPage();
+            this.tab_HoaDon = new System.Windows.Forms.TabPage();
+            this.tab_KhoHang = new System.Windows.Forms.TabPage();
+            this.tab_KhuyenMai = new System.Windows.Forms.TabPage();
+            this.tab_DoanhThu = new System.Windows.Forms.TabPage();
+            this.tab_DangXuat = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.foreverForm1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -62,11 +62,12 @@
             this.foreverForm1.Name = "foreverForm1";
             this.foreverForm1.Padding = new System.Windows.Forms.Padding(1, 51, 1, 1);
             this.foreverForm1.Sizable = true;
-            this.foreverForm1.Size = new System.Drawing.Size(1242, 692);
+            this.foreverForm1.Size = new System.Drawing.Size(1756, 1015);
             this.foreverForm1.TabIndex = 0;
             this.foreverForm1.Text = "foreverForm1";
             this.foreverForm1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.foreverForm1.TextLight = System.Drawing.Color.SeaGreen;
+            this.foreverForm1.Click += new System.EventHandler(this.foreverForm1_Click);
             // 
             // tabPage1
             // 
@@ -77,12 +78,12 @@
             this.tabPage1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.tabPage1.CompositingType = System.Drawing.Drawing2D.CompositingMode.SourceOver;
             this.tabPage1.ControlBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.tabPage1.Controls.Add(this.tabPage2);
-            this.tabPage1.Controls.Add(this.tabPage3);
-            this.tabPage1.Controls.Add(this.tabPage4);
-            this.tabPage1.Controls.Add(this.tabPage5);
-            this.tabPage1.Controls.Add(this.tabPage7);
-            this.tabPage1.Controls.Add(this.tabPage6);
+            this.tabPage1.Controls.Add(this.tab_TrangChu);
+            this.tabPage1.Controls.Add(this.tab_HoaDon);
+            this.tabPage1.Controls.Add(this.tab_KhoHang);
+            this.tabPage1.Controls.Add(this.tab_KhuyenMai);
+            this.tabPage1.Controls.Add(this.tab_DoanhThu);
+            this.tabPage1.Controls.Add(this.tab_DangXuat);
             this.tabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPage1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabPage1.FrameColor = System.Drawing.Color.DarkGray;
@@ -98,35 +99,78 @@
             this.tabPage1.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
             this.tabPage1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.tabPage1.SelectedIndex = 0;
-            this.tabPage1.Size = new System.Drawing.Size(1240, 640);
+            this.tabPage1.Size = new System.Drawing.Size(1754, 963);
             this.tabPage1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabPage1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.tabPage1.StringType = System.Drawing.StringAlignment.Near;
             this.tabPage1.TabColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.tabPage1.TabIndex = 0;
             this.tabPage1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.tabPage1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabPage1_Selected);
             // 
-            // tabPage2
+            // tab_TrangChu
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
-            this.tabPage2.ImageIndex = 0;
-            this.tabPage2.Location = new System.Drawing.Point(139, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1023, 521);
-            this.tabPage2.TabIndex = 0;
-            this.tabPage2.Text = "Trang Chủ";
+            this.tab_TrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
+            this.tab_TrangChu.ImageIndex = 0;
+            this.tab_TrangChu.Location = new System.Drawing.Point(139, 4);
+            this.tab_TrangChu.Name = "tab_TrangChu";
+            this.tab_TrangChu.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_TrangChu.Size = new System.Drawing.Size(1611, 955);
+            this.tab_TrangChu.TabIndex = 0;
+            this.tab_TrangChu.Text = "Trang Chủ";
             // 
-            // tabPage3
+            // tab_HoaDon
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
-            this.tabPage3.ImageIndex = 2;
-            this.tabPage3.Location = new System.Drawing.Point(139, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1023, 521);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "Hóa đơn";
+            this.tab_HoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
+            this.tab_HoaDon.ImageIndex = 2;
+            this.tab_HoaDon.Location = new System.Drawing.Point(139, 4);
+            this.tab_HoaDon.Name = "tab_HoaDon";
+            this.tab_HoaDon.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_HoaDon.Size = new System.Drawing.Size(1611, 955);
+            this.tab_HoaDon.TabIndex = 1;
+            this.tab_HoaDon.Text = "Hóa đơn";
+            // 
+            // tab_KhoHang
+            // 
+            this.tab_KhoHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
+            this.tab_KhoHang.ImageIndex = 3;
+            this.tab_KhoHang.Location = new System.Drawing.Point(139, 4);
+            this.tab_KhoHang.Name = "tab_KhoHang";
+            this.tab_KhoHang.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_KhoHang.Size = new System.Drawing.Size(1611, 955);
+            this.tab_KhoHang.TabIndex = 2;
+            this.tab_KhoHang.Text = "Kho hàng";
+            // 
+            // tab_KhuyenMai
+            // 
+            this.tab_KhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
+            this.tab_KhuyenMai.ImageIndex = 4;
+            this.tab_KhuyenMai.Location = new System.Drawing.Point(139, 4);
+            this.tab_KhuyenMai.Name = "tab_KhuyenMai";
+            this.tab_KhuyenMai.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_KhuyenMai.Size = new System.Drawing.Size(1611, 955);
+            this.tab_KhuyenMai.TabIndex = 3;
+            this.tab_KhuyenMai.Text = "Khuyến mãi";
+            // 
+            // tab_DoanhThu
+            // 
+            this.tab_DoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
+            this.tab_DoanhThu.ImageIndex = 1;
+            this.tab_DoanhThu.Location = new System.Drawing.Point(139, 4);
+            this.tab_DoanhThu.Name = "tab_DoanhThu";
+            this.tab_DoanhThu.Size = new System.Drawing.Size(1611, 955);
+            this.tab_DoanhThu.TabIndex = 5;
+            this.tab_DoanhThu.Text = "Doanh Thu";
+            // 
+            // tab_DangXuat
+            // 
+            this.tab_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
+            this.tab_DangXuat.Location = new System.Drawing.Point(139, 4);
+            this.tab_DangXuat.Name = "tab_DangXuat";
+            this.tab_DangXuat.Size = new System.Drawing.Size(1611, 955);
+            this.tab_DangXuat.TabIndex = 4;
+            this.tab_DangXuat.Text = "Đăng xuất !";
+            this.tab_DangXuat.Click += new System.EventHandler(this.tab_DangXuat_Click);
             // 
             // imageList1
             // 
@@ -138,52 +182,11 @@
             this.imageList1.Images.SetKeyName(3, "box_edit_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png");
             this.imageList1.Images.SetKeyName(4, "approval_delegation_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png");
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
-            this.tabPage4.ImageIndex = 3;
-            this.tabPage4.Location = new System.Drawing.Point(139, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1023, 521);
-            this.tabPage4.TabIndex = 2;
-            this.tabPage4.Text = "Kho hàng";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
-            this.tabPage5.ImageIndex = 4;
-            this.tabPage5.Location = new System.Drawing.Point(139, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1023, 521);
-            this.tabPage5.TabIndex = 3;
-            this.tabPage5.Text = "Khuyến mãi";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
-            this.tabPage6.Location = new System.Drawing.Point(139, 4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1023, 521);
-            this.tabPage6.TabIndex = 4;
-            this.tabPage6.Text = "Đăng xuất !";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(74)))));
-            this.tabPage7.ImageIndex = 1;
-            this.tabPage7.Location = new System.Drawing.Point(139, 4);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1097, 632);
-            this.tabPage7.TabIndex = 5;
-            this.tabPage7.Text = "Doanh Thu";
-            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1242, 692);
+            this.ClientSize = new System.Drawing.Size(1756, 1015);
             this.Controls.Add(this.foreverForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_TrangChu";
@@ -202,11 +205,11 @@
         private ReaLTaiizor.Forms.ForeverForm foreverForm1;
         private System.Windows.Forms.ImageList imageList1;
         private ReaLTaiizor.Controls.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tab_TrangChu;
+        private System.Windows.Forms.TabPage tab_HoaDon;
+        private System.Windows.Forms.TabPage tab_KhoHang;
+        private System.Windows.Forms.TabPage tab_KhuyenMai;
+        private System.Windows.Forms.TabPage tab_DoanhThu;
+        private System.Windows.Forms.TabPage tab_DangXuat;
     }
 }
