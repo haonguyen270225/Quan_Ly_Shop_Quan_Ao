@@ -185,6 +185,12 @@
     <Compile Include="frm_TrangChu.Designer.cs">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TrangChu02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TrangChu02.Designer.cs">
+      <DependentUpon>frm_TrangChu02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quan_Ly_Shop_Quan_AoDataSet.Designer.cs">
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TrangChu.resx">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TrangChu02.resx">
+      <DependentUpon>frm_TrangChu02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
