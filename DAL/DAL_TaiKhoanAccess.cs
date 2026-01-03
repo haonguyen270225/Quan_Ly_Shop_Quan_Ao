@@ -21,6 +21,7 @@ namespace DAL
 
             int ketQua = (int)sqlCommand.ExecuteScalar();
 
+            conn.Close();
             return ketQua;
         }
 

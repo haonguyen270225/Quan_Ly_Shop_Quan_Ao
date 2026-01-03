@@ -179,6 +179,12 @@
     <Compile Include="frm_DangNhapReaLTaiizor.Designer.cs">
       <DependentUpon>frm_DangNhapReaLTaiizor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ThayDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThayDoiMatKhau.Designer.cs">
+      <DependentUpon>frm_ThayDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </Compile>
     <EmbeddedResource Include="frm_DangNhapReaLTaiizor.resx">
       <DependentUpon>frm_DangNhapReaLTaiizor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThayDoiMatKhau.resx">
+      <DependentUpon>frm_ThayDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TrangChu.resx">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>

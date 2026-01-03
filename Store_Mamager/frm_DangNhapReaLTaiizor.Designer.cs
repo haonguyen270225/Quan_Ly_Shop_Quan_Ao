@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DangNhapReaLTaiizor));
             this.hopePictureBox1 = new ReaLTaiizor.Controls.HopePictureBox();
             this.nightPanel1 = new ReaLTaiizor.Controls.NightPanel();
             this.TB_MatKhau = new ReaLTaiizor.Controls.ForeverTextBox();
@@ -257,7 +258,7 @@
             this.hopePictureBox2.TabStop = false;
             this.hopePictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
-            // from_DangNhapReaLTaiizor
+            // frm_DangNhapReaLTaiizor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,7 +266,8 @@
             this.ClientSize = new System.Drawing.Size(1092, 648);
             this.Controls.Add(this.nightPanel1);
             this.Controls.Add(this.hopePictureBox1);
-            this.Name = "from_DangNhapReaLTaiizor";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frm_DangNhapReaLTaiizor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập !";
             this.Load += new System.EventHandler(this.frm_DangNhapReaLTaiizor_Load);

@@ -56,9 +56,9 @@ namespace Store_Manager
                 MessageBox.Show("Đăng nhập thành công !");
                // Store_Manager.frm_TrangChu frm = new Store_Manager.frm_TrangChu();
                 //frm.ShowDialog();
-               // frm_TrangChu  frm_TrangChu = new frm_TrangChu();
-                //form_TrangChu.Show();
-                //frm_TrangChu.ShowDialog();
+                frm_TrangChu  frm_TrangChu = new frm_TrangChu();
+                frm_TrangChu.taiKhoan = taiKhoan;
+                frm_TrangChu.ShowDialog();
                  Application.Exit(); //this.Show();
                 //this.Show();
             }
