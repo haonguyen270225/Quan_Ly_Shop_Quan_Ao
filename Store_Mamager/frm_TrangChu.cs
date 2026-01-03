@@ -65,5 +65,12 @@ namespace Store_Manager
         {
 
         }
+
+        private void frm_TrangChu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quan_Ly_Shop_Quan_AoDataSet.HoaDon' table. You can move, or remove it, as needed.
+            this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
+
+        }
     }
 }

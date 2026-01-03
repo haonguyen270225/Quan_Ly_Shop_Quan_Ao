@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangChu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.foreverForm1 = new ReaLTaiizor.Forms.ForeverForm();
             this.controlBox1 = new ReaLTaiizor.Controls.ControlBox();
@@ -40,10 +43,27 @@
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.nightLabel1 = new ReaLTaiizor.Controls.NightLabel();
+            this.hopePictureBox1 = new ReaLTaiizor.Controls.HopePictureBox();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.tabPage1 = new ReaLTaiizor.Controls.TabPage();
             this.tab_TrangChu = new System.Windows.Forms.TabPage();
+            this.DT_TrangChu = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quan_Ly_Shop_Quan_AoDataSet = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSet();
+            this.foreverGroupBox3 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            this.hopePictureBox4 = new ReaLTaiizor.Controls.HopePictureBox();
+            this.bigLabel9 = new ReaLTaiizor.Controls.BigLabel();
+            this.foreverGroupBox2 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            this.hopePictureBox3 = new ReaLTaiizor.Controls.HopePictureBox();
+            this.bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
+            this.foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            this.hopePictureBox2 = new ReaLTaiizor.Controls.HopePictureBox();
+            this.bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
             this.groupBox1 = new ReaLTaiizor.Controls.GroupBox();
+            this.parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
+            this.bigLabel6 = new ReaLTaiizor.Controls.BigLabel();
+            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
+            this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.tab_HoaDon = new System.Windows.Forms.TabPage();
@@ -51,34 +71,32 @@
             this.tab_KhuyenMai = new System.Windows.Forms.TabPage();
             this.tab_DoanhThu = new System.Windows.Forms.TabPage();
             this.tab_DangXuat = new System.Windows.Forms.TabPage();
-            this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel6 = new ReaLTaiizor.Controls.BigLabel();
-            this.airButton1 = new ReaLTaiizor.Controls.AirButton();
-            this.foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
-            this.bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
-            this.foreverGroupBox2 = new ReaLTaiizor.Controls.ForeverGroupBox();
-            this.bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
-            this.foreverGroupBox3 = new ReaLTaiizor.Controls.ForeverGroupBox();
-            this.bigLabel9 = new ReaLTaiizor.Controls.BigLabel();
-            this.hopePictureBox1 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.hopePictureBox4 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.hopePictureBox3 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.hopePictureBox2 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
+            this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
+            this.column = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tab_TrangChu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DT_TrangChu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).BeginInit();
+            this.foreverGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox4)).BeginInit();
+            this.foreverGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox3)).BeginInit();
+            this.foreverGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
-            this.foreverGroupBox1.SuspendLayout();
-            this.foreverGroupBox2.SuspendLayout();
-            this.foreverGroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -143,7 +161,6 @@
             // crownGroupBox1
             // 
             this.crownGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.crownGroupBox1.Controls.Add(this.airButton1);
             this.crownGroupBox1.Controls.Add(this.bigLabel2);
             this.crownGroupBox1.Controls.Add(this.bigLabel1);
             this.crownGroupBox1.Location = new System.Drawing.Point(0, 51);
@@ -186,6 +203,20 @@
             this.nightLabel1.Size = new System.Drawing.Size(222, 37);
             this.nightLabel1.TabIndex = 0;
             this.nightLabel1.Text = "PayPayShop.Com";
+            // 
+            // hopePictureBox1
+            // 
+            this.hopePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
+            this.hopePictureBox1.Image = global::Store_Manager.Properties.Resources.p_10819135;
+            this.hopePictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.hopePictureBox1.Name = "hopePictureBox1";
+            this.hopePictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hopePictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.hopePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hopePictureBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hopePictureBox1.TabIndex = 0;
+            this.hopePictureBox1.TabStop = false;
+            this.hopePictureBox1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // headerLabel1
             // 
@@ -243,6 +274,7 @@
             // tab_TrangChu
             // 
             this.tab_TrangChu.BackColor = System.Drawing.Color.White;
+            this.tab_TrangChu.Controls.Add(this.DT_TrangChu);
             this.tab_TrangChu.Controls.Add(this.foreverGroupBox3);
             this.tab_TrangChu.Controls.Add(this.foreverGroupBox2);
             this.tab_TrangChu.Controls.Add(this.foreverGroupBox1);
@@ -258,6 +290,209 @@
             this.tab_TrangChu.Size = new System.Drawing.Size(1323, 868);
             this.tab_TrangChu.TabIndex = 0;
             this.tab_TrangChu.Text = "Trang Chủ";
+            // 
+            // DT_TrangChu
+            // 
+            this.DT_TrangChu.AllowUserToResizeRows = false;
+            this.DT_TrangChu.AutoGenerateColumns = false;
+            this.DT_TrangChu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DT_TrangChu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DT_TrangChu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DT_TrangChu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DT_TrangChu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DT_TrangChu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DT_TrangChu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.column,
+            this.column2,
+            this.iDDataGridViewTextBoxColumn,
+            this.maHoaDonDataGridViewTextBoxColumn,
+            this.ngayDataGridViewTextBoxColumn,
+            this.gioDataGridViewTextBoxColumn,
+            this.tongThuDataGridViewTextBoxColumn,
+            this.iDNhanVienDataGridViewTextBoxColumn,
+            this.iDKhachHangDataGridViewTextBoxColumn});
+            this.DT_TrangChu.DataSource = this.hoaDonBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DT_TrangChu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DT_TrangChu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DT_TrangChu.EnableHeadersVisualStyles = false;
+            this.DT_TrangChu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DT_TrangChu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DT_TrangChu.Location = new System.Drawing.Point(6, 522);
+            this.DT_TrangChu.Name = "DT_TrangChu";
+            this.DT_TrangChu.ReadOnly = true;
+            this.DT_TrangChu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DT_TrangChu.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DT_TrangChu.RowHeadersWidth = 51;
+            this.DT_TrangChu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DT_TrangChu.RowTemplate.Height = 24;
+            this.DT_TrangChu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DT_TrangChu.Size = new System.Drawing.Size(1311, 340);
+            this.DT_TrangChu.TabIndex = 8;
+            // 
+            // hoaDonBindingSource
+            // 
+            this.hoaDonBindingSource.DataMember = "HoaDon";
+            this.hoaDonBindingSource.DataSource = this.quan_Ly_Shop_Quan_AoDataSet;
+            // 
+            // quan_Ly_Shop_Quan_AoDataSet
+            // 
+            this.quan_Ly_Shop_Quan_AoDataSet.DataSetName = "Quan_Ly_Shop_Quan_AoDataSet";
+            this.quan_Ly_Shop_Quan_AoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // foreverGroupBox3
+            // 
+            this.foreverGroupBox3.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox3.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox3.BaseColor = System.Drawing.SystemColors.WindowFrame;
+            this.foreverGroupBox3.Controls.Add(this.hopePictureBox4);
+            this.foreverGroupBox3.Controls.Add(this.bigLabel9);
+            this.foreverGroupBox3.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.foreverGroupBox3.Location = new System.Drawing.Point(872, 166);
+            this.foreverGroupBox3.Name = "foreverGroupBox3";
+            this.foreverGroupBox3.ShowArrow = true;
+            this.foreverGroupBox3.ShowText = true;
+            this.foreverGroupBox3.Size = new System.Drawing.Size(450, 235);
+            this.foreverGroupBox3.TabIndex = 7;
+            this.foreverGroupBox3.Text = "Danh Sách Khách Hàng !";
+            this.foreverGroupBox3.TextColor = System.Drawing.Color.Black;
+            // 
+            // hopePictureBox4
+            // 
+            this.hopePictureBox4.BackColor = System.Drawing.Color.White;
+            this.hopePictureBox4.Image = global::Store_Manager.Properties.Resources.group_779146;
+            this.hopePictureBox4.Location = new System.Drawing.Point(285, 79);
+            this.hopePictureBox4.Name = "hopePictureBox4";
+            this.hopePictureBox4.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hopePictureBox4.Size = new System.Drawing.Size(136, 130);
+            this.hopePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hopePictureBox4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hopePictureBox4.TabIndex = 6;
+            this.hopePictureBox4.TabStop = false;
+            this.hopePictureBox4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // bigLabel9
+            // 
+            this.bigLabel9.AutoSize = true;
+            this.bigLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel9.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.bigLabel9.ForeColor = System.Drawing.Color.Black;
+            this.bigLabel9.Location = new System.Drawing.Point(23, 107);
+            this.bigLabel9.Name = "bigLabel9";
+            this.bigLabel9.Size = new System.Drawing.Size(48, 57);
+            this.bigLabel9.TabIndex = 3;
+            this.bigLabel9.Text = "5";
+            // 
+            // foreverGroupBox2
+            // 
+            this.foreverGroupBox2.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox2.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox2.BaseColor = System.Drawing.Color.Olive;
+            this.foreverGroupBox2.Controls.Add(this.hopePictureBox3);
+            this.foreverGroupBox2.Controls.Add(this.bigLabel8);
+            this.foreverGroupBox2.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.foreverGroupBox2.Location = new System.Drawing.Point(428, 163);
+            this.foreverGroupBox2.Name = "foreverGroupBox2";
+            this.foreverGroupBox2.ShowArrow = true;
+            this.foreverGroupBox2.ShowText = true;
+            this.foreverGroupBox2.Size = new System.Drawing.Size(440, 235);
+            this.foreverGroupBox2.TabIndex = 7;
+            this.foreverGroupBox2.Text = "Doanh Thu Hôm Nay !";
+            this.foreverGroupBox2.TextColor = System.Drawing.Color.Yellow;
+            this.foreverGroupBox2.Click += new System.EventHandler(this.foreverGroupBox2_Click);
+            // 
+            // hopePictureBox3
+            // 
+            this.hopePictureBox3.BackColor = System.Drawing.Color.White;
+            this.hopePictureBox3.Image = global::Store_Manager.Properties.Resources.investment_3459461;
+            this.hopePictureBox3.Location = new System.Drawing.Point(275, 79);
+            this.hopePictureBox3.Name = "hopePictureBox3";
+            this.hopePictureBox3.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hopePictureBox3.Size = new System.Drawing.Size(136, 130);
+            this.hopePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hopePictureBox3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hopePictureBox3.TabIndex = 6;
+            this.hopePictureBox3.TabStop = false;
+            this.hopePictureBox3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // bigLabel8
+            // 
+            this.bigLabel8.AutoSize = true;
+            this.bigLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel8.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.bigLabel8.ForeColor = System.Drawing.Color.Yellow;
+            this.bigLabel8.Location = new System.Drawing.Point(23, 107);
+            this.bigLabel8.Name = "bigLabel8";
+            this.bigLabel8.Size = new System.Drawing.Size(48, 57);
+            this.bigLabel8.TabIndex = 3;
+            this.bigLabel8.Text = "5";
+            // 
+            // foreverGroupBox1
+            // 
+            this.foreverGroupBox1.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox1.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox1.Controls.Add(this.hopePictureBox2);
+            this.foreverGroupBox1.Controls.Add(this.bigLabel7);
+            this.foreverGroupBox1.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.foreverGroupBox1.Location = new System.Drawing.Point(9, 163);
+            this.foreverGroupBox1.Name = "foreverGroupBox1";
+            this.foreverGroupBox1.ShowArrow = true;
+            this.foreverGroupBox1.ShowText = true;
+            this.foreverGroupBox1.Size = new System.Drawing.Size(414, 235);
+            this.foreverGroupBox1.TabIndex = 2;
+            this.foreverGroupBox1.Text = "Hóa đơn đã bán !";
+            this.foreverGroupBox1.TextColor = System.Drawing.Color.Olive;
+            this.foreverGroupBox1.Click += new System.EventHandler(this.foreverGroupBox1_Click);
+            // 
+            // hopePictureBox2
+            // 
+            this.hopePictureBox2.BackColor = System.Drawing.Color.White;
+            this.hopePictureBox2.Image = global::Store_Manager.Properties.Resources.business_136065742;
+            this.hopePictureBox2.Location = new System.Drawing.Point(258, 79);
+            this.hopePictureBox2.Name = "hopePictureBox2";
+            this.hopePictureBox2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hopePictureBox2.Size = new System.Drawing.Size(136, 130);
+            this.hopePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hopePictureBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hopePictureBox2.TabIndex = 6;
+            this.hopePictureBox2.TabStop = false;
+            this.hopePictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // bigLabel7
+            // 
+            this.bigLabel7.AutoSize = true;
+            this.bigLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel7.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.bigLabel7.ForeColor = System.Drawing.Color.Olive;
+            this.bigLabel7.Location = new System.Drawing.Point(23, 107);
+            this.bigLabel7.Name = "bigLabel7";
+            this.bigLabel7.Size = new System.Drawing.Size(48, 57);
+            this.bigLabel7.TabIndex = 3;
+            this.bigLabel7.Text = "5";
             // 
             // groupBox1
             // 
@@ -284,316 +519,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.Text = "Thông tin tài Khoản";
             // 
-            // bigLabel3
-            // 
-            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel3.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bigLabel3.Location = new System.Drawing.Point(10, 28);
-            this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(116, 30);
-            this.bigLabel3.TabIndex = 7;
-            this.bigLabel3.Text = "Xin Chào : ";
-            this.bigLabel3.Click += new System.EventHandler(this.bigLabel3_Click);
-            // 
-            // poisonDataGridView1
-            // 
-            this.poisonDataGridView1.AllowUserToResizeRows = false;
-            this.poisonDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.poisonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.poisonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.poisonDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.poisonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.poisonDataGridView1.EnableHeadersVisualStyles = false;
-            this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.poisonDataGridView1.Location = new System.Drawing.Point(171, 193);
-            this.poisonDataGridView1.Name = "poisonDataGridView1";
-            this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.poisonDataGridView1.RowHeadersWidth = 51;
-            this.poisonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.poisonDataGridView1.RowTemplate.Height = 24;
-            this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.poisonDataGridView1.Size = new System.Drawing.Size(8, 8);
-            this.poisonDataGridView1.TabIndex = 0;
-            // 
-            // tab_HoaDon
-            // 
-            this.tab_HoaDon.BackColor = System.Drawing.Color.White;
-            this.tab_HoaDon.ImageIndex = 2;
-            this.tab_HoaDon.Location = new System.Drawing.Point(204, 4);
-            this.tab_HoaDon.Margin = new System.Windows.Forms.Padding(6);
-            this.tab_HoaDon.Name = "tab_HoaDon";
-            this.tab_HoaDon.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_HoaDon.Size = new System.Drawing.Size(1323, 687);
-            this.tab_HoaDon.TabIndex = 1;
-            this.tab_HoaDon.Text = "Hóa đơn";
-            // 
-            // tab_KhoHang
-            // 
-            this.tab_KhoHang.BackColor = System.Drawing.Color.White;
-            this.tab_KhoHang.ImageIndex = 3;
-            this.tab_KhoHang.Location = new System.Drawing.Point(204, 4);
-            this.tab_KhoHang.Margin = new System.Windows.Forms.Padding(6);
-            this.tab_KhoHang.Name = "tab_KhoHang";
-            this.tab_KhoHang.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_KhoHang.Size = new System.Drawing.Size(1323, 687);
-            this.tab_KhoHang.TabIndex = 2;
-            this.tab_KhoHang.Text = "Kho hàng";
-            // 
-            // tab_KhuyenMai
-            // 
-            this.tab_KhuyenMai.BackColor = System.Drawing.Color.White;
-            this.tab_KhuyenMai.ImageIndex = 4;
-            this.tab_KhuyenMai.Location = new System.Drawing.Point(204, 4);
-            this.tab_KhuyenMai.Margin = new System.Windows.Forms.Padding(6);
-            this.tab_KhuyenMai.Name = "tab_KhuyenMai";
-            this.tab_KhuyenMai.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_KhuyenMai.Size = new System.Drawing.Size(1323, 687);
-            this.tab_KhuyenMai.TabIndex = 3;
-            this.tab_KhuyenMai.Text = "Khuyến mãi";
-            // 
-            // tab_DoanhThu
-            // 
-            this.tab_DoanhThu.BackColor = System.Drawing.Color.White;
-            this.tab_DoanhThu.ImageIndex = 1;
-            this.tab_DoanhThu.Location = new System.Drawing.Point(204, 4);
-            this.tab_DoanhThu.Margin = new System.Windows.Forms.Padding(6);
-            this.tab_DoanhThu.Name = "tab_DoanhThu";
-            this.tab_DoanhThu.Size = new System.Drawing.Size(1323, 687);
-            this.tab_DoanhThu.TabIndex = 5;
-            this.tab_DoanhThu.Text = "Doanh Thu";
-            // 
-            // tab_DangXuat
-            // 
-            this.tab_DangXuat.BackColor = System.Drawing.Color.White;
-            this.tab_DangXuat.Location = new System.Drawing.Point(204, 4);
-            this.tab_DangXuat.Margin = new System.Windows.Forms.Padding(6);
-            this.tab_DangXuat.Name = "tab_DangXuat";
-            this.tab_DangXuat.Size = new System.Drawing.Size(1323, 687);
-            this.tab_DangXuat.TabIndex = 4;
-            this.tab_DangXuat.Text = "Đăng xuất !";
-            this.tab_DangXuat.Click += new System.EventHandler(this.tab_DangXuat_Click);
-            // 
-            // bigLabel4
-            // 
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bigLabel4.Location = new System.Drawing.Point(8, 95);
-            this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(131, 30);
-            this.bigLabel4.TabIndex = 8;
-            this.bigLabel4.Text = "Chức Vụ : ";
-            // 
-            // bigLabel5
-            // 
-            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel5.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bigLabel5.Location = new System.Drawing.Point(144, 28);
-            this.bigLabel5.Name = "bigLabel5";
-            this.bigLabel5.Size = new System.Drawing.Size(309, 30);
-            this.bigLabel5.TabIndex = 9;
-            this.bigLabel5.Text = "Nguyễn Văn An";
-            // 
-            // bigLabel6
-            // 
-            this.bigLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel6.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bigLabel6.Location = new System.Drawing.Point(145, 95);
-            this.bigLabel6.Name = "bigLabel6";
-            this.bigLabel6.Size = new System.Drawing.Size(308, 30);
-            this.bigLabel6.TabIndex = 10;
-            this.bigLabel6.Text = "Nhân Viên Bán Hàng !";
-            // 
-            // airButton1
-            // 
-            this.airButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.airButton1.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
-            this.airButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.airButton1.Image = null;
-            this.airButton1.Location = new System.Drawing.Point(3, 30);
-            this.airButton1.Name = "airButton1";
-            this.airButton1.NoRounding = false;
-            this.airButton1.Size = new System.Drawing.Size(100, 45);
-            this.airButton1.TabIndex = 7;
-            this.airButton1.Text = "airButton1";
-            this.airButton1.Transparent = false;
-            // 
-            // foreverGroupBox1
-            // 
-            this.foreverGroupBox1.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.foreverGroupBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.Controls.Add(this.hopePictureBox2);
-            this.foreverGroupBox1.Controls.Add(this.bigLabel7);
-            this.foreverGroupBox1.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.foreverGroupBox1.Location = new System.Drawing.Point(9, 163);
-            this.foreverGroupBox1.Name = "foreverGroupBox1";
-            this.foreverGroupBox1.ShowArrow = true;
-            this.foreverGroupBox1.ShowText = true;
-            this.foreverGroupBox1.Size = new System.Drawing.Size(414, 235);
-            this.foreverGroupBox1.TabIndex = 2;
-            this.foreverGroupBox1.Text = "Hóa đơn đã bán !";
-            this.foreverGroupBox1.TextColor = System.Drawing.Color.Olive;
-            this.foreverGroupBox1.Click += new System.EventHandler(this.foreverGroupBox1_Click);
-            // 
-            // bigLabel7
-            // 
-            this.bigLabel7.AutoSize = true;
-            this.bigLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel7.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel7.ForeColor = System.Drawing.Color.Olive;
-            this.bigLabel7.Location = new System.Drawing.Point(23, 107);
-            this.bigLabel7.Name = "bigLabel7";
-            this.bigLabel7.Size = new System.Drawing.Size(48, 57);
-            this.bigLabel7.TabIndex = 3;
-            this.bigLabel7.Text = "5";
-            // 
-            // foreverGroupBox2
-            // 
-            this.foreverGroupBox2.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox2.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.foreverGroupBox2.BaseColor = System.Drawing.Color.Olive;
-            this.foreverGroupBox2.Controls.Add(this.hopePictureBox3);
-            this.foreverGroupBox2.Controls.Add(this.bigLabel8);
-            this.foreverGroupBox2.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.foreverGroupBox2.Location = new System.Drawing.Point(428, 163);
-            this.foreverGroupBox2.Name = "foreverGroupBox2";
-            this.foreverGroupBox2.ShowArrow = true;
-            this.foreverGroupBox2.ShowText = true;
-            this.foreverGroupBox2.Size = new System.Drawing.Size(440, 235);
-            this.foreverGroupBox2.TabIndex = 7;
-            this.foreverGroupBox2.Text = "Doanh Thu Hôm Nay !";
-            this.foreverGroupBox2.TextColor = System.Drawing.Color.Yellow;
-            this.foreverGroupBox2.Click += new System.EventHandler(this.foreverGroupBox2_Click);
-            // 
-            // bigLabel8
-            // 
-            this.bigLabel8.AutoSize = true;
-            this.bigLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel8.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel8.ForeColor = System.Drawing.Color.Yellow;
-            this.bigLabel8.Location = new System.Drawing.Point(23, 107);
-            this.bigLabel8.Name = "bigLabel8";
-            this.bigLabel8.Size = new System.Drawing.Size(48, 57);
-            this.bigLabel8.TabIndex = 3;
-            this.bigLabel8.Text = "5";
-            // 
-            // foreverGroupBox3
-            // 
-            this.foreverGroupBox3.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox3.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.foreverGroupBox3.BaseColor = System.Drawing.SystemColors.WindowFrame;
-            this.foreverGroupBox3.Controls.Add(this.hopePictureBox4);
-            this.foreverGroupBox3.Controls.Add(this.bigLabel9);
-            this.foreverGroupBox3.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.foreverGroupBox3.Location = new System.Drawing.Point(872, 166);
-            this.foreverGroupBox3.Name = "foreverGroupBox3";
-            this.foreverGroupBox3.ShowArrow = true;
-            this.foreverGroupBox3.ShowText = true;
-            this.foreverGroupBox3.Size = new System.Drawing.Size(450, 235);
-            this.foreverGroupBox3.TabIndex = 7;
-            this.foreverGroupBox3.Text = "Danh Sách Khách Hàng !";
-            this.foreverGroupBox3.TextColor = System.Drawing.Color.Black;
-            // 
-            // bigLabel9
-            // 
-            this.bigLabel9.AutoSize = true;
-            this.bigLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel9.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel9.ForeColor = System.Drawing.Color.Black;
-            this.bigLabel9.Location = new System.Drawing.Point(23, 107);
-            this.bigLabel9.Name = "bigLabel9";
-            this.bigLabel9.Size = new System.Drawing.Size(48, 57);
-            this.bigLabel9.TabIndex = 3;
-            this.bigLabel9.Text = "5";
-            // 
-            // hopePictureBox1
-            // 
-            this.hopePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
-            this.hopePictureBox1.Image = global::Store_Manager.Properties.Resources.p_10819135;
-            this.hopePictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.hopePictureBox1.Name = "hopePictureBox1";
-            this.hopePictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.hopePictureBox1.Size = new System.Drawing.Size(56, 50);
-            this.hopePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hopePictureBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.hopePictureBox1.TabIndex = 0;
-            this.hopePictureBox1.TabStop = false;
-            this.hopePictureBox1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // hopePictureBox4
-            // 
-            this.hopePictureBox4.BackColor = System.Drawing.Color.White;
-            this.hopePictureBox4.Image = global::Store_Manager.Properties.Resources.group_779146;
-            this.hopePictureBox4.Location = new System.Drawing.Point(285, 79);
-            this.hopePictureBox4.Name = "hopePictureBox4";
-            this.hopePictureBox4.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.hopePictureBox4.Size = new System.Drawing.Size(136, 130);
-            this.hopePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hopePictureBox4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.hopePictureBox4.TabIndex = 6;
-            this.hopePictureBox4.TabStop = false;
-            this.hopePictureBox4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // hopePictureBox3
-            // 
-            this.hopePictureBox3.BackColor = System.Drawing.Color.White;
-            this.hopePictureBox3.Image = global::Store_Manager.Properties.Resources.investment_3459461;
-            this.hopePictureBox3.Location = new System.Drawing.Point(275, 79);
-            this.hopePictureBox3.Name = "hopePictureBox3";
-            this.hopePictureBox3.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.hopePictureBox3.Size = new System.Drawing.Size(136, 130);
-            this.hopePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hopePictureBox3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.hopePictureBox3.TabIndex = 6;
-            this.hopePictureBox3.TabStop = false;
-            this.hopePictureBox3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // hopePictureBox2
-            // 
-            this.hopePictureBox2.BackColor = System.Drawing.Color.White;
-            this.hopePictureBox2.Image = global::Store_Manager.Properties.Resources.business_136065742;
-            this.hopePictureBox2.Location = new System.Drawing.Point(258, 79);
-            this.hopePictureBox2.Name = "hopePictureBox2";
-            this.hopePictureBox2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.hopePictureBox2.Size = new System.Drawing.Size(136, 130);
-            this.hopePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hopePictureBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.hopePictureBox2.TabIndex = 6;
-            this.hopePictureBox2.TabStop = false;
-            this.hopePictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
             // parrotButton1
             // 
             this.parrotButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -617,6 +542,239 @@
             this.parrotButton1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
+            // bigLabel6
+            // 
+            this.bigLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel6.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bigLabel6.Location = new System.Drawing.Point(145, 95);
+            this.bigLabel6.Name = "bigLabel6";
+            this.bigLabel6.Size = new System.Drawing.Size(308, 30);
+            this.bigLabel6.TabIndex = 10;
+            this.bigLabel6.Text = "Nhân Viên Bán Hàng !";
+            // 
+            // bigLabel5
+            // 
+            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel5.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bigLabel5.Location = new System.Drawing.Point(144, 28);
+            this.bigLabel5.Name = "bigLabel5";
+            this.bigLabel5.Size = new System.Drawing.Size(309, 30);
+            this.bigLabel5.TabIndex = 9;
+            this.bigLabel5.Text = "Nguyễn Văn An";
+            // 
+            // bigLabel4
+            // 
+            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel4.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bigLabel4.Location = new System.Drawing.Point(8, 95);
+            this.bigLabel4.Name = "bigLabel4";
+            this.bigLabel4.Size = new System.Drawing.Size(131, 30);
+            this.bigLabel4.TabIndex = 8;
+            this.bigLabel4.Text = "Chức Vụ : ";
+            // 
+            // bigLabel3
+            // 
+            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel3.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bigLabel3.Location = new System.Drawing.Point(10, 28);
+            this.bigLabel3.Name = "bigLabel3";
+            this.bigLabel3.Size = new System.Drawing.Size(116, 30);
+            this.bigLabel3.TabIndex = 7;
+            this.bigLabel3.Text = "Xin Chào : ";
+            this.bigLabel3.Click += new System.EventHandler(this.bigLabel3_Click);
+            // 
+            // poisonDataGridView1
+            // 
+            this.poisonDataGridView1.AllowUserToResizeRows = false;
+            this.poisonDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.poisonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.poisonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.poisonDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.poisonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.poisonDataGridView1.EnableHeadersVisualStyles = false;
+            this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.poisonDataGridView1.Location = new System.Drawing.Point(171, 193);
+            this.poisonDataGridView1.Name = "poisonDataGridView1";
+            this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.poisonDataGridView1.RowHeadersWidth = 51;
+            this.poisonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.poisonDataGridView1.RowTemplate.Height = 24;
+            this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.poisonDataGridView1.Size = new System.Drawing.Size(8, 8);
+            this.poisonDataGridView1.TabIndex = 0;
+            // 
+            // tab_HoaDon
+            // 
+            this.tab_HoaDon.BackColor = System.Drawing.Color.White;
+            this.tab_HoaDon.ImageIndex = 2;
+            this.tab_HoaDon.Location = new System.Drawing.Point(204, 4);
+            this.tab_HoaDon.Margin = new System.Windows.Forms.Padding(6);
+            this.tab_HoaDon.Name = "tab_HoaDon";
+            this.tab_HoaDon.Padding = new System.Windows.Forms.Padding(6);
+            this.tab_HoaDon.Size = new System.Drawing.Size(1323, 868);
+            this.tab_HoaDon.TabIndex = 1;
+            this.tab_HoaDon.Text = "Hóa đơn";
+            // 
+            // tab_KhoHang
+            // 
+            this.tab_KhoHang.BackColor = System.Drawing.Color.White;
+            this.tab_KhoHang.ImageIndex = 3;
+            this.tab_KhoHang.Location = new System.Drawing.Point(204, 4);
+            this.tab_KhoHang.Margin = new System.Windows.Forms.Padding(6);
+            this.tab_KhoHang.Name = "tab_KhoHang";
+            this.tab_KhoHang.Padding = new System.Windows.Forms.Padding(6);
+            this.tab_KhoHang.Size = new System.Drawing.Size(1323, 868);
+            this.tab_KhoHang.TabIndex = 2;
+            this.tab_KhoHang.Text = "Kho hàng";
+            // 
+            // tab_KhuyenMai
+            // 
+            this.tab_KhuyenMai.BackColor = System.Drawing.Color.White;
+            this.tab_KhuyenMai.ImageIndex = 4;
+            this.tab_KhuyenMai.Location = new System.Drawing.Point(204, 4);
+            this.tab_KhuyenMai.Margin = new System.Windows.Forms.Padding(6);
+            this.tab_KhuyenMai.Name = "tab_KhuyenMai";
+            this.tab_KhuyenMai.Padding = new System.Windows.Forms.Padding(6);
+            this.tab_KhuyenMai.Size = new System.Drawing.Size(1323, 868);
+            this.tab_KhuyenMai.TabIndex = 3;
+            this.tab_KhuyenMai.Text = "Khuyến mãi";
+            // 
+            // tab_DoanhThu
+            // 
+            this.tab_DoanhThu.BackColor = System.Drawing.Color.White;
+            this.tab_DoanhThu.ImageIndex = 1;
+            this.tab_DoanhThu.Location = new System.Drawing.Point(204, 4);
+            this.tab_DoanhThu.Margin = new System.Windows.Forms.Padding(6);
+            this.tab_DoanhThu.Name = "tab_DoanhThu";
+            this.tab_DoanhThu.Size = new System.Drawing.Size(1323, 868);
+            this.tab_DoanhThu.TabIndex = 5;
+            this.tab_DoanhThu.Text = "Doanh Thu";
+            // 
+            // tab_DangXuat
+            // 
+            this.tab_DangXuat.BackColor = System.Drawing.Color.White;
+            this.tab_DangXuat.Location = new System.Drawing.Point(204, 4);
+            this.tab_DangXuat.Margin = new System.Windows.Forms.Padding(6);
+            this.tab_DangXuat.Name = "tab_DangXuat";
+            this.tab_DangXuat.Size = new System.Drawing.Size(1323, 868);
+            this.tab_DangXuat.TabIndex = 4;
+            this.tab_DangXuat.Text = "Đăng xuất !";
+            this.tab_DangXuat.Click += new System.EventHandler(this.tab_DangXuat_Click);
+            // 
+            // hoaDonTableAdapter
+            // 
+            this.hoaDonTableAdapter.ClearBeforeFill = true;
+            // 
+            // column
+            // 
+            this.column.HeaderText = "STT";
+            this.column.MinimumWidth = 6;
+            this.column.Name = "column";
+            this.column.ReadOnly = true;
+            this.column.Visible = false;
+            this.column.Width = 180;
+            // 
+            // column2
+            // 
+            this.column2.HeaderText = "Mã hóa đơn";
+            this.column2.MinimumWidth = 6;
+            this.column2.Name = "column2";
+            this.column2.ReadOnly = true;
+            this.column2.Visible = false;
+            this.column2.Width = 200;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maHoaDonDataGridViewTextBoxColumn
+            // 
+            this.maHoaDonDataGridViewTextBoxColumn.DataPropertyName = "MaHoaDon";
+            this.maHoaDonDataGridViewTextBoxColumn.HeaderText = "Mã hóa đơn ";
+            this.maHoaDonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maHoaDonDataGridViewTextBoxColumn.Name = "maHoaDonDataGridViewTextBoxColumn";
+            this.maHoaDonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maHoaDonDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // ngayDataGridViewTextBoxColumn
+            // 
+            this.ngayDataGridViewTextBoxColumn.DataPropertyName = "Ngay";
+            this.ngayDataGridViewTextBoxColumn.HeaderText = "Ngày";
+            this.ngayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayDataGridViewTextBoxColumn.Name = "ngayDataGridViewTextBoxColumn";
+            this.ngayDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngayDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // gioDataGridViewTextBoxColumn
+            // 
+            this.gioDataGridViewTextBoxColumn.DataPropertyName = "Gio";
+            this.gioDataGridViewTextBoxColumn.HeaderText = "Giờ";
+            this.gioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gioDataGridViewTextBoxColumn.Name = "gioDataGridViewTextBoxColumn";
+            this.gioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gioDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // tongThuDataGridViewTextBoxColumn
+            // 
+            this.tongThuDataGridViewTextBoxColumn.DataPropertyName = "TongThu";
+            this.tongThuDataGridViewTextBoxColumn.HeaderText = "Tổng Thu";
+            this.tongThuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tongThuDataGridViewTextBoxColumn.Name = "tongThuDataGridViewTextBoxColumn";
+            this.tongThuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tongThuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iDNhanVienDataGridViewTextBoxColumn
+            // 
+            this.iDNhanVienDataGridViewTextBoxColumn.DataPropertyName = "IDNhanVien";
+            this.iDNhanVienDataGridViewTextBoxColumn.HeaderText = "ID Nhân Viên";
+            this.iDNhanVienDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDNhanVienDataGridViewTextBoxColumn.Name = "iDNhanVienDataGridViewTextBoxColumn";
+            this.iDNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDNhanVienDataGridViewTextBoxColumn.Width = 190;
+            // 
+            // iDKhachHangDataGridViewTextBoxColumn
+            // 
+            this.iDKhachHangDataGridViewTextBoxColumn.DataPropertyName = "IDKhachHang";
+            this.iDKhachHangDataGridViewTextBoxColumn.HeaderText = "ID Khách Hàng";
+            this.iDKhachHangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDKhachHangDataGridViewTextBoxColumn.Name = "iDKhachHangDataGridViewTextBoxColumn";
+            this.iDKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDKhachHangDataGridViewTextBoxColumn.Width = 190;
+            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -631,23 +789,27 @@
             this.Text = "frm_TrangChu";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_TrangChu_Load);
             this.foreverForm1.ResumeLayout(false);
             this.foreverForm1.PerformLayout();
             this.crownGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tab_TrangChu.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
-            this.foreverGroupBox1.ResumeLayout(false);
-            this.foreverGroupBox1.PerformLayout();
-            this.foreverGroupBox2.ResumeLayout(false);
-            this.foreverGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DT_TrangChu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).EndInit();
             this.foreverGroupBox3.ResumeLayout(false);
             this.foreverGroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox4)).EndInit();
+            this.foreverGroupBox2.ResumeLayout(false);
+            this.foreverGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox3)).EndInit();
+            this.foreverGroupBox1.ResumeLayout(false);
+            this.foreverGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -672,7 +834,6 @@
         private ReaLTaiizor.Controls.PoisonDataGridView poisonDataGridView1;
         private ReaLTaiizor.Controls.GroupBox groupBox1;
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
-        private ReaLTaiizor.Controls.AirButton airButton1;
         private ReaLTaiizor.Controls.BigLabel bigLabel6;
         private ReaLTaiizor.Controls.BigLabel bigLabel5;
         private ReaLTaiizor.Controls.BigLabel bigLabel4;
@@ -686,5 +847,18 @@
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox3;
         private ReaLTaiizor.Controls.HopePictureBox hopePictureBox4;
         private ReaLTaiizor.Controls.BigLabel bigLabel9;
+        private ReaLTaiizor.Controls.PoisonDataGridView DT_TrangChu;
+        private Quan_Ly_Shop_Quan_AoDataSet quan_Ly_Shop_Quan_AoDataSet;
+        private System.Windows.Forms.BindingSource hoaDonBindingSource;
+        private Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter hoaDonTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHoaDonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongThuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDNhanVienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDKhachHangDataGridViewTextBoxColumn;
     }
 }
