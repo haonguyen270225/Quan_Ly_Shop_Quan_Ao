@@ -113,6 +113,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business_136065743 {
+            get {
+                object obj = ResourceManager.GetObject("business_136065743", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24", resourceCulture);
@@ -136,6 +146,16 @@ namespace Store_Manager.Properties {
         internal static System.Drawing.Bitmap group_779146 {
             get {
                 object obj = ResourceManager.GetObject("group_779146", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap group_7791461 {
+            get {
+                object obj = ResourceManager.GetObject("group_7791461", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +283,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap man_6251202 {
+            get {
+                object obj = ResourceManager.GetObject("man_6251202", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p_10819135 {
             get {
                 object obj = ResourceManager.GetObject("p_10819135", resourceCulture);
@@ -316,6 +346,26 @@ namespace Store_Manager.Properties {
         internal static System.Drawing.Bitmap revenue_21755841 {
             get {
                 object obj = ResourceManager.GetObject("revenue_21755841", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap revenue_21755842 {
+            get {
+                object obj = ResourceManager.GetObject("revenue_21755842", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap revenue_21755843 {
+            get {
+                object obj = ResourceManager.GetObject("revenue_21755843", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

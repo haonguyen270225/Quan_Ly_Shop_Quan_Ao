@@ -345,6 +345,21 @@
   <ItemGroup>
     <None Include="Resources\group_779146.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man_62512021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue_21755842.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_136065743.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue_21755843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_7791461.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
