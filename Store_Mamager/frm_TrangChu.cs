@@ -35,5 +35,35 @@ namespace Store_Manager
                 this.Close();
             }
         }
+
+        private void lostButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lostButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void hopePictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thông tin nhân viên !");
+        }
+
+        private void bigLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foreverGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foreverGroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

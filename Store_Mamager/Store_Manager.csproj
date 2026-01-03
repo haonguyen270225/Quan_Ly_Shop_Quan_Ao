@@ -291,6 +291,60 @@
   <ItemGroup>
     <None Include="Resources\logo-shop-quan-ao-nam-14.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_10096963.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_10819135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trang_Chu_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trang_Chu_051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_9376694.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\important_5632411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\important_56324111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_13606574.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_136065741.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_136065742.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue_2175584.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue_21755841.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\investment_3459461.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_779146.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

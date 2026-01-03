@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangChu02));
-            this.hopeForm1 = new ReaLTaiizor.Forms.HopeForm();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.airTabPage1 = new ReaLTaiizor.Controls.AirTabPage();
             this.tab_TrangChu = new System.Windows.Forms.TabPage();
@@ -39,26 +38,9 @@
             this.tab_KhuyenMai = new System.Windows.Forms.TabPage();
             this.tab_DoanhThu = new System.Windows.Forms.TabPage();
             this.tab_DangXuat = new System.Windows.Forms.TabPage();
+            this.hopeForm1 = new ReaLTaiizor.Forms.HopeForm();
             this.airTabPage1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // hopeForm1
-            // 
-            this.hopeForm1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hopeForm1.ControlBoxColorH = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(231)))), ((int)(((byte)(237)))));
-            this.hopeForm1.ControlBoxColorHC = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hopeForm1.ControlBoxColorN = System.Drawing.Color.White;
-            this.hopeForm1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.hopeForm1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hopeForm1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeForm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
-            this.hopeForm1.Image = global::Store_Manager.Properties.Resources.logo_shop_quan_ao_nam_14;
-            this.hopeForm1.Location = new System.Drawing.Point(0, 0);
-            this.hopeForm1.Name = "hopeForm1";
-            this.hopeForm1.Size = new System.Drawing.Size(1582, 40);
-            this.hopeForm1.TabIndex = 0;
-            this.hopeForm1.Text = "hopeForm1";
-            this.hopeForm1.ThemeColor = System.Drawing.Color.Goldenrod;
             // 
             // imageList1
             // 
@@ -168,6 +150,24 @@
             this.tab_DangXuat.Size = new System.Drawing.Size(1334, 942);
             this.tab_DangXuat.TabIndex = 5;
             this.tab_DangXuat.Text = "    Đăng xuất !";
+            // 
+            // hopeForm1
+            // 
+            this.hopeForm1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.hopeForm1.ControlBoxColorH = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(231)))), ((int)(((byte)(237)))));
+            this.hopeForm1.ControlBoxColorHC = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.hopeForm1.ControlBoxColorN = System.Drawing.Color.White;
+            this.hopeForm1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.hopeForm1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hopeForm1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.hopeForm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.hopeForm1.Image = global::Store_Manager.Properties.Resources.logo_shop_quan_ao_nam_14;
+            this.hopeForm1.Location = new System.Drawing.Point(0, 0);
+            this.hopeForm1.Name = "hopeForm1";
+            this.hopeForm1.Size = new System.Drawing.Size(1582, 40);
+            this.hopeForm1.TabIndex = 0;
+            this.hopeForm1.Text = "hopeForm1";
+            this.hopeForm1.ThemeColor = System.Drawing.Color.Goldenrod;
             // 
             // frm_TrangChu02
             // 
