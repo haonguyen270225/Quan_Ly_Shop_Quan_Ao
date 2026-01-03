@@ -93,5 +93,20 @@ namespace Store_Manager
             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
 
         }
+
+        private void parrotButton1_Click(object sender, EventArgs e)
+        {
+            GB_ChiTietTaiKhoan.BringToFront();
+            GB_ChiTietTaiKhoan.Visible = true;
+            DG_TrangChu.Visible = false;
+        }
+
+        private void CTTK_B_Thoat_Click(object sender, EventArgs e)
+        {
+            GB_ChiTietTaiKhoan.SendToBack();
+            GB_ChiTietTaiKhoan.Visible = false;
+            DG_TrangChu.Visible = true;
+
+        }
     }
 }

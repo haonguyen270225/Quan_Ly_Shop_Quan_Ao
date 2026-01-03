@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangChu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.foreverForm1 = new ReaLTaiizor.Forms.ForeverForm();
             this.controlBox1 = new ReaLTaiizor.Controls.ControlBox();
@@ -47,7 +47,7 @@
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.tabPage1 = new ReaLTaiizor.Controls.TabPage();
             this.tab_TrangChu = new System.Windows.Forms.TabPage();
-            this.DT_TrangChu = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.DG_TrangChu = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,11 +83,11 @@
             this.tab_TaiKhoan = new System.Windows.Forms.TabPage();
             this.tab_DangXuat = new System.Windows.Forms.TabPage();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
-            this.thunderGroupBox1 = new ReaLTaiizor.Controls.ThunderGroupBox();
-            this.hopePictureBox2 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.moonButton1 = new ReaLTaiizor.Controls.MoonButton();
-            this.moonButton2 = new ReaLTaiizor.Controls.MoonButton();
-            this.dreamButton1 = new ReaLTaiizor.Controls.DreamButton();
+            this.GB_ChiTietTaiKhoan = new ReaLTaiizor.Controls.ThunderGroupBox();
+            this.CTTK_PB_AnhDaiDien = new ReaLTaiizor.Controls.HopePictureBox();
+            this.CTTK_B_AnhMacDinh = new ReaLTaiizor.Controls.MoonButton();
+            this.CTTK_B_AnhTrenMay = new ReaLTaiizor.Controls.MoonButton();
+            this.CTTK_B_Thoat = new ReaLTaiizor.Controls.DreamButton();
             this.labelEdit1 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit3 = new ReaLTaiizor.Controls.LabelEdit();
@@ -98,26 +98,26 @@
             this.labelEdit8 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit9 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit10 = new ReaLTaiizor.Controls.LabelEdit();
-            this.hopeTextBox1 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox2 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox3 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox4 = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_HoVaTen = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_MaNhanVien = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_ChuVu = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_DiaChi = new ReaLTaiizor.Controls.HopeTextBox();
             this.labelEdit11 = new ReaLTaiizor.Controls.LabelEdit();
-            this.hopeTextBox5 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox6 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox7 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox8 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox9 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.hopeTextBox10 = new ReaLTaiizor.Controls.HopeTextBox();
-            this.spaceButton1 = new ReaLTaiizor.Controls.SpaceButton();
+            this.CTTK_TB_SDT = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_NgaySinh = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_GioiTinh = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_HinhThucLamViec = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_UserName = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_TB_PassWord = new ReaLTaiizor.Controls.HopeTextBox();
+            this.CTTK_B_ThayDoiTaiKhoan = new ReaLTaiizor.Controls.SpaceButton();
             this.dungeonLinkLabel1 = new ReaLTaiizor.Controls.DungeonLinkLabel();
-            this.FCB_HienThiMatKhau = new ReaLTaiizor.Controls.FoxCheckBox();
+            this.FCB_HienThiMatKhau_CTTK = new ReaLTaiizor.Controls.FoxCheckBox();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tab_TrangChu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DT_TrangChu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_TrangChu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).BeginInit();
             this.GB_DanhSachKhachHang.SuspendLayout();
@@ -126,8 +126,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
-            this.thunderGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox2)).BeginInit();
+            this.GB_ChiTietTaiKhoan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -146,7 +146,7 @@
             this.foreverForm1.BackColor = System.Drawing.Color.White;
             this.foreverForm1.BaseColor = System.Drawing.Color.White;
             this.foreverForm1.BorderColor = System.Drawing.Color.PowderBlue;
-            this.foreverForm1.Controls.Add(this.thunderGroupBox1);
+            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Controls.Add(this.controlBox1);
             this.foreverForm1.Controls.Add(this.crownGroupBox1);
             this.foreverForm1.Controls.Add(this.nightLabel1);
@@ -313,7 +313,7 @@
             this.tab_TrangChu.Controls.Add(this.GB_HoaDonDaBan);
             this.tab_TrangChu.Controls.Add(this.groupBox1);
             this.tab_TrangChu.Controls.Add(this.poisonDataGridView1);
-            this.tab_TrangChu.Controls.Add(this.DT_TrangChu);
+            this.tab_TrangChu.Controls.Add(this.DG_TrangChu);
             this.tab_TrangChu.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_TrangChu.ImageIndex = 0;
             this.tab_TrangChu.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -325,24 +325,24 @@
             this.tab_TrangChu.TabIndex = 0;
             this.tab_TrangChu.Text = "Trang Chủ";
             // 
-            // DT_TrangChu
+            // DG_TrangChu
             // 
-            this.DT_TrangChu.AllowUserToResizeRows = false;
-            this.DT_TrangChu.AutoGenerateColumns = false;
-            this.DT_TrangChu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DT_TrangChu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DT_TrangChu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DT_TrangChu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DT_TrangChu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.DT_TrangChu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DT_TrangChu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DG_TrangChu.AllowUserToResizeRows = false;
+            this.DG_TrangChu.AutoGenerateColumns = false;
+            this.DG_TrangChu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DG_TrangChu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DG_TrangChu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DG_TrangChu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_TrangChu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.DG_TrangChu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_TrangChu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.maHoaDonDataGridViewTextBoxColumn,
             this.ngayDataGridViewTextBoxColumn,
@@ -352,38 +352,37 @@
             this.iDKhachHangDataGridViewTextBoxColumn,
             this.column,
             this.column2});
-            this.DT_TrangChu.DataSource = this.hoaDonBindingSource;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DT_TrangChu.DefaultCellStyle = dataGridViewCellStyle14;
-            this.DT_TrangChu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DT_TrangChu.EnableHeadersVisualStyles = false;
-            this.DT_TrangChu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DT_TrangChu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DT_TrangChu.Location = new System.Drawing.Point(6, 381);
-            this.DT_TrangChu.Name = "DT_TrangChu";
-            this.DT_TrangChu.ReadOnly = true;
-            this.DT_TrangChu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DT_TrangChu.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.DT_TrangChu.RowHeadersWidth = 51;
-            this.DT_TrangChu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DT_TrangChu.RowTemplate.Height = 24;
-            this.DT_TrangChu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DT_TrangChu.Size = new System.Drawing.Size(1331, 356);
-            this.DT_TrangChu.TabIndex = 8;
-            this.DT_TrangChu.Visible = false;
+            this.DG_TrangChu.DataSource = this.hoaDonBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_TrangChu.DefaultCellStyle = dataGridViewCellStyle8;
+            this.DG_TrangChu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DG_TrangChu.EnableHeadersVisualStyles = false;
+            this.DG_TrangChu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DG_TrangChu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DG_TrangChu.Location = new System.Drawing.Point(6, 381);
+            this.DG_TrangChu.Name = "DG_TrangChu";
+            this.DG_TrangChu.ReadOnly = true;
+            this.DG_TrangChu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_TrangChu.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.DG_TrangChu.RowHeadersWidth = 51;
+            this.DG_TrangChu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DG_TrangChu.RowTemplate.Height = 24;
+            this.DG_TrangChu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_TrangChu.Size = new System.Drawing.Size(1331, 356);
+            this.DG_TrangChu.TabIndex = 8;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -698,6 +697,7 @@
             this.parrotButton1.TextColor = System.Drawing.Color.Black;
             this.parrotButton1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.parrotButton1.Click += new System.EventHandler(this.parrotButton1_Click);
             // 
             // bigLabel6
             // 
@@ -750,37 +750,37 @@
             this.poisonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.poisonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.poisonDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.poisonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.poisonDataGridView1.EnableHeadersVisualStyles = false;
             this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.poisonDataGridView1.Location = new System.Drawing.Point(171, 193);
             this.poisonDataGridView1.Name = "poisonDataGridView1";
             this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.poisonDataGridView1.RowHeadersWidth = 51;
             this.poisonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.poisonDataGridView1.RowTemplate.Height = 24;
@@ -859,106 +859,108 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
-            // thunderGroupBox1
+            // GB_ChiTietTaiKhoan
             // 
-            this.thunderGroupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.thunderGroupBox1.BodyColorA = System.Drawing.Color.Gainsboro;
-            this.thunderGroupBox1.BodyColorB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.thunderGroupBox1.BodyColorC = System.Drawing.Color.DimGray;
-            this.thunderGroupBox1.BodyColorD = System.Drawing.Color.Gray;
-            this.thunderGroupBox1.Controls.Add(this.dungeonLinkLabel1);
-            this.thunderGroupBox1.Controls.Add(this.FCB_HienThiMatKhau);
-            this.thunderGroupBox1.Controls.Add(this.spaceButton1);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox10);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox9);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox8);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox7);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox6);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox5);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit11);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox4);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox3);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox2);
-            this.thunderGroupBox1.Controls.Add(this.hopeTextBox1);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit10);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit9);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit8);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit7);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit6);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit5);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit4);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit3);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit2);
-            this.thunderGroupBox1.Controls.Add(this.labelEdit1);
-            this.thunderGroupBox1.Controls.Add(this.dreamButton1);
-            this.thunderGroupBox1.Controls.Add(this.moonButton2);
-            this.thunderGroupBox1.Controls.Add(this.moonButton1);
-            this.thunderGroupBox1.Controls.Add(this.hopePictureBox2);
-            this.thunderGroupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thunderGroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.thunderGroupBox1.Location = new System.Drawing.Point(369, 112);
-            this.thunderGroupBox1.Name = "thunderGroupBox1";
-            this.thunderGroupBox1.Size = new System.Drawing.Size(870, 725);
-            this.thunderGroupBox1.TabIndex = 9;
-            this.thunderGroupBox1.Text = "    Chi tiết tài khoản !";
+            this.GB_ChiTietTaiKhoan.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GB_ChiTietTaiKhoan.BodyColorA = System.Drawing.Color.Gainsboro;
+            this.GB_ChiTietTaiKhoan.BodyColorB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.GB_ChiTietTaiKhoan.BodyColorC = System.Drawing.Color.DimGray;
+            this.GB_ChiTietTaiKhoan.BodyColorD = System.Drawing.Color.Gray;
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.dungeonLinkLabel1);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.FCB_HienThiMatKhau_CTTK);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_ThayDoiTaiKhoan);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_PassWord);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_UserName);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_HinhThucLamViec);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_GioiTinh);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_NgaySinh);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_SDT);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit11);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_DiaChi);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_ChuVu);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_MaNhanVien);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_HoVaTen);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit10);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit9);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit8);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit7);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit6);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit5);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit4);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit3);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit2);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit1);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_Thoat);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_AnhTrenMay);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_AnhMacDinh);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_PB_AnhDaiDien);
+            this.GB_ChiTietTaiKhoan.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB_ChiTietTaiKhoan.ForeColor = System.Drawing.Color.Black;
+            this.GB_ChiTietTaiKhoan.Location = new System.Drawing.Point(369, 112);
+            this.GB_ChiTietTaiKhoan.Name = "GB_ChiTietTaiKhoan";
+            this.GB_ChiTietTaiKhoan.Size = new System.Drawing.Size(870, 725);
+            this.GB_ChiTietTaiKhoan.TabIndex = 9;
+            this.GB_ChiTietTaiKhoan.Text = "    Chi tiết tài khoản !";
+            this.GB_ChiTietTaiKhoan.Visible = false;
             // 
-            // hopePictureBox2
+            // CTTK_PB_AnhDaiDien
             // 
-            this.hopePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
-            this.hopePictureBox2.Image = global::Store_Manager.Properties.Resources.man_6251202;
-            this.hopePictureBox2.Location = new System.Drawing.Point(19, 51);
-            this.hopePictureBox2.Name = "hopePictureBox2";
-            this.hopePictureBox2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.hopePictureBox2.Size = new System.Drawing.Size(260, 303);
-            this.hopePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hopePictureBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.hopePictureBox2.TabIndex = 11;
-            this.hopePictureBox2.TabStop = false;
-            this.hopePictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.CTTK_PB_AnhDaiDien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
+            this.CTTK_PB_AnhDaiDien.Image = global::Store_Manager.Properties.Resources.man_6251202;
+            this.CTTK_PB_AnhDaiDien.Location = new System.Drawing.Point(19, 51);
+            this.CTTK_PB_AnhDaiDien.Name = "CTTK_PB_AnhDaiDien";
+            this.CTTK_PB_AnhDaiDien.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.CTTK_PB_AnhDaiDien.Size = new System.Drawing.Size(260, 303);
+            this.CTTK_PB_AnhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CTTK_PB_AnhDaiDien.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.CTTK_PB_AnhDaiDien.TabIndex = 11;
+            this.CTTK_PB_AnhDaiDien.TabStop = false;
+            this.CTTK_PB_AnhDaiDien.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
-            // moonButton1
+            // CTTK_B_AnhMacDinh
             // 
-            this.moonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moonButton1.Customization = "/////9PT0//w8PD/gICA/w==";
-            this.moonButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.moonButton1.Image = null;
-            this.moonButton1.Location = new System.Drawing.Point(21, 360);
-            this.moonButton1.Name = "moonButton1";
-            this.moonButton1.NoRounding = false;
-            this.moonButton1.Size = new System.Drawing.Size(120, 36);
-            this.moonButton1.TabIndex = 12;
-            this.moonButton1.Text = "Mặc định!";
-            this.moonButton1.Transparent = false;
+            this.CTTK_B_AnhMacDinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_AnhMacDinh.Customization = "/////9PT0//w8PD/gICA/w==";
+            this.CTTK_B_AnhMacDinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CTTK_B_AnhMacDinh.Image = null;
+            this.CTTK_B_AnhMacDinh.Location = new System.Drawing.Point(21, 360);
+            this.CTTK_B_AnhMacDinh.Name = "CTTK_B_AnhMacDinh";
+            this.CTTK_B_AnhMacDinh.NoRounding = false;
+            this.CTTK_B_AnhMacDinh.Size = new System.Drawing.Size(120, 36);
+            this.CTTK_B_AnhMacDinh.TabIndex = 12;
+            this.CTTK_B_AnhMacDinh.Text = "Mặc định!";
+            this.CTTK_B_AnhMacDinh.Transparent = false;
             // 
-            // moonButton2
+            // CTTK_B_AnhTrenMay
             // 
-            this.moonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moonButton2.Customization = "/////9PT0//w8PD/gICA/w==";
-            this.moonButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.moonButton2.Image = null;
-            this.moonButton2.Location = new System.Drawing.Point(159, 360);
-            this.moonButton2.Name = "moonButton2";
-            this.moonButton2.NoRounding = false;
-            this.moonButton2.Size = new System.Drawing.Size(120, 36);
-            this.moonButton2.TabIndex = 13;
-            this.moonButton2.Text = "Trên máy!";
-            this.moonButton2.Transparent = false;
+            this.CTTK_B_AnhTrenMay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_AnhTrenMay.Customization = "/////9PT0//w8PD/gICA/w==";
+            this.CTTK_B_AnhTrenMay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CTTK_B_AnhTrenMay.Image = null;
+            this.CTTK_B_AnhTrenMay.Location = new System.Drawing.Point(159, 360);
+            this.CTTK_B_AnhTrenMay.Name = "CTTK_B_AnhTrenMay";
+            this.CTTK_B_AnhTrenMay.NoRounding = false;
+            this.CTTK_B_AnhTrenMay.Size = new System.Drawing.Size(120, 36);
+            this.CTTK_B_AnhTrenMay.TabIndex = 13;
+            this.CTTK_B_AnhTrenMay.Text = "Trên máy!";
+            this.CTTK_B_AnhTrenMay.Transparent = false;
             // 
-            // dreamButton1
+            // CTTK_B_Thoat
             // 
-            this.dreamButton1.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dreamButton1.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.dreamButton1.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.dreamButton1.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dreamButton1.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dreamButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dreamButton1.ForeColor = System.Drawing.Color.Red;
-            this.dreamButton1.Location = new System.Drawing.Point(735, 669);
-            this.dreamButton1.Name = "dreamButton1";
-            this.dreamButton1.Size = new System.Drawing.Size(120, 41);
-            this.dreamButton1.TabIndex = 14;
-            this.dreamButton1.Text = "Thoát!";
-            this.dreamButton1.UseVisualStyleBackColor = true;
+            this.CTTK_B_Thoat.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CTTK_B_Thoat.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.CTTK_B_Thoat.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.CTTK_B_Thoat.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CTTK_B_Thoat.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CTTK_B_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_Thoat.ForeColor = System.Drawing.Color.Red;
+            this.CTTK_B_Thoat.Location = new System.Drawing.Point(735, 669);
+            this.CTTK_B_Thoat.Name = "CTTK_B_Thoat";
+            this.CTTK_B_Thoat.Size = new System.Drawing.Size(120, 41);
+            this.CTTK_B_Thoat.TabIndex = 14;
+            this.CTTK_B_Thoat.Text = "Thoát!";
+            this.CTTK_B_Thoat.UseVisualStyleBackColor = true;
+            this.CTTK_B_Thoat.Click += new System.EventHandler(this.CTTK_B_Thoat_Click);
             // 
             // labelEdit1
             // 
@@ -1080,101 +1082,101 @@
             this.labelEdit10.TabIndex = 24;
             this.labelEdit10.Text = "Hình thức làm việc :";
             // 
-            // hopeTextBox1
+            // CTTK_TB_HoVaTen
             // 
-            this.hopeTextBox1.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox1.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox1.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox1.Hint = "";
-            this.hopeTextBox1.Location = new System.Drawing.Point(480, 38);
-            this.hopeTextBox1.MaxLength = 32767;
-            this.hopeTextBox1.Multiline = false;
-            this.hopeTextBox1.Name = "hopeTextBox1";
-            this.hopeTextBox1.PasswordChar = '\0';
-            this.hopeTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox1.SelectedText = "";
-            this.hopeTextBox1.SelectionLength = 0;
-            this.hopeTextBox1.SelectionStart = 0;
-            this.hopeTextBox1.Size = new System.Drawing.Size(375, 43);
-            this.hopeTextBox1.TabIndex = 25;
-            this.hopeTextBox1.TabStop = false;
-            this.hopeTextBox1.Text = "Nguyễn Văn An";
-            this.hopeTextBox1.UseSystemPasswordChar = false;
+            this.CTTK_TB_HoVaTen.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_HoVaTen.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_HoVaTen.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_HoVaTen.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_HoVaTen.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_HoVaTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_HoVaTen.Hint = "";
+            this.CTTK_TB_HoVaTen.Location = new System.Drawing.Point(480, 38);
+            this.CTTK_TB_HoVaTen.MaxLength = 32767;
+            this.CTTK_TB_HoVaTen.Multiline = false;
+            this.CTTK_TB_HoVaTen.Name = "CTTK_TB_HoVaTen";
+            this.CTTK_TB_HoVaTen.PasswordChar = '\0';
+            this.CTTK_TB_HoVaTen.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_HoVaTen.SelectedText = "";
+            this.CTTK_TB_HoVaTen.SelectionLength = 0;
+            this.CTTK_TB_HoVaTen.SelectionStart = 0;
+            this.CTTK_TB_HoVaTen.Size = new System.Drawing.Size(375, 43);
+            this.CTTK_TB_HoVaTen.TabIndex = 25;
+            this.CTTK_TB_HoVaTen.TabStop = false;
+            this.CTTK_TB_HoVaTen.Text = "Nguyễn Văn An";
+            this.CTTK_TB_HoVaTen.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox2
+            // CTTK_TB_MaNhanVien
             // 
-            this.hopeTextBox2.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox2.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox2.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox2.Hint = "";
-            this.hopeTextBox2.Location = new System.Drawing.Point(480, 99);
-            this.hopeTextBox2.MaxLength = 32767;
-            this.hopeTextBox2.Multiline = false;
-            this.hopeTextBox2.Name = "hopeTextBox2";
-            this.hopeTextBox2.PasswordChar = '\0';
-            this.hopeTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox2.SelectedText = "";
-            this.hopeTextBox2.SelectionLength = 0;
-            this.hopeTextBox2.SelectionStart = 0;
-            this.hopeTextBox2.Size = new System.Drawing.Size(375, 43);
-            this.hopeTextBox2.TabIndex = 26;
-            this.hopeTextBox2.TabStop = false;
-            this.hopeTextBox2.Text = "NV001";
-            this.hopeTextBox2.UseSystemPasswordChar = false;
+            this.CTTK_TB_MaNhanVien.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_MaNhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_MaNhanVien.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_MaNhanVien.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_MaNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_MaNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_MaNhanVien.Hint = "";
+            this.CTTK_TB_MaNhanVien.Location = new System.Drawing.Point(480, 99);
+            this.CTTK_TB_MaNhanVien.MaxLength = 32767;
+            this.CTTK_TB_MaNhanVien.Multiline = false;
+            this.CTTK_TB_MaNhanVien.Name = "CTTK_TB_MaNhanVien";
+            this.CTTK_TB_MaNhanVien.PasswordChar = '\0';
+            this.CTTK_TB_MaNhanVien.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_MaNhanVien.SelectedText = "";
+            this.CTTK_TB_MaNhanVien.SelectionLength = 0;
+            this.CTTK_TB_MaNhanVien.SelectionStart = 0;
+            this.CTTK_TB_MaNhanVien.Size = new System.Drawing.Size(375, 43);
+            this.CTTK_TB_MaNhanVien.TabIndex = 26;
+            this.CTTK_TB_MaNhanVien.TabStop = false;
+            this.CTTK_TB_MaNhanVien.Text = "NV001";
+            this.CTTK_TB_MaNhanVien.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox3
+            // CTTK_TB_ChuVu
             // 
-            this.hopeTextBox3.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox3.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox3.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox3.Hint = "";
-            this.hopeTextBox3.Location = new System.Drawing.Point(480, 157);
-            this.hopeTextBox3.MaxLength = 32767;
-            this.hopeTextBox3.Multiline = false;
-            this.hopeTextBox3.Name = "hopeTextBox3";
-            this.hopeTextBox3.PasswordChar = '\0';
-            this.hopeTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox3.SelectedText = "";
-            this.hopeTextBox3.SelectionLength = 0;
-            this.hopeTextBox3.SelectionStart = 0;
-            this.hopeTextBox3.Size = new System.Drawing.Size(375, 43);
-            this.hopeTextBox3.TabIndex = 27;
-            this.hopeTextBox3.TabStop = false;
-            this.hopeTextBox3.Text = "Nhân Viên Bán Hàng ";
-            this.hopeTextBox3.UseSystemPasswordChar = false;
+            this.CTTK_TB_ChuVu.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_ChuVu.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_ChuVu.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_ChuVu.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_ChuVu.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_ChuVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_ChuVu.Hint = "";
+            this.CTTK_TB_ChuVu.Location = new System.Drawing.Point(480, 157);
+            this.CTTK_TB_ChuVu.MaxLength = 32767;
+            this.CTTK_TB_ChuVu.Multiline = false;
+            this.CTTK_TB_ChuVu.Name = "CTTK_TB_ChuVu";
+            this.CTTK_TB_ChuVu.PasswordChar = '\0';
+            this.CTTK_TB_ChuVu.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_ChuVu.SelectedText = "";
+            this.CTTK_TB_ChuVu.SelectionLength = 0;
+            this.CTTK_TB_ChuVu.SelectionStart = 0;
+            this.CTTK_TB_ChuVu.Size = new System.Drawing.Size(375, 43);
+            this.CTTK_TB_ChuVu.TabIndex = 27;
+            this.CTTK_TB_ChuVu.TabStop = false;
+            this.CTTK_TB_ChuVu.Text = "Nhân Viên Bán Hàng ";
+            this.CTTK_TB_ChuVu.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox4
+            // CTTK_TB_DiaChi
             // 
-            this.hopeTextBox4.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox4.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox4.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox4.Hint = "";
-            this.hopeTextBox4.Location = new System.Drawing.Point(480, 212);
-            this.hopeTextBox4.MaxLength = 32767;
-            this.hopeTextBox4.Multiline = false;
-            this.hopeTextBox4.Name = "hopeTextBox4";
-            this.hopeTextBox4.PasswordChar = '\0';
-            this.hopeTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox4.SelectedText = "";
-            this.hopeTextBox4.SelectionLength = 0;
-            this.hopeTextBox4.SelectionStart = 0;
-            this.hopeTextBox4.Size = new System.Drawing.Size(375, 43);
-            this.hopeTextBox4.TabIndex = 28;
-            this.hopeTextBox4.TabStop = false;
-            this.hopeTextBox4.Text = "Sóc Trăng ";
-            this.hopeTextBox4.UseSystemPasswordChar = false;
+            this.CTTK_TB_DiaChi.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_DiaChi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_DiaChi.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_DiaChi.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_DiaChi.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_DiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_DiaChi.Hint = "";
+            this.CTTK_TB_DiaChi.Location = new System.Drawing.Point(480, 212);
+            this.CTTK_TB_DiaChi.MaxLength = 32767;
+            this.CTTK_TB_DiaChi.Multiline = false;
+            this.CTTK_TB_DiaChi.Name = "CTTK_TB_DiaChi";
+            this.CTTK_TB_DiaChi.PasswordChar = '\0';
+            this.CTTK_TB_DiaChi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_DiaChi.SelectedText = "";
+            this.CTTK_TB_DiaChi.SelectionLength = 0;
+            this.CTTK_TB_DiaChi.SelectionStart = 0;
+            this.CTTK_TB_DiaChi.Size = new System.Drawing.Size(375, 43);
+            this.CTTK_TB_DiaChi.TabIndex = 28;
+            this.CTTK_TB_DiaChi.TabStop = false;
+            this.CTTK_TB_DiaChi.Text = "Sóc Trăng ";
+            this.CTTK_TB_DiaChi.UseSystemPasswordChar = false;
             // 
             // labelEdit11
             // 
@@ -1188,164 +1190,164 @@
             this.labelEdit11.TabIndex = 29;
             this.labelEdit11.Text = "SDT :";
             // 
-            // hopeTextBox5
+            // CTTK_TB_SDT
             // 
-            this.hopeTextBox5.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox5.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox5.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox5.Hint = "";
-            this.hopeTextBox5.Location = new System.Drawing.Point(480, 264);
-            this.hopeTextBox5.MaxLength = 32767;
-            this.hopeTextBox5.Multiline = false;
-            this.hopeTextBox5.Name = "hopeTextBox5";
-            this.hopeTextBox5.PasswordChar = '\0';
-            this.hopeTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox5.SelectedText = "";
-            this.hopeTextBox5.SelectionLength = 0;
-            this.hopeTextBox5.SelectionStart = 0;
-            this.hopeTextBox5.Size = new System.Drawing.Size(375, 43);
-            this.hopeTextBox5.TabIndex = 30;
-            this.hopeTextBox5.TabStop = false;
-            this.hopeTextBox5.Text = "0912345678";
-            this.hopeTextBox5.UseSystemPasswordChar = false;
+            this.CTTK_TB_SDT.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_SDT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_SDT.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_SDT.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_SDT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_SDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_SDT.Hint = "";
+            this.CTTK_TB_SDT.Location = new System.Drawing.Point(480, 264);
+            this.CTTK_TB_SDT.MaxLength = 32767;
+            this.CTTK_TB_SDT.Multiline = false;
+            this.CTTK_TB_SDT.Name = "CTTK_TB_SDT";
+            this.CTTK_TB_SDT.PasswordChar = '\0';
+            this.CTTK_TB_SDT.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_SDT.SelectedText = "";
+            this.CTTK_TB_SDT.SelectionLength = 0;
+            this.CTTK_TB_SDT.SelectionStart = 0;
+            this.CTTK_TB_SDT.Size = new System.Drawing.Size(375, 43);
+            this.CTTK_TB_SDT.TabIndex = 30;
+            this.CTTK_TB_SDT.TabStop = false;
+            this.CTTK_TB_SDT.Text = "0912345678";
+            this.CTTK_TB_SDT.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox6
+            // CTTK_TB_NgaySinh
             // 
-            this.hopeTextBox6.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox6.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox6.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox6.Hint = "";
-            this.hopeTextBox6.Location = new System.Drawing.Point(450, 322);
-            this.hopeTextBox6.MaxLength = 32767;
-            this.hopeTextBox6.Multiline = false;
-            this.hopeTextBox6.Name = "hopeTextBox6";
-            this.hopeTextBox6.PasswordChar = '\0';
-            this.hopeTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox6.SelectedText = "";
-            this.hopeTextBox6.SelectionLength = 0;
-            this.hopeTextBox6.SelectionStart = 0;
-            this.hopeTextBox6.Size = new System.Drawing.Size(129, 43);
-            this.hopeTextBox6.TabIndex = 31;
-            this.hopeTextBox6.TabStop = false;
-            this.hopeTextBox6.Text = "12/12/2006";
-            this.hopeTextBox6.UseSystemPasswordChar = false;
+            this.CTTK_TB_NgaySinh.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_NgaySinh.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_NgaySinh.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_NgaySinh.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_NgaySinh.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_NgaySinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_NgaySinh.Hint = "";
+            this.CTTK_TB_NgaySinh.Location = new System.Drawing.Point(450, 322);
+            this.CTTK_TB_NgaySinh.MaxLength = 32767;
+            this.CTTK_TB_NgaySinh.Multiline = false;
+            this.CTTK_TB_NgaySinh.Name = "CTTK_TB_NgaySinh";
+            this.CTTK_TB_NgaySinh.PasswordChar = '\0';
+            this.CTTK_TB_NgaySinh.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_NgaySinh.SelectedText = "";
+            this.CTTK_TB_NgaySinh.SelectionLength = 0;
+            this.CTTK_TB_NgaySinh.SelectionStart = 0;
+            this.CTTK_TB_NgaySinh.Size = new System.Drawing.Size(129, 43);
+            this.CTTK_TB_NgaySinh.TabIndex = 31;
+            this.CTTK_TB_NgaySinh.TabStop = false;
+            this.CTTK_TB_NgaySinh.Text = "12/12/2006";
+            this.CTTK_TB_NgaySinh.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox7
+            // CTTK_TB_GioiTinh
             // 
-            this.hopeTextBox7.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox7.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox7.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox7.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox7.Hint = "";
-            this.hopeTextBox7.Location = new System.Drawing.Point(724, 323);
-            this.hopeTextBox7.MaxLength = 32767;
-            this.hopeTextBox7.Multiline = false;
-            this.hopeTextBox7.Name = "hopeTextBox7";
-            this.hopeTextBox7.PasswordChar = '\0';
-            this.hopeTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox7.SelectedText = "";
-            this.hopeTextBox7.SelectionLength = 0;
-            this.hopeTextBox7.SelectionStart = 0;
-            this.hopeTextBox7.Size = new System.Drawing.Size(129, 43);
-            this.hopeTextBox7.TabIndex = 32;
-            this.hopeTextBox7.TabStop = false;
-            this.hopeTextBox7.Text = "Nam";
-            this.hopeTextBox7.UseSystemPasswordChar = false;
+            this.CTTK_TB_GioiTinh.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_GioiTinh.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_GioiTinh.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_GioiTinh.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_GioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_GioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_GioiTinh.Hint = "";
+            this.CTTK_TB_GioiTinh.Location = new System.Drawing.Point(724, 323);
+            this.CTTK_TB_GioiTinh.MaxLength = 32767;
+            this.CTTK_TB_GioiTinh.Multiline = false;
+            this.CTTK_TB_GioiTinh.Name = "CTTK_TB_GioiTinh";
+            this.CTTK_TB_GioiTinh.PasswordChar = '\0';
+            this.CTTK_TB_GioiTinh.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_GioiTinh.SelectedText = "";
+            this.CTTK_TB_GioiTinh.SelectionLength = 0;
+            this.CTTK_TB_GioiTinh.SelectionStart = 0;
+            this.CTTK_TB_GioiTinh.Size = new System.Drawing.Size(129, 43);
+            this.CTTK_TB_GioiTinh.TabIndex = 32;
+            this.CTTK_TB_GioiTinh.TabStop = false;
+            this.CTTK_TB_GioiTinh.Text = "Nam";
+            this.CTTK_TB_GioiTinh.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox8
+            // CTTK_TB_HinhThucLamViec
             // 
-            this.hopeTextBox8.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox8.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox8.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox8.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox8.Hint = "";
-            this.hopeTextBox8.Location = new System.Drawing.Point(543, 374);
-            this.hopeTextBox8.MaxLength = 32767;
-            this.hopeTextBox8.Multiline = false;
-            this.hopeTextBox8.Name = "hopeTextBox8";
-            this.hopeTextBox8.PasswordChar = '\0';
-            this.hopeTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox8.SelectedText = "";
-            this.hopeTextBox8.SelectionLength = 0;
-            this.hopeTextBox8.SelectionStart = 0;
-            this.hopeTextBox8.Size = new System.Drawing.Size(296, 43);
-            this.hopeTextBox8.TabIndex = 33;
-            this.hopeTextBox8.TabStop = false;
-            this.hopeTextBox8.Text = "Full time !";
-            this.hopeTextBox8.UseSystemPasswordChar = false;
+            this.CTTK_TB_HinhThucLamViec.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_HinhThucLamViec.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_HinhThucLamViec.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_HinhThucLamViec.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_HinhThucLamViec.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_HinhThucLamViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_HinhThucLamViec.Hint = "";
+            this.CTTK_TB_HinhThucLamViec.Location = new System.Drawing.Point(543, 374);
+            this.CTTK_TB_HinhThucLamViec.MaxLength = 32767;
+            this.CTTK_TB_HinhThucLamViec.Multiline = false;
+            this.CTTK_TB_HinhThucLamViec.Name = "CTTK_TB_HinhThucLamViec";
+            this.CTTK_TB_HinhThucLamViec.PasswordChar = '\0';
+            this.CTTK_TB_HinhThucLamViec.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_HinhThucLamViec.SelectedText = "";
+            this.CTTK_TB_HinhThucLamViec.SelectionLength = 0;
+            this.CTTK_TB_HinhThucLamViec.SelectionStart = 0;
+            this.CTTK_TB_HinhThucLamViec.Size = new System.Drawing.Size(296, 43);
+            this.CTTK_TB_HinhThucLamViec.TabIndex = 33;
+            this.CTTK_TB_HinhThucLamViec.TabStop = false;
+            this.CTTK_TB_HinhThucLamViec.Text = "Full time !";
+            this.CTTK_TB_HinhThucLamViec.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox9
+            // CTTK_TB_UserName
             // 
-            this.hopeTextBox9.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox9.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox9.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox9.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox9.Hint = "";
-            this.hopeTextBox9.Location = new System.Drawing.Point(328, 493);
-            this.hopeTextBox9.MaxLength = 32767;
-            this.hopeTextBox9.Multiline = false;
-            this.hopeTextBox9.Name = "hopeTextBox9";
-            this.hopeTextBox9.PasswordChar = '\0';
-            this.hopeTextBox9.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox9.SelectedText = "";
-            this.hopeTextBox9.SelectionLength = 0;
-            this.hopeTextBox9.SelectionStart = 0;
-            this.hopeTextBox9.Size = new System.Drawing.Size(296, 43);
-            this.hopeTextBox9.TabIndex = 34;
-            this.hopeTextBox9.TabStop = false;
-            this.hopeTextBox9.Text = "an.nguyen";
-            this.hopeTextBox9.UseSystemPasswordChar = false;
+            this.CTTK_TB_UserName.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_UserName.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_UserName.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_UserName.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_UserName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_UserName.Hint = "";
+            this.CTTK_TB_UserName.Location = new System.Drawing.Point(328, 493);
+            this.CTTK_TB_UserName.MaxLength = 32767;
+            this.CTTK_TB_UserName.Multiline = false;
+            this.CTTK_TB_UserName.Name = "CTTK_TB_UserName";
+            this.CTTK_TB_UserName.PasswordChar = '\0';
+            this.CTTK_TB_UserName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_UserName.SelectedText = "";
+            this.CTTK_TB_UserName.SelectionLength = 0;
+            this.CTTK_TB_UserName.SelectionStart = 0;
+            this.CTTK_TB_UserName.Size = new System.Drawing.Size(296, 43);
+            this.CTTK_TB_UserName.TabIndex = 34;
+            this.CTTK_TB_UserName.TabStop = false;
+            this.CTTK_TB_UserName.Text = "an.nguyen";
+            this.CTTK_TB_UserName.UseSystemPasswordChar = false;
             // 
-            // hopeTextBox10
+            // CTTK_TB_PassWord
             // 
-            this.hopeTextBox10.BackColor = System.Drawing.Color.White;
-            this.hopeTextBox10.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.hopeTextBox10.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeTextBox10.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeTextBox10.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeTextBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeTextBox10.Hint = "";
-            this.hopeTextBox10.Location = new System.Drawing.Point(328, 542);
-            this.hopeTextBox10.MaxLength = 32767;
-            this.hopeTextBox10.Multiline = false;
-            this.hopeTextBox10.Name = "hopeTextBox10";
-            this.hopeTextBox10.PasswordChar = '\0';
-            this.hopeTextBox10.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeTextBox10.SelectedText = "";
-            this.hopeTextBox10.SelectionLength = 0;
-            this.hopeTextBox10.SelectionStart = 0;
-            this.hopeTextBox10.Size = new System.Drawing.Size(296, 43);
-            this.hopeTextBox10.TabIndex = 35;
-            this.hopeTextBox10.TabStop = false;
-            this.hopeTextBox10.Text = "123456";
-            this.hopeTextBox10.UseSystemPasswordChar = false;
+            this.CTTK_TB_PassWord.BackColor = System.Drawing.Color.White;
+            this.CTTK_TB_PassWord.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.CTTK_TB_PassWord.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.CTTK_TB_PassWord.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.CTTK_TB_PassWord.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_PassWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.CTTK_TB_PassWord.Hint = "";
+            this.CTTK_TB_PassWord.Location = new System.Drawing.Point(328, 542);
+            this.CTTK_TB_PassWord.MaxLength = 32767;
+            this.CTTK_TB_PassWord.Multiline = false;
+            this.CTTK_TB_PassWord.Name = "CTTK_TB_PassWord";
+            this.CTTK_TB_PassWord.PasswordChar = '\0';
+            this.CTTK_TB_PassWord.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CTTK_TB_PassWord.SelectedText = "";
+            this.CTTK_TB_PassWord.SelectionLength = 0;
+            this.CTTK_TB_PassWord.SelectionStart = 0;
+            this.CTTK_TB_PassWord.Size = new System.Drawing.Size(296, 43);
+            this.CTTK_TB_PassWord.TabIndex = 35;
+            this.CTTK_TB_PassWord.TabStop = false;
+            this.CTTK_TB_PassWord.Text = "123456";
+            this.CTTK_TB_PassWord.UseSystemPasswordChar = false;
             // 
-            // spaceButton1
+            // CTTK_B_ThayDoiTaiKhoan
             // 
-            this.spaceButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.spaceButton1.Customization = "Kioq/zIyMv8yMjL/Kioq/y8vL/8nJyf//v7+/yMjI/8qKir/";
-            this.spaceButton1.Font = new System.Drawing.Font("Verdana", 8F);
-            this.spaceButton1.Image = null;
-            this.spaceButton1.Location = new System.Drawing.Point(649, 545);
-            this.spaceButton1.Name = "spaceButton1";
-            this.spaceButton1.NoRounding = false;
-            this.spaceButton1.Size = new System.Drawing.Size(157, 40);
-            this.spaceButton1.TabIndex = 36;
-            this.spaceButton1.Text = "Thay đổi tài khoản !";
-            this.spaceButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.spaceButton1.Transparent = false;
+            this.CTTK_B_ThayDoiTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_ThayDoiTaiKhoan.Customization = "Kioq/zIyMv8yMjL/Kioq/y8vL/8nJyf//v7+/yMjI/8qKir/";
+            this.CTTK_B_ThayDoiTaiKhoan.Font = new System.Drawing.Font("Verdana", 8F);
+            this.CTTK_B_ThayDoiTaiKhoan.Image = null;
+            this.CTTK_B_ThayDoiTaiKhoan.Location = new System.Drawing.Point(649, 545);
+            this.CTTK_B_ThayDoiTaiKhoan.Name = "CTTK_B_ThayDoiTaiKhoan";
+            this.CTTK_B_ThayDoiTaiKhoan.NoRounding = false;
+            this.CTTK_B_ThayDoiTaiKhoan.Size = new System.Drawing.Size(157, 40);
+            this.CTTK_B_ThayDoiTaiKhoan.TabIndex = 36;
+            this.CTTK_B_ThayDoiTaiKhoan.Text = "Thay đổi tài khoản !";
+            this.CTTK_B_ThayDoiTaiKhoan.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CTTK_B_ThayDoiTaiKhoan.Transparent = false;
             // 
             // dungeonLinkLabel1
             // 
@@ -1363,29 +1365,29 @@
             this.dungeonLinkLabel1.Text = "Hiển thị mật khẩu !\r\n";
             this.dungeonLinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(119)))), ((int)(((byte)(70)))));
             // 
-            // FCB_HienThiMatKhau
+            // FCB_HienThiMatKhau_CTTK
             // 
-            this.FCB_HienThiMatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.FCB_HienThiMatKhau.Checked = false;
-            this.FCB_HienThiMatKhau.CheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.FCB_HienThiMatKhau.CheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
-            this.FCB_HienThiMatKhau.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
-            this.FCB_HienThiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FCB_HienThiMatKhau.DisabledCheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.FCB_HienThiMatKhau.DisabledCheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(166)))), ((int)(((byte)(191)))));
-            this.FCB_HienThiMatKhau.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(183)))), ((int)(((byte)(216)))));
-            this.FCB_HienThiMatKhau.DisabledUncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.FCB_HienThiMatKhau.DisabledUncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(189)))), ((int)(((byte)(133)))));
-            this.FCB_HienThiMatKhau.DisabledUncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(124)))));
-            this.FCB_HienThiMatKhau.EnabledCalc = true;
-            this.FCB_HienThiMatKhau.Location = new System.Drawing.Point(328, 591);
-            this.FCB_HienThiMatKhau.Name = "FCB_HienThiMatKhau";
-            this.FCB_HienThiMatKhau.Size = new System.Drawing.Size(55, 28);
-            this.FCB_HienThiMatKhau.TabIndex = 37;
-            this.FCB_HienThiMatKhau.Text = "foxCheckBox1";
-            this.FCB_HienThiMatKhau.UncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.FCB_HienThiMatKhau.UncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(132)))), ((int)(((byte)(0)))));
-            this.FCB_HienThiMatKhau.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.FCB_HienThiMatKhau_CTTK.BackColor = System.Drawing.Color.Transparent;
+            this.FCB_HienThiMatKhau_CTTK.Checked = false;
+            this.FCB_HienThiMatKhau_CTTK.CheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.FCB_HienThiMatKhau_CTTK.CheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
+            this.FCB_HienThiMatKhau_CTTK.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.FCB_HienThiMatKhau_CTTK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FCB_HienThiMatKhau_CTTK.DisabledCheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.FCB_HienThiMatKhau_CTTK.DisabledCheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(166)))), ((int)(((byte)(191)))));
+            this.FCB_HienThiMatKhau_CTTK.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(183)))), ((int)(((byte)(216)))));
+            this.FCB_HienThiMatKhau_CTTK.DisabledUncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.FCB_HienThiMatKhau_CTTK.DisabledUncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(189)))), ((int)(((byte)(133)))));
+            this.FCB_HienThiMatKhau_CTTK.DisabledUncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(124)))));
+            this.FCB_HienThiMatKhau_CTTK.EnabledCalc = true;
+            this.FCB_HienThiMatKhau_CTTK.Location = new System.Drawing.Point(328, 591);
+            this.FCB_HienThiMatKhau_CTTK.Name = "FCB_HienThiMatKhau_CTTK";
+            this.FCB_HienThiMatKhau_CTTK.Size = new System.Drawing.Size(55, 28);
+            this.FCB_HienThiMatKhau_CTTK.TabIndex = 37;
+            this.FCB_HienThiMatKhau_CTTK.Text = "foxCheckBox1";
+            this.FCB_HienThiMatKhau_CTTK.UncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.FCB_HienThiMatKhau_CTTK.UncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(132)))), ((int)(((byte)(0)))));
+            this.FCB_HienThiMatKhau_CTTK.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
             // 
             // frm_TrangChu
             // 
@@ -1408,7 +1410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tab_TrangChu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DT_TrangChu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_TrangChu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).EndInit();
             this.GB_DanhSachKhachHang.ResumeLayout(false);
@@ -1420,9 +1422,9 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
-            this.thunderGroupBox1.ResumeLayout(false);
-            this.thunderGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox2)).EndInit();
+            this.GB_ChiTietTaiKhoan.ResumeLayout(false);
+            this.GB_ChiTietTaiKhoan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1457,7 +1459,7 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel8;
         private ReaLTaiizor.Controls.ForeverGroupBox GB_DanhSachKhachHang;
         private ReaLTaiizor.Controls.BigLabel bigLabel9;
-        private ReaLTaiizor.Controls.PoisonDataGridView DT_TrangChu;
+        private ReaLTaiizor.Controls.PoisonDataGridView DG_TrangChu;
         private Quan_Ly_Shop_Quan_AoDataSet quan_Ly_Shop_Quan_AoDataSet;
         private System.Windows.Forms.BindingSource hoaDonBindingSource;
         private Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter hoaDonTableAdapter;
@@ -1475,11 +1477,11 @@
         private ReaLTaiizor.Controls.ParrotButton B_HoaDon;
         private ReaLTaiizor.Controls.ParrotButton B_DoanhThu;
         private ReaLTaiizor.Controls.ParrotButton B_KhachHang;
-        private ReaLTaiizor.Controls.ThunderGroupBox thunderGroupBox1;
-        private ReaLTaiizor.Controls.HopePictureBox hopePictureBox2;
-        private ReaLTaiizor.Controls.MoonButton moonButton1;
-        private ReaLTaiizor.Controls.MoonButton moonButton2;
-        private ReaLTaiizor.Controls.DreamButton dreamButton1;
+        private ReaLTaiizor.Controls.ThunderGroupBox GB_ChiTietTaiKhoan;
+        private ReaLTaiizor.Controls.HopePictureBox CTTK_PB_AnhDaiDien;
+        private ReaLTaiizor.Controls.MoonButton CTTK_B_AnhMacDinh;
+        private ReaLTaiizor.Controls.MoonButton CTTK_B_AnhTrenMay;
+        private ReaLTaiizor.Controls.DreamButton CTTK_B_Thoat;
         private ReaLTaiizor.Controls.LabelEdit labelEdit7;
         private ReaLTaiizor.Controls.LabelEdit labelEdit6;
         private ReaLTaiizor.Controls.LabelEdit labelEdit5;
@@ -1487,22 +1489,22 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit3;
         private ReaLTaiizor.Controls.LabelEdit labelEdit2;
         private ReaLTaiizor.Controls.LabelEdit labelEdit1;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox1;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_HoVaTen;
         private ReaLTaiizor.Controls.LabelEdit labelEdit10;
         private ReaLTaiizor.Controls.LabelEdit labelEdit9;
         private ReaLTaiizor.Controls.LabelEdit labelEdit8;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox2;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox3;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox8;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox7;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox6;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox5;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_MaNhanVien;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_ChuVu;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_HinhThucLamViec;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_GioiTinh;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_NgaySinh;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_SDT;
         private ReaLTaiizor.Controls.LabelEdit labelEdit11;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox4;
-        private ReaLTaiizor.Controls.SpaceButton spaceButton1;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox10;
-        private ReaLTaiizor.Controls.HopeTextBox hopeTextBox9;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_DiaChi;
+        private ReaLTaiizor.Controls.SpaceButton CTTK_B_ThayDoiTaiKhoan;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_PassWord;
+        private ReaLTaiizor.Controls.HopeTextBox CTTK_TB_UserName;
         private ReaLTaiizor.Controls.DungeonLinkLabel dungeonLinkLabel1;
-        private ReaLTaiizor.Controls.FoxCheckBox FCB_HienThiMatKhau;
+        private ReaLTaiizor.Controls.FoxCheckBox FCB_HienThiMatKhau_CTTK;
     }
 }
