@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
+using BLL;
 namespace Store_Manager
 {
     public partial class frm_ThayDoiMatKhau : Form
     {
+
+        #region KhaiBao
+        internal TaiKhoan taiKhoan = new TaiKhoan();
+        #endregion
         public frm_ThayDoiMatKhau()
         {
             InitializeComponent();

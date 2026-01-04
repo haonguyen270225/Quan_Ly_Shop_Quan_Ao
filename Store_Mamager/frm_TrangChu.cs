@@ -14,6 +14,13 @@ namespace Store_Manager
 
     public partial class frm_TrangChu : Form
     {
+        #region KhaiBao
+        internal TaiKhoan taiKhoan;
+        private NhanVien nhanVien = new NhanVien();
+        private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
+        #endregion
+
+
         private void CreateLoading()
         {
             nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
@@ -28,10 +35,11 @@ namespace Store_Manager
             CTTK_TB_NgaySinh.Text = "12/07/2003";
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
             CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
+            CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
             CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
             CTTK_TB_PassWord.UseSystemPasswordChar = true;
             CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
-
+            
             if(nhanVien.GioiTinh == 1)
             {
                 CTTK_TB_GioiTinh.Text = "Nam";
@@ -52,9 +60,7 @@ namespace Store_Manager
         
         }
 
-        internal static TaiKhoan taiKhoan;
-        private NhanVien nhanVien = new NhanVien();
-        private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
+       
 
         private void frm_TrangChu_Load(object sender, EventArgs e)
         {

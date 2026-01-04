@@ -15,20 +15,16 @@ namespace Store_Manager
 {
     public partial class frm_DangNhapReaLTaiizor : LostForm
     {
+        #region KhaiBao
+        private TaiKhoan taiKhoan = new TaiKhoan();
+        private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
+        #endregion
+
+
         public frm_DangNhapReaLTaiizor()
         {
             InitializeComponent();
         }
-
-        private void parrotNavigationBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        TaiKhoan taiKhoan = new TaiKhoan();
-        BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
-
-        
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
             TB_MatKhau.UseSystemPasswordChar = true;
