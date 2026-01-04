@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_DataAccess
     {
-        public static SqlConnection Connec()
+        public static SqlConnection Conn()
         {
             // Tạo kết nối cơ sở dữ liệu .
             string strcon = @"Data Source=TUFGAMINGF15;Initial Catalog=Quan_Ly_Shop_Quan_Ao;Integrated Security = True;";
