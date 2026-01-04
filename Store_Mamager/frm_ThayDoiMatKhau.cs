@@ -10,24 +10,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using System.Security.Cryptography;
 namespace Store_Manager
 {
     public partial class frm_ThayDoiMatKhau : Form
     {
 
         #region KhaiBao
-        internal TaiKhoan taiKhoan = new TaiKhoan();
+        public static TaiKhoan taiKhoan = frm_TrangChu.taiKhoan;
+        private BLL_ThayDoiMatKhau bll_ThayDoiMatKhau = new BLL_ThayDoiMatKhau();
+
+        public event Action DaDongVaCapNhatMatKhau;
         #endregion
         public frm_ThayDoiMatKhau()
         {
             InitializeComponent();
         }
 
-        private void lostButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
+        
+      
         private void frm_ThayDoiMatKhau_Load(object sender, EventArgs e)
         {
             MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
@@ -72,12 +74,71 @@ namespace Store_Manager
             }
         }
 
-            //        bool SelectNextControl(
-            //    Control activeControl,   // Control hiện đang có focus
-            //    bool forward,            // true: nhảy tới (tiếp theo), false: nhảy lùi (trước đó)
-            //    bool tabStopOnly,        // true: chỉ nhảy đến control có TabStop = true
-            //    bool nested,             // true: tìm cả trong các container con (Panel, GroupBox)
-            //    bool wrap                // true: nếu đang ở control cuối cùng → quay về đầu tiên
-            //);
+
+
+        private void B_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void B_Luu_Click(object sender, EventArgs e)
+        {
+            if(TB_MatKhauCu.Text == taiKhoan.PassWord)
+            {
+                if(TB_MatKhauCu.Text == "" || TB_MatKhauMoi.Text == "" || TB_NhapLaiMatKhauMoi.Text == "")
+                {
+                    MessageBox.Show("Không được để trống");
+                }
+                else
+                {
+                    if(TB_MatKhauMoi.Text != TB_NhapLaiMatKhauMoi.Text)
+                    {
+                        MessageBox.Show("Mật khẩu mới khác Nhập lại mật khẩu !");
+                    }
+                    else
+                    {
+                        int kq = bll_ThayDoiMatKhau.ThayDoiMatKhau(taiKhoan, TB_MatKhauMoi.Text.ToString());
+                        if(kq == -1)
+                        {
+                            MessageBox.Show("Mật khẩu tối thiểu 10 ký tự");
+                        }
+                        else if(kq == -2)
+                        {
+                            MessageBox.Show("Mật khẩu tối đa 30 ký tự !");
+                        }
+                        else if(kq == 0)
+                        {
+                            MessageBox.Show("Lỗi cơ sỡ dữ liệu !");
+                        }
+                        else if(kq == 1)
+                        {
+                            frm_TrangChu.taiKhoan.PassWord = TB_MatKhauMoi.Text.ToString();
+                            frm_DangNhapReaLTaiizor.taiKhoan.PassWord = TB_MatKhauMoi.Text.ToString();
+                            MessageBox.Show(" Đã cập nhập mật khẩu mới :" + TB_MatKhauMoi.Text.ToString());
+                            DaDongVaCapNhatMatKhau?.Invoke(); // sự kiện frm_TrangChu; GỌI (kích hoạt) tất cả các hàm đã đăng ký vào event
+                                                              // ? < = > if (DaDongVaCapNhat != null)
+                                                              //{
+                                                              //    DaDongVaCapNhat.Invoke();
+                                                              //} -> tránh lỗi NullReferenceException
+                            this.Close();
+                            
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mật khẩu cũ không đúng !");
+            }
+        }
+
+
+        //        bool SelectNextControl(
+        //    Control activeControl,   // Control hiện đang có focus
+        //    bool forward,            // true: nhảy tới (tiếp theo), false: nhảy lùi (trước đó)
+        //    bool tabStopOnly,        // true: chỉ nhảy đến control có TabStop = true
+        //    bool nested,             // true: tìm cả trong các container con (Panel, GroupBox)
+        //    bool wrap                // true: nếu đang ở control cuối cùng → quay về đầu tiên
+        //);
     }
 }

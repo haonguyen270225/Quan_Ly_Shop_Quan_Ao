@@ -15,14 +15,18 @@ namespace Store_Manager
     public partial class frm_TrangChu : Form
     {
         #region KhaiBao
-        internal TaiKhoan taiKhoan;
+        public static TaiKhoan taiKhoan;
         private NhanVien nhanVien = new NhanVien();
         private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
+
+       
         #endregion
 
 
-        private void CreateLoading()
-        {
+        public void CreateLoading()
+         {
+            MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
+            MessageBox.Show("Gọi hàm CreateLoading()");
             nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
             L_HoVaTen_MaNhanVien.Text = nhanVien.HoVaTen.ToString() + " - " + nhanVien.MaNhanVien.ToString();
             L_HoVaTen.Text = nhanVien.HoVaTen.ToString();
@@ -173,9 +177,13 @@ namespace Store_Manager
         private void CTTK_B_ThayDoiTaiKhoan_Click(object sender, EventArgs e)
         {
             frm_ThayDoiMatKhau frm = new frm_ThayDoiMatKhau();
-            frm.taiKhoan = taiKhoan;
+
+            frm.DaDongVaCapNhatMatKhau += () =>
+            {
+                CreateLoading(); // Thêm vào sự kiện event : public event Action DaDongVaCapNhatMatKhau;
+            };
+            // C2 : frm.DaDongVaCapNhatMatKhau += CreateLoading; // không ();
             frm.ShowDialog();
-            
         }
     }
 }

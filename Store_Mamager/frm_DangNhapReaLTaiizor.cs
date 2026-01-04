@@ -16,7 +16,7 @@ namespace Store_Manager
     public partial class frm_DangNhapReaLTaiizor : LostForm
     {
         #region KhaiBao
-        private TaiKhoan taiKhoan = new TaiKhoan();
+        public static TaiKhoan taiKhoan = new TaiKhoan();
         private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
         private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
         #endregion
@@ -56,6 +56,7 @@ namespace Store_Manager
                 taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan); //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString()  );
                 frm_TrangChu  frm_TrangChu = new frm_TrangChu();
                 frm_TrangChu.taiKhoan = taiKhoan;
+                MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
                 frm_TrangChu.ShowDialog();
                  Application.Exit(); //this.Show();
                 //this.Show();

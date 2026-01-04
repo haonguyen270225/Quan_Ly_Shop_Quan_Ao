@@ -36,8 +36,8 @@
             this.TB_MatKhauCu = new ReaLTaiizor.Controls.DreamTextBox();
             this.TB_MatKhauMoi = new ReaLTaiizor.Controls.DreamTextBox();
             this.TB_NhapLaiMatKhauMoi = new ReaLTaiizor.Controls.DreamTextBox();
-            this.lostButton1 = new ReaLTaiizor.Controls.LostButton();
-            this.lostButton2 = new ReaLTaiizor.Controls.LostButton();
+            this.B_Luu = new ReaLTaiizor.Controls.LostButton();
+            this.B_Thoat = new ReaLTaiizor.Controls.LostButton();
             this.SuspendLayout();
             // 
             // skyLabel1
@@ -143,42 +143,43 @@
             this.TB_NhapLaiMatKhauMoi.Size = new System.Drawing.Size(343, 34);
             this.TB_NhapLaiMatKhauMoi.TabIndex = 2;
             // 
-            // lostButton1
+            // B_Luu
             // 
-            this.lostButton1.BackColor = System.Drawing.Color.PaleGreen;
-            this.lostButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lostButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lostButton1.ForeColor = System.Drawing.Color.Black;
-            this.lostButton1.HoverColor = System.Drawing.Color.Lime;
-            this.lostButton1.Image = null;
-            this.lostButton1.Location = new System.Drawing.Point(142, 297);
-            this.lostButton1.Name = "lostButton1";
-            this.lostButton1.Size = new System.Drawing.Size(120, 40);
-            this.lostButton1.TabIndex = 3;
-            this.lostButton1.Text = "Lưu !";
+            this.B_Luu.BackColor = System.Drawing.Color.PaleGreen;
+            this.B_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.B_Luu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_Luu.ForeColor = System.Drawing.Color.Black;
+            this.B_Luu.HoverColor = System.Drawing.Color.Lime;
+            this.B_Luu.Image = null;
+            this.B_Luu.Location = new System.Drawing.Point(142, 297);
+            this.B_Luu.Name = "B_Luu";
+            this.B_Luu.Size = new System.Drawing.Size(120, 40);
+            this.B_Luu.TabIndex = 3;
+            this.B_Luu.Text = "Lưu !";
+            this.B_Luu.Click += new System.EventHandler(this.B_Luu_Click);
             // 
-            // lostButton2
+            // B_Thoat
             // 
-            this.lostButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lostButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lostButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lostButton2.ForeColor = System.Drawing.Color.Black;
-            this.lostButton2.HoverColor = System.Drawing.Color.Red;
-            this.lostButton2.Image = null;
-            this.lostButton2.Location = new System.Drawing.Point(436, 297);
-            this.lostButton2.Name = "lostButton2";
-            this.lostButton2.Size = new System.Drawing.Size(120, 40);
-            this.lostButton2.TabIndex = 4;
-            this.lostButton2.Text = "Thoát !";
-            this.lostButton2.Click += new System.EventHandler(this.lostButton2_Click);
+            this.B_Thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.B_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.B_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_Thoat.ForeColor = System.Drawing.Color.Black;
+            this.B_Thoat.HoverColor = System.Drawing.Color.Red;
+            this.B_Thoat.Image = null;
+            this.B_Thoat.Location = new System.Drawing.Point(436, 297);
+            this.B_Thoat.Name = "B_Thoat";
+            this.B_Thoat.Size = new System.Drawing.Size(120, 40);
+            this.B_Thoat.TabIndex = 4;
+            this.B_Thoat.Text = "Thoát !";
+            this.B_Thoat.Click += new System.EventHandler(this.B_Thoat_Click);
             // 
             // frm_ThayDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 363);
-            this.Controls.Add(this.lostButton2);
-            this.Controls.Add(this.lostButton1);
+            this.Controls.Add(this.B_Thoat);
+            this.Controls.Add(this.B_Luu);
             this.Controls.Add(this.TB_NhapLaiMatKhauMoi);
             this.Controls.Add(this.TB_MatKhauMoi);
             this.Controls.Add(this.TB_MatKhauCu);
@@ -208,7 +209,7 @@
         private ReaLTaiizor.Controls.DreamTextBox TB_MatKhauCu;
         private ReaLTaiizor.Controls.DreamTextBox TB_MatKhauMoi;
         private ReaLTaiizor.Controls.DreamTextBox TB_NhapLaiMatKhauMoi;
-        private ReaLTaiizor.Controls.LostButton lostButton1;
-        private ReaLTaiizor.Controls.LostButton lostButton2;
+        private ReaLTaiizor.Controls.LostButton B_Luu;
+        private ReaLTaiizor.Controls.LostButton B_Thoat;
     }
 }
