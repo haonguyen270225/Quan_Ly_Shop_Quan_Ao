@@ -14,7 +14,7 @@ namespace DAL
         public NhanVien ThongTinTaiKhoanDangNhap(TaiKhoan taiKhoan)
         {
             NhanVien nhanVien = new NhanVien();
-            SqlConnection conn = DAL_DataAccess.Connec();
+            SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
             SqlCommand sqlCommand = new SqlCommand(@"SELECT * FROM dbo.ThongTinTaiKhoan(@UserName, @PassWord);", conn);
             

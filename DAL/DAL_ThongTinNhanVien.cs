@@ -13,7 +13,7 @@ namespace DAL
         {
             List<NhanVien> listNhanVienTmp = new List<NhanVien>();
 
-            SqlConnection conn = DAL_DataAccess.Connec();
+            SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
 
             SqlCommand sqlCommand = new SqlCommand("SELECT [ID], [MaNhanVien], [HoVaTen], [SDT], [Email], [CCCD], [DiaChi], [ChucVu], [GioiTinh] , [HinhThucLamViec] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[NhanVien]" , conn);

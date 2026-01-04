@@ -173,6 +173,7 @@ namespace Store_Manager
         private void CTTK_B_ThayDoiTaiKhoan_Click(object sender, EventArgs e)
         {
             frm_ThayDoiMatKhau frm = new frm_ThayDoiMatKhau();
+            frm.taiKhoan = taiKhoan;
             frm.ShowDialog();
             
         }

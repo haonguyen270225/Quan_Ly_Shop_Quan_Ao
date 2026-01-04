@@ -11,7 +11,7 @@ namespace DAL
     {
         public  int DAL_CheckLogic(TaiKhoan taiKhoan)
         {
-            SqlConnection conn = DAL_DataAccess.Connec();
+            SqlConnection conn = DAL_DataAccess.Conn();
 
             conn.Open();
             SqlCommand sqlCommand = new SqlCommand("SELECT dbo.CheckLogin(@UserName, @PassWord)", conn);

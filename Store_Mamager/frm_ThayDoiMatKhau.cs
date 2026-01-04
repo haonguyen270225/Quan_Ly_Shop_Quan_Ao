@@ -30,6 +30,7 @@ namespace Store_Manager
 
         private void frm_ThayDoiMatKhau_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
             TB_MatKhauCu.Focus();
             // Gán chung sự kiện KeyDown cho tất cả TextBox trên form
             foreach (Control ctrl in this.Controls)
