@@ -9,10 +9,11 @@ namespace DAL
 {
     public class DAL_ThongTinTaiKhoanDangNhap
     {
-        private NhanVien nhanVien = new NhanVien();
+       // private NhanVien nhanVien = new NhanVien();
         
         public NhanVien ThongTinTaiKhoanDangNhap(TaiKhoan taiKhoan)
         {
+            NhanVien nhanVien = new NhanVien();
             SqlConnection conn = DAL_DataAccess.Connec();
             conn.Open();
             SqlCommand sqlCommand = new SqlCommand(@"SELECT * FROM dbo.ThongTinTaiKhoan(@UserName, @PassWord);", conn);
