@@ -98,6 +98,14 @@ namespace Store_Manager
             else if(tabPage1.SelectedTab == tab_HoaDon)
             {
                 L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
+                FLP_HoaDon.Controls.Clear();
+                
+                for(int i = 0; i < 5; i++)
+                {
+                    UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham();
+                    FLP_HoaDon.Controls.Add(uc);
+                }
+                   
             }
         }
 
@@ -154,6 +162,11 @@ namespace Store_Manager
             };
             // C2 : frm.DaDongVaCapNhatMatKhau += CreateLoading; // không ();
             frm.ShowDialog();
+        }
+
+        private void tab_HoaDon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
