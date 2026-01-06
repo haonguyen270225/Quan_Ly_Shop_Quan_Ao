@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_LoadingKhoHang.cs" />
     <Compile Include="BLL_LoadingThongTinTaiKhoan.cs" />
     <Compile Include="BLL_ThayDoiMatKhau.cs" />
     <Compile Include="BLL_ThongTinNhanVien.cs" />

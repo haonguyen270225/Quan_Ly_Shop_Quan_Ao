@@ -8,19 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-
+using DTO;
 namespace Store_Manager
 {
     public partial class UC_HoaDon_SanPham : UserControl
     {
-        public UC_HoaDon_SanPham()
+        public UC_HoaDon_SanPham(KhoHang khoHang)
         {
             InitializeComponent();
+
             //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F); // hoặc giữ nguyên nhưng...
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F); 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            LoadingDuLieu(khoHang);
         }
+
+
+        private void LoadingDuLieu(KhoHang khoHang)
+        {
+            UC_L_ThongTinSanPham.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang;
+            UC_L_Gia.Text = khoHang.Gia + "đ";
+            UC_GB_SanPham.Text = khoHang.ID.ToString();
+            //Loading Hình ảnh !
+        }
+
+
         void RoundPictureBox(PictureBox pb, int radius)
         {
             GraphicsPath path = new GraphicsPath();

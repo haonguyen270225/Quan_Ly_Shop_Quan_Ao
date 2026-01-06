@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-    public class DAL_ThongTinNhanVien : DAL_DataAccess
+    public class DAL_ThongTinNhanVien 
     {
         public  List<NhanVien> NhanVienAccess()
         {

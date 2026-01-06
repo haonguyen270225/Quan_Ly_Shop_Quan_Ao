@@ -16,13 +16,25 @@ namespace Store_Manager
         #region KhaiBao
         public static TaiKhoan taiKhoan = new TaiKhoan();
         private NhanVien nhanVien = new NhanVien();
+        private List<KhoHang> listKhoHang = new List<KhoHang>();
         private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
         private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
-       
+        private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
+        
         #endregion
 
 
-        public void CreateLoading()
+        public void CreateLoading_TrangDonHang()
+        {
+            listKhoHang = bll_LoadingKhoHang.LoadingKhoHang();
+            FLP_HoaDon.Controls.Clear();
+            for (int i = 0; i < listKhoHang.Count ; i++)
+            {
+                UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham(listKhoHang[i]);
+                FLP_HoaDon.Controls.Add(uc);
+            }
+        }
+        public void CreateLoading_TrangChu()
          {
             taiKhoan.UserName = "binh.tran";
             taiKhoan.PassWord = "123456";
@@ -63,7 +75,6 @@ namespace Store_Manager
             {
                 CTTK_TB_HinhThucLamViec.Text = "Pass Time !";
             }
-        
         }
 
        
@@ -72,7 +83,7 @@ namespace Store_Manager
         {
             // TODO: This line of code loads data into the 'quan_Ly_Shop_Quan_AoDataSet.HoaDon' table. You can move, or remove it, as needed.
              this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
-            CreateLoading();
+            CreateLoading_TrangChu();
            
             MessageBox.Show(taiKhoan.UserName.ToString() + "    " + taiKhoan.PassWord.ToString());
             MessageBox.Show(nhanVien.HoVaTen.ToString() + "    " + nhanVien.CCCD.ToString());
@@ -97,14 +108,7 @@ namespace Store_Manager
             else if(tabPage1.SelectedTab == tab_HoaDon)
             {
                 L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
-                FLP_HoaDon.Controls.Clear();
-                
-                for(int i = 0; i < 5; i++)
-                {
-                    UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham();
-                    FLP_HoaDon.Controls.Add(uc);
-                }
-                   
+                CreateLoading_TrangDonHang();
             }
         }
 
@@ -157,7 +161,7 @@ namespace Store_Manager
 
             frm.DaDongVaCapNhatMatKhau += () =>
             {
-                CreateLoading(); // Thêm vào sự kiện event : public event Action DaDongVaCapNhatMatKhau;
+                CreateLoading_TrangChu(); // Thêm vào sự kiện event : public event Action DaDongVaCapNhatMatKhau;
             };
             // C2 : frm.DaDongVaCapNhatMatKhau += CreateLoading; // không ();
             frm.ShowDialog();
