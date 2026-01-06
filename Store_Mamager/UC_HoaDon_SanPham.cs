@@ -52,8 +52,8 @@ namespace Store_Manager
         private void UC_HoaDon_SanPham_Load(object sender, EventArgs e)
         {
            
-            this.Padding = new Padding(30);
-            UC_PB_2.Padding = new Padding(30);
+            this.Padding = new Padding(10);
+          //  UC_PB_2.Padding = new Padding(30);
             RoundPictureBox(UC_PB_2, 20);
             this.Margin = new Padding(0);
             EnableHover(
@@ -78,14 +78,30 @@ namespace Store_Manager
 
         }
 
-        public void EnableClick(GroupBox gb, EventHandler onClick)
+        public void EnableClick(GroupBox gb, MouseEventHandler onDoubleClick)
         {
-            gb.Click += onClick;
+            gb.MouseDoubleClick += onDoubleClick;
 
             foreach (Control c in gb.Controls)
             {
-                c.Click += onClick;
+                c.MouseDoubleClick += onDoubleClick;
             }
         }
+
+
+        //public void EnableDoubleClickOnly(GroupBox gb, MouseEventHandler onDoubleClick)
+        //{
+        //    // Chỉ gán DoubleClick cho GroupBox
+        //    gb.MouseDoubleClick += onDoubleClick;
+
+        //    // Nếu bạn KHÔNG muốn DoubleClick trên control con (chỉ GroupBox thôi)
+        //    // → Vô hiệu hóa DoubleClick của tất cả control con
+        //    foreach (Control c in gb.Controls)
+        //    {
+        //        c.MouseDoubleClick += (sender, e) => { /* Không làm gì */ };
+        //        // Hoặc nếu muốn chặn hoàn toàn:
+        //        // c.MouseDoubleClick += (sender, e) => e.Handled = true;
+        //    }
+        //}
     }
 }

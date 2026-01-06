@@ -68,6 +68,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UC_PB_2.Image = global::Store_Manager.Properties.Resources.logo_shop_quan_ao_nam_14;
             this.UC_PB_2.Location = new System.Drawing.Point(4, -12);
+            this.UC_PB_2.Margin = new System.Windows.Forms.Padding(1);
             this.UC_PB_2.Name = "UC_PB_2";
             this.UC_PB_2.Size = new System.Drawing.Size(236, 256);
             this.UC_PB_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,7 +82,7 @@
             this.L_TrangChu_TieuDe.BackColor = System.Drawing.Color.Transparent;
             this.L_TrangChu_TieuDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.L_TrangChu_TieuDe.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_TrangChu_TieuDe.ForeColor = System.Drawing.Color.Black;
+            this.L_TrangChu_TieuDe.ForeColor = System.Drawing.Color.White;
             this.L_TrangChu_TieuDe.Location = new System.Drawing.Point(12, 247);
             this.L_TrangChu_TieuDe.Name = "L_TrangChu_TieuDe";
             this.L_TrangChu_TieuDe.Size = new System.Drawing.Size(223, 106);
