@@ -11,7 +11,6 @@ using DTO;
 using BLL;
 namespace Store_Manager
 {
-
     public partial class frm_TrangChu : Form
     {
         #region KhaiBao
@@ -28,8 +27,8 @@ namespace Store_Manager
             taiKhoan.UserName = "binh.tran";
             taiKhoan.PassWord = "123456";
             taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
-            MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
-            MessageBox.Show("Gọi hàm CreateLoading()");
+            //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
+            //MessageBox.Show("Gọi hàm CreateLoading()");
             nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
             L_HoVaTen_MaNhanVien.Text = nhanVien.HoVaTen.ToString() + " - " + nhanVien.MaNhanVien.ToString();
             L_TrangChu_HoVaTen.Text = "Xin chào : " + nhanVien.HoVaTen.ToString();

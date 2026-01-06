@@ -28,76 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.UC_Card_HienThi = new ReaLTaiizor.Controls.MaterialCard();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.UC_GB_SanPham = new ReaLTaiizor.Controls.ParrotGroupBox();
+            this.UC_PB_2 = new System.Windows.Forms.PictureBox();
+            this.UC_GB_SanPham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UC_PB_2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // UC_GB_SanPham
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Store_Manager.Properties.Resources.shopping_cart_791967;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.UC_HoaDon_SanPham_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.UC_HoaDon_SanPham_MouseLeave);
+            this.UC_GB_SanPham.BorderColor = System.Drawing.Color.LightCyan;
+            this.UC_GB_SanPham.BorderWidth = 3;
+            this.UC_GB_SanPham.Controls.Add(this.UC_PB_2);
+            this.UC_GB_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_GB_SanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UC_GB_SanPham.Location = new System.Drawing.Point(0, 0);
+            this.UC_GB_SanPham.Name = "UC_GB_SanPham";
+            this.UC_GB_SanPham.Padding = new System.Windows.Forms.Padding(0);
+            this.UC_GB_SanPham.ShowText = true;
+            this.UC_GB_SanPham.Size = new System.Drawing.Size(213, 394);
+            this.UC_GB_SanPham.TabIndex = 0;
+            this.UC_GB_SanPham.TabStop = false;
+            this.UC_GB_SanPham.Text = "1";
+            this.UC_GB_SanPham.TextColor = System.Drawing.Color.Brown;
             // 
-            // pictureBox2
+            // UC_PB_2
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = global::Store_Manager.Properties.Resources.logo_shop_quan_ao_nam_14;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(198, 213);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.UC_HoaDon_SanPham_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.UC_HoaDon_SanPham_MouseLeave);
-            // 
-            // UC_Card_HienThi
-            // 
-            this.UC_Card_HienThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.UC_Card_HienThi.Depth = 0;
-            this.UC_Card_HienThi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.UC_Card_HienThi.Location = new System.Drawing.Point(15, 306);
-            this.UC_Card_HienThi.Margin = new System.Windows.Forms.Padding(14);
-            this.UC_Card_HienThi.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.UC_Card_HienThi.Name = "UC_Card_HienThi";
-            this.UC_Card_HienThi.Padding = new System.Windows.Forms.Padding(14);
-            this.UC_Card_HienThi.Size = new System.Drawing.Size(169, 106);
-            this.UC_Card_HienThi.TabIndex = 2;
-            this.UC_Card_HienThi.MouseEnter += new System.EventHandler(this.UC_HoaDon_SanPham_MouseEnter);
-            this.UC_Card_HienThi.MouseLeave += new System.EventHandler(this.UC_HoaDon_SanPham_MouseLeave);
+            this.UC_PB_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UC_PB_2.Image = global::Store_Manager.Properties.Resources.logo_shop_quan_ao_nam_14;
+            this.UC_PB_2.Location = new System.Drawing.Point(4, -12);
+            this.UC_PB_2.Name = "UC_PB_2";
+            this.UC_PB_2.Size = new System.Drawing.Size(206, 256);
+            this.UC_PB_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UC_PB_2.TabIndex = 4;
+            this.UC_PB_2.TabStop = false;
             // 
             // UC_HoaDon_SanPham
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.UC_Card_HienThi);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.UC_GB_SanPham);
             this.Name = "UC_HoaDon_SanPham";
-            this.Size = new System.Drawing.Size(198, 433);
+            this.Size = new System.Drawing.Size(213, 394);
             this.Load += new System.EventHandler(this.UC_HoaDon_SanPham_Load);
-            this.MouseEnter += new System.EventHandler(this.UC_HoaDon_SanPham_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.UC_HoaDon_SanPham_MouseLeave);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.UC_GB_SanPham.ResumeLayout(false);
+            this.UC_GB_SanPham.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UC_PB_2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private ReaLTaiizor.Controls.MaterialCard UC_Card_HienThi;
+        private ReaLTaiizor.Controls.ParrotGroupBox UC_GB_SanPham;
+        private System.Windows.Forms.PictureBox UC_PB_2;
     }
 }

@@ -35,28 +35,42 @@ namespace Store_Manager
             pb.Region = new Region(path);
         } // Bp góc ảnh;
 
-        private void UC_HoaDon_SanPham_MouseEnter(object sender, EventArgs e)
-        {
+        //private void UC_HoaDon_SanPham_MouseEnter(object sender, EventArgs e)
+        //{
             
-            this.BackColor = Color.Gray;
-            UC_Card_HienThi.Padding = new Padding(30);
-            pictureBox2.Padding = new Padding(30);
-        }
+        //    this.BackColor = Color.Gray;
+           
+        //    UC_PB_2.Padding = new Padding(30);
+        //}
 
-        private void UC_HoaDon_SanPham_MouseLeave(object sender, EventArgs e)
-        {
-            this.BackColor = Color.Transparent;
-            UC_Card_HienThi.Padding = new Padding(30);
-            pictureBox2.Padding = new Padding(30);
-        }
+        //private void UC_HoaDon_SanPham_MouseLeave(object sender, EventArgs e)
+        //{
+        //    this.BackColor = Color.Transparent;
+        //    UC_PB_2.Padding = new Padding(30);
+        //}
 
         private void UC_HoaDon_SanPham_Load(object sender, EventArgs e)
         {
-            UC_Card_HienThi.Padding = new Padding(30);
-            UC_Card_HienThi.BackColor = Color.DarkGray;
+           
             this.Padding = new Padding(30);
-            pictureBox2.Padding = new Padding(30);
-            RoundPictureBox(pictureBox2, 20);
+            UC_PB_2.Padding = new Padding(30);
+            RoundPictureBox(UC_PB_2, 20);
+            this.Margin = new Padding(0);
+            EnableHover(
+                  UC_GB_SanPham,
+                  Color.FromArgb(230, 240, 255),
+                  Color.Transparent
+             );
+        }
+
+
+        public void EnableHover(GroupBox gB, Color hoverColor, Color normalColor)
+        {
+            void enter(object s, EventArgs e) => gB.BackColor = hoverColor;
+            void leave(object s, EventArgs e) => gB.BackColor = normalColor;
+            gB.MouseEnter += enter; gB.MouseLeave += leave; 
+            foreach (Control c in gB.Controls) { c.MouseEnter += enter; c.MouseLeave += leave; }
+
         }
     }
 }
