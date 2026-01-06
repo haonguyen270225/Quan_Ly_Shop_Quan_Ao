@@ -15,23 +15,26 @@ namespace Store_Manager
     public partial class frm_TrangChu : Form
     {
         #region KhaiBao
-        public static TaiKhoan taiKhoan;
+        public static TaiKhoan taiKhoan = new TaiKhoan();
         private NhanVien nhanVien = new NhanVien();
         private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
-
+        private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
        
         #endregion
 
 
         public void CreateLoading()
          {
+            taiKhoan.UserName = "binh.tran";
+            taiKhoan.PassWord = "123456";
+            taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
             MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
             MessageBox.Show("Gọi hàm CreateLoading()");
             nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
             L_HoVaTen_MaNhanVien.Text = nhanVien.HoVaTen.ToString() + " - " + nhanVien.MaNhanVien.ToString();
-            L_HoVaTen.Text = nhanVien.HoVaTen.ToString();
-            L_ChuVu.Text = nhanVien.ChucVu.ToString();
-
+            L_TrangChu_HoVaTen.Text = "Xin chào : " + nhanVien.HoVaTen.ToString();
+            L_TrangChu_ChuVu.Text = "Chức vụ : " + nhanVien.ChucVu.ToString();
+            L_TrangChu_TieuDe.Text = ">>> Thông tin trang chủ !";
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
             CTTK_TB_ChuVu.Text = nhanVien.ChucVu.ToString();
@@ -87,6 +90,14 @@ namespace Store_Manager
             if(tabPage1.SelectedTab == tab_DangXuat)
             {
                 this.Close();
+            }
+            if(tabPage1.SelectedTab == tab_TrangChu)
+            {
+                L_TrangChu_TieuDe.Text = ">>> Thông tin trang chủ !";
+            }
+            else if(tabPage1.SelectedTab == tab_HoaDon)
+            {
+                L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
             }
         }
 
