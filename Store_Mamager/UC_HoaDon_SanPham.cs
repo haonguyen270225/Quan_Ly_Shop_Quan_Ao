@@ -58,9 +58,14 @@ namespace Store_Manager
             this.Margin = new Padding(0);
             EnableHover(
                   UC_GB_SanPham,
-                  Color.FromArgb(230, 240, 255),
+                //  Color.FromArgb(230, 240, 255),
+                Color.DarkGoldenrod,
                   Color.Transparent
              );
+            EnableClick(UC_GB_SanPham , ( s , cv ) =>
+            {
+                MessageBox.Show("GroupBox clicked!");
+            });
         }
 
 
@@ -71,6 +76,16 @@ namespace Store_Manager
             gB.MouseEnter += enter; gB.MouseLeave += leave; 
             foreach (Control c in gB.Controls) { c.MouseEnter += enter; c.MouseLeave += leave; }
 
+        }
+
+        public void EnableClick(GroupBox gb, EventHandler onClick)
+        {
+            gb.Click += onClick;
+
+            foreach (Control c in gb.Controls)
+            {
+                c.Click += onClick;
+            }
         }
     }
 }
