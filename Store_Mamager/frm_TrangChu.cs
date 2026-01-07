@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using System.Security.Cryptography;
+using System.ComponentModel.Design;
+using System.Runtime.Remoting.Messaging;
 namespace Store_Manager
 {
     public partial class frm_TrangChu : Form
@@ -23,7 +26,7 @@ namespace Store_Manager
         private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
         private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
         private BLL_LoadingLoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoadingLoaiSanPham();
-        private BLL_LoadingSPSize bLL_LoadingSPSize = new BLL_LoadingSPSize();
+        private BLL_LoadingSPSize bll_LoadingSPSize = new BLL_LoadingSPSize();
         #endregion
 
         #region TrangChu
@@ -101,6 +104,7 @@ namespace Store_Manager
             else if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_HoaDon)
             {
                 L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
+                listKhoHang = bll_LoadingKhoHang.LoadingKhoHang();
                 CreateLoading_TrangDonHang();
             }
         }
@@ -161,24 +165,22 @@ namespace Store_Manager
         }
         #endregion
 
-
         #region HoaDon
         
 
         private void LaodingSPSizeSanPham()
         {
-            listSPSize = bLL_LoadingSPSize.LoadingSPSize();
+            listSPSize = bll_LoadingSPSize.LoadingSPSize();
             HoaDon_CB_SizeSanPham.Items.Clear();
             HoaDon_CB_SizeSanPham.Items.Add("Size");
             foreach(var item in listSPSize)
             {
-                HoaDon_CB_SizeSanPham.Items.Add(item.MaSize);
+                HoaDon_CB_SizeSanPham.Items.Add(item.MaSize.ToString());
             }
-            HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+           // HoaDon_CB_SizeSanPham.SelectedIndex = 0;
         }
         private void LoadingLoaiSanPham()
         {
-
             HD_CB_LoaiSanPham.Items.Clear();
             HD_CB_LoaiSanPham.Items.Add("Mã quần áo !");
             listLoaiSanPham = bll_LoadingLoaiSanPham.LoadingLoaiSanPham();
@@ -188,25 +190,44 @@ namespace Store_Manager
             }
             HD_CB_LoaiSanPham.SelectedIndex = 0;
         }
+
+
+        private void LoadingSamPham(List<KhoHang> listKhoHang)
+        {
+            FLP_HoaDon.Controls.Clear();
+            UC_HoaDon_SanPham.dem = 0;
+            for (int i = 0; i < listKhoHang.Count; i++)
+            {
+                UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham(listKhoHang[i]);
+                UC_HoaDon_SanPham.dem = i + 1;
+                FLP_HoaDon.Controls.Add(uc);
+            }
+        }
         public void CreateLoading_TrangDonHang()
         {
             LaodingSPSizeSanPham();
             LoadingLoaiSanPham();
-            listKhoHang = bll_LoadingKhoHang.LoadingKhoHang();
-            FLP_HoaDon.Controls.Clear();
-            for (int i = 0; i < listKhoHang.Count; i++)
-            {
-                UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham(listKhoHang[i]);
-                FLP_HoaDon.Controls.Add(uc);
-            }
+            LoadingSamPham(listKhoHang);
         }
-        
-        
+        // Xử lý sự kiện ComboBox;
+
         #endregion
 
-        private void textBoxEdit1_TextChanged(object sender, EventArgs e)
-        {
 
+        private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem as string;
+            List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+            if (bll_LoadingSPSize.LocTheoSize(maSanPham , listSPSize , listKhoHang) == null)
+            {
+                LoadingSamPham(listTmp);
+                return;
+            }
+            else
+            {
+                listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
+                LoadingSamPham(listTmp);
+            }
         }
     }
 
