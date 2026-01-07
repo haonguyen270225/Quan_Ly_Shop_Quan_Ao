@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,8 @@ namespace Store_Manager
             InitializeComponent();
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+
+            HoaDon_ChiTietHoaDon_L_STT.Text = dem.ToString();
         }
 
         #region KhaiBao
@@ -35,7 +38,17 @@ namespace Store_Manager
              );
             EnableClick(HoaDon_ChiTietHoaDon_P, (s, cv) =>
             {
-                MessageBox.Show("GroupBox clicked!"); // khi double Clic chuột;
+                //if(HoaDon_ChiTietHoaDon_CB_STT.Checked  == false)
+                //{
+                //    HoaDon_ChiTietHoaDon_CB_STT.Checked = true;
+                //    HoaDon_ChiTietHoaDon_P.BackColor = Color.OliveDrab;
+                //}
+                //else
+                //{
+                //    HoaDon_ChiTietHoaDon_CB_STT.Checked = false;
+                //    HoaDon_ChiTietHoaDon_P.BackColor = Color.FromArgb(63, 63, 70);
+                //}
+                
             });
         }
 
@@ -49,17 +62,23 @@ namespace Store_Manager
             }
         }
 
+        
         public void EnableHover(Control pn, Color hoverColor, Color normalColor)
         {
             void enter(object s, EventArgs e) => pn.BackColor = hoverColor;
             void leave(object s, EventArgs e) => pn.BackColor = normalColor;
             pn.MouseEnter += enter; pn.MouseLeave += leave;
             foreach (Control c in pn.Controls) { c.MouseEnter += enter; c.MouseLeave += leave; }
-
         }
+
 
         #endregion
 
-
+        private void HoaDon_ChiTietHoaDon_B_Xoa_Click(object sender, EventArgs e)
+        {
+            FlowLayoutPanel fLP = this.Parent as FlowLayoutPanel;
+            fLP.Controls.Remove(this);
+            this.Dispose(); // Giải Phóng Tài Nguyên;
+        }
     }
 }

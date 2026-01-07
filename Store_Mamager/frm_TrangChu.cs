@@ -303,10 +303,11 @@ namespace Store_Manager
             dr["ThanhTien"] = "290.900";
 
             dt.Rows.Add(dr);
-
+            UC_HoaDon_ChiTietHoaDon.dem = 0;
             for (int i = 0; i < 25; i++)
             {
-                UC_HoaDon_ChiTietHoaDon uc = new UC_HoaDon_ChiTietHoaDon();
+                UC_HoaDon_ChiTietHoaDon.dem = i + 1;
+               UC_HoaDon_ChiTietHoaDon uc = new UC_HoaDon_ChiTietHoaDon();
                 HoaDon_FLP_ChiTietHoaDon.Controls.Add(uc);
             }
          }
