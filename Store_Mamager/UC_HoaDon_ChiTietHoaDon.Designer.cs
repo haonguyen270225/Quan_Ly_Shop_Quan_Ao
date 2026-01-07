@@ -28,41 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lostPanel1 = new ReaLTaiizor.Controls.LostPanel();
-            this.crownNumeric1 = new ReaLTaiizor.Controls.CrownNumeric();
+            this.HoaDon_ChiTietHoaDon_P = new ReaLTaiizor.Controls.LostPanel();
+            this.crownButton1 = new ReaLTaiizor.Controls.CrownButton();
             this.foreverLabel1 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.foreverLabel2 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.foreverLabel3 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.checkBox1 = new ReaLTaiizor.Controls.CheckBox();
-            this.lostPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.crownNumeric1)).BeginInit();
+            this.HoaDon_ChiTietHoaDon_CB_STT = new ReaLTaiizor.Controls.CheckBox();
+            this.HoaDon_ChiTietHoaDon_L_TenHang = new ReaLTaiizor.Controls.ForeverLabel();
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien = new ReaLTaiizor.Controls.ForeverLabel();
+            this.HoaDon_ChiTietHoaDon_L_Gia = new ReaLTaiizor.Controls.ForeverLabel();
+            this.HoaDon_ChiTietHoaDon_P.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lostPanel1
+            // HoaDon_ChiTietHoaDon_P
             // 
-            this.lostPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.lostPanel1.Controls.Add(this.checkBox1);
-            this.lostPanel1.Controls.Add(this.foreverLabel1);
-            this.lostPanel1.Controls.Add(this.foreverLabel3);
-            this.lostPanel1.Controls.Add(this.foreverLabel2);
-            this.lostPanel1.Controls.Add(this.crownNumeric1);
-            this.lostPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lostPanel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lostPanel1.ForeColor = System.Drawing.Color.White;
-            this.lostPanel1.Location = new System.Drawing.Point(0, 0);
-            this.lostPanel1.Name = "lostPanel1";
-            this.lostPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.lostPanel1.ShowText = true;
-            this.lostPanel1.Size = new System.Drawing.Size(559, 55);
-            this.lostPanel1.TabIndex = 0;
+            this.HoaDon_ChiTietHoaDon_P.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.crownButton1);
+            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.foreverLabel1);
+            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.HoaDon_ChiTietHoaDon_CB_STT);
+            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.HoaDon_ChiTietHoaDon_L_TenHang);
+            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.HoaDon_ChiTietHoaDon_L_ThanhTien);
+            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.HoaDon_ChiTietHoaDon_L_Gia);
+            this.HoaDon_ChiTietHoaDon_P.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HoaDon_ChiTietHoaDon_P.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.HoaDon_ChiTietHoaDon_P.ForeColor = System.Drawing.Color.White;
+            this.HoaDon_ChiTietHoaDon_P.Location = new System.Drawing.Point(0, 0);
+            this.HoaDon_ChiTietHoaDon_P.Margin = new System.Windows.Forms.Padding(2);
+            this.HoaDon_ChiTietHoaDon_P.Name = "HoaDon_ChiTietHoaDon_P";
+            this.HoaDon_ChiTietHoaDon_P.Padding = new System.Windows.Forms.Padding(3);
+            this.HoaDon_ChiTietHoaDon_P.ShowText = true;
+            this.HoaDon_ChiTietHoaDon_P.Size = new System.Drawing.Size(672, 56);
+            this.HoaDon_ChiTietHoaDon_P.TabIndex = 0;
             // 
-            // crownNumeric1
+            // crownButton1
             // 
-            this.crownNumeric1.Location = new System.Drawing.Point(239, 11);
-            this.crownNumeric1.Margin = new System.Windows.Forms.Padding(0);
-            this.crownNumeric1.Name = "crownNumeric1";
-            this.crownNumeric1.Size = new System.Drawing.Size(68, 34);
-            this.crownNumeric1.TabIndex = 0;
+            this.crownButton1.Location = new System.Drawing.Point(595, 10);
+            this.crownButton1.Name = "crownButton1";
+            this.crownButton1.Padding = new System.Windows.Forms.Padding(5);
+            this.crownButton1.Size = new System.Drawing.Size(69, 37);
+            this.crownButton1.TabIndex = 9;
+            this.crownButton1.Text = "Xóa";
             // 
             // foreverLabel1
             // 
@@ -71,75 +74,90 @@
             this.foreverLabel1.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.foreverLabel1.ForeColor = System.Drawing.Color.LightGray;
-            this.foreverLabel1.Location = new System.Drawing.Point(5, 15);
+            this.foreverLabel1.Location = new System.Drawing.Point(269, 24);
             this.foreverLabel1.Name = "foreverLabel1";
-            this.foreverLabel1.Size = new System.Drawing.Size(160, 23);
-            this.foreverLabel1.TabIndex = 3;
-            this.foreverLabel1.Text = "Quần Áo Nam / Nữ";
+            this.foreverLabel1.Size = new System.Drawing.Size(28, 23);
+            this.foreverLabel1.TabIndex = 8;
+            this.foreverLabel1.Text = "10\r\n";
             // 
-            // foreverLabel2
+            // HoaDon_ChiTietHoaDon_CB_STT
             // 
-            this.foreverLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.foreverLabel2.AutoSize = true;
-            this.foreverLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.foreverLabel2.ForeColor = System.Drawing.Color.LightGray;
-            this.foreverLabel2.Location = new System.Drawing.Point(315, 18);
-            this.foreverLabel2.Name = "foreverLabel2";
-            this.foreverLabel2.Size = new System.Drawing.Size(119, 23);
-            this.foreverLabel2.TabIndex = 4;
-            this.foreverLabel2.Text = "100.000.000  đ";
+            this.HoaDon_ChiTietHoaDon_CB_STT.Checked = false;
+            this.HoaDon_ChiTietHoaDon_CB_STT.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.HoaDon_ChiTietHoaDon_CB_STT.CheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.HoaDon_ChiTietHoaDon_CB_STT.CheckedDisabledColor = System.Drawing.Color.Gray;
+            this.HoaDon_ChiTietHoaDon_CB_STT.CheckedEnabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.HoaDon_ChiTietHoaDon_CB_STT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HoaDon_ChiTietHoaDon_CB_STT.Enable = true;
+            this.HoaDon_ChiTietHoaDon_CB_STT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.HoaDon_ChiTietHoaDon_CB_STT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.HoaDon_ChiTietHoaDon_CB_STT.Location = new System.Drawing.Point(1, 37);
+            this.HoaDon_ChiTietHoaDon_CB_STT.Name = "HoaDon_ChiTietHoaDon_CB_STT";
+            this.HoaDon_ChiTietHoaDon_CB_STT.Size = new System.Drawing.Size(85, 16);
+            this.HoaDon_ChiTietHoaDon_CB_STT.TabIndex = 7;
+            this.HoaDon_ChiTietHoaDon_CB_STT.Text = "1";
             // 
-            // foreverLabel3
+            // HoaDon_ChiTietHoaDon_L_TenHang
             // 
-            this.foreverLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.foreverLabel3.AutoSize = true;
-            this.foreverLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.foreverLabel3.ForeColor = System.Drawing.Color.LightGray;
-            this.foreverLabel3.Location = new System.Drawing.Point(439, 19);
-            this.foreverLabel3.Name = "foreverLabel3";
-            this.foreverLabel3.Size = new System.Drawing.Size(119, 23);
-            this.foreverLabel3.TabIndex = 5;
-            this.foreverLabel3.Text = "100.000.000  đ";
+            this.HoaDon_ChiTietHoaDon_L_TenHang.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.HoaDon_ChiTietHoaDon_L_TenHang.AutoSize = true;
+            this.HoaDon_ChiTietHoaDon_L_TenHang.BackColor = System.Drawing.Color.Transparent;
+            this.HoaDon_ChiTietHoaDon_L_TenHang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.HoaDon_ChiTietHoaDon_L_TenHang.ForeColor = System.Drawing.Color.LightGray;
+            this.HoaDon_ChiTietHoaDon_L_TenHang.Location = new System.Drawing.Point(6, 14);
+            this.HoaDon_ChiTietHoaDon_L_TenHang.Name = "HoaDon_ChiTietHoaDon_L_TenHang";
+            this.HoaDon_ChiTietHoaDon_L_TenHang.Size = new System.Drawing.Size(160, 23);
+            this.HoaDon_ChiTietHoaDon_L_TenHang.TabIndex = 3;
+            this.HoaDon_ChiTietHoaDon_L_TenHang.Text = "Quần Áo Nam / Nữ";
             // 
-            // checkBox1
+            // HoaDon_ChiTietHoaDon_L_ThanhTien
             // 
-            this.checkBox1.Checked = false;
-            this.checkBox1.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.checkBox1.CheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.checkBox1.CheckedDisabledColor = System.Drawing.Color.Gray;
-            this.checkBox1.CheckedEnabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Enable = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
-            this.checkBox1.Location = new System.Drawing.Point(1, 37);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 16);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "1";
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.AutoSize = true;
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.BackColor = System.Drawing.Color.Transparent;
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.ForeColor = System.Drawing.Color.LightGray;
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.Location = new System.Drawing.Point(445, 25);
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.Name = "HoaDon_ChiTietHoaDon_L_ThanhTien";
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.Size = new System.Drawing.Size(119, 23);
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.TabIndex = 5;
+            this.HoaDon_ChiTietHoaDon_L_ThanhTien.Text = "100.000.000  đ";
+            // 
+            // HoaDon_ChiTietHoaDon_L_Gia
+            // 
+            this.HoaDon_ChiTietHoaDon_L_Gia.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.HoaDon_ChiTietHoaDon_L_Gia.AutoSize = true;
+            this.HoaDon_ChiTietHoaDon_L_Gia.BackColor = System.Drawing.Color.Transparent;
+            this.HoaDon_ChiTietHoaDon_L_Gia.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.HoaDon_ChiTietHoaDon_L_Gia.ForeColor = System.Drawing.Color.LightGray;
+            this.HoaDon_ChiTietHoaDon_L_Gia.Location = new System.Drawing.Point(315, 24);
+            this.HoaDon_ChiTietHoaDon_L_Gia.Name = "HoaDon_ChiTietHoaDon_L_Gia";
+            this.HoaDon_ChiTietHoaDon_L_Gia.Size = new System.Drawing.Size(119, 23);
+            this.HoaDon_ChiTietHoaDon_L_Gia.TabIndex = 4;
+            this.HoaDon_ChiTietHoaDon_L_Gia.Text = "100.000.000  đ";
             // 
             // UC_HoaDon_ChiTietHoaDon
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.lostPanel1);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.HoaDon_ChiTietHoaDon_P);
             this.Name = "UC_HoaDon_ChiTietHoaDon";
-            this.Size = new System.Drawing.Size(559, 55);
-            this.lostPanel1.ResumeLayout(false);
-            this.lostPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.crownNumeric1)).EndInit();
+            this.Size = new System.Drawing.Size(672, 56);
+            this.Load += new System.EventHandler(this.UC_HoaDon_ChiTietHoaDon_Load);
+            this.HoaDon_ChiTietHoaDon_P.ResumeLayout(false);
+            this.HoaDon_ChiTietHoaDon_P.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ReaLTaiizor.Controls.LostPanel lostPanel1;
-        private ReaLTaiizor.Controls.CrownNumeric crownNumeric1;
+        private ReaLTaiizor.Controls.LostPanel HoaDon_ChiTietHoaDon_P;
+        private ReaLTaiizor.Controls.ForeverLabel HoaDon_ChiTietHoaDon_L_TenHang;
+        private ReaLTaiizor.Controls.ForeverLabel HoaDon_ChiTietHoaDon_L_Gia;
+        private ReaLTaiizor.Controls.ForeverLabel HoaDon_ChiTietHoaDon_L_ThanhTien;
+        private ReaLTaiizor.Controls.CheckBox HoaDon_ChiTietHoaDon_CB_STT;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel1;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel2;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel3;
-        private ReaLTaiizor.Controls.CheckBox checkBox1;
+        private ReaLTaiizor.Controls.CrownButton crownButton1;
     }
 }
