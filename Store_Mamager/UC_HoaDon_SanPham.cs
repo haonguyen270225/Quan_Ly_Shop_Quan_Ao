@@ -13,6 +13,9 @@ namespace Store_Manager
 {
     public partial class UC_HoaDon_SanPham : UserControl
     {
+        #region KhaiBao
+        public static int dem = 0;
+        #endregion
         public UC_HoaDon_SanPham(KhoHang khoHang)
         {
             InitializeComponent();
@@ -28,8 +31,10 @@ namespace Store_Manager
         private void LoadingDuLieu(KhoHang khoHang)
         {
             UC_L_ThongTinSanPham.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang;
-            UC_L_Gia.Text = khoHang.Gia + "đ";
-            UC_GB_SanPham.Text = khoHang.ID.ToString();
+            UC_L_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
+            dem++;
+            UC_GB_SanPham.Text = dem.ToString("");
+            //UC_GB_SanPham.Text = khoHang.ID.ToString();
             //Loading Hình ảnh !
         }
 
@@ -48,19 +53,6 @@ namespace Store_Manager
             pb.Region = new Region(path);
         } // Bp góc ảnh;
 
-        //private void UC_HoaDon_SanPham_MouseEnter(object sender, EventArgs e)
-        //{
-            
-        //    this.BackColor = Color.Gray;
-           
-        //    UC_PB_2.Padding = new Padding(30);
-        //}
-
-        //private void UC_HoaDon_SanPham_MouseLeave(object sender, EventArgs e)
-        //{
-        //    this.BackColor = Color.Transparent;
-        //    UC_PB_2.Padding = new Padding(30);
-        //}
 
         private void UC_HoaDon_SanPham_Load(object sender, EventArgs e)
         {

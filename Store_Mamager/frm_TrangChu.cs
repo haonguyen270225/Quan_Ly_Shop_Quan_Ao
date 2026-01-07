@@ -17,25 +17,18 @@ namespace Store_Manager
         public static TaiKhoan taiKhoan = new TaiKhoan();
         private NhanVien nhanVien = new NhanVien();
         private List<KhoHang> listKhoHang = new List<KhoHang>();
+        private List<LoaiSanPham> listLoaiSanPham = new List<LoaiSanPham>();
+        private List<SPSize> listSPSize = new List<SPSize>();
         private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
         private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
         private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
-        
+        private BLL_LoadingLoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoadingLoaiSanPham();
+        private BLL_LoadingSPSize bLL_LoadingSPSize = new BLL_LoadingSPSize();
         #endregion
 
-
-        public void CreateLoading_TrangDonHang()
-        {
-            listKhoHang = bll_LoadingKhoHang.LoadingKhoHang();
-            FLP_HoaDon.Controls.Clear();
-            for (int i = 0; i < listKhoHang.Count ; i++)
-            {
-                UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham(listKhoHang[i]);
-                FLP_HoaDon.Controls.Add(uc);
-            }
-        }
+        #region TrangChu
         public void CreateLoading_TrangChu()
-         {
+        {
             taiKhoan.UserName = "binh.tran";
             taiKhoan.PassWord = "123456";
             taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
@@ -57,8 +50,8 @@ namespace Store_Manager
             CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
             CTTK_TB_PassWord.UseSystemPasswordChar = true;
             CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
-            
-            if(nhanVien.GioiTinh == 1)
+
+            if (nhanVien.GioiTinh == 1)
             {
                 CTTK_TB_GioiTinh.Text = "Nam";
             }
@@ -67,7 +60,7 @@ namespace Store_Manager
                 CTTK_TB_GioiTinh.Text = "Nu";
             }
 
-            if(nhanVien.HinhThucLamViec == 0)
+            if (nhanVien.HinhThucLamViec == 0)
             {
                 CTTK_TB_HinhThucLamViec.Text = "Full Time !";
             }
@@ -77,17 +70,17 @@ namespace Store_Manager
             }
         }
 
-       
+
 
         private void frm_TrangChu_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quan_Ly_Shop_Quan_AoDataSet.HoaDon' table. You can move, or remove it, as needed.
-             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
+            this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
             CreateLoading_TrangChu();
-           
+
             MessageBox.Show(taiKhoan.UserName.ToString() + "    " + taiKhoan.PassWord.ToString());
             MessageBox.Show(nhanVien.HoVaTen.ToString() + "    " + nhanVien.CCCD.ToString());
-          
+
         }
 
         public frm_TrangChu()
@@ -97,15 +90,15 @@ namespace Store_Manager
 
         private void tabPage1_Selected(object sender, TabControlEventArgs e)
         {
-            if(tabPage1.SelectedTab == tab_DangXuat)
+            if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_DangXuat)
             {
                 this.Close();
             }
-            if(tabPage1.SelectedTab == tab_TrangChu)
+            if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_TrangChu)
             {
                 L_TrangChu_TieuDe.Text = ">>> Thông tin trang chủ !";
             }
-            else if(tabPage1.SelectedTab == tab_HoaDon)
+            else if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_HoaDon)
             {
                 L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
                 CreateLoading_TrangDonHang();
@@ -166,10 +159,55 @@ namespace Store_Manager
             // C2 : frm.DaDongVaCapNhatMatKhau += CreateLoading; // không ();
             frm.ShowDialog();
         }
+        #endregion
 
-        private void tab_HoaDon_Click(object sender, EventArgs e)
+
+        #region HoaDon
+        
+
+        private void LaodingSPSizeSanPham()
+        {
+            listSPSize = bLL_LoadingSPSize.LoadingSPSize();
+            HoaDon_CB_SizeSanPham.Items.Clear();
+            HoaDon_CB_SizeSanPham.Items.Add("Size");
+            foreach(var item in listSPSize)
+            {
+                HoaDon_CB_SizeSanPham.Items.Add(item.MaSize);
+            }
+            HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+        }
+        private void LoadingLoaiSanPham()
+        {
+
+            HD_CB_LoaiSanPham.Items.Clear();
+            HD_CB_LoaiSanPham.Items.Add("Mã quần áo !");
+            listLoaiSanPham = bll_LoadingLoaiSanPham.LoadingLoaiSanPham();
+            foreach(var item in listLoaiSanPham)
+            {
+                HD_CB_LoaiSanPham.Items.Add(item.TenLoai);
+            }
+            HD_CB_LoaiSanPham.SelectedIndex = 0;
+        }
+        public void CreateLoading_TrangDonHang()
+        {
+            LaodingSPSizeSanPham();
+            LoadingLoaiSanPham();
+            listKhoHang = bll_LoadingKhoHang.LoadingKhoHang();
+            FLP_HoaDon.Controls.Clear();
+            for (int i = 0; i < listKhoHang.Count; i++)
+            {
+                UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham(listKhoHang[i]);
+                FLP_HoaDon.Controls.Add(uc);
+            }
+        }
+        
+        
+        #endregion
+
+        private void textBoxEdit1_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
+
 }

@@ -283,6 +283,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_10275878 {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass_10275878", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man_6251202 {
             get {
                 object obj = ResourceManager.GetObject("man_6251202", resourceCulture);
