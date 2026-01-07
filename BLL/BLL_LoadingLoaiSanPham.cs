@@ -16,5 +16,33 @@ namespace BLL
         {
             return dal_LoadingLoaiSanPham.LoadingLoaiSanPham();
         }
+
+        public List<KhoHang> LocLoaiSanPham(string tenLoai , List<LoaiSanPham> listLoaiSanPham , List<KhoHang>  listKhoHang)
+        {
+             List<KhoHang> tmpKhoHang = new List<KhoHang>();
+             if(tenLoai == "Mã quần áo !")
+            {
+                return null;
+            }
+            else
+            {
+                int iD = -1;
+                foreach(var item in listLoaiSanPham)
+                {
+                    if (item.TenLoai == tenLoai)
+                    {
+                        iD = item.ID;
+                    }
+                }
+                foreach(var item in listKhoHang)
+                {
+                    if (item.IDLoaiSanPham == iD)
+                    {
+                        tmpKhoHang.Add(item);
+                    }
+                }
+                return tmpKhoHang;
+            }
+        }
     }
 }

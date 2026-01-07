@@ -177,7 +177,7 @@ namespace Store_Manager
             {
                 HoaDon_CB_SizeSanPham.Items.Add(item.MaSize.ToString());
             }
-           // HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+           HoaDon_CB_SizeSanPham.SelectedIndex = 0;
         }
         private void LoadingLoaiSanPham()
         {
@@ -213,12 +213,45 @@ namespace Store_Manager
 
         #endregion
 
+        //private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
+        //    List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+        //    if (bll_LoadingSPSize.LocTheoSize(maSanPham , listSPSize , listKhoHang) == null)
+        //    {
+        //        LoadingSamPham(listTmp);
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
+        //        LoadingSamPham(listTmp);
+        //    }
+        //}
 
-        private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        //private void HD_CB_LoaiSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+        //    string tenLoai = HD_CB_LoaiSanPham.SelectedItem.ToString();
+        //    List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+        //    if(bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai , listLoaiSanPham , listTmp) == null)
+        //    {
+        //        LoadingSamPham(listTmp);
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        listTmp = bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp);
+        //        LoadingSamPham(listTmp);
+        //    }
+        //}
+
+        private void HoaDon_CB_SizeSanPham_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem as string;
+            HD_CB_LoaiSanPham.SelectedIndex = 0;
+            string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
             List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-            if (bll_LoadingSPSize.LocTheoSize(maSanPham , listSPSize , listKhoHang) == null)
+            if (bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang) == null)
             {
                 LoadingSamPham(listTmp);
                 return;
@@ -226,6 +259,23 @@ namespace Store_Manager
             else
             {
                 listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
+                LoadingSamPham(listTmp);
+            }
+        }
+
+        private void HD_CB_LoaiSanPham_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+            string tenLoai = HD_CB_LoaiSanPham.SelectedItem.ToString();
+            List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+            if (bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp) == null)
+            {
+                LoadingSamPham(listTmp);
+                return;
+            }
+            else
+            {
+                listTmp = bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp);
                 LoadingSamPham(listTmp);
             }
         }

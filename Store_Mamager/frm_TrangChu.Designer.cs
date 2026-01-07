@@ -875,7 +875,7 @@
             this.HoaDon_CB_SizeSanPham.Size = new System.Drawing.Size(104, 26);
             this.HoaDon_CB_SizeSanPham.StartIndex = 0;
             this.HoaDon_CB_SizeSanPham.TabIndex = 15;
-            this.HoaDon_CB_SizeSanPham.SelectedIndexChanged += new System.EventHandler(this.HoaDon_CB_SizeSanPham_SelectedIndexChanged);
+            this.HoaDon_CB_SizeSanPham.SelectionChangeCommitted += new System.EventHandler(this.HoaDon_CB_SizeSanPham_SelectionChangeCommitted);
             // 
             // HD_CB_LoaiSanPham
             // 
@@ -891,6 +891,8 @@
             this.HD_CB_LoaiSanPham.Name = "HD_CB_LoaiSanPham";
             this.HD_CB_LoaiSanPham.Size = new System.Drawing.Size(278, 35);
             this.HD_CB_LoaiSanPham.TabIndex = 15;
+            
+            this.HD_CB_LoaiSanPham.SelectionChangeCommitted += new System.EventHandler(this.HD_CB_LoaiSanPham_SelectionChangeCommitted);
             // 
             // FLP_HoaDon
             // 
