@@ -208,6 +208,9 @@ namespace Store_Manager
             LaodingSPSizeSanPham();
             LoadingLoaiSanPham();
             LoadingSamPham(listKhoHang);
+
+
+            Loading_DGV_HoaDon();
         }
         // Xử lý sự kiện ComboBox;
 
@@ -279,6 +282,28 @@ namespace Store_Manager
                 LoadingSamPham(listTmp);
             }
         }
-    }
 
+
+
+        // Dữ liệu Hoa_Don_DGV_HoaDon
+        private void Loading_DGV_HoaDon()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("STT");
+            dt.Columns.Add("TenHang");
+            dt.Columns.Add("SL");
+            dt.Columns.Add("DonGia");
+            dt.Columns.Add("ThanhTien");
+
+            DataRow dr =  dt.NewRow();
+            dr["STT"] = 1;
+            dr["TenHang"] = "Quan áo ";
+            dr["DonGia"] = "190.200";
+            dr["SL"] = "10";
+            dr["ThanhTien"] = "290.900";
+
+            dt.Rows.Add(dr);
+            
+         }
+    }
 }

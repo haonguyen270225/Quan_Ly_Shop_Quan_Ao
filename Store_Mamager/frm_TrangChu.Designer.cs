@@ -63,24 +63,14 @@
             this.L_TrangChu_HoVaTen = new ReaLTaiizor.Controls.BigLabel();
             this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.DG_TrangChu = new ReaLTaiizor.Controls.PoisonDataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quan_Ly_Shop_Quan_AoDataSet = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSet();
             this.tab_HoaDon = new System.Windows.Forms.TabPage();
             this.parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HoaDon_TB_TenSanPham = new ReaLTaiizor.Controls.SmallTextBox();
             this.HoaDon_CB_SizeSanPham = new ReaLTaiizor.Controls.DungeonComboBox();
             this.HD_CB_LoaiSanPham = new ReaLTaiizor.Controls.CrownComboBox();
-            this.FLP_HoaDon = new System.Windows.Forms.FlowLayoutPanel();
             this.tab_KhoHang = new System.Windows.Forms.TabPage();
             this.tab_KhuyenMai = new System.Windows.Forms.TabPage();
             this.tab_DoanhThu = new System.Windows.Forms.TabPage();
@@ -119,7 +109,18 @@
             this.CTTK_PB_AnhDaiDien = new ReaLTaiizor.Controls.HopePictureBox();
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongThuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNhanVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quan_Ly_Shop_Quan_AoDataSet = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSet();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
+            this.crownLabel1 = new ReaLTaiizor.Controls.CrownLabel();
+            this.FLP_HoaDon = new System.Windows.Forms.FlowLayoutPanel();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
@@ -132,13 +133,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_TrangChu_ThongTinTaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_TrangChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).BeginInit();
             this.tab_HoaDon.SuspendLayout();
             this.parrotGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GB_ChiTietTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -687,69 +688,6 @@
             this.DG_TrangChu.Size = new System.Drawing.Size(1350, 332);
             this.DG_TrangChu.TabIndex = 8;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maHoaDonDataGridViewTextBoxColumn
-            // 
-            this.maHoaDonDataGridViewTextBoxColumn.DataPropertyName = "MaHoaDon";
-            this.maHoaDonDataGridViewTextBoxColumn.HeaderText = "Mã hóa đơn ";
-            this.maHoaDonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maHoaDonDataGridViewTextBoxColumn.Name = "maHoaDonDataGridViewTextBoxColumn";
-            this.maHoaDonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maHoaDonDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // ngayDataGridViewTextBoxColumn
-            // 
-            this.ngayDataGridViewTextBoxColumn.DataPropertyName = "Ngay";
-            this.ngayDataGridViewTextBoxColumn.HeaderText = "Ngày";
-            this.ngayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ngayDataGridViewTextBoxColumn.Name = "ngayDataGridViewTextBoxColumn";
-            this.ngayDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ngayDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // gioDataGridViewTextBoxColumn
-            // 
-            this.gioDataGridViewTextBoxColumn.DataPropertyName = "Gio";
-            this.gioDataGridViewTextBoxColumn.HeaderText = "Giờ";
-            this.gioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gioDataGridViewTextBoxColumn.Name = "gioDataGridViewTextBoxColumn";
-            this.gioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gioDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // tongThuDataGridViewTextBoxColumn
-            // 
-            this.tongThuDataGridViewTextBoxColumn.DataPropertyName = "TongThu";
-            this.tongThuDataGridViewTextBoxColumn.HeaderText = "Tổng Thu";
-            this.tongThuDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tongThuDataGridViewTextBoxColumn.Name = "tongThuDataGridViewTextBoxColumn";
-            this.tongThuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tongThuDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iDNhanVienDataGridViewTextBoxColumn
-            // 
-            this.iDNhanVienDataGridViewTextBoxColumn.DataPropertyName = "IDNhanVien";
-            this.iDNhanVienDataGridViewTextBoxColumn.HeaderText = "ID Nhân Viên";
-            this.iDNhanVienDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDNhanVienDataGridViewTextBoxColumn.Name = "iDNhanVienDataGridViewTextBoxColumn";
-            this.iDNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDNhanVienDataGridViewTextBoxColumn.Width = 190;
-            // 
-            // iDKhachHangDataGridViewTextBoxColumn
-            // 
-            this.iDKhachHangDataGridViewTextBoxColumn.DataPropertyName = "IDKhachHang";
-            this.iDKhachHangDataGridViewTextBoxColumn.HeaderText = "ID Khách Hàng";
-            this.iDKhachHangDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDKhachHangDataGridViewTextBoxColumn.Name = "iDKhachHangDataGridViewTextBoxColumn";
-            this.iDKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDKhachHangDataGridViewTextBoxColumn.Width = 190;
-            // 
             // column
             // 
             this.column.HeaderText = "STT";
@@ -768,19 +706,10 @@
             this.column2.Visible = false;
             this.column2.Width = 200;
             // 
-            // hoaDonBindingSource
-            // 
-            this.hoaDonBindingSource.DataMember = "HoaDon";
-            this.hoaDonBindingSource.DataSource = this.quan_Ly_Shop_Quan_AoDataSet;
-            // 
-            // quan_Ly_Shop_Quan_AoDataSet
-            // 
-            this.quan_Ly_Shop_Quan_AoDataSet.DataSetName = "Quan_Ly_Shop_Quan_AoDataSet";
-            this.quan_Ly_Shop_Quan_AoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tab_HoaDon
             // 
             this.tab_HoaDon.BackColor = System.Drawing.Color.White;
+            this.tab_HoaDon.Controls.Add(this.crownLabel1);
             this.tab_HoaDon.Controls.Add(this.parrotGroupBox1);
             this.tab_HoaDon.Controls.Add(this.FLP_HoaDon);
             this.tab_HoaDon.ImageIndex = 2;
@@ -891,20 +820,7 @@
             this.HD_CB_LoaiSanPham.Name = "HD_CB_LoaiSanPham";
             this.HD_CB_LoaiSanPham.Size = new System.Drawing.Size(278, 35);
             this.HD_CB_LoaiSanPham.TabIndex = 15;
-            
             this.HD_CB_LoaiSanPham.SelectionChangeCommitted += new System.EventHandler(this.HD_CB_LoaiSanPham_SelectionChangeCommitted);
-            // 
-            // FLP_HoaDon
-            // 
-            this.FLP_HoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FLP_HoaDon.AutoScroll = true;
-            this.FLP_HoaDon.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.FLP_HoaDon.Location = new System.Drawing.Point(613, 63);
-            this.FLP_HoaDon.Margin = new System.Windows.Forms.Padding(1);
-            this.FLP_HoaDon.Name = "FLP_HoaDon";
-            this.FLP_HoaDon.Size = new System.Drawing.Size(750, 653);
-            this.FLP_HoaDon.TabIndex = 0;
             // 
             // tab_KhoHang
             // 
@@ -1531,9 +1447,109 @@
             this.CTTK_PB_AnhDaiDien.TabStop = false;
             this.CTTK_PB_AnhDaiDien.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maHoaDonDataGridViewTextBoxColumn
+            // 
+            this.maHoaDonDataGridViewTextBoxColumn.DataPropertyName = "MaHoaDon";
+            this.maHoaDonDataGridViewTextBoxColumn.HeaderText = "Mã hóa đơn ";
+            this.maHoaDonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maHoaDonDataGridViewTextBoxColumn.Name = "maHoaDonDataGridViewTextBoxColumn";
+            this.maHoaDonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maHoaDonDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // ngayDataGridViewTextBoxColumn
+            // 
+            this.ngayDataGridViewTextBoxColumn.DataPropertyName = "Ngay";
+            this.ngayDataGridViewTextBoxColumn.HeaderText = "Ngày";
+            this.ngayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayDataGridViewTextBoxColumn.Name = "ngayDataGridViewTextBoxColumn";
+            this.ngayDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngayDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // gioDataGridViewTextBoxColumn
+            // 
+            this.gioDataGridViewTextBoxColumn.DataPropertyName = "Gio";
+            this.gioDataGridViewTextBoxColumn.HeaderText = "Giờ";
+            this.gioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gioDataGridViewTextBoxColumn.Name = "gioDataGridViewTextBoxColumn";
+            this.gioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gioDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // tongThuDataGridViewTextBoxColumn
+            // 
+            this.tongThuDataGridViewTextBoxColumn.DataPropertyName = "TongThu";
+            this.tongThuDataGridViewTextBoxColumn.HeaderText = "Tổng Thu";
+            this.tongThuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tongThuDataGridViewTextBoxColumn.Name = "tongThuDataGridViewTextBoxColumn";
+            this.tongThuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tongThuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iDNhanVienDataGridViewTextBoxColumn
+            // 
+            this.iDNhanVienDataGridViewTextBoxColumn.DataPropertyName = "IDNhanVien";
+            this.iDNhanVienDataGridViewTextBoxColumn.HeaderText = "ID Nhân Viên";
+            this.iDNhanVienDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDNhanVienDataGridViewTextBoxColumn.Name = "iDNhanVienDataGridViewTextBoxColumn";
+            this.iDNhanVienDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDNhanVienDataGridViewTextBoxColumn.Width = 190;
+            // 
+            // iDKhachHangDataGridViewTextBoxColumn
+            // 
+            this.iDKhachHangDataGridViewTextBoxColumn.DataPropertyName = "IDKhachHang";
+            this.iDKhachHangDataGridViewTextBoxColumn.HeaderText = "ID Khách Hàng";
+            this.iDKhachHangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDKhachHangDataGridViewTextBoxColumn.Name = "iDKhachHangDataGridViewTextBoxColumn";
+            this.iDKhachHangDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDKhachHangDataGridViewTextBoxColumn.Width = 190;
+            // 
+            // hoaDonBindingSource
+            // 
+            this.hoaDonBindingSource.DataMember = "HoaDon";
+            this.hoaDonBindingSource.DataSource = this.quan_Ly_Shop_Quan_AoDataSet;
+            // 
+            // quan_Ly_Shop_Quan_AoDataSet
+            // 
+            this.quan_Ly_Shop_Quan_AoDataSet.DataSetName = "Quan_Ly_Shop_Quan_AoDataSet";
+            this.quan_Ly_Shop_Quan_AoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // hoaDonTableAdapter
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
+            // 
+            // crownLabel1
+            // 
+            this.crownLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.crownLabel1.AutoSize = true;
+            this.crownLabel1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crownLabel1.ForeColor = System.Drawing.Color.Black;
+            this.crownLabel1.Location = new System.Drawing.Point(157, 8);
+            this.crownLabel1.Name = "crownLabel1";
+            this.crownLabel1.Size = new System.Drawing.Size(280, 38);
+            this.crownLabel1.TabIndex = 4;
+            this.crownLabel1.Text = "Thông tin hóa đơn !";
+            this.crownLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FLP_HoaDon
+            // 
+            this.FLP_HoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FLP_HoaDon.AutoScroll = true;
+            this.FLP_HoaDon.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.FLP_HoaDon.Location = new System.Drawing.Point(613, 63);
+            this.FLP_HoaDon.Margin = new System.Windows.Forms.Padding(1);
+            this.FLP_HoaDon.Name = "FLP_HoaDon";
+            this.FLP_HoaDon.Size = new System.Drawing.Size(750, 653);
+            this.FLP_HoaDon.TabIndex = 0;
             // 
             // frm_TrangChu
             // 
@@ -1566,15 +1582,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_TrangChu_ThongTinTaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_TrangChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).EndInit();
             this.tab_HoaDon.ResumeLayout(false);
+            this.tab_HoaDon.PerformLayout();
             this.parrotGroupBox1.ResumeLayout(false);
             this.parrotGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GB_ChiTietTaiKhoan.ResumeLayout(false);
             this.GB_ChiTietTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1657,12 +1674,13 @@
         private System.Windows.Forms.TabPage tab_DoanhThu;
         private System.Windows.Forms.TabPage tab_TaiKhoan;
         private System.Windows.Forms.TabPage tab_DangXuat;
-        private System.Windows.Forms.FlowLayoutPanel FLP_HoaDon;
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox1;
         private ReaLTaiizor.Animate.Parrot.ObjectAnimator objectAnimator1;
         private ReaLTaiizor.Controls.CrownComboBox HD_CB_LoaiSanPham;
         private ReaLTaiizor.Controls.DungeonComboBox HoaDon_CB_SizeSanPham;
         private ReaLTaiizor.Controls.SmallTextBox HoaDon_TB_TenSanPham;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ReaLTaiizor.Controls.CrownLabel crownLabel1;
+        private System.Windows.Forms.FlowLayoutPanel FLP_HoaDon;
     }
 }
