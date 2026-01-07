@@ -204,6 +204,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Quan_Ly_Shop_Quan_AoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UC_HoaDon_ChiTietHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_HoaDon_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>UC_HoaDon_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_HoaDon_SanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +238,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_HoaDon_ChiTietHoaDon.resx">
+      <DependentUpon>UC_HoaDon_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_HoaDon_SanPham.resx">
       <DependentUpon>UC_HoaDon_SanPham.cs</DependentUpon>
     </EmbeddedResource>
