@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.HoaDon_ChiTietHoaDon_P = new ReaLTaiizor.Controls.LostPanel();
-            this.ChiTietSanPham_L_STT = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.HoaDon_ChiTietHoaDon_B_Xoa = new ReaLTaiizor.Controls.CrownButton();
             this.ChiTietSanPham_SoLuong = new ReaLTaiizor.Controls.ForeverLabel();
             this.ChiTietSanPham_L_TenHang = new ReaLTaiizor.Controls.ForeverLabel();
@@ -41,7 +40,6 @@
             // HoaDon_ChiTietHoaDon_P
             // 
             this.HoaDon_ChiTietHoaDon_P.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.ChiTietSanPham_L_STT);
             this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.HoaDon_ChiTietHoaDon_B_Xoa);
             this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.ChiTietSanPham_SoLuong);
             this.HoaDon_ChiTietHoaDon_P.Controls.Add(this.ChiTietSanPham_L_TenHang);
@@ -57,19 +55,6 @@
             this.HoaDon_ChiTietHoaDon_P.ShowText = true;
             this.HoaDon_ChiTietHoaDon_P.Size = new System.Drawing.Size(672, 56);
             this.HoaDon_ChiTietHoaDon_P.TabIndex = 0;
-            // 
-            // ChiTietSanPham_L_STT
-            // 
-            this.ChiTietSanPham_L_STT.AutoSize = true;
-            this.ChiTietSanPham_L_STT.BackColor = System.Drawing.Color.Transparent;
-            this.ChiTietSanPham_L_STT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.ChiTietSanPham_L_STT.ForeColor = System.Drawing.Color.Green;
-            this.ChiTietSanPham_L_STT.Location = new System.Drawing.Point(-2, 35);
-            this.ChiTietSanPham_L_STT.Name = "ChiTietSanPham_L_STT";
-            this.ChiTietSanPham_L_STT.Size = new System.Drawing.Size(20, 23);
-            this.ChiTietSanPham_L_STT.TabIndex = 10;
-            this.ChiTietSanPham_L_STT.Text = "1";
-            this.ChiTietSanPham_L_STT.Visible = false;
             // 
             // HoaDon_ChiTietHoaDon_B_Xoa
             // 
@@ -157,6 +142,5 @@
         private ReaLTaiizor.Controls.ForeverLabel ChiTietSanPham_L_ThanhTien;
         private ReaLTaiizor.Controls.ForeverLabel ChiTietSanPham_SoLuong;
         private ReaLTaiizor.Controls.CrownButton HoaDon_ChiTietHoaDon_B_Xoa;
-        private ReaLTaiizor.Controls.DungeonHeaderLabel ChiTietSanPham_L_STT;
     }
 }

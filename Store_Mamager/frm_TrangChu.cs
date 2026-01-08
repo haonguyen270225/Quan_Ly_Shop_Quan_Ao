@@ -295,13 +295,14 @@ namespace Store_Manager
                 if(item.chiTietSanPham.MaHang == sanPham.MaHang)
                 {
                     item.TangSoLuong();
+                    HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
                     return;
                 }
             }
             //int sTT = 0;
             FLP_ChiTietSanPham.Controls.Add(ucChiTietSanPham = new UC_ChiTietSanPham(sanPham));
-            
-         }
+            HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
+        }
     }
 }
 

@@ -17,6 +17,7 @@ namespace Store_Manager
         #region KhaiBao
         private int soLuong = 1;
         private static int sTT = 1;
+        public static double tongThu { get; private set; } = 0;
         public KhoHang chiTietSanPham { get; private set; }
         #endregion
 
@@ -37,7 +38,7 @@ namespace Store_Manager
             ChiTietSanPham_L_Gia.Text = sanPham.Gia.ToString("N0");
             ChiTietSanPham_L_ThanhTien.Text = sanPham.Gia.ToString("N0");
             ChiTietSanPham_SoLuong.Text = soLuong.ToString();
-           
+            tongThu += Convert.ToDouble(ChiTietSanPham_L_ThanhTien.Text);
         } 
 
         public void TangSoLuong()
@@ -45,6 +46,7 @@ namespace Store_Manager
             this.soLuong += 1;
             ChiTietSanPham_SoLuong.Text = soLuong.ToString();
             ChiTietSanPham_L_ThanhTien.Text = (soLuong * chiTietSanPham.Gia).ToString("N0");
+            tongThu += Convert.ToDouble(ChiTietSanPham_L_ThanhTien.Text);
         }
 
         #region GiaoDien
