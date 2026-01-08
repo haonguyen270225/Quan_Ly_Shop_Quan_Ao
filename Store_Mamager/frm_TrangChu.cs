@@ -27,6 +27,11 @@ namespace Store_Manager
         private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
         private BLL_LoadingLoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoadingLoaiSanPham();
         private BLL_LoadingSPSize bll_LoadingSPSize = new BLL_LoadingSPSize();
+    
+        private UC_SanPham ucSanPham;
+        private UC_ChiTietSanPham ucChiTietSanPham;
+        //private List<KhoHang> listSanPham;
+        private List<KhoHang> listChiTietSanPham = new List<KhoHang>();
         #endregion
 
         #region TrangChu
@@ -81,8 +86,8 @@ namespace Store_Manager
             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
             CreateLoading_TrangChu();
 
-            MessageBox.Show(taiKhoan.UserName.ToString() + "    " + taiKhoan.PassWord.ToString());
-            MessageBox.Show(nhanVien.HoVaTen.ToString() + "    " + nhanVien.CCCD.ToString());
+        //    MessageBox.Show(taiKhoan.UserName.ToString() + "    " + taiKhoan.PassWord.ToString());
+          //  MessageBox.Show(nhanVien.HoVaTen.ToString() + "    " + nhanVien.CCCD.ToString());
 
         }
 
@@ -165,6 +170,8 @@ namespace Store_Manager
         }
         #endregion
 
+
+
         #region HoaDon
         
 
@@ -192,31 +199,128 @@ namespace Store_Manager
         }
 
 
-        private void LoadingSamPham(List<KhoHang> listKhoHang)
+        private void AddSanPham(List<KhoHang> listKhoHang)
         {
-            FLP_HoaDon.Controls.Clear();
-            UC_HoaDon_SanPham.dem = 0;
+            FLP_SanPham.Controls.Clear();
+            //ucSanPham.sanPham_Dem = 0;
+            if(listKhoHang.Count == 0)
+            {
+                return;
+            }
             for (int i = 0; i < listKhoHang.Count; i++)
             {
-                UC_HoaDon_SanPham uc = new UC_HoaDon_SanPham(listKhoHang[i]);
-                UC_HoaDon_SanPham.dem = i + 1;
-                FLP_HoaDon.Controls.Add(uc);
+                ucSanPham = new UC_SanPham(listKhoHang[i] , i + 1);
+                ucSanPham.OnAddToHoaDon += (s, sp) =>
+                {
+                    AddChiTietSanPham(sp);
+                };
+                FLP_SanPham.Controls.Add(ucSanPham);
             }
         }
         public void CreateLoading_TrangDonHang()
         {
             LaodingSPSizeSanPham();
             LoadingLoaiSanPham();
-            LoadingSamPham(listKhoHang);
-
-
-            Loading_DGV_HoaDon();
+            AddSanPham(listKhoHang);
+          //  Loading_DGV_HoaDon();
         }
-
-
         #endregion
 
+
+        #region Select_SanPham 
+
+        // Xử lý sự kiện ComboBox - Menu;
+        private void HoaDon_CB_SizeSanPham_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            HD_CB_LoaiSanPham.SelectedIndex = 0;
+            string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
+            List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+            if (bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang) == null)
+            {
+                AddSanPham(listTmp);
+                return;
+            }
+            else
+            {
+                listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
+                AddSanPham(listTmp);
+            }
+        }
+
+        private void HD_CB_LoaiSanPham_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+            string tenLoai = HD_CB_LoaiSanPham.SelectedItem.ToString();
+            List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+            if (bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp) == null)
+            {
+                AddSanPham(listTmp);
+                return;
+            }
+            else
+            {
+                listTmp = bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp);
+                AddSanPham(listTmp);
+            }
+        }
+        #endregion
+
+        // Dữ liệu HoaDon_FLP_DanhSachChiTietSanPham
+        private void AddChiTietSanPham(KhoHang sanPham)
+        {
+          
+            //if (listChiTietSanPham.Count == 0)
+            //{
+            //    UC_ChiTietSanPham.dem += 1;
+            //    ucChiTietSanPham = new UC_ChiTietSanPham(sanPham);
+            //    HoaDon_FLP_DanhSachChiTietSanPham.Controls.Add(ucChiTietSanPham);
+                
+            //}
+            //else
+            //{
+            //    for (int i = 0; i < listChiTietSanPham.Count; i++)
+            //    {
+            //        if(sanPham.MaHang == listChiTietSanPham[i].MaHang)
+            //        {
+            //            return;
+            //        }
+            //    }
+            //    UC_ChiTietSanPham.dem += 1;
+            //    ucChiTietSanPham = new UC_ChiTietSanPham(sanPham);
+            //    HoaDon_FLP_DanhSachChiTietSanPham.Controls.Add(ucChiTietSanPham);
+            //}
+
+            foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+            {
+                if(item.chiTietSanPham.MaHang == sanPham.MaHang)
+                {
+                    item.TangSoLuong();
+                    return;
+                }
+            }
+            //int sTT = 0;
+            FLP_ChiTietSanPham.Controls.Add(ucChiTietSanPham = new UC_ChiTietSanPham(sanPham));
+            
+         }
+    }
+}
+
         #region Demo
+        //DataTable dt = new DataTable();
+        //dt.Columns.Add("STT");
+        //    dt.Columns.Add("TenHang");
+        //    dt.Columns.Add("SL");
+        //    dt.Columns.Add("DonGia");
+        //    dt.Columns.Add("ThanhTien");
+
+        //    DataRow dr = dt.NewRow();
+        //dr["STT"] = 1;
+        //    dr["TenHang"] = "Quan áo ";
+        //    dr["DonGia"] = "190.200";
+        //    dr["SL"] = "10";
+        //    dr["ThanhTien"] = "290.900";
+
+        //    dt.Rows.Add(dr);
         //private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
         //{
         //    string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
@@ -250,71 +354,3 @@ namespace Store_Manager
         //    }
         //}
         #endregion
-
-        #region Select_SanPham
-
-        // Xử lý sự kiện ComboBox - Menu;
-        private void HoaDon_CB_SizeSanPham_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            HD_CB_LoaiSanPham.SelectedIndex = 0;
-            string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
-            List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-            if (bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang) == null)
-            {
-                LoadingSamPham(listTmp);
-                return;
-            }
-            else
-            {
-                listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
-                LoadingSamPham(listTmp);
-            }
-        }
-
-        private void HD_CB_LoaiSanPham_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            HoaDon_CB_SizeSanPham.SelectedIndex = 0;
-            string tenLoai = HD_CB_LoaiSanPham.SelectedItem.ToString();
-            List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-            if (bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp) == null)
-            {
-                LoadingSamPham(listTmp);
-                return;
-            }
-            else
-            {
-                listTmp = bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp);
-                LoadingSamPham(listTmp);
-            }
-        }
-        #endregion
-
-        // Dữ liệu HoaDon_FLP_DanhSachChiTietSanPham
-        private void Loading_DGV_HoaDon()
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("STT");
-            dt.Columns.Add("TenHang");
-            dt.Columns.Add("SL");
-            dt.Columns.Add("DonGia");
-            dt.Columns.Add("ThanhTien");
-
-            DataRow dr =  dt.NewRow();
-            dr["STT"] = 1;
-            dr["TenHang"] = "Quan áo ";
-            dr["DonGia"] = "190.200";
-            dr["SL"] = "10";
-            dr["ThanhTien"] = "290.900";
-
-            dt.Rows.Add(dr);
-            UC_HoaDon_ChiTietSanPham.dem = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                UC_HoaDon_ChiTietSanPham.dem = i + 1;
-                UC_HoaDon_ChiTietSanPham uc = new UC_HoaDon_ChiTietSanPham();
-                HoaDon_FLP_DanhSachChiTietSanPham.Controls.Add(uc);
-            }
-         }
-
-    }
-}

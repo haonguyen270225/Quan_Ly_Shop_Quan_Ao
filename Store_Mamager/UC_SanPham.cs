@@ -11,65 +11,45 @@ using System.Drawing.Drawing2D;
 using DTO;
 namespace Store_Manager
 {
-    public partial class UC_HoaDon_SanPham : UserControl
+    public partial class UC_SanPham : UserControl
     {
         #region KhaiBao
-        public static int dem = 0;
+        public event EventHandler<KhoHang> OnAddToHoaDon;
+
+        public KhoHang sanPham { get; private set; }
         #endregion
-        public UC_HoaDon_SanPham(KhoHang khoHang)
+        public UC_SanPham(KhoHang khoHang , int sTT)
         {
             InitializeComponent();
-
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F); 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            LoadingDuLieu(khoHang);
+            this.sanPham = khoHang;
+            LoadingDuLieu(khoHang , sTT);
         }
 
-
-        private void LoadingDuLieu(KhoHang khoHang)
+        private void LoadingDuLieu(KhoHang khoHang , int sTT)
         {
-            UC_L_ThongTinSanPham.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang;
-            UC_L_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
-            dem++;
-            UC_GB_SanPham.Text = dem.ToString("");
-            //UC_GB_SanPham.Text = khoHang.ID.ToString();
-            //Loading Hình ảnh !
+            SanPham_L.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang;
+            SanPham_L_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
+            SanPham_GB.Text = sTT.ToString();
         }
-
-
-        void RoundPictureBox(PictureBox pb, int radius)
-        {
-            GraphicsPath path = new GraphicsPath();
-            path.StartFigure();
-
-            path.AddArc(0, 0, radius, radius, 180, 90);
-            path.AddArc(pb.Width - radius, 0, radius, radius, 270, 90);
-            path.AddArc(pb.Width - radius, pb.Height - radius, radius, radius, 0, 90);
-            path.AddArc(0, pb.Height - radius, radius, radius, 90, 90);
-
-            path.CloseFigure();
-            pb.Region = new Region(path);
-        } // Bp góc ảnh;
-
 
         private void UC_HoaDon_SanPham_Load(object sender, EventArgs e)
         {
            
             this.Padding = new Padding(10);
-          //  UC_PB_2.Padding = new Padding(30);
-            RoundPictureBox(UC_PB_2, 20);
             this.Margin = new Padding(0);
             EnableHover(
-                  UC_GB_SanPham,
-                //  Color.FromArgb(230, 240, 255),
+                  SanPham_GB,
                 Color.DarkGoldenrod,
-                  Color.Transparent
+                Color.Transparent
              );
-            EnableClick(UC_GB_SanPham , ( s , cv ) =>
+
+            EnableDoubleClick(SanPham_GB, (s, cv) =>
             {
-                MessageBox.Show("GroupBox clicked!");
+                GroupBox gb = (GroupBox)s;
+                //MessageBox.Show("Double click sản phẩm");
+                OnAddToHoaDon?.Invoke(this, sanPham);
             });
         }
 
@@ -83,16 +63,26 @@ namespace Store_Manager
 
         }
 
-        public void EnableClick(GroupBox gb, MouseEventHandler onDoubleClick)
+
+        public void EnableDoubleClick(GroupBox gb, MouseEventHandler onDoubleClick)
         {
-            gb.MouseDoubleClick += onDoubleClick;
+            void dbl(object s, MouseEventArgs e)
+            {
+                onDoubleClick?.Invoke(gb, e);
+            }
+
+            gb.MouseDoubleClick += dbl;
 
             foreach (Control c in gb.Controls)
             {
-                c.MouseDoubleClick += onDoubleClick;
+                c.MouseDoubleClick += dbl;
             }
         }
 
+        #region demo
+
+        //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 
         //public void EnableDoubleClickOnly(GroupBox gb, MouseEventHandler onDoubleClick)
         //{
@@ -108,5 +98,21 @@ namespace Store_Manager
         //        // c.MouseDoubleClick += (sender, e) => e.Handled = true;
         //    }
         //}
+
+        //public void EnableClick(GroupBox gb, MouseEventHandler onDoubleClick)
+        //{
+        //    gb.MouseDoubleClick += onDoubleClick;
+
+        //    foreach (Control c in gb.Controls)
+        //    {
+        //        c.MouseDoubleClick += onDoubleClick;
+        //    }
+        //}
+        #endregion
+
+        private void UC_PB_2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -204,17 +204,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Quan_Ly_Shop_Quan_AoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UC_HoaDon_ChiTietSanPham.cs">
+    <Compile Include="UC_ChiTietSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_HoaDon_ChiTietSanPham.Designer.cs">
-      <DependentUpon>UC_HoaDon_ChiTietSanPham.cs</DependentUpon>
+    <Compile Include="UC_ChiTietSanPham.Designer.cs">
+      <DependentUpon>UC_ChiTietSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_HoaDon_SanPham.cs">
+    <Compile Include="UC_SanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_HoaDon_SanPham.Designer.cs">
-      <DependentUpon>UC_HoaDon_SanPham.cs</DependentUpon>
+    <Compile Include="UC_SanPham.Designer.cs">
+      <DependentUpon>UC_SanPham.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frm_DangNhapReaLTaiizor.resx">
       <DependentUpon>frm_DangNhapReaLTaiizor.cs</DependentUpon>
@@ -238,11 +238,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UC_HoaDon_ChiTietSanPham.resx">
-      <DependentUpon>UC_HoaDon_ChiTietSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="UC_ChiTietSanPham.resx">
+      <DependentUpon>UC_ChiTietSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_HoaDon_SanPham.resx">
-      <DependentUpon>UC_HoaDon_SanPham.cs</DependentUpon>
+    <EmbeddedResource Include="UC_SanPham.resx">
+      <DependentUpon>UC_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

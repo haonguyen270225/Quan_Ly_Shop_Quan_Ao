@@ -8,24 +8,44 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 using DTO;
 namespace Store_Manager
 {
-    public partial class UC_HoaDon_ChiTietSanPham : UserControl
+    public partial class UC_ChiTietSanPham : UserControl
     {
-        public UC_HoaDon_ChiTietSanPham()
+        #region KhaiBao
+        private int soLuong = 1;
+        private static int sTT = 1;
+        public KhoHang chiTietSanPham { get; private set; }
+        #endregion
+
+        public UC_ChiTietSanPham(KhoHang sanPham)
         {
             InitializeComponent();
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 
-            HoaDon_ChiTietHoaDon_L_STT.Text = dem.ToString();
+            dataChiTietSanPham(sanPham);
+            this.chiTietSanPham = sanPham;
         }
 
-        #region KhaiBao
-        public static int dem = 0;
-        public List<KhoHang> listSanPham = new List<KhoHang>();
-        #endregion
+       
+        private void dataChiTietSanPham(KhoHang sanPham)
+        {
+            ChiTietSanPham_L_TenHang.Text = sanPham.TenHang.ToString();
+            ChiTietSanPham_L_Gia.Text = sanPham.Gia.ToString("N0");
+            ChiTietSanPham_L_ThanhTien.Text = sanPham.Gia.ToString("N0");
+            ChiTietSanPham_SoLuong.Text = soLuong.ToString();
+           
+        } 
+
+        public void TangSoLuong()
+        {
+            this.soLuong += 1;
+            ChiTietSanPham_SoLuong.Text = soLuong.ToString();
+            ChiTietSanPham_L_ThanhTien.Text = (soLuong * chiTietSanPham.Gia).ToString("N0");
+        }
 
         #region GiaoDien
         private void UC_HoaDon_ChiTietHoaDon_Load(object sender, EventArgs e)
@@ -48,7 +68,6 @@ namespace Store_Manager
                 //    HoaDon_ChiTietHoaDon_CB_STT.Checked = false;
                 //    HoaDon_ChiTietHoaDon_P.BackColor = Color.FromArgb(63, 63, 70);
                 //}
-                
             });
         }
 
@@ -70,10 +89,7 @@ namespace Store_Manager
             pn.MouseEnter += enter; pn.MouseLeave += leave;
             foreach (Control c in pn.Controls) { c.MouseEnter += enter; c.MouseLeave += leave; }
         }
-
-
         #endregion
-
         private void HoaDon_ChiTietHoaDon_B_Xoa_Click(object sender, EventArgs e)
         {
             FlowLayoutPanel fLP = this.Parent as FlowLayoutPanel;
