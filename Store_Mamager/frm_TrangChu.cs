@@ -212,10 +212,11 @@ namespace Store_Manager
 
             Loading_DGV_HoaDon();
         }
-        // Xử lý sự kiện ComboBox;
+
 
         #endregion
 
+        #region Demo
         //private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
         //{
         //    string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
@@ -248,7 +249,11 @@ namespace Store_Manager
         //        LoadingSamPham(listTmp);
         //    }
         //}
+        #endregion
 
+        #region Select_SanPham
+
+        // Xử lý sự kiện ComboBox - Menu;
         private void HoaDon_CB_SizeSanPham_SelectionChangeCommitted(object sender, EventArgs e)
         {
             HD_CB_LoaiSanPham.SelectedIndex = 0;
@@ -282,10 +287,9 @@ namespace Store_Manager
                 LoadingSamPham(listTmp);
             }
         }
+        #endregion
 
-
-
-        // Dữ liệu Hoa_Don_DGV_HoaDon
+        // Dữ liệu HoaDon_FLP_DanhSachChiTietSanPham
         private void Loading_DGV_HoaDon()
         {
             DataTable dt = new DataTable();
@@ -307,8 +311,8 @@ namespace Store_Manager
             for (int i = 0; i < 10; i++)
             {
                 UC_HoaDon_ChiTietSanPham.dem = i + 1;
-               UC_HoaDon_ChiTietSanPham uc = new UC_HoaDon_ChiTietSanPham();
-                HoaDon_FLP_ChiTietHoaDon.Controls.Add(uc);
+                UC_HoaDon_ChiTietSanPham uc = new UC_HoaDon_ChiTietSanPham();
+                HoaDon_FLP_DanhSachChiTietSanPham.Controls.Add(uc);
             }
          }
 
