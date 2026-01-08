@@ -1,6 +1,6 @@
 ﻿namespace Store_Manager
 {
-    partial class UC_HoaDon_ChiTietHoaDon
+    partial class UC_HoaDon_ChiTietSanPham
     {
         /// <summary> 
         /// Required designer variable.

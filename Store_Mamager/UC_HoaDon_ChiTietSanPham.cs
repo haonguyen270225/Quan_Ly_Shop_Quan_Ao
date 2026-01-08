@@ -11,9 +11,9 @@ using System.Windows.Forms;
 using DTO;
 namespace Store_Manager
 {
-    public partial class UC_HoaDon_ChiTietHoaDon : UserControl
+    public partial class UC_HoaDon_ChiTietSanPham : UserControl
     {
-        public UC_HoaDon_ChiTietHoaDon()
+        public UC_HoaDon_ChiTietSanPham()
         {
             InitializeComponent();
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
