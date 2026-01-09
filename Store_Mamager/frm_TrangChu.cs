@@ -32,7 +32,7 @@ namespace Store_Manager
         private UC_ChiTietSanPham ucChiTietSanPham;
         //private List<KhoHang> listSanPham;
         private List<KhoHang> listChiTietSanPham = new List<KhoHang>();
-        private double tongThu = 0; 
+        private double tongThu = 0;
         #endregion
 
         #region TrangChu
@@ -288,7 +288,6 @@ namespace Store_Manager
             //};
             ucChiTietSanPham.Xoa += XoaChiTietSanPham;
             FLP_ChiTietSanPham.Controls.Add(ucChiTietSanPham);
-            //HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
             CapNhat_ListChiTietSanPham();
             listChiTietSanPham.Add(sanPham);
             CapNhat_TongThu();
@@ -297,7 +296,6 @@ namespace Store_Manager
         private void XoaChiTietSanPham(UC_ChiTietSanPham uc)
         {
             FLP_ChiTietSanPham.Controls.Remove(uc);
-            // HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0");
             CapNhat_ListChiTietSanPham();
             CapNhat_TongThu();
             uc.Dispose();
@@ -336,6 +334,50 @@ namespace Store_Manager
             {
                 return;
             }
+        }
+
+
+
+        private void HoaDon_TB_TenSanPham_MouseLeave(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(HoaDon_TB_TenSanPham.Text)) // Bỏ qua chuỗi rỗng , null or \t và \n or " ";)
+            {
+                this.ActiveControl = null;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+    
+
+        private void parrotButton1_Click_1(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(HoaDon_TB_TenSanPham.Text) // Bỏ qua chuỗi rỗng , null or \t và \n or " ";
+                || HoaDon_TB_TenSanPham.Text == "Tìm kiếm tên sản phẩm  !")
+            {
+                FLP_SanPham.Controls.Clear();
+                AddSanPham(bll_LoadingKhoHang.LoadingKhoHang());
+                return;
+            }
+            else
+            {
+                List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+                if (BLL_XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0 )
+                {
+                    MessageBox.Show("Nullllllllllllll");
+                }
+                else
+                {
+                    FLP_SanPham.Controls.Clear();
+                    listTmp = BLL_XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text);
+                    AddSanPham(listTmp);
+                }
+            }
+
         }
     }
 }
