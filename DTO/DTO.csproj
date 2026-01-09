@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KhoHang.cs" />
+    <Compile Include="KhuyenMai.cs" />
     <Compile Include="SPSize.cs" />
     <Compile Include="LoaiSanPham.cs" />
     <Compile Include="NhanVien.cs" />

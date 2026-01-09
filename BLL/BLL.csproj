@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL_LoadingKhoHang.cs" />
+    <Compile Include="BLL_LoadingKhuyenMai.cs" />
     <Compile Include="BLL_LoadingLoaiSanPham.cs" />
     <Compile Include="BLL_LoadingSPSize.cs" />
     <Compile Include="BLL_LoadingThongTinTaiKhoan.cs" />

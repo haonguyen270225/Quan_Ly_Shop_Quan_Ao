@@ -27,7 +27,8 @@ namespace Store_Manager
         private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
         private BLL_LoadingLoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoadingLoaiSanPham();
         private BLL_LoadingSPSize bll_LoadingSPSize = new BLL_LoadingSPSize();
-    
+        private BLL_LoadingKhuyenMai bll_LoadingKhuyenMai = new BLL_LoadingKhuyenMai();
+        private List <KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
         private UC_SanPham ucSanPham;
         private UC_ChiTietSanPham ucChiTietSanPham;
         //private List<KhoHang> listSanPham;
@@ -111,6 +112,7 @@ namespace Store_Manager
             {
                 L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
                 listKhoHang = bll_LoadingKhoHang.LoadingKhoHang();
+                listKhuyenMai = bll_LoadingKhuyenMai.LoadingKhuyenMai();
                 CreateLoading_TrangDonHang();
             }
         }
@@ -199,6 +201,16 @@ namespace Store_Manager
             HD_CB_LoaiSanPham.SelectedIndex = 0;
         }
 
+        private void LoadingKhuyenMai()
+        {
+            HoaDon_CB_MaKhuyenMai.Items.Clear();
+            HoaDon_CB_MaKhuyenMai.Items.Add("Mã khuyến mãi !");
+            foreach (var item in listKhuyenMai)
+            {
+                HoaDon_CB_MaKhuyenMai.Items.Add(item.MaKhuyenMai + ": " + item.ThongTin);
+            }
+            HoaDon_CB_MaKhuyenMai.SelectedIndex = 0;
+        }
 
         private void AddSanPham(List<KhoHang> listKhoHang)
         {
@@ -222,8 +234,9 @@ namespace Store_Manager
         {
             LaodingSPSizeSanPham();
             LoadingLoaiSanPham();
+            LoadingKhuyenMai();
             AddSanPham(listKhoHang);
-          //  Loading_DGV_HoaDon();
+           //Loading_DGV_HoaDon();
         }
         #endregion
 
@@ -379,6 +392,8 @@ namespace Store_Manager
             }
 
         }
+
+       
     }
 }
 #region Demo
