@@ -32,6 +32,7 @@ namespace Store_Manager
         private UC_ChiTietSanPham ucChiTietSanPham;
         //private List<KhoHang> listSanPham;
         private List<KhoHang> listChiTietSanPham = new List<KhoHang>();
+        private double tongThu = 0; 
         #endregion
 
         #region TrangChu
@@ -269,89 +270,121 @@ namespace Store_Manager
         private void AddChiTietSanPham(KhoHang sanPham)
         {
           
-            //if (listChiTietSanPham.Count == 0)
-            //{
-            //    UC_ChiTietSanPham.dem += 1;
-            //    ucChiTietSanPham = new UC_ChiTietSanPham(sanPham);
-            //    HoaDon_FLP_DanhSachChiTietSanPham.Controls.Add(ucChiTietSanPham);
-                
-            //}
-            //else
-            //{
-            //    for (int i = 0; i < listChiTietSanPham.Count; i++)
-            //    {
-            //        if(sanPham.MaHang == listChiTietSanPham[i].MaHang)
-            //        {
-            //            return;
-            //        }
-            //    }
-            //    UC_ChiTietSanPham.dem += 1;
-            //    ucChiTietSanPham = new UC_ChiTietSanPham(sanPham);
-            //    HoaDon_FLP_DanhSachChiTietSanPham.Controls.Add(ucChiTietSanPham);
-            //}
-
             foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
             {
                 if(item.chiTietSanPham.MaHang == sanPham.MaHang)
                 {
                     item.TangSoLuong();
-                    HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
+                    // HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
+                    CapNhat_TongThu();
                     return;
                 }
             }
-            //int sTT = 0;
-            FLP_ChiTietSanPham.Controls.Add(ucChiTietSanPham = new UC_ChiTietSanPham(sanPham));
-            HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
+            ucChiTietSanPham = new UC_ChiTietSanPham(sanPham);
+            //ucChiTietSanPham.Xoa += uc =>
+            //{
+            //    FLP_ChiTietSanPham.Controls.Remove(uc);
+            //    uc.Dispose();
+            //};
+            ucChiTietSanPham.Xoa += XoaChiTietSanPham;
+            FLP_ChiTietSanPham.Controls.Add(ucChiTietSanPham);
+            //HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
+            CapNhat_ListChiTietSanPham();
+            listChiTietSanPham.Add(sanPham);
+            CapNhat_TongThu();
+        }
+
+        private void XoaChiTietSanPham(UC_ChiTietSanPham uc)
+        {
+            FLP_ChiTietSanPham.Controls.Remove(uc);
+            // HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0");
+            CapNhat_ListChiTietSanPham();
+            CapNhat_TongThu();
+            uc.Dispose();
+        }
+
+        private void CapNhat_TongThu()
+        {
+            tongThu = 0;
+            foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+            {
+                tongThu += item.tongThu_ChiTietSanPham;
+            }
+            HoaDon_TongThu.Text = tongThu.ToString("N0") + " đ";
+        }
+
+        private void CapNhat_ListChiTietSanPham()
+        {
+            listChiTietSanPham.Clear();
+            foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+            {
+                listChiTietSanPham.Add(item.chiTietSanPham);
+            }
+        }
+
+        private void HoaDon_Xoa_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Thông báo !", "Bạn có muốn xóa !", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+            if (result == DialogResult.Yes) 
+            {
+                 FLP_ChiTietSanPham.Controls.Clear();
+                 listChiTietSanPham.Clear();
+                 CapNhat_ListChiTietSanPham();
+                 CapNhat_TongThu();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
+#region Demo
+//DataTable dt = new DataTable();
+//dt.Columns.Add("STT");
+//    dt.Columns.Add("TenHang");
+//    dt.Columns.Add("SL");
+//    dt.Columns.Add("DonGia");
+//    dt.Columns.Add("ThanhTien");
 
-        #region Demo
-        //DataTable dt = new DataTable();
-        //dt.Columns.Add("STT");
-        //    dt.Columns.Add("TenHang");
-        //    dt.Columns.Add("SL");
-        //    dt.Columns.Add("DonGia");
-        //    dt.Columns.Add("ThanhTien");
+//    DataRow dr = dt.NewRow();
+//dr["STT"] = 1;
+//    dr["TenHang"] = "Quan áo ";
+//    dr["DonGia"] = "190.200";
+//    dr["SL"] = "10";
+//    dr["ThanhTien"] = "290.900";
 
-        //    DataRow dr = dt.NewRow();
-        //dr["STT"] = 1;
-        //    dr["TenHang"] = "Quan áo ";
-        //    dr["DonGia"] = "190.200";
-        //    dr["SL"] = "10";
-        //    dr["ThanhTien"] = "290.900";
+//    dt.Rows.Add(dr);
+//private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
+//{
+//    string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
+//    List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+//    if (bll_LoadingSPSize.LocTheoSize(maSanPham , listSPSize , listKhoHang) == null)
+//    {
+//        LoadingSamPham(listTmp);
+//        return;
+//    }
+//    else
+//    {
+//        listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
+//        LoadingSamPham(listTmp);
+//    }
+//}
 
-        //    dt.Rows.Add(dr);
-        //private void HoaDon_CB_SizeSanPham_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    string maSanPham = HoaDon_CB_SizeSanPham.SelectedItem.ToString();
-        //    List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-        //    if (bll_LoadingSPSize.LocTheoSize(maSanPham , listSPSize , listKhoHang) == null)
-        //    {
-        //        LoadingSamPham(listTmp);
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        listTmp = bll_LoadingSPSize.LocTheoSize(maSanPham, listSPSize, listKhoHang);
-        //        LoadingSamPham(listTmp);
-        //    }
-        //}
-
-        //private void HD_CB_LoaiSanPham_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    HoaDon_CB_SizeSanPham.SelectedIndex = 0;
-        //    string tenLoai = HD_CB_LoaiSanPham.SelectedItem.ToString();
-        //    List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-        //    if(bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai , listLoaiSanPham , listTmp) == null)
-        //    {
-        //        LoadingSamPham(listTmp);
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        listTmp = bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp);
-        //        LoadingSamPham(listTmp);
-        //    }
-        //}
-        #endregion
+//private void HD_CB_LoaiSanPham_SelectedIndexChanged(object sender, EventArgs e)
+//{
+//    HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+//    string tenLoai = HD_CB_LoaiSanPham.SelectedItem.ToString();
+//    List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
+//    if(bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai , listLoaiSanPham , listTmp) == null)
+//    {
+//        LoadingSamPham(listTmp);
+//        return;
+//    }
+//    else
+//    {
+//        listTmp = bll_LoadingLoaiSanPham.LocLoaiSanPham(tenLoai, listLoaiSanPham, listTmp);
+//        LoadingSamPham(listTmp);
+//    }
+//}
+#endregion listChiTietSanPham
