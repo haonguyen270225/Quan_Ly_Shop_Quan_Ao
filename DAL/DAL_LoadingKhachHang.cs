@@ -26,6 +26,7 @@ namespace DAL
                     KhachHang khachHang = new KhachHang();
                     khachHang.ID = Convert.ToInt32(dataReader["ID"]);
                     khachHang.MaKhachHang = dataReader["MaKhachHang"].ToString();
+                    khachHang.HoVaTen = dataReader["HoVaTen"].ToString();
                     khachHang.SDT = dataReader["SDT"].ToString();
                     tmp.Add(khachHang);
                 }

@@ -22,8 +22,8 @@ namespace Store_Manager
         #region KhaiBao
         //BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
         //List<KhachHang> listKhachHang = new List<KhachHang>();
+        public event Action<KhachHang> DaDongVaThemKachHang;
         KhachHang khachHang = new KhachHang();
-
         #endregion
         private void frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
@@ -63,37 +63,65 @@ namespace Store_Manager
 
         private void B_Luu_Click(object sender, EventArgs e)
         {
-            khachHang.HoVaTen = TB_HoVaTen.Text.Trim();
-            khachHang.SDT = TB_HoVaTen.Text.Trim();
-            khachHang.MaKhachHang = TB_MaKhachHang.Text.Trim();
-            if (khachHang.HoVaTen.Length == 0 || khachHang.SDT.Length == 0 || khachHang.MaKhachHang.Length == 0)
+          
+            khachHang.MaKhachHang = TB_MaKhachHang.Text;
+            khachHang.HoVaTen = TB_MaKhachHang.Text;
+            khachHang.SDT = TB_SDT.Text;
+            try
             {
-                MessageBox.Show("TexBox không được để trống !");
+              BLL_LoadingKhachHang.Check_ThemKhachHang(khachHang);
+              DaDongVaThemKachHang.Invoke(khachHang);
+              this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
                 return;
             }
-            if (XuLy_Chuoi.KiemTra_HoVaTen(khachHang.HoVaTen) == true && XuLy_Chuoi.KiemTra_Ma(khachHang.MaKhachHang) == true && XuLy_Chuoi.KiemTra_STD(khachHang.SDT) == true)
-            {
-                MessageBox.Show("Hợp lê !");
-                return;
-            }
-            else
-            {
-                if (XuLy_Chuoi.KiemTra_Ma(khachHang.MaKhachHang) == false)
-                {
-                    MessageBox.Show("Mã khách hàng  không được các ký tự đặc biệt và khoản trắng !");
-                    return;
-                }
-                else if (XuLy_Chuoi.KiemTra_HoVaTen(khachHang.HoVaTen) == false)
-                {
-                    MessageBox.Show("Họ và Tên không được chứa số và các ký tự đặc biệt !");
-                    return;
-                }
-                else if (XuLy_Chuoi.KiemTra_STD(khachHang.SDT) == false)
-                {
-                    MessageBox.Show("SDT phải là chữ số và không chứa khoản trắng !");
-                    return;
-                }
-            }
+            #region demo_ThongTinKhachHang
+            //if (kQ == false)
+            //{
+            //    MessageBox.Show(mes);
+            //}
+            //else
+            //{
+            //    MessageBox.Show(mes);
+            //}
+            //khachHang.HoVaTen = TB_HoVaTen.Text.Trim();
+            //khachHang.SDT = TB_HoVaTen.Text.Trim();
+            //khachHang.MaKhachHang = TB_MaKhachHang.Text.Trim();
+            //if (khachHang.HoVaTen.Length == 0 || khachHang.SDT.Length == 0 || khachHang.MaKhachHang.Length == 0)
+            //{
+            //    MessageBox.Show("TexBox không được để trống !");
+            //    return;
+            //}
+            //if (XuLy_Chuoi.KiemTra_HoVaTen(khachHang.HoVaTen) == true && XuLy_Chuoi.KiemTra_Ma(khachHang.MaKhachHang) == true && XuLy_Chuoi.KiemTra_STD(khachHang.SDT) == true)
+            //{
+
+            //    DaDongVaThemKachHang?.Invoke(khachHang); // sự kiện frm_TrangChu; GỌI (kích hoạt) tất cả các hàm đã đăng ký vào event
+            //    string tTKhachHang = "Khách hàng : " + khachHang.MaKhachHang + khachHang.HoVaTen + khachHang.SDT;
+            //    MessageBox.Show(tTKhachHang);
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    if (XuLy_Chuoi.KiemTra_Ma(khachHang.MaKhachHang) == false)
+            //    {
+            //        MessageBox.Show("Mã khách hàng  không được các ký tự đặc biệt và khoản trắng !");
+            //        return;
+            //    }
+            //    else if (XuLy_Chuoi.KiemTra_HoVaTen(khachHang.HoVaTen) == false)
+            //    {
+            //        MessageBox.Show("Họ và Tên không được chứa số và các ký tự đặc biệt !");
+            //        return;
+            //    }
+            //    else if (XuLy_Chuoi.KiemTra_STD(khachHang.SDT) == false)
+            //    {
+            //        MessageBox.Show("SDT phải là chữ số và không chứa khoản trắng !");
+            //        return;
+            //    }
+            //}
+            #endregion
         }
     }
 }

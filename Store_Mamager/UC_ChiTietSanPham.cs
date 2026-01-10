@@ -21,8 +21,7 @@ namespace Store_Manager
        // public static double tongThu { get; private set; } = 0;
         public KhoHang chiTietSanPham { get; private set; }
 
-        public event Action<UC_ChiTietSanPham> Xoa;
-
+        public event Action<UC_ChiTietSanPham> Xoa_ChiTietSanPham;
         #endregion
 
         public UC_ChiTietSanPham(KhoHang sanPham)
@@ -98,7 +97,7 @@ namespace Store_Manager
         private void HoaDon_ChiTietHoaDon_B_Xoa_Click(object sender, EventArgs e)
         {
            tongThu_ChiTietSanPham -= Convert.ToDouble(ChiTietSanPham_L_ThanhTien.Text.ToString());
-           Xoa?.Invoke(this);
+           Xoa_ChiTietSanPham?.Invoke(this);
         }
 
     }

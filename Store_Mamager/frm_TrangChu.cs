@@ -22,13 +22,15 @@ namespace Store_Manager
         private List<KhoHang> listKhoHang = new List<KhoHang>();
         private List<LoaiSanPham> listLoaiSanPham = new List<LoaiSanPham>();
         private List<SPSize> listSPSize = new List<SPSize>();
+        private List<KhachHang> listKhachHang = new List<KhachHang>();
         private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
         private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
         private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
         private BLL_LoadingLoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoadingLoaiSanPham();
         private BLL_LoadingSPSize bll_LoadingSPSize = new BLL_LoadingSPSize();
         private BLL_LoadingKhuyenMai bll_LoadingKhuyenMai = new BLL_LoadingKhuyenMai();
-        private List <KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
+        private BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
+        private List<KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
         private UC_SanPham ucSanPham;
         private UC_ChiTietSanPham ucChiTietSanPham;
         //private List<KhoHang> listSanPham;
@@ -42,11 +44,18 @@ namespace Store_Manager
             InitializeComponent();
         }
 
+        private List<KhachHang> LoadingDanhSachKhachHang() {
+            return bll_LoadingKhachHang.LoadingKhachHang();
+        }
+
         public void CreateLoading_TrangChu()
         {
             taiKhoan.UserName = "binh.tran";
             taiKhoan.PassWord = "123456";
             taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
+
+            listKhachHang = LoadingDanhSachKhachHang();
+
             //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
             //MessageBox.Show("Gọi hàm CreateLoading()");
             nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
@@ -65,7 +74,6 @@ namespace Store_Manager
             CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
             CTTK_TB_PassWord.UseSystemPasswordChar = true;
             CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
-
             if (nhanVien.GioiTinh == 1)
             {
                 CTTK_TB_GioiTinh.Text = "Nam";
@@ -92,9 +100,8 @@ namespace Store_Manager
             // TODO: This line of code loads data into the 'quan_Ly_Shop_Quan_AoDataSet.HoaDon' table. You can move, or remove it, as needed.
             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
             CreateLoading_TrangChu();
-
-
         }
+
 
         private void tabPage1_Selected(object sender, TabControlEventArgs e)
         {
@@ -174,25 +181,25 @@ namespace Store_Manager
 
 
         #region HoaDon
-        
+
 
         private void LaodingSPSizeSanPham()
         {
             listSPSize = bll_LoadingSPSize.LoadingSPSize();
             HoaDon_CB_SizeSanPham.Items.Clear();
             HoaDon_CB_SizeSanPham.Items.Add("Size");
-            foreach(var item in listSPSize)
+            foreach (var item in listSPSize)
             {
                 HoaDon_CB_SizeSanPham.Items.Add(item.MaSize.ToString());
             }
-           HoaDon_CB_SizeSanPham.SelectedIndex = 0;
+            HoaDon_CB_SizeSanPham.SelectedIndex = 0;
         }
         private void LoadingLoaiSanPham()
         {
             HD_CB_LoaiSanPham.Items.Clear();
             HD_CB_LoaiSanPham.Items.Add("Mã quần áo !");
             listLoaiSanPham = bll_LoadingLoaiSanPham.LoadingLoaiSanPham();
-            foreach(var item in listLoaiSanPham)
+            foreach (var item in listLoaiSanPham)
             {
                 HD_CB_LoaiSanPham.Items.Add(item.TenLoai);
             }
@@ -214,13 +221,13 @@ namespace Store_Manager
         {
             FLP_SanPham.Controls.Clear();
             //ucSanPham.sanPham_Dem = 0;
-            if(listKhoHang.Count == 0)
+            if (listKhoHang.Count == 0)
             {
                 return;
             }
             for (int i = 0; i < listKhoHang.Count; i++)
             {
-                ucSanPham = new UC_SanPham(listKhoHang[i] , i + 1);
+                ucSanPham = new UC_SanPham(listKhoHang[i], i + 1);
                 ucSanPham.OnAddToHoaDon += (s, sp) =>
                 {
                     AddChiTietSanPham(sp);
@@ -234,7 +241,7 @@ namespace Store_Manager
             LoadingLoaiSanPham();
             LoadingKhuyenMai();
             AddSanPham(listKhoHang);
-           //Loading_DGV_HoaDon();
+            //Loading_DGV_HoaDon();
         }
         #endregion
 
@@ -280,10 +287,10 @@ namespace Store_Manager
         // Dữ liệu HoaDon_FLP_DanhSachChiTietSanPham
         private void AddChiTietSanPham(KhoHang sanPham)
         {
-          
-            foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+
+            foreach (UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
             {
-                if(item.chiTietSanPham.MaHang == sanPham.MaHang)
+                if (item.chiTietSanPham.MaHang == sanPham.MaHang)
                 {
                     item.TangSoLuong();
                     // HoaDon_TongThu.Text = UC_ChiTietSanPham.tongThu.ToString("N0") + " đ";
@@ -297,7 +304,7 @@ namespace Store_Manager
             //    FLP_ChiTietSanPham.Controls.Remove(uc);
             //    uc.Dispose();
             //};
-            ucChiTietSanPham.Xoa += XoaChiTietSanPham;
+            ucChiTietSanPham.Xoa_ChiTietSanPham += XoaChiTietSanPham;
             FLP_ChiTietSanPham.Controls.Add(ucChiTietSanPham);
             CapNhat_ListChiTietSanPham();
             listChiTietSanPham.Add(sanPham);
@@ -315,7 +322,7 @@ namespace Store_Manager
         private void CapNhat_TongThu()
         {
             tongThu = 0;
-            foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+            foreach (UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
             {
                 tongThu += item.tongThu_ChiTietSanPham;
             }
@@ -325,7 +332,7 @@ namespace Store_Manager
         private void CapNhat_ListChiTietSanPham()
         {
             listChiTietSanPham.Clear();
-            foreach(UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+            foreach (UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
             {
                 listChiTietSanPham.Add(item.chiTietSanPham);
             }
@@ -334,12 +341,12 @@ namespace Store_Manager
         private void HoaDon_Xoa_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Thông báo !", "Bạn có muốn xóa !", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
-            if (result == DialogResult.Yes) 
+            if (result == DialogResult.Yes)
             {
-                 FLP_ChiTietSanPham.Controls.Clear();
-                 listChiTietSanPham.Clear();
-                 CapNhat_ListChiTietSanPham();
-                 CapNhat_TongThu();
+                FLP_ChiTietSanPham.Controls.Clear();
+                listChiTietSanPham.Clear();
+                CapNhat_ListChiTietSanPham();
+                CapNhat_TongThu();
             }
             else
             {
@@ -362,7 +369,7 @@ namespace Store_Manager
             }
         }
 
-    
+
 
         private void parrotButton1_Click_1(object sender, EventArgs e)
         {
@@ -377,7 +384,7 @@ namespace Store_Manager
             else
             {
                 List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-                if (XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0 )
+                if (XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0)
                 {
                     MessageBox.Show("Nullllllllllllll");
                 }
@@ -391,7 +398,21 @@ namespace Store_Manager
 
         }
 
-       
+        private void HoaDon_ThanhToan_Click(object sender, EventArgs e)
+        {
+            //frm.DaDongVaThemKachHang += ThemDanhSachKhachHang;
+            frm_ThongTinKhachHang frm = new frm_ThongTinKhachHang();
+            frm.ShowDialog();
+        }
+
+
+        #region XuLy_KhachHang
+        private void ThemDanhSachKhachHang(KhachHang khachHang)
+        {
+            listKhachHang.Add(khachHang);
+        } 
+
+        #endregion
     }
 }
 #region Demo

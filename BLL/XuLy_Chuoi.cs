@@ -17,7 +17,7 @@ namespace BLL
             bool kQ = true;
             foreach(char c in sDT)
             {
-                 if(char.IsDigit(c) == true)
+                 if(char.IsDigit(c) != true)
                 {
                     kQ = false;
                     break;
@@ -30,9 +30,11 @@ namespace BLL
         public static bool KiemTra_HoVaTen(string hoVaTen)
         {
             bool kQ = true;
+            if (string.IsNullOrWhiteSpace(hoVaTen))
+                kQ = false;
             foreach (char c in hoVaTen)
             {
-                if (char.IsPunctuation(c) == true || char.IsDigit(c) == true)
+                if (char.IsDigit(c) == true && char.IsWhiteSpace(c)  == true)
                 {
                     kQ = false;
                     break;
@@ -57,6 +59,7 @@ namespace BLL
             }
            return kQ;
         }
+
 
         public static  List<KhoHang> TimKiem_DanhSanhKhoHang(List<KhoHang> khoHang , string str) 
         {
@@ -89,6 +92,7 @@ namespace BLL
                     listTmp.Add(item);
                 }
             }
+
 
             if (listTmp.Count > 0)
                 return listTmp;

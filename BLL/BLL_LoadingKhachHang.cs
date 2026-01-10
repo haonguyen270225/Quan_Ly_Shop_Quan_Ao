@@ -6,15 +6,87 @@ using System.Threading.Tasks;
 using DTO;
 using DAL;
 using System.Runtime.InteropServices;
+using System.Web.UI.Design;
+using System.Diagnostics.Eventing.Reader;
+using System.Data.SqlClient;
 namespace BLL
 {
     public class BLL_LoadingKhachHang
     {
         DAL_LoadingKhachHang dal_LoadingKhachHang = new DAL_LoadingKhachHang();
 
+        
         public List<KhachHang> LoadingKhachHang()
         {
             return dal_LoadingKhachHang.LoadingKhachHang();
+        }
+
+        public void _serverThemKhachHang(KhachHang khacHang)
+        {
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"INSERT INTO [dbo].[KhachHang]
+           ([MaKhachHang]
+           ,[HoVaTen]
+           ,[SDT]) 
+            VALUES (@maKhachHang,@hoVaTen,@sDt", conn);
+            sqlCommand.Parameters.AddWithValue("@maKhachHang", khacHang.MaKhachHang);
+            sqlCommand.Parameters.AddWithValue("@hoVaTen" , khacHang.HoVaTen);
+            sqlCommand.Parameters.AddWithValue("@sDt", khacHang.SDT);
+            sqlCommand.ExecuteReader();
+            conn.Close();
+        }
+
+
+
+        public static string Check_ThemKhachHang( KhachHang kh) 
+        {
+            #region demo
+            //{
+            //    //kQ = true;
+            //    if(khacHang.HoVaTen.Length == 0 || khacHang.SDT.Length == 0 || khacHang.MaKhachHang.Length == 0 )
+            //    {
+            //        kQ = false;
+            //        return "Text box không được để trống !";
+            //    }
+            //    else if(XuLy_Chuoi.KiemTra_Ma(khacHang.MaKhachHang) == false) 
+            //    {
+            //         kQ = false;
+            //        return "Mã khách hàng không chứa ký tự đặc biệt hoặc khoảng trắng !";
+            //    }
+            //    else if(XuLy_Chuoi.KiemTra_HoVaTen(khacHang.HoVaTen) == false){
+            //        kQ = false;
+            //        return "Họ và tên không chứa ký tự đặc biệt hoặc chữ số !";
+            //    }
+            //    else if (XuLy_Chuoi.KiemTra_STD(khacHang.SDT) == false )
+            //    {
+            //        kQ = false;
+            //        return "Số điện thoại phải là chữ số !";
+            //    }
+            //    else
+            //    {
+            //        kQ = true;
+            //        return "Thông tin khách hàng : " + khacHang.MaKhachHang + khacHang.HoVaTen + khacHang.SDT;
+            //    }
+            #endregion
+            if (kh == null)
+            throw new Exception("Khách hàng không hợp lệ");
+
+            if (string.IsNullOrWhiteSpace(kh.MaKhachHang) ||
+                string.IsNullOrWhiteSpace(kh.HoVaTen) ||
+                string.IsNullOrWhiteSpace(kh.SDT))
+                throw new Exception("Text box không được để trống");
+
+            if (XuLy_Chuoi.KiemTra_Ma(kh.MaKhachHang) == false)
+                throw new Exception("Mã khách hàng không chứa khoảng trắng và ký tự đặc biệt !");
+
+            if (XuLy_Chuoi.KiemTra_HoVaTen(kh.HoVaTen) == false)
+                throw new Exception("Họ và tên không chứa số và ký tự đặc biệt !");
+
+            if (XuLy_Chuoi.KiemTra_STD(kh.SDT) == false)
+                throw new Exception("Số điện thoại không hợp lệ !");
+
+            return null; // hợp lệ !
         }
     }
 }

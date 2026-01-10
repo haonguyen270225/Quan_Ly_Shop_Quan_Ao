@@ -15,7 +15,6 @@ namespace Store_Manager
     {
         #region KhaiBao
         public event EventHandler<KhoHang> OnAddToHoaDon;
-
         public KhoHang sanPham { get; private set; }
         #endregion
         public UC_SanPham(KhoHang khoHang , int sTT)
