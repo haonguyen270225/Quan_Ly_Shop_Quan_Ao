@@ -75,6 +75,7 @@
             this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quan_Ly_Shop_Quan_AoDataSet = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSet();
             this.tab_HoaDon = new System.Windows.Forms.TabPage();
+            this.HoaDon_CB_MaKhuyenMai = new ReaLTaiizor.Controls.ComboBoxEdit();
             this.HoaDon_TongThu = new ReaLTaiizor.Controls.MetroTextBox();
             this.metroLabel1 = new ReaLTaiizor.Controls.MetroLabel();
             this.HoaDon_ThanhToan = new ReaLTaiizor.Controls.ParrotButton();
@@ -131,7 +132,6 @@
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
-            this.HoaDon_CB_MaKhuyenMai = new ReaLTaiizor.Controls.ComboBoxEdit();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
@@ -811,6 +811,26 @@
             this.tab_HoaDon.Size = new System.Drawing.Size(1362, 719);
             this.tab_HoaDon.TabIndex = 1;
             this.tab_HoaDon.Text = "Hóa Đơn";
+            // 
+            // HoaDon_CB_MaKhuyenMai
+            // 
+            this.HoaDon_CB_MaKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.HoaDon_CB_MaKhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.HoaDon_CB_MaKhuyenMai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HoaDon_CB_MaKhuyenMai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.HoaDon_CB_MaKhuyenMai.DropDownHeight = 100;
+            this.HoaDon_CB_MaKhuyenMai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.HoaDon_CB_MaKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.HoaDon_CB_MaKhuyenMai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.HoaDon_CB_MaKhuyenMai.FormattingEnabled = true;
+            this.HoaDon_CB_MaKhuyenMai.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.HoaDon_CB_MaKhuyenMai.IntegralHeight = false;
+            this.HoaDon_CB_MaKhuyenMai.ItemHeight = 20;
+            this.HoaDon_CB_MaKhuyenMai.Location = new System.Drawing.Point(8, 599);
+            this.HoaDon_CB_MaKhuyenMai.Name = "HoaDon_CB_MaKhuyenMai";
+            this.HoaDon_CB_MaKhuyenMai.Size = new System.Drawing.Size(233, 26);
+            this.HoaDon_CB_MaKhuyenMai.StartIndex = 0;
+            this.HoaDon_CB_MaKhuyenMai.TabIndex = 12;
             // 
             // HoaDon_TongThu
             // 
@@ -1757,26 +1777,6 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
-            // HoaDon_CB_MaKhuyenMai
-            // 
-            this.HoaDon_CB_MaKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.HoaDon_CB_MaKhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.HoaDon_CB_MaKhuyenMai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HoaDon_CB_MaKhuyenMai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.HoaDon_CB_MaKhuyenMai.DropDownHeight = 100;
-            this.HoaDon_CB_MaKhuyenMai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.HoaDon_CB_MaKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.HoaDon_CB_MaKhuyenMai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.HoaDon_CB_MaKhuyenMai.FormattingEnabled = true;
-            this.HoaDon_CB_MaKhuyenMai.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.HoaDon_CB_MaKhuyenMai.IntegralHeight = false;
-            this.HoaDon_CB_MaKhuyenMai.ItemHeight = 20;
-            this.HoaDon_CB_MaKhuyenMai.Location = new System.Drawing.Point(8, 599);
-            this.HoaDon_CB_MaKhuyenMai.Name = "HoaDon_CB_MaKhuyenMai";
-            this.HoaDon_CB_MaKhuyenMai.Size = new System.Drawing.Size(233, 26);
-            this.HoaDon_CB_MaKhuyenMai.StartIndex = 0;
-            this.HoaDon_CB_MaKhuyenMai.TabIndex = 12;
-            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1814,7 +1814,6 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
-            this.parrotGroupBox1.PerformLayout();
             this.GB_ChiTietTaiKhoan.ResumeLayout(false);
             this.GB_ChiTietTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).EndInit();

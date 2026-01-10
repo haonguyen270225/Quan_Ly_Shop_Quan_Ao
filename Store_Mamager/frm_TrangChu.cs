@@ -37,6 +37,11 @@ namespace Store_Manager
         #endregion
 
         #region TrangChu
+        public frm_TrangChu()
+        {
+            InitializeComponent();
+        }
+
         public void CreateLoading_TrangChu()
         {
             taiKhoan.UserName = "binh.tran";
@@ -88,14 +93,7 @@ namespace Store_Manager
             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
             CreateLoading_TrangChu();
 
-        //    MessageBox.Show(taiKhoan.UserName.ToString() + "    " + taiKhoan.PassWord.ToString());
-          //  MessageBox.Show(nhanVien.HoVaTen.ToString() + "    " + nhanVien.CCCD.ToString());
 
-        }
-
-        public frm_TrangChu()
-        {
-            InitializeComponent();
         }
 
         private void tabPage1_Selected(object sender, TabControlEventArgs e)
@@ -379,14 +377,14 @@ namespace Store_Manager
             else
             {
                 List<KhoHang> listTmp = bll_LoadingKhoHang.LoadingKhoHang();
-                if (BLL_XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0 )
+                if (XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0 )
                 {
                     MessageBox.Show("Nullllllllllllll");
                 }
                 else
                 {
                     FLP_SanPham.Controls.Clear();
-                    listTmp = BLL_XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text);
+                    listTmp = XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text);
                     AddSanPham(listTmp);
                 }
             }

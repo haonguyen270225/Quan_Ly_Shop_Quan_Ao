@@ -27,9 +27,6 @@ namespace Store_Manager
             InitializeComponent();
         }
 
-
-        
-      
         private void frm_ThayDoiMatKhau_Load(object sender, EventArgs e)
         {
             MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());

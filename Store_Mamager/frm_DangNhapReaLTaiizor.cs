@@ -26,6 +26,7 @@ namespace Store_Manager
         {
             InitializeComponent();
         }
+          
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
             TB_MatKhau.UseSystemPasswordChar = true;
