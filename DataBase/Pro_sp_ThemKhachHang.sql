@@ -1,0 +1,12 @@
+﻿--create procedure sp_ThemKhachHang
+--(
+--	@MaKhachHang varchar(10),
+--	@HoVaTen nvarchar(50),
+--	@SDT varchar(15)
+--)
+--as
+--begin
+--     INSERT INTO [dbo].[KhachHang] (MaKhachHang , HoVaTen , SDT )
+--     VALUES (@MaKhachHang , @HoVaTen , @SDT)
+--end
+exec sp_ThemKhachHang 'KH011' , N'Nguyễn Văn Demo' , '091122344'
