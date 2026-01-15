@@ -16,7 +16,7 @@ namespace Store_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_ThongTinKhachHang());
+            Application.Run(new frm_TrangChu());
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Web.UI.Design;
 using System.Diagnostics.Eventing.Reader;
 using System.Data.SqlClient;
+using System.Windows.Forms.Design;
 namespace BLL
 {
     public class BLL_LoadingKhachHang
@@ -37,9 +38,7 @@ namespace BLL
             conn.Close();
         }
 
-
-
-        public static string Check_ThemKhachHang( KhachHang kh) 
+        public static string Check_ThemKhachHang( KhachHang kh , List<KhachHang> listKhachHang) 
         {
             #region demo
             //{
@@ -76,7 +75,14 @@ namespace BLL
                 string.IsNullOrWhiteSpace(kh.HoVaTen) ||
                 string.IsNullOrWhiteSpace(kh.SDT))
                 throw new Exception("Text box không được để trống");
-
+            foreach(KhachHang item in listKhachHang)
+            {
+                if (item.MaKhachHang == kh.MaKhachHang)
+                {
+                    throw new Exception("Mã khách hàng đã tồn tại !");
+                    break;
+                }
+            }
             if (XuLy_Chuoi.KiemTra_Ma(kh.MaKhachHang) == false)
                 throw new Exception("Mã khách hàng không chứa khoảng trắng và ký tự đặc biệt !");
 
@@ -85,8 +91,19 @@ namespace BLL
 
             if (XuLy_Chuoi.KiemTra_STD(kh.SDT) == false)
                 throw new Exception("Số điện thoại không hợp lệ !");
-
+            if (kh.HoVaTen.Length > 50 || kh.HoVaTen.Length < 5)
+                throw new Exception("Họ và tên dài  lớn hơn 5 và nhỏ hơn 50 ký tự !");
+            if (kh.MaKhachHang.Length > 10 || kh.MaKhachHang.Length < 5)
+                throw new Exception("Mã khách hàng lớn hơn 5  và nhỏ hơn 10 ký tự !");
+            if (kh.SDT.Length != 10)
+                throw new Exception("SDT phải bằng  10 ký tự ! ");
             return null; // hợp lệ !
+        }
+
+
+        public  void  ThemKhachHang(KhachHang khachHang)
+        {
+            dal_LoadingKhachHang.ThemKhachHang(khachHang);
         }
     }
 }

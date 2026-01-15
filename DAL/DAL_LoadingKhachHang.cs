@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 namespace DAL
 {
     public class DAL_LoadingKhachHang
@@ -33,6 +34,19 @@ namespace DAL
             }
             conn.Close();
             return tmp;
+        }
+
+        public void ThemKhachHang(KhachHang khachHang)
+        {
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"sp_ThemKhachHang", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@MaKhachHang", khachHang.MaKhachHang);
+            sqlCommand.Parameters.AddWithValue("@HoVaTen", khachHang.HoVaTen);
+            sqlCommand.Parameters.AddWithValue("@SDT", khachHang.SDT);
+            sqlCommand.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

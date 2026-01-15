@@ -14,17 +14,16 @@ namespace Store_Manager
 {
     public partial class frm_ThongTinKhachHang : Form
     {
+        #region KhaiBao
+        public event Action<KhachHang> DaDongVaThemKachHang;
+        KhachHang khachHang = new KhachHang();        
+        #endregion
+
         public frm_ThongTinKhachHang()
         {
             InitializeComponent();
         }
 
-        #region KhaiBao
-        //BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
-        //List<KhachHang> listKhachHang = new List<KhachHang>();
-        public event Action<KhachHang> DaDongVaThemKachHang;
-        KhachHang khachHang = new KhachHang();
-        #endregion
         private void frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
             GanSuKienEnterChoTatCaTextBox(this);
@@ -65,13 +64,18 @@ namespace Store_Manager
         {
           
             khachHang.MaKhachHang = TB_MaKhachHang.Text;
-            khachHang.HoVaTen = TB_MaKhachHang.Text;
+            khachHang.HoVaTen = TB_HoVaTen.Text;
             khachHang.SDT = TB_SDT.Text;
             try
             {
-              BLL_LoadingKhachHang.Check_ThemKhachHang(khachHang);
-              DaDongVaThemKachHang.Invoke(khachHang);
-              this.Close();
+                BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
+                BLL_LoadingKhachHang.Check_ThemKhachHang(khachHang , bll_LoadingKhachHang.LoadingKhachHang());
+                
+                if (DaDongVaThemKachHang != null)
+                {
+                    DaDongVaThemKachHang.Invoke(khachHang);
+                }
+               this.Close();
             }
             catch (Exception ex)
             {

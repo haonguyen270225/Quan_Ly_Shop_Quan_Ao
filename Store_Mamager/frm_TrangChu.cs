@@ -178,8 +178,6 @@ namespace Store_Manager
         }
         #endregion
 
-
-
         #region HoaDon
 
 
@@ -398,20 +396,35 @@ namespace Store_Manager
 
         }
 
+
+
+        #region frm_ThongTinKhachHang
         private void HoaDon_ThanhToan_Click(object sender, EventArgs e)
         {
             //frm.DaDongVaThemKachHang += ThemDanhSachKhachHang;
             frm_ThongTinKhachHang frm = new frm_ThongTinKhachHang();
+            frm.DaDongVaThemKachHang += (khachHang) =>
+            {
+                ThemDanhSachKhachHang(khachHang);
+                
+            };
             frm.ShowDialog();
         }
 
-
-        #region XuLy_KhachHang
         private void ThemDanhSachKhachHang(KhachHang khachHang)
         {
-            listKhachHang.Add(khachHang);
-        } 
+            bll_LoadingKhachHang.ThemKhachHang(khachHang);
+            listKhachHang = bll_LoadingKhachHang.LoadingKhachHang();
+            MessageBox.Show("Khach Hang : " + " - " + khachHang.MaKhachHang + " - " + khachHang.HoVaTen + " - " + khachHang.SDT);
+        }
+        #endregion
 
+
+        #region frm_HoaDonChiTiet
+        private void LoadingHoaDonChiTiet(KhachHang khachHang ,  NhanVien nhanVien , List<KhoHang> khoHang , double tongThu)
+        {
+           
+        }
         #endregion
     }
 }

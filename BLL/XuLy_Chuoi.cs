@@ -30,18 +30,15 @@ namespace BLL
         public static bool KiemTra_HoVaTen(string hoVaTen)
         {
             bool kQ = true;
-            if (string.IsNullOrWhiteSpace(hoVaTen))
-                kQ = false;
             foreach (char c in hoVaTen)
             {
-                if (char.IsDigit(c) == true && char.IsWhiteSpace(c)  == true)
+                if (char.IsPunctuation(c) == true || char.IsDigit(c) == true )
                 {
                     kQ = false;
                     break;
                 }
-                //char.IsPunctuation(c) -> co các dấu câu không 
-                // char.IsWhiteSpace(c) -> có khoảng trắng , tab 
-                
+                //char.IsPunctuation(c) -> co các dấu câu không . , ; : ! ? ' " - ( ) [ ] { } … – — “ ” ‘ ’ 、 。
+                // char.IsWhiteSpace(c) -> có khoảng trắng , tab    
             }
             return kQ;
         }
@@ -52,13 +49,16 @@ namespace BLL
 
             foreach (char c in ma)
             {
-                if(char.IsPunctuation(c) == true || char.IsWhiteSpace(c) == true)
+                if (char.IsLetterOrDigit(c) == false || c > 127)
                 {
                     kQ = false;
+                    break;
                 }
+                // char.IsLetterOrDigit(c) Trả về true nếu ký tự c là CHỮ CÁI hoặc CHỮ SỐ
             }
-           return kQ;
+            return kQ;
         }
+
 
 
         public static  List<KhoHang> TimKiem_DanhSanhKhoHang(List<KhoHang> khoHang , string str) 

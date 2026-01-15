@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             "",
             "",
@@ -37,10 +37,11 @@
             "",
             "",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.airForm1 = new ReaLTaiizor.Forms.AirForm();
+            this.foxLabel9 = new ReaLTaiizor.Controls.FoxLabel();
             this.foxLabel8 = new ReaLTaiizor.Controls.FoxLabel();
             this.foxLabel7 = new ReaLTaiizor.Controls.FoxLabel();
             this.foxLabel4 = new ReaLTaiizor.Controls.FoxLabel();
@@ -52,7 +53,12 @@
             this.poisonLinkLabel2 = new ReaLTaiizor.Controls.PoisonLinkLabel();
             this.poisonLinkLabel1 = new ReaLTaiizor.Controls.PoisonLinkLabel();
             this.foxLabel1 = new ReaLTaiizor.Controls.FoxLabel();
-            this.foxLabel9 = new ReaLTaiizor.Controls.FoxLabel();
+            this.B_Luu = new ReaLTaiizor.Controls.Button();
+            this.B_QuayLai = new ReaLTaiizor.Controls.Button();
+            this.L_HoVaTenKhachHang = new ReaLTaiizor.Controls.FoxLabel();
+            this.L_MaKhuyenMai = new ReaLTaiizor.Controls.FoxLabel();
+            this.L_SDT = new ReaLTaiizor.Controls.FoxLabel();
+            this.foxLabel10 = new ReaLTaiizor.Controls.FoxLabel();
             this.airForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +66,12 @@
             // 
             this.airForm1.BackColor = System.Drawing.Color.White;
             this.airForm1.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.airForm1.Controls.Add(this.foxLabel10);
+            this.airForm1.Controls.Add(this.L_SDT);
+            this.airForm1.Controls.Add(this.L_MaKhuyenMai);
+            this.airForm1.Controls.Add(this.L_HoVaTenKhachHang);
+            this.airForm1.Controls.Add(this.B_QuayLai);
+            this.airForm1.Controls.Add(this.B_Luu);
             this.airForm1.Controls.Add(this.foxLabel9);
             this.airForm1.Controls.Add(this.foxLabel8);
             this.airForm1.Controls.Add(this.foxLabel7);
@@ -82,13 +94,25 @@
             this.airForm1.Name = "airForm1";
             this.airForm1.NoRounding = false;
             this.airForm1.Sizable = false;
-            this.airForm1.Size = new System.Drawing.Size(744, 860);
+            this.airForm1.Size = new System.Drawing.Size(744, 890);
             this.airForm1.SmartBounds = true;
             this.airForm1.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.airForm1.TabIndex = 0;
             this.airForm1.Text = "Chi Tiết Hóa Đơn !";
             this.airForm1.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.airForm1.Transparent = false;
+            // 
+            // foxLabel9
+            // 
+            this.foxLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.foxLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.foxLabel9.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foxLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.foxLabel9.Location = new System.Drawing.Point(374, 234);
+            this.foxLabel9.Name = "foxLabel9";
+            this.foxLabel9.Size = new System.Drawing.Size(155, 24);
+            this.foxLabel9.TabIndex = 12;
+            this.foxLabel9.Text = "Mã khuyến mãi :";
             // 
             // foxLabel8
             // 
@@ -98,7 +122,7 @@
             this.foxLabel8.ForeColor = System.Drawing.Color.Black;
             this.foxLabel8.Location = new System.Drawing.Point(12, 225);
             this.foxLabel8.Name = "foxLabel8";
-            this.foxLabel8.Size = new System.Drawing.Size(132, 33);
+            this.foxLabel8.Size = new System.Drawing.Size(55, 33);
             this.foxLabel8.TabIndex = 11;
             this.foxLabel8.Text = "SĐT :";
             // 
@@ -120,7 +144,7 @@
             this.foxLabel4.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel4.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foxLabel4.ForeColor = System.Drawing.Color.Black;
-            this.foxLabel4.Location = new System.Drawing.Point(391, 765);
+            this.foxLabel4.Location = new System.Drawing.Point(335, 745);
             this.foxLabel4.Name = "foxLabel4";
             this.foxLabel4.Size = new System.Drawing.Size(132, 34);
             this.foxLabel4.TabIndex = 9;
@@ -146,7 +170,7 @@
             this.foxLabel5.ForeColor = System.Drawing.Color.Black;
             this.foxLabel5.Location = new System.Drawing.Point(12, 186);
             this.foxLabel5.Name = "foxLabel5";
-            this.foxLabel5.Size = new System.Drawing.Size(132, 33);
+            this.foxLabel5.Size = new System.Drawing.Size(157, 33);
             this.foxLabel5.TabIndex = 7;
             this.foxLabel5.Text = "Khách hàng :";
             // 
@@ -159,17 +183,17 @@
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
-            this.materialListView1.Location = new System.Drawing.Point(9, 276);
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
+            this.materialListView1.Location = new System.Drawing.Point(3, 276);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.materialListView1.Name = "materialListView1";
             this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(720, 473);
+            this.materialListView1.Size = new System.Drawing.Size(738, 435);
             this.materialListView1.TabIndex = 6;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
@@ -180,7 +204,7 @@
             this.foxLabel3.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel3.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foxLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel3.Location = new System.Drawing.Point(3, 833);
+            this.foxLabel3.Location = new System.Drawing.Point(3, 861);
             this.foxLabel3.Name = "foxLabel3";
             this.foxLabel3.Size = new System.Drawing.Size(124, 24);
             this.foxLabel3.TabIndex = 4;
@@ -192,9 +216,9 @@
             this.foxLabel2.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel2.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foxLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel2.Location = new System.Drawing.Point(12, 775);
+            this.foxLabel2.Location = new System.Drawing.Point(12, 749);
             this.foxLabel2.Name = "foxLabel2";
-            this.foxLabel2.Size = new System.Drawing.Size(352, 24);
+            this.foxLabel2.Size = new System.Drawing.Size(317, 24);
             this.foxLabel2.TabIndex = 3;
             this.foxLabel2.Text = "Nhân viên :";
             // 
@@ -229,23 +253,101 @@
             this.foxLabel1.TabIndex = 0;
             this.foxLabel1.Text = "Kinh Doanh Thời Trang Nam & Nữ";
             // 
-            // foxLabel9
+            // B_Luu
             // 
-            this.foxLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.foxLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.foxLabel9.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foxLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel9.Location = new System.Drawing.Point(374, 234);
-            this.foxLabel9.Name = "foxLabel9";
-            this.foxLabel9.Size = new System.Drawing.Size(194, 24);
-            this.foxLabel9.TabIndex = 12;
-            this.foxLabel9.Text = "Mã khuyến mãi :";
+            this.B_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.B_Luu.BackColor = System.Drawing.Color.Transparent;
+            this.B_Luu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.B_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.B_Luu.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.B_Luu.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.B_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.B_Luu.Image = null;
+            this.B_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_Luu.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.B_Luu.Location = new System.Drawing.Point(609, 838);
+            this.B_Luu.Name = "B_Luu";
+            this.B_Luu.PressedBorderColor = System.Drawing.Color.Green;
+            this.B_Luu.PressedColor = System.Drawing.Color.Green;
+            this.B_Luu.Size = new System.Drawing.Size(120, 40);
+            this.B_Luu.TabIndex = 13;
+            this.B_Luu.Text = "Lưu";
+            this.B_Luu.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // B_QuayLai
+            // 
+            this.B_QuayLai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.B_QuayLai.BackColor = System.Drawing.Color.Transparent;
+            this.B_QuayLai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.B_QuayLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.B_QuayLai.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.B_QuayLai.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.B_QuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.B_QuayLai.Image = null;
+            this.B_QuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_QuayLai.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.B_QuayLai.Location = new System.Drawing.Point(477, 838);
+            this.B_QuayLai.Name = "B_QuayLai";
+            this.B_QuayLai.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.B_QuayLai.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.B_QuayLai.Size = new System.Drawing.Size(120, 40);
+            this.B_QuayLai.TabIndex = 14;
+            this.B_QuayLai.Text = "Quay lại !";
+            this.B_QuayLai.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // L_HoVaTenKhachHang
+            // 
+            this.L_HoVaTenKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.L_HoVaTenKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.L_HoVaTenKhachHang.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_HoVaTenKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.L_HoVaTenKhachHang.Location = new System.Drawing.Point(175, 186);
+            this.L_HoVaTenKhachHang.Name = "L_HoVaTenKhachHang";
+            this.L_HoVaTenKhachHang.Size = new System.Drawing.Size(194, 33);
+            this.L_HoVaTenKhachHang.TabIndex = 15;
+            this.L_HoVaTenKhachHang.Text = "Nguyen van a";
+            // 
+            // L_MaKhuyenMai
+            // 
+            this.L_MaKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.L_MaKhuyenMai.BackColor = System.Drawing.Color.Transparent;
+            this.L_MaKhuyenMai.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_MaKhuyenMai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.L_MaKhuyenMai.Location = new System.Drawing.Point(535, 234);
+            this.L_MaKhuyenMai.Name = "L_MaKhuyenMai";
+            this.L_MaKhuyenMai.Size = new System.Drawing.Size(194, 24);
+            this.L_MaKhuyenMai.TabIndex = 16;
+            this.L_MaKhuyenMai.Text = "Khuyen mai 10%";
+            // 
+            // L_SDT
+            // 
+            this.L_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.L_SDT.BackColor = System.Drawing.Color.Transparent;
+            this.L_SDT.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_SDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.L_SDT.Location = new System.Drawing.Point(73, 229);
+            this.L_SDT.Name = "L_SDT";
+            this.L_SDT.Size = new System.Drawing.Size(274, 24);
+            this.L_SDT.TabIndex = 17;
+            this.L_SDT.Text = "09999999999";
+            // 
+            // foxLabel10
+            // 
+            this.foxLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.foxLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.foxLabel10.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foxLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.foxLabel10.Location = new System.Drawing.Point(472, 746);
+            this.foxLabel10.Name = "foxLabel10";
+            this.foxLabel10.Size = new System.Drawing.Size(251, 24);
+            this.foxLabel10.TabIndex = 18;
+            this.foxLabel10.Text = "10.000.000 đ";
             // 
             // frm_HoaDonChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 860);
+            this.ClientSize = new System.Drawing.Size(744, 890);
             this.Controls.Add(this.airForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(112, 35);
@@ -274,5 +376,11 @@
         private ReaLTaiizor.Controls.FoxLabel foxLabel4;
         private ReaLTaiizor.Controls.FoxLabel foxLabel8;
         private ReaLTaiizor.Controls.FoxLabel foxLabel9;
+        private ReaLTaiizor.Controls.Button B_Luu;
+        private ReaLTaiizor.Controls.Button B_QuayLai;
+        private ReaLTaiizor.Controls.FoxLabel foxLabel10;
+        private ReaLTaiizor.Controls.FoxLabel L_SDT;
+        private ReaLTaiizor.Controls.FoxLabel L_MaKhuyenMai;
+        private ReaLTaiizor.Controls.FoxLabel L_HoVaTenKhachHang;
     }
 }
