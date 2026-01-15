@@ -76,7 +76,7 @@
             this.quan_Ly_Shop_Quan_AoDataSet = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSet();
             this.tab_HoaDon = new System.Windows.Forms.TabPage();
             this.HoaDon_CB_MaKhuyenMai = new ReaLTaiizor.Controls.ComboBoxEdit();
-            this.HoaDon_TongThu = new ReaLTaiizor.Controls.MetroTextBox();
+            this.TB_TongThu = new ReaLTaiizor.Controls.MetroTextBox();
             this.metroLabel1 = new ReaLTaiizor.Controls.MetroLabel();
             this.HoaDon_ThanhToan = new ReaLTaiizor.Controls.ParrotButton();
             this.HoaDon_Xoa = new ReaLTaiizor.Controls.ParrotButton();
@@ -794,7 +794,7 @@
             // 
             this.tab_HoaDon.BackColor = System.Drawing.Color.White;
             this.tab_HoaDon.Controls.Add(this.HoaDon_CB_MaKhuyenMai);
-            this.tab_HoaDon.Controls.Add(this.HoaDon_TongThu);
+            this.tab_HoaDon.Controls.Add(this.TB_TongThu);
             this.tab_HoaDon.Controls.Add(this.metroLabel1);
             this.tab_HoaDon.Controls.Add(this.HoaDon_ThanhToan);
             this.tab_HoaDon.Controls.Add(this.HoaDon_Xoa);
@@ -832,35 +832,35 @@
             this.HoaDon_CB_MaKhuyenMai.StartIndex = 0;
             this.HoaDon_CB_MaKhuyenMai.TabIndex = 12;
             // 
-            // HoaDon_TongThu
+            // TB_TongThu
             // 
-            this.HoaDon_TongThu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.HoaDon_TongThu.AutoCompleteCustomSource = null;
-            this.HoaDon_TongThu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.HoaDon_TongThu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.HoaDon_TongThu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.HoaDon_TongThu.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.HoaDon_TongThu.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.HoaDon_TongThu.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.HoaDon_TongThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.HoaDon_TongThu.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.HoaDon_TongThu.Image = null;
-            this.HoaDon_TongThu.IsDerivedStyle = true;
-            this.HoaDon_TongThu.Lines = null;
-            this.HoaDon_TongThu.Location = new System.Drawing.Point(389, 598);
-            this.HoaDon_TongThu.MaxLength = 32767;
-            this.HoaDon_TongThu.Multiline = false;
-            this.HoaDon_TongThu.Name = "HoaDon_TongThu";
-            this.HoaDon_TongThu.ReadOnly = true;
-            this.HoaDon_TongThu.Size = new System.Drawing.Size(173, 27);
-            this.HoaDon_TongThu.Style = ReaLTaiizor.Enum.Metro.Style.Light;
-            this.HoaDon_TongThu.StyleManager = null;
-            this.HoaDon_TongThu.TabIndex = 11;
-            this.HoaDon_TongThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.HoaDon_TongThu.ThemeAuthor = "Taiizor";
-            this.HoaDon_TongThu.ThemeName = "MetroLight";
-            this.HoaDon_TongThu.UseSystemPasswordChar = false;
-            this.HoaDon_TongThu.WatermarkText = "";
+            this.TB_TongThu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TB_TongThu.AutoCompleteCustomSource = null;
+            this.TB_TongThu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TB_TongThu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TB_TongThu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.TB_TongThu.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TB_TongThu.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.TB_TongThu.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.TB_TongThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TB_TongThu.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.TB_TongThu.Image = null;
+            this.TB_TongThu.IsDerivedStyle = true;
+            this.TB_TongThu.Lines = null;
+            this.TB_TongThu.Location = new System.Drawing.Point(389, 598);
+            this.TB_TongThu.MaxLength = 32767;
+            this.TB_TongThu.Multiline = false;
+            this.TB_TongThu.Name = "TB_TongThu";
+            this.TB_TongThu.ReadOnly = true;
+            this.TB_TongThu.Size = new System.Drawing.Size(173, 27);
+            this.TB_TongThu.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.TB_TongThu.StyleManager = null;
+            this.TB_TongThu.TabIndex = 11;
+            this.TB_TongThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TB_TongThu.ThemeAuthor = "Taiizor";
+            this.TB_TongThu.ThemeName = "MetroLight";
+            this.TB_TongThu.UseSystemPasswordChar = false;
+            this.TB_TongThu.WatermarkText = "";
             // 
             // metroLabel1
             // 
@@ -1815,6 +1815,7 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
+            this.parrotGroupBox1.PerformLayout();
             this.GB_ChiTietTaiKhoan.ResumeLayout(false);
             this.GB_ChiTietTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).EndInit();
@@ -1916,7 +1917,7 @@
         private ReaLTaiizor.Controls.ParrotButton HoaDon_Xoa;
         private ReaLTaiizor.Controls.ParrotButton HoaDon_ThanhToan;
         private ReaLTaiizor.Controls.MetroLabel metroLabel1;
-        private ReaLTaiizor.Controls.MetroTextBox HoaDon_TongThu;
+        private ReaLTaiizor.Controls.MetroTextBox TB_TongThu;
         private ReaLTaiizor.Controls.ParrotButton parrotButton1;
         private ReaLTaiizor.Controls.ComboBoxEdit HoaDon_CB_MaKhuyenMai;
     }

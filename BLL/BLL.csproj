@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_Interface_HoaDon.cs" />
+    <Compile Include="BLL_LoadingChiTietHoaDon.cs" />
+    <Compile Include="BLL_LoadingHoaDon.cs" />
     <Compile Include="BLL_LoadingKhachHang.cs" />
     <Compile Include="BLL_LoadingKhoHang.cs" />
     <Compile Include="BLL_LoadingKhuyenMai.cs" />

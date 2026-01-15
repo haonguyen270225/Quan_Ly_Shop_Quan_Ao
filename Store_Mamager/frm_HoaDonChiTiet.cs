@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Store_Manager
 {
     public partial class frm_HoaDonChiTiet : Form
     {
-        public frm_HoaDonChiTiet()
+        public frm_HoaDonChiTiet(KhachHang khachHang , NhanVien nhanVien , List<KhoHang> listKhoHang , List<ChiTietHoaDon> listChiTietHoaDon)
         {
             InitializeComponent();
         }

@@ -12,7 +12,7 @@ namespace DAL
     {
         public List<KhuyenMai> LoadingKhuyenMai()
         {
-            List<KhuyenMai> tmp = new List<KhuyenMai>();
+            List<KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
             SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
             SqlCommand sqlCommand = new SqlCommand(@"SELECT [ID] , [MaKhuyenMai],[ThongTin] , [GiaTri] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[KhuyenMai]", conn);
@@ -27,11 +27,11 @@ namespace DAL
                     khuyenMai.ID = Convert.ToInt32(dataReader["ID"]);
                     khuyenMai.MaKhuyenMai = dataReader["MaKhuyenMai"].ToString();
                     khuyenMai.ThongTin = dataReader["ThongTin"].ToString();
-                    tmp.Add(khuyenMai);
+                    listKhuyenMai.Add(khuyenMai);
                 }
             }
             conn.Close();
-            return tmp;
+            return listKhuyenMai;
         }
     }
 }

@@ -30,12 +30,15 @@ namespace Store_Manager
         private BLL_LoadingSPSize bll_LoadingSPSize = new BLL_LoadingSPSize();
         private BLL_LoadingKhuyenMai bll_LoadingKhuyenMai = new BLL_LoadingKhuyenMai();
         private BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
+        private BLL_LoadingHoaDon bll_LoadingHoaDon = new BLL_LoadingHoaDon();
         private List<KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
         private UC_SanPham ucSanPham;
         private UC_ChiTietSanPham ucChiTietSanPham;
         //private List<KhoHang> listSanPham;
         private List<KhoHang> listChiTietSanPham = new List<KhoHang>();
         private double tongThu = 0;
+        private List<ChiTietHoaDon> listChiTietHoaDon = new List<ChiTietHoaDon>();
+        private List<HoaDon> listHoaDon = new List<HoaDon>();
         #endregion
 
         #region TrangChu
@@ -55,7 +58,7 @@ namespace Store_Manager
             taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
 
             listKhachHang = LoadingDanhSachKhachHang();
-
+            listHoaDon = bll_LoadingHoaDon.LoadingHoaDon();
             //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
             //MessageBox.Show("Gọi hàm CreateLoading()");
             nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
@@ -324,7 +327,7 @@ namespace Store_Manager
             {
                 tongThu += item.tongThu_ChiTietSanPham;
             }
-            HoaDon_TongThu.Text = tongThu.ToString("N0") + " đ";
+            TB_TongThu.Text = tongThu.ToString("N0") + " đ";
         }
 
         private void CapNhat_ListChiTietSanPham()
@@ -402,6 +405,8 @@ namespace Store_Manager
         private void HoaDon_ThanhToan_Click(object sender, EventArgs e)
         {
             //frm.DaDongVaThemKachHang += ThemDanhSachKhachHang;
+           
+
             frm_ThongTinKhachHang frm = new frm_ThongTinKhachHang();
             frm.DaDongVaThemKachHang += (khachHang) =>
             {
@@ -413,18 +418,37 @@ namespace Store_Manager
 
         private void ThemDanhSachKhachHang(KhachHang khachHang)
         {
-            bll_LoadingKhachHang.ThemKhachHang(khachHang);
+            //bll_LoadingKhachHang.ThemKhachHang(khachHang);
             listKhachHang = bll_LoadingKhachHang.LoadingKhachHang();
             MessageBox.Show("Khach Hang : " + " - " + khachHang.MaKhachHang + " - " + khachHang.HoVaTen + " - " + khachHang.SDT);
+            LoadingChiTietHoaDon(khachHang, nhanVien, listKhoHang, listChiTietHoaDon);
         }
         #endregion
 
 
         #region frm_HoaDonChiTiet
-        private void LoadingHoaDonChiTiet(KhachHang khachHang ,  NhanVien nhanVien , List<KhoHang> khoHang , double tongThu)
+        private void LoadingChiTietHoaDon(KhachHang khachHang, NhanVien nhanVien, List<KhoHang> listKhoHang, List<ChiTietHoaDon> tietHoaDon )
         {
-           
-        }
+            ucChiTietSanPham = new UC_ChiTietSanPham();
+            HoaDon hoaDon = new HoaDon();
+            hoaDon.ID = listHoaDon.Count + 1;
+            hoaDon.TongThu = ucChiTietSanPham.tongThu_ChiTietSanPham;
+            hoaDon.Ngay = DateTime.Today;
+            hoaDon.Gio = DateTime.Now.TimeOfDay;
+            hoaDon.IDNhanVien = nhanVien.ID;
+            hoaDon.IDKhachHang = listKhachHang.Count + 1;
+            listChiTietHoaDon.Clear();
+            foreach (UC_ChiTietSanPham item in FLP_ChiTietSanPham.Controls)
+            {
+                ChiTietHoaDon tmp = new ChiTietHoaDon();
+                tmp.IDMaHang = item.chiTietSanPham.ID;
+                tmp.SoLuong = item.soLuong;
+                tmp.TongTien = item.tongThu_ChiTietSanPham;
+                tmp.IDHoaDon = listHoaDon.Count + 1;
+            }
+            frm_HoaDonChiTiet frm = new frm_HoaDonChiTiet(khachHang, nhanVien, listKhoHang, listChiTietHoaDon);
+            frm.ShowDialog();
+        } 
         #endregion
     }
 }

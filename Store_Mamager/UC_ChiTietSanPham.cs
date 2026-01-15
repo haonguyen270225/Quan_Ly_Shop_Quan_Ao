@@ -17,13 +17,17 @@ namespace Store_Manager
         #region KhaiBao
         public int soLuong { get; private set; } = 1;
         public double tongThu_ChiTietSanPham { get; private set; }
-        private static int sTT = 1;
+        //private static int sTT = 1;
        // public static double tongThu { get; private set; } = 0;
         public KhoHang chiTietSanPham { get; private set; }
 
         public event Action<UC_ChiTietSanPham> Xoa_ChiTietSanPham;
         #endregion
 
+        public UC_ChiTietSanPham()
+        {
+           // return;
+        }
         public UC_ChiTietSanPham(KhoHang sanPham)
         {
             InitializeComponent();

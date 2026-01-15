@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_DataAccess.cs" />
+    <Compile Include="DAL_LoadingChiTietHoaDon.cs" />
+    <Compile Include="DAL_LoadingHoaDon.cs" />
     <Compile Include="DAL_LoadingKhachHang.cs" />
     <Compile Include="DAL_LoadingKhoHang.cs" />
     <Compile Include="DAL_LoadingKhuyenMai.cs" />
