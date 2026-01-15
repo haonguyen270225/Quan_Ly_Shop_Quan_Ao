@@ -15,8 +15,9 @@ namespace Store_Manager
     public partial class frm_ThongTinKhachHang : Form
     {
         #region KhaiBao
-        public event Action<KhachHang> DaDongVaThemKachHang;
-        KhachHang khachHang = new KhachHang();        
+        public event Action<KhachHang , string > DaDongVaThemKachHang;
+        KhachHang khachHang = new KhachHang();
+        string maHoaDon = "";
         #endregion
 
         public frm_ThongTinKhachHang()
@@ -66,14 +67,15 @@ namespace Store_Manager
             khachHang.MaKhachHang = TB_MaKhachHang.Text;
             khachHang.HoVaTen = TB_HoVaTen.Text;
             khachHang.SDT = TB_SDT.Text;
+            maHoaDon = TB_MaHoaDon.Text;
             try
             {
                 BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
-                BLL_LoadingKhachHang.Check_ThemKhachHang(khachHang , bll_LoadingKhachHang.LoadingKhachHang());
-                
+                BLL_LoadingHoaDon bll_LoadingHoaDon = new BLL_LoadingHoaDon();
+                BLL_LoadingKhachHang.Check_ThemKhachHang(khachHang , bll_LoadingKhachHang.LoadingKhachHang() , bll_LoadingHoaDon.LoadingHoaDon() , maHoaDon);
                 if (DaDongVaThemKachHang != null)
                 {
-                    DaDongVaThemKachHang.Invoke(khachHang);
+                    DaDongVaThemKachHang.Invoke(khachHang , maHoaDon);
                 }
                this.Close();
             }

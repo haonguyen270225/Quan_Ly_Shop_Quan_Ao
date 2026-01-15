@@ -38,5 +38,34 @@ namespace DAL
             conn.Close();
             return listHoaDon;
         }
+
+        public void ThemHoaDon(HoaDon hoaDon)
+        {
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"
+           INSERT INTO [dbo].[HoaDon]
+           ([MaHoaDon]
+           ,[Ngay]
+           ,[Gio]
+           ,[TongThu]
+           ,[IDNhanVien]
+           ,[IDKhachHang])  
+           VALUES
+           (@MaHoaDon
+           ,@Ngay
+           ,@Gio
+           ,@TongThu
+           ,@IDNhanVien
+           ,@IDKhachHang)", conn);
+            sqlCommand.Parameters.AddWithValue("@MaHoaDon", hoaDon.MaHoaDon);
+            sqlCommand.Parameters.AddWithValue("@Ngay", hoaDon.Ngay);
+            sqlCommand.Parameters.AddWithValue("@Gio", hoaDon.Gio);
+            sqlCommand.Parameters.AddWithValue("@TongThu", hoaDon.TongThu);
+            sqlCommand.Parameters.AddWithValue("@IDNhanVien", hoaDon.IDNhanVien);
+            sqlCommand.Parameters.AddWithValue("@IDKhachHang", hoaDon.IDKhachHang);
+            sqlCommand.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

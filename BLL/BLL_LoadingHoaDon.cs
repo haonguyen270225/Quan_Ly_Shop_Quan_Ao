@@ -16,6 +16,9 @@ namespace BLL
             return dal_LoadingHoaDon.LoadingHoaDon();
         }
     
-
+        public void ThemHoaDon(HoaDon hoaDon)
+        {
+            dal_LoadingHoaDon.ThemHoaDon(hoaDon);
+        }
     }
 }

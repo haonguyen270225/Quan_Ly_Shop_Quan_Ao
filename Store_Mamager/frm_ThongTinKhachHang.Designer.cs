@@ -38,6 +38,8 @@
             this.B_Xoa = new ReaLTaiizor.Controls.CyberButton();
             this.TB_SDT = new ReaLTaiizor.Controls.HopeTextBox();
             this.TB_HoVaTen = new ReaLTaiizor.Controls.HopeTextBox();
+            this.TB_MaHoaDon = new ReaLTaiizor.Controls.HopeTextBox();
+            this.foxBigLabel5 = new ReaLTaiizor.Controls.FoxBigLabel();
             this.airForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,6 +122,8 @@
             // 
             this.airForm1.BackColor = System.Drawing.Color.Gainsboro;
             this.airForm1.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.airForm1.Controls.Add(this.TB_MaHoaDon);
+            this.airForm1.Controls.Add(this.foxBigLabel5);
             this.airForm1.Controls.Add(this.B_Luu);
             this.airForm1.Controls.Add(this.B_Xoa);
             this.airForm1.Controls.Add(this.TB_SDT);
@@ -139,7 +143,7 @@
             this.airForm1.Name = "airForm1";
             this.airForm1.NoRounding = false;
             this.airForm1.Sizable = false;
-            this.airForm1.Size = new System.Drawing.Size(763, 486);
+            this.airForm1.Size = new System.Drawing.Size(763, 567);
             this.airForm1.SmartBounds = true;
             this.airForm1.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.airForm1.TabIndex = 0;
@@ -173,7 +177,7 @@
             this.B_Luu.Lighting = false;
             this.B_Luu.LinearGradient_Background = false;
             this.B_Luu.LinearGradientPen = false;
-            this.B_Luu.Location = new System.Drawing.Point(263, 399);
+            this.B_Luu.Location = new System.Drawing.Point(263, 480);
             this.B_Luu.Name = "B_Luu";
             this.B_Luu.PenWidth = 90;
             this.B_Luu.Rounding = true;
@@ -214,7 +218,7 @@
             this.B_Xoa.Lighting = false;
             this.B_Xoa.LinearGradient_Background = false;
             this.B_Xoa.LinearGradientPen = false;
-            this.B_Xoa.Location = new System.Drawing.Point(523, 399);
+            this.B_Xoa.Location = new System.Drawing.Point(523, 480);
             this.B_Xoa.Name = "B_Xoa";
             this.B_Xoa.PenWidth = 90;
             this.B_Xoa.Rounding = true;
@@ -274,11 +278,47 @@
             this.TB_HoVaTen.TabStop = false;
             this.TB_HoVaTen.UseSystemPasswordChar = false;
             // 
+            // TB_MaHoaDon
+            // 
+            this.TB_MaHoaDon.BackColor = System.Drawing.Color.White;
+            this.TB_MaHoaDon.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.TB_MaHoaDon.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.TB_MaHoaDon.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.TB_MaHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TB_MaHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.TB_MaHoaDon.Hint = "";
+            this.TB_MaHoaDon.Location = new System.Drawing.Point(263, 362);
+            this.TB_MaHoaDon.MaxLength = 32767;
+            this.TB_MaHoaDon.Multiline = false;
+            this.TB_MaHoaDon.Name = "TB_MaHoaDon";
+            this.TB_MaHoaDon.PasswordChar = '\0';
+            this.TB_MaHoaDon.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TB_MaHoaDon.SelectedText = "";
+            this.TB_MaHoaDon.SelectionLength = 0;
+            this.TB_MaHoaDon.SelectionStart = 0;
+            this.TB_MaHoaDon.Size = new System.Drawing.Size(415, 43);
+            this.TB_MaHoaDon.TabIndex = 23;
+            this.TB_MaHoaDon.TabStop = false;
+            this.TB_MaHoaDon.UseSystemPasswordChar = false;
+            // 
+            // foxBigLabel5
+            // 
+            this.foxBigLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.foxBigLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 14F);
+            this.foxBigLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.foxBigLabel5.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
+            this.foxBigLabel5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.foxBigLabel5.Location = new System.Drawing.Point(11, 362);
+            this.foxBigLabel5.Name = "foxBigLabel5";
+            this.foxBigLabel5.Size = new System.Drawing.Size(186, 39);
+            this.foxBigLabel5.TabIndex = 22;
+            this.foxBigLabel5.Text = "Mã hóa đơn :";
+            // 
             // frm_ThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 486);
+            this.ClientSize = new System.Drawing.Size(763, 567);
             this.Controls.Add(this.airForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -306,5 +346,7 @@
         private ReaLTaiizor.Controls.HopeTextBox TB_HoVaTen;
         private ReaLTaiizor.Controls.CyberButton B_Xoa;
         private ReaLTaiizor.Controls.CyberButton B_Luu;
+        private ReaLTaiizor.Controls.HopeTextBox TB_MaHoaDon;
+        private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel5;
     }
 }

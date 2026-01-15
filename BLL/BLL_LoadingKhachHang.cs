@@ -38,7 +38,7 @@ namespace BLL
             conn.Close();
         }
 
-        public static string Check_ThemKhachHang( KhachHang kh , List<KhachHang> listKhachHang) 
+        public static string Check_ThemKhachHang(KhachHang kh , List<KhachHang> listKhachHang , List<HoaDon> listHoDon , string maHoaDon ) 
         {
             #region demo
             //{
@@ -73,16 +73,31 @@ namespace BLL
 
             if (string.IsNullOrWhiteSpace(kh.MaKhachHang) ||
                 string.IsNullOrWhiteSpace(kh.HoVaTen) ||
-                string.IsNullOrWhiteSpace(kh.SDT))
+                string.IsNullOrWhiteSpace(kh.SDT) || 
+                string.IsNullOrWhiteSpace(maHoaDon))
                 throw new Exception("Text box không được để trống");
             foreach(KhachHang item in listKhachHang)
             {
                 if (item.MaKhachHang == kh.MaKhachHang)
                 {
-                    throw new Exception("Mã khách hàng đã tồn tại !");
-                    break;
+                    throw new Exception("Mã khách hàng đã bị trùng !");
+                   
+                }
+                if(item.SDT == kh.SDT) 
+                {
+                    throw new Exception("Số điện thoại đã bị trùng !");
+                   
                 }
             }
+            foreach(HoaDon item in listHoDon)
+            {
+                if(item.MaHoaDon == maHoaDon)
+                {
+                    throw new Exception("Mã hóa đơn đã bị trùng !");
+                }
+            }
+            if(XuLy_Chuoi.KiemTra_Ma(maHoaDon) == false)
+                throw new Exception("Mã hóa đơn không chứa khoảng trắng và ký tự đặc biệt !");
             if (XuLy_Chuoi.KiemTra_Ma(kh.MaKhachHang) == false)
                 throw new Exception("Mã khách hàng không chứa khoảng trắng và ký tự đặc biệt !");
 

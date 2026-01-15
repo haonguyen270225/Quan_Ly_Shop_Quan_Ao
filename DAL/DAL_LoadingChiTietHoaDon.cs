@@ -33,5 +33,10 @@ namespace DAL
             conn.Close();
             return listChiTietHoaDon;
         }
+
+        public void ThemChiTietHoaDon()
+        {
+            
+        }
     }
 }

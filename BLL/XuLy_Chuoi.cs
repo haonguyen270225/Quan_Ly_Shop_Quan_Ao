@@ -11,7 +11,6 @@ namespace BLL
 {
     public  class XuLy_Chuoi
     {
-
         public static bool KiemTra_STD(string sDT)
         {
             bool kQ = true;
