@@ -48,11 +48,7 @@ namespace Store_Manager
             InitializeComponent();
         }
 
-        //private List<KhachHang> LoadingDanhSachKhachHang() {
-        //    return bll_LoadingKhachHang.LoadingKhachHang();
-        //}
-
-        
+       
         public void CreateLoading_TrangChu()
         {
             //taiKhoan.UserName = "binh.tran";
@@ -71,7 +67,8 @@ namespace Store_Manager
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
             CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
-            CTTK_TB_ChucVu.Text = nhanVien.DiaChi.ToString();
+            CTTK_TB_ChucVu.Text = nhanVien.ChucVu.ToString();
+            CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
             CTTK_TB_NgaySinh.Text = "12/07/2003";
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
             CTTK_TB_SDT.Text = nhanVien.SDT.ToString();

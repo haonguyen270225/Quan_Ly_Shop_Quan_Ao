@@ -10,10 +10,10 @@ namespace BLL
 {
     public class BLL_ThongTinTaiKhoanDangNhap
     {
-        private DAL_ThongTinTaiKhoanDangNhap dal_ThongTinTaiKhoanDangNhap = new DAL_ThongTinTaiKhoanDangNhap();
+        private DAL_NhanVien dal_NhanVien = new DAL_NhanVien();
         public NhanVien ThongTinTaiKhoanDangNhap(TaiKhoan taiKhoan)
         {
-            return dal_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
+            return dal_NhanVien.Loading_NhanVienDangNhap(taiKhoan);
         }
     }
 }
