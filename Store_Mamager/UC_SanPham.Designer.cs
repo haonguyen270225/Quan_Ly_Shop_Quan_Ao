@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.SanPham_GB = new ReaLTaiizor.Controls.ParrotGroupBox();
+            this.SanPham_PB_HetHang = new ReaLTaiizor.Controls.HopePictureBox();
             this.SanPham_L = new ReaLTaiizor.Controls.BigLabel();
             this.SanPham_L_Gia = new ReaLTaiizor.Controls.BigLabel();
             this.UC_PB_2 = new System.Windows.Forms.PictureBox();
@@ -37,6 +38,7 @@
             this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sizeTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.SizeTableAdapter();
             this.SanPham_GB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SanPham_PB_HetHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UC_PB_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
@@ -46,9 +48,10 @@
             // 
             this.SanPham_GB.BorderColor = System.Drawing.Color.LightCyan;
             this.SanPham_GB.BorderWidth = 3;
+            this.SanPham_GB.Controls.Add(this.SanPham_PB_HetHang);
+            this.SanPham_GB.Controls.Add(this.UC_PB_2);
             this.SanPham_GB.Controls.Add(this.SanPham_L);
             this.SanPham_GB.Controls.Add(this.SanPham_L_Gia);
-            this.SanPham_GB.Controls.Add(this.UC_PB_2);
             this.SanPham_GB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SanPham_GB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SanPham_GB.Location = new System.Drawing.Point(0, 0);
@@ -60,6 +63,20 @@
             this.SanPham_GB.TabStop = false;
             this.SanPham_GB.Text = "1";
             this.SanPham_GB.TextColor = System.Drawing.Color.Brown;
+            // 
+            // SanPham_PB_HetHang
+            // 
+            this.SanPham_PB_HetHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
+            this.SanPham_PB_HetHang.Image = global::Store_Manager.Properties.Resources.SanPham;
+            this.SanPham_PB_HetHang.Location = new System.Drawing.Point(162, 168);
+            this.SanPham_PB_HetHang.Name = "SanPham_PB_HetHang";
+            this.SanPham_PB_HetHang.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.SanPham_PB_HetHang.Size = new System.Drawing.Size(57, 51);
+            this.SanPham_PB_HetHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SanPham_PB_HetHang.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.SanPham_PB_HetHang.TabIndex = 7;
+            this.SanPham_PB_HetHang.TabStop = false;
+            this.SanPham_PB_HetHang.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // SanPham_L
             // 
@@ -129,6 +146,7 @@
             this.Load += new System.EventHandler(this.UC_HoaDon_SanPham_Load);
             this.SanPham_GB.ResumeLayout(false);
             this.SanPham_GB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SanPham_PB_HetHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UC_PB_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
@@ -145,5 +163,6 @@
         private Quan_Ly_Shop_Quan_AoDataSet quan_Ly_Shop_Quan_AoDataSet;
         private Quan_Ly_Shop_Quan_AoDataSetTableAdapters.SizeTableAdapter sizeTableAdapter;
         private ReaLTaiizor.Controls.BigLabel SanPham_L_Gia;
+        private ReaLTaiizor.Controls.HopePictureBox SanPham_PB_HetHang;
     }
 }

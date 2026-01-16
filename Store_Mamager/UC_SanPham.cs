@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using DTO;
+using System.Runtime.Remoting.Messaging;
 namespace Store_Manager
 {
     public partial class UC_SanPham : UserControl
     {
         #region KhaiBao
         public event EventHandler<KhoHang> OnAddToHoaDon;
+        
         public KhoHang sanPham { get; private set; }
 
+        public int sL_SanPham { get; set; } = 0;
+        
         #endregion
         public UC_SanPham(KhoHang khoHang , int sTT)
         {
@@ -29,9 +33,17 @@ namespace Store_Manager
 
         private void LoadingDuLieu(KhoHang khoHang , int sTT)
         {
-            SanPham_L.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang;
+            SanPham_L.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang + "\n SL Kho : " + (khoHang.SoLuongTon - sL_SanPham);
             SanPham_L_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
             SanPham_GB.Text = sTT.ToString();
+            if(khoHang.SoLuongTon == 0 || sL_SanPham == khoHang.SoLuongTon)
+            {
+               SanPham_PB_HetHang.BringToFront();
+            }
+            else
+            {
+                SanPham_PB_HetHang.SendToBack();
+            }
         }
 
         private void UC_HoaDon_SanPham_Load(object sender, EventArgs e)
@@ -48,8 +60,18 @@ namespace Store_Manager
             EnableDoubleClick(SanPham_GB, (s, cv) =>
             {
                 GroupBox gb = (GroupBox)s;
-                //MessageBox.Show("Double click sản phẩm");
-                OnAddToHoaDon?.Invoke(this, sanPham);
+                if (sanPham.SoLuongTon == 0 || sL_SanPham == sanPham.SoLuongTon)
+                {
+                    MessageBox.Show("Số lượng sản phẩm đã hết !", "Cảnh báo !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    SanPham_PB_HetHang.BringToFront();
+                    return;
+                }
+                else
+                {
+                    //MessageBox.Show("Double click sản phẩm");
+                    sL_SanPham++;
+                    OnAddToHoaDon?.Invoke(this, sanPham);
+                }
             });
         }
 

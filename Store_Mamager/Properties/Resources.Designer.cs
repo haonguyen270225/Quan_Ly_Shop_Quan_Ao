@@ -393,6 +393,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap SanPham {
+            get {
+                object obj = ResourceManager.GetObject("SanPham", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap setting_9376694 {
             get {
                 object obj = ResourceManager.GetObject("setting_9376694", resourceCulture);

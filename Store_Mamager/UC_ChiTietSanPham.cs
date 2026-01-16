@@ -22,12 +22,9 @@ namespace Store_Manager
         public KhoHang chiTietSanPham { get; private set; }
 
         public event Action<UC_ChiTietSanPham> Xoa_ChiTietSanPham;
+        
         #endregion
 
-        public UC_ChiTietSanPham()
-        {
-           // return;
-        }
         public UC_ChiTietSanPham(KhoHang sanPham)
         {
             InitializeComponent();

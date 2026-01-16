@@ -361,6 +361,7 @@ namespace Store_Manager
         private void XoaChiTietSanPham(UC_ChiTietSanPham uc)
         {
             FLP_ChiTietSanPham.Controls.Remove(uc);
+            
             CapNhat_ListChiTietSanPham();
             CapNhat_TongThu();
             uc.Dispose();
