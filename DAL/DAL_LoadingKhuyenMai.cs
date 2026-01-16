@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-    public class DAL_LoadingKhuyenMai
+    public class DAL_KhuyenMai
     {
         public List<KhuyenMai> LoadingKhuyenMai()
         {

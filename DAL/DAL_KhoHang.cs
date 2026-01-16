@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-    public  class DAL_LoadingKhoHang : DAL_DataAccess
+    public  class DAL_KhoHang : DAL_DataAccess
     {
         public List<KhoHang> LoadingKhoHang()
         {

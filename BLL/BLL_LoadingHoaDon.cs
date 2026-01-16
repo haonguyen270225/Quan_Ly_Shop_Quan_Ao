@@ -10,7 +10,7 @@ namespace BLL
 {
     public class BLL_LoadingHoaDon
     {
-       private  DAL_LoadingHoaDon dal_LoadingHoaDon = new DAL_LoadingHoaDon();
+       private  DAL_HoaDon dal_LoadingHoaDon = new DAL_HoaDon();
        public List<HoaDon> LoadingHoaDon()
         {
             return dal_LoadingHoaDon.LoadingHoaDon();

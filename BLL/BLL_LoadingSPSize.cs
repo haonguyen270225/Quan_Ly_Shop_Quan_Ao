@@ -11,7 +11,7 @@ namespace BLL
 {
     public class BLL_LoadingSPSize
     {
-        private DAL_LoadingSize dal_LoadingSize = new DAL_LoadingSize();    
+        private DAL_SPSize dal_LoadingSize = new DAL_SPSize();    
         public List<SPSize> LoadingSPSize()
         {
             return dal_LoadingSize.LoadingSize();

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DAL
 {
-    public class DAL_LoadingChiTietHoaDon
+    public class DAL_ChiTietHoaDon
     {
         public List<ChiTietHoaDon> LoadingChiTietHoaDon()
         {

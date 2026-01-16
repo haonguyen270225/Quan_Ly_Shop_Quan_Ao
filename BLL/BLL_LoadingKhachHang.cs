@@ -14,7 +14,7 @@ namespace BLL
 {
     public class BLL_LoadingKhachHang
     {
-        DAL_LoadingKhachHang dal_LoadingKhachHang = new DAL_LoadingKhachHang();
+        DAL_KhachHang dal_LoadingKhachHang = new DAL_KhachHang();
 
         
         public List<KhachHang> LoadingKhachHang()

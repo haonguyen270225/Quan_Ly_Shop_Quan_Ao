@@ -10,7 +10,7 @@ namespace BLL
 {
     public class BLL_LoadingLoaiSanPham
     {
-        private DAL_LoadingLoaiSanPham dal_LoadingLoaiSanPham = new DAL_LoadingLoaiSanPham();
+        private DAL_LoaiSanPham dal_LoadingLoaiSanPham = new DAL_LoaiSanPham();
 
         public List<LoaiSanPham> LoadingLoaiSanPham()
         {

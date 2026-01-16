@@ -14,7 +14,7 @@ namespace BLL
     public class BLL_ThongTinNhanVien
     {
         
-        private DAL_ThongTinNhanVien thongTinNhanVien = new DAL_ThongTinNhanVien();
+        private DAL_NhanVien thongTinNhanVien = new DAL_NhanVien();
         
         public  List<NhanVien>  LoadingThongTinNhanVien()
         {

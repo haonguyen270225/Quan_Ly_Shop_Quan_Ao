@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DAL_LoadingHoaDon
+    public class DAL_HoaDon
     {
         public List<HoaDon> LoadingHoaDon()
         {

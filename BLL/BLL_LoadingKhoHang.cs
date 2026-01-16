@@ -9,7 +9,7 @@ namespace BLL
 {
     public class BLL_LoadingKhoHang
     {
-        private DAL_LoadingKhoHang dal_LoadingKhoHang = new DAL_LoadingKhoHang();
+        private DAL_KhoHang dal_LoadingKhoHang = new DAL_KhoHang();
         public List<KhoHang> LoadingKhoHang() 
         {
             List<KhoHang> listKhoHang = new List<KhoHang>();

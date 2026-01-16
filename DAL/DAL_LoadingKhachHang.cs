@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DAL
 {
-    public class DAL_LoadingKhachHang
+    public class DAL_KhachHang
     {
         public List<KhachHang> LoadingKhachHang()
         {

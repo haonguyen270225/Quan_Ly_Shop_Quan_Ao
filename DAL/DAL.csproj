@@ -43,15 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_DataAccess.cs" />
-    <Compile Include="DAL_LoadingChiTietHoaDon.cs" />
-    <Compile Include="DAL_LoadingHoaDon.cs" />
+    <Compile Include="DAL_ChiTietHoaDon.cs" />
+    <Compile Include="DAL_HoaDon.cs" />
     <Compile Include="DAL_LoadingKhachHang.cs" />
-    <Compile Include="DAL_LoadingKhoHang.cs" />
+    <Compile Include="DAL_KhoHang.cs" />
     <Compile Include="DAL_LoadingKhuyenMai.cs" />
     <Compile Include="DAL_LoadingLoaiSanPham.cs" />
     <Compile Include="DAL_LoadingThongTinTaiKhoan.cs" />
     <Compile Include="DAL_ThayDoiMatKhau.cs" />
-    <Compile Include="DAL_ThongTinNhanVien.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_LoadingSize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAL_TaiKhoanAccess.cs" />

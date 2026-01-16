@@ -9,7 +9,7 @@ namespace BLL
 {
     public class BLL_LoadingChiTietHoaDon
     {
-        DAL_LoadingChiTietHoaDon dal_LoadingChiTietHoaDon = new DAL_LoadingChiTietHoaDon();
+        DAL_ChiTietHoaDon dal_LoadingChiTietHoaDon = new DAL_ChiTietHoaDon();
         public List<ChiTietHoaDon> LoadingChiTietHoaDon()
         {
             return dal_LoadingChiTietHoaDon.LoadingChiTietHoaDon();
