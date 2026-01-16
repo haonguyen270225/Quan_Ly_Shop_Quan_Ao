@@ -1,17 +1,18 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
-using BLL;
-using System.Security.Cryptography;
-using System.ComponentModel.Design;
-using System.Runtime.Remoting.Messaging;
 namespace Store_Manager
 {
     public partial class frm_TrangChu : Form
@@ -94,6 +95,51 @@ namespace Store_Manager
             else
             {
                 CTTK_TB_HinhThucLamViec.Text = "Pass Time !";
+            }
+
+
+
+            // Loading PB_HinhAnh
+            PB_TrangChu_ThongTinTaiKhoan.Image.Dispose();
+            PB_TrangChu_ThongTinTaiKhoan.Image = null;
+            CTTK_PB_AnhDaiDien.Image.Dispose();
+            CTTK_PB_AnhDaiDien.Image = null;
+            if (taiKhoan?.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
+            {
+                try
+                {
+                    using (MemoryStream ms = new MemoryStream(taiKhoan.HinhAnh))
+                    {
+                        PB_TrangChu_ThongTinTaiKhoan.Image = Image.FromStream(ms);
+                        PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
+
+                        CTTK_PB_AnhDaiDien.Image = Image.FromStream(ms);
+                        CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi load ảnh từ database: " + ex.Message);
+                    // Fallback về ảnh mặc định
+                    PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
+                    PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
+                    CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+                    CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+            }
+            else
+            {
+                if (CTTK_PB_AnhDaiDien.Image != null)
+                {
+                    CTTK_PB_AnhDaiDien.Image.Dispose();
+                    CTTK_PB_AnhDaiDien.Image = null;
+                }
+
+                CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+                CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
+
+                PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
+                PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 

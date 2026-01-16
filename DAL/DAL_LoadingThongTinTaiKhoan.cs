@@ -28,6 +28,22 @@ namespace DAL
                     taiKhoan.UserName = dataReader["UserName"].ToString();
                     taiKhoan.PassWord = dataReader["Password"].ToString();
                     taiKhoan.IDNhanVien = Convert.ToInt32(dataReader["IDNhanVien"]);
+                    try
+                    {
+                        if (!dataReader.IsDBNull(dataReader.GetOrdinal("HinhAnh")))
+                        {
+                            taiKhoan.HinhAnh = (byte[])dataReader["HinhAnh"];
+                        }
+                        else
+                        {
+                            taiKhoan.HinhAnh = null;
+                        }
+                    }
+                    catch(IndexOutOfRangeException)
+                    {
+                        taiKhoan.HinhAnh = null;
+                    }
+                    
                 }
             }
             conn.Close();
