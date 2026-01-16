@@ -70,9 +70,9 @@ namespace Store_Manager
             maHoaDon = TB_MaHoaDon.Text;
             try
             {
-                BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
-                BLL_LoadingHoaDon bll_LoadingHoaDon = new BLL_LoadingHoaDon();
-                BLL_LoadingKhachHang.Check_ThemKhachHang(khachHang , bll_LoadingKhachHang.LoadingKhachHang() , bll_LoadingHoaDon.LoadingHoaDon() , maHoaDon);
+                BLL_KhachHang bll_LoadingKhachHang = new BLL_KhachHang();
+                BLL_HoaDon bll_LoadingHoaDon = new BLL_HoaDon();
+                BLL_KhachHang.Check_ThemKhachHang(khachHang , bll_LoadingKhachHang.LoadingKhachHang() , bll_LoadingHoaDon.LoadingHoaDon() , maHoaDon);
                 if (DaDongVaThemKachHang != null)
                 {
                     DaDongVaThemKachHang.Invoke(khachHang , maHoaDon);

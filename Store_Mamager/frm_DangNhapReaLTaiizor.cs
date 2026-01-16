@@ -18,7 +18,7 @@ namespace Store_Manager
         #region KhaiBao
         public static TaiKhoan taiKhoan = new TaiKhoan();
         private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
-        private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
+        
         #endregion
 
 
@@ -54,7 +54,7 @@ namespace Store_Manager
                 MessageBox.Show("Đăng nhập thành công !");
                 // Store_Manager.frm_TrangChu frm = new Store_Manager.frm_TrangChu();
                 //frm.ShowDialog();
-                taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan); 
+                taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan); 
                 //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString()  );
                 frm_TrangChu  frm_TrangChu = new frm_TrangChu();
                 frm_TrangChu.taiKhoan = taiKhoan;

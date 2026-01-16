@@ -24,17 +24,19 @@ namespace Store_Manager
         private List<LoaiSanPham> listLoaiSanPham = new List<LoaiSanPham>();
         private List<SPSize> listSPSize = new List<SPSize>();
         private List<KhachHang> listKhachHang = new List<KhachHang>();
-        private BLL_ThongTinTaiKhoanDangNhap bLL_ThongTinTaiKhoanDangNhap = new BLL_ThongTinTaiKhoanDangNhap();
-        private BLL_LoadingThongTinTaiKhoan bLL_LoadingThongTinTaiKhoan = new BLL_LoadingThongTinTaiKhoan();
-        private BLL_LoadingKhoHang bll_LoadingKhoHang = new BLL_LoadingKhoHang();
-        private BLL_LoadingLoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoadingLoaiSanPham();
-        private BLL_LoadingSPSize bll_LoadingSPSize = new BLL_LoadingSPSize();
-        private BLL_LoadingKhuyenMai bll_LoadingKhuyenMai = new BLL_LoadingKhuyenMai();
-        private BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
-        private BLL_LoadingHoaDon bll_LoadingHoaDon = new BLL_LoadingHoaDon();
         private List<KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
+
+        private BLL_NhanVien bLL_NhanVien = new BLL_NhanVien();
+        private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
+        private BLL_KhoHang bll_LoadingKhoHang = new BLL_KhoHang();
+        private BLL_LoaiSanPham bll_LoadingLoaiSanPham = new BLL_LoaiSanPham();
+        private BLL_SPSize bll_LoadingSPSize = new BLL_SPSize();
+        private BLL_KhuyenMai bll_LoadingKhuyenMai = new BLL_KhuyenMai();
+        private BLL_KhachHang bll_LoadingKhachHang = new BLL_KhachHang();
+        private BLL_HoaDon bll_LoadingHoaDon = new BLL_HoaDon();
         private UC_SanPham ucSanPham;
         private UC_ChiTietSanPham ucChiTietSanPham;
+
         //private List<KhoHang> listSanPham;
         private List<KhoHang> listChiTietSanPham = new List<KhoHang>();
         private double tongThu = 0;
@@ -53,13 +55,13 @@ namespace Store_Manager
         {
             //taiKhoan.UserName = "binh.tran";
             //taiKhoan.PassWord = "123456";
-            taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
+            taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
 
             listKhachHang = bll_LoadingKhachHang.LoadingKhachHang();
             listHoaDon = bll_LoadingHoaDon.LoadingHoaDon();
             //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
             //MessageBox.Show("Gọi hàm CreateLoading()");
-            nhanVien = bLL_ThongTinTaiKhoanDangNhap.ThongTinTaiKhoanDangNhap(taiKhoan);
+            nhanVien = bLL_NhanVien.TT_NhanVienDangNhap(taiKhoan);//bll_NhanVien.(taiKhoan);
             L_HoVaTen_MaNhanVien.Text = nhanVien.HoVaTen.ToString() + " - " + nhanVien.MaNhanVien.ToString();
             L_TrangChu_HoVaTen.Text = "Xin chào : " + nhanVien.HoVaTen.ToString();
             L_TrangChu_ChuVu.Text = "Chức vụ : " + nhanVien.ChucVu.ToString();
@@ -489,7 +491,7 @@ namespace Store_Manager
                 tmp.IDMaHang = item.chiTietSanPham.ID;
                 tmp.SoLuong = item.soLuong;
                 tmp.TongTien = item.tongThu_ChiTietSanPham;
-                tmp.IDHoaDon = listHoaDon.Count + 1;
+                //tmp.IDHoaDon = listHoaDon.Count + 1;
                 listChiTietHoaDon.Add(tmp);
             }
             frm_HoaDonChiTiet frm = new frm_HoaDonChiTiet(khachHang, nhanVien, hoaDon , listKhoHang, listChiTietHoaDon  , HoaDon_CB_MaKhuyenMai.Text , maHoaDon);

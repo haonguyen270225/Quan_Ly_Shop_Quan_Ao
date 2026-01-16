@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class BLL_LoadingSPSize
+    public class BLL_SPSize
     {
-        private DAL_SPSize dal_LoadingSize = new DAL_SPSize();    
+        private DAL_SPSize dal_SPSize = new DAL_SPSize();    
         public List<SPSize> LoadingSPSize()
         {
-            return dal_LoadingSize.LoadingSize();
+            return dal_SPSize.LoadingSize();
         }
 
 

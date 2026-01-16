@@ -34,9 +34,18 @@ namespace DAL
             return listChiTietHoaDon;
         }
 
-        public void ThemChiTietHoaDon()
+        public void ThemChiTietHoaDon(ChiTietHoaDon cTHD)
         {
-            
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"sp_ThemChiTietHoaDon", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@SoLuong", cTHD.SoLuong);
+            sqlCommand.Parameters.AddWithValue("@TongTien", cTHD.TongTien);
+            sqlCommand.Parameters.AddWithValue("@IDMaHang", cTHD.IDMaHang);
+            sqlCommand.Parameters.AddWithValue("@IDHoaDon", cTHD.IDHoaDon);
+            sqlCommand.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

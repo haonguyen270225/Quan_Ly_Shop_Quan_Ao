@@ -18,7 +18,7 @@ namespace Store_Manager
 
         #region KhaiBao
         public static TaiKhoan taiKhoan = frm_TrangChu.taiKhoan;
-        private BLL_ThayDoiMatKhau bll_ThayDoiMatKhau = new BLL_ThayDoiMatKhau();
+        private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
 
         public event Action DaDongVaCapNhatMatKhau;
         #endregion
@@ -94,7 +94,7 @@ namespace Store_Manager
                     }
                     else
                     {
-                        int kq = bll_ThayDoiMatKhau.ThayDoiMatKhau(taiKhoan, TB_MatKhauMoi.Text.ToString());
+                        int kq = bll_TaiKhoan.ThayDoiMatKhau(taiKhoan, TB_MatKhauMoi.Text.ToString());
                         if(kq == -1)
                         {
                             MessageBox.Show("Mật khẩu tối thiểu 10 ký tự");

@@ -11,7 +11,7 @@ namespace BLL
     
     public class BLL_TaiKhoan
     {
-        private DAL_TaiKhoan taiKhoanAccess = new DAL_TaiKhoan();
+        private DAL_TaiKhoan dal_TaiKhoan = new DAL_TaiKhoan();
         public int BLL_CheckLogin(TaiKhoan taiKhoan)
         {
 
@@ -24,9 +24,18 @@ namespace BLL
                 return -2;
             }
 
-            int kq = taiKhoanAccess.DAL_CheckLogic(taiKhoan);
+            int kq = dal_TaiKhoan.DAL_CheckLogic(taiKhoan);
 
             return kq;
+        }
+        public int ThayDoiMatKhau(TaiKhoan taiKhoan, string matKhauMoi)
+        {
+            return dal_TaiKhoan.ThayDoiMatKhau(taiKhoan.ID, matKhauMoi);
+        }
+
+        public TaiKhoan LoadingThongTinTaiKhoan(TaiKhoan taiKhoan)
+        {
+            return dal_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan.UserName, taiKhoan.PassWord);
         }
     }
 }

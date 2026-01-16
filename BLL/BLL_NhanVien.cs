@@ -11,15 +11,15 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
 namespace BLL
 {
-    public class BLL_ThongTinNhanVien
+    public class BLL_NhanVien
     {
         
-        private DAL_NhanVien thongTinNhanVien = new DAL_NhanVien();
+        private DAL_NhanVien dal_NhanVien = new DAL_NhanVien();
         
         public  List<NhanVien>  LoadingThongTinNhanVien()
         {
            // List<NhanVien> listNhanVien = new List<NhanVien>();          
-            return new List<NhanVien>(thongTinNhanVien.NhanVienAccess()); 
+            return new List<NhanVien>(dal_NhanVien.NhanVienAccess()); 
         }
 
 
@@ -134,7 +134,10 @@ namespace BLL
             }
             return listTK;
         }
-        
-        
+
+        public NhanVien TT_NhanVienDangNhap(TaiKhoan taiKhoan)
+        {
+            return dal_NhanVien.Loading_NhanVienDangNhap(taiKhoan);
+        }
     }
 }

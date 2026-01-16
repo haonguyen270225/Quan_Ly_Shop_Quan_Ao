@@ -21,8 +21,9 @@ namespace Store_Manager
         HoaDon cTHD_HoaDon = new HoaDon();
         List<KhoHang> cTHD_ListKhoHang = new List<KhoHang>();
         List<ChiTietHoaDon> cTHD_ListChiTietHoDon = new List<ChiTietHoaDon>();
-        BLL_LoadingKhachHang bll_LoadingKhachHang = new BLL_LoadingKhachHang();
-        BLL_LoadingHoaDon bll_LoadingHoaDon = new BLL_LoadingHoaDon();
+        BLL_KhachHang bll_KhachHang = new BLL_KhachHang();
+        BLL_HoaDon bll_HoaDon = new BLL_HoaDon();
+        BLL_ChiTietHoaDon bll_ChiTietHoaDon = new BLL_ChiTietHoaDon();
         string cTHD_MaKhuyenMai = "";
         string cTHD_MaHoaDon = "";
         #endregion
@@ -83,14 +84,22 @@ namespace Store_Manager
             hoaDon.Ngay = DateTime.Today;
             hoaDon.Gio = DateTime.Now.TimeOfDay;
             hoaDon.MaHoaDon = cTHD_MaHoaDon;
-           
-            bll_LoadingKhachHang.ThemKhachHang(khachHang);
+
+            bll_KhachHang.ThemKhachHang(khachHang);
             List<KhachHang> tmp = new List<KhachHang>();
-            int iD = bll_LoadingKhachHang.LoadingKhachHang().Last().ID;
+            int iD = bll_KhachHang.LoadingKhachHang().Last().ID;
             hoaDon.IDKhachHang = iD;
             hoaDon.IDNhanVien = nhanVien.ID;
-            bll_LoadingHoaDon.ThemHoaDon(hoaDon);
+            bll_HoaDon.ThemHoaDon(hoaDon);
+
+            // Thêm chi tiết hóa đơn !
+            for (int i = 0; i < listChiTietHoaDon.Count; i++)
+            {
+                listChiTietHoaDon[i].IDHoaDon = bll_HoaDon.LoadingHoaDon().Last().ID;
+                bll_ChiTietHoaDon.Add(listChiTietHoaDon[i]);
+            }
         }
+        
         private void B_QuayLai_Click(object sender, EventArgs e)
         {
             DialogResult kQ = MessageBox.Show("Bạn có muốn thoát !", "Xác nhận thoát !", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

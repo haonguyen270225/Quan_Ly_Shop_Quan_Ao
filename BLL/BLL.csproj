@@ -46,17 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL_LoadingChiTietHoaDon.cs" />
-    <Compile Include="BLL_LoadingHoaDon.cs" />
-    <Compile Include="BLL_LoadingKhachHang.cs" />
-    <Compile Include="BLL_LoadingKhoHang.cs" />
-    <Compile Include="BLL_LoadingKhuyenMai.cs" />
-    <Compile Include="BLL_LoadingLoaiSanPham.cs" />
-    <Compile Include="BLL_LoadingSPSize.cs" />
-    <Compile Include="BLL_LoadingThongTinTaiKhoan.cs" />
-    <Compile Include="BLL_ThayDoiMatKhau.cs" />
-    <Compile Include="BLL_ThongTinNhanVien.cs" />
-    <Compile Include="BLL_ThongTinTaiKhoanDangNhap.cs" />
+    <Compile Include="BLL_ChiTietHoaDon.cs" />
+    <Compile Include="BLL_HoaDon.cs" />
+    <Compile Include="BLL_KhachHang.cs" />
+    <Compile Include="BLL_KhoHang.cs" />
+    <Compile Include="BLL_KhuyenMai.cs" />
+    <Compile Include="BLL_LoaiSanPham.cs" />
+    <Compile Include="BLL_SPSize.cs" />
+    <Compile Include="BLL_NhanVien.cs" />
     <Compile Include="XuLy_Chuoi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BLL_TaiKhoan.cs" />
