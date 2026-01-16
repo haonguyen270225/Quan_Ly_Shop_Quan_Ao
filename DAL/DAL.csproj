@@ -48,7 +48,6 @@
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_KhuyenMai.cs" />
     <Compile Include="DAL_KhoHang.cs" />
-    <Compile Include="DAL_LoadingThongTinTaiKhoan.cs" />
     <Compile Include="DAL_LoaiSanPham.cs" />
     <Compile Include="DAL_SPSize.cs" />
     <Compile Include="DAL_NhanVien.cs" />

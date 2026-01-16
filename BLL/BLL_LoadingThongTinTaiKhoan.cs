@@ -9,10 +9,10 @@ namespace BLL
 {
     public class BLL_LoadingThongTinTaiKhoan
     {
-        private DAL_LoadingThongTinTaiKhoan dal_LoadingThongTinTaiKhoan = new DAL_LoadingThongTinTaiKhoan();
+        private DAL_TaiKhoan dal_TaiKhoan = new DAL_TaiKhoan();
         public TaiKhoan LoadingThongTinTaiKhoan(TaiKhoan taiKhoan)
         {
-            return dal_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan.UserName, taiKhoan.PassWord);
+            return dal_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan.UserName, taiKhoan.PassWord);
         }
     }
 }
