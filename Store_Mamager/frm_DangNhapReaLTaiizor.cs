@@ -54,13 +54,13 @@ namespace Store_Manager
                 MessageBox.Show("Đăng nhập thành công !");
                 // Store_Manager.frm_TrangChu frm = new Store_Manager.frm_TrangChu();
                 //frm.ShowDialog();
-                taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan); //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString()  );
+                taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan); 
+                //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString()  );
                 frm_TrangChu  frm_TrangChu = new frm_TrangChu();
                 frm_TrangChu.taiKhoan = taiKhoan;
                 MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
                 frm_TrangChu.ShowDialog();
-                 Application.Exit(); //this.Show();
-                //this.Show();
+                 Application.Exit();
             }
             else
             {

@@ -11,7 +11,7 @@ namespace BLL
     
     public class BLL_TaiKhoan
     {
-        private DAL_TaiKhoanAccess taiKhoanAccess = new DAL_TaiKhoanAccess();
+        private DAL_TaiKhoan taiKhoanAccess = new DAL_TaiKhoan();
         public int BLL_CheckLogin(TaiKhoan taiKhoan)
         {
 

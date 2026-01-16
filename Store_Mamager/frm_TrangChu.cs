@@ -55,8 +55,8 @@ namespace Store_Manager
         
         public void CreateLoading_TrangChu()
         {
-            taiKhoan.UserName = "binh.tran";
-            taiKhoan.PassWord = "123456";
+            //taiKhoan.UserName = "binh.tran";
+            //taiKhoan.PassWord = "123456";
             taiKhoan = bLL_LoadingThongTinTaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
 
             listKhachHang = bll_LoadingKhachHang.LoadingKhachHang();
