@@ -51,6 +51,7 @@ namespace Store_Manager
         //    return bll_LoadingKhachHang.LoadingKhachHang();
         //}
 
+        
         public void CreateLoading_TrangChu()
         {
             taiKhoan.UserName = "binh.tran";
@@ -68,8 +69,8 @@ namespace Store_Manager
             L_TrangChu_TieuDe.Text = ">>> Thông tin trang chủ !";
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
-            CTTK_TB_ChuVu.Text = nhanVien.ChucVu.ToString();
-            CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
+            CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
+            CTTK_TB_ChucVu.Text = nhanVien.DiaChi.ToString();
             CTTK_TB_NgaySinh.Text = "12/07/2003";
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
             CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
@@ -450,8 +451,71 @@ namespace Store_Manager
             }
             frm_HoaDonChiTiet frm = new frm_HoaDonChiTiet(khachHang, nhanVien, hoaDon , listKhoHang, listChiTietHoaDon  , HoaDon_CB_MaKhuyenMai.Text , maHoaDon);
             frm.ShowDialog();
-        } 
+        }
         #endregion
+
+
+        #region Chi_Tiet_Tai_Khoan
+        private void CTTK_B_AnhMacDinh_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                if (CTTK_PB_AnhDaiDien.Image != null)
+                {
+                    CTTK_PB_AnhDaiDien.Image.Dispose();
+                    CTTK_PB_AnhDaiDien.Image = null;
+                }
+
+                // Load ảnh mặc định từ Resources
+                CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+
+                // Tùy chỉnh hiển thị (khuyến nghị)
+                CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
+
+                PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
+                PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
+
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Không thể load ảnh mặc định!\nLỗi: " + ex.Message);
+            }
+        }
+        private void CTTK_B_AnhTrenMay_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog oFD = new OpenFileDialog())
+            {
+                oFD.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All files (*.*)|*.*";
+                oFD.Title = "Chọn ảnh cho hồ sơ";
+
+                if (oFD.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        CTTK_PB_AnhDaiDien.Image = Image.FromFile(oFD.FileName);
+
+                        // Tùy chọn: Căn chỉnh ảnh đẹp hơn
+                        CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
+
+
+                        PB_TrangChu_ThongTinTaiKhoan.Image = Image.FromFile(oFD.FileName);
+                        
+                        PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Không thể load ảnh!\nLỗi: " + ex.Message);
+                    }
+
+                }
+
+            }
+        }
+
+        #endregion
+
+        
     }
 }
 #region Demo

@@ -235,4 +235,10 @@
   <data name="trash-bin_5055247" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash-bin_5055247.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CTTK_MacDinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\CTTK_MacDinh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
