@@ -108,9 +108,9 @@
             this.TaiKhoan_GBLoading = new ReaLTaiizor.Controls.CyberGroupBox();
             this.TaiKhoan_DGV_ListTaiKhoan = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.TaiKhoan_GBThongTin = new ReaLTaiizor.Controls.CyberGroupBox();
-            this.crownComboBox2 = new ReaLTaiizor.Controls.CrownComboBox();
-            this.crownComboBox1 = new ReaLTaiizor.Controls.CrownComboBox();
-            this.TaiKhoan_TC_DiaChi = new ReaLTaiizor.Controls.SmallTextBox();
+            this.TaiKhoan_CB_GioiTinh = new ReaLTaiizor.Controls.CrownComboBox();
+            this.TaiKhoan_CB_ChucVu = new ReaLTaiizor.Controls.CrownComboBox();
+            this.TaiKhoan_TB_DiaChi = new ReaLTaiizor.Controls.SmallTextBox();
             this.foxLabel12 = new ReaLTaiizor.Controls.FoxLabel();
             this.foxLabel11 = new ReaLTaiizor.Controls.FoxLabel();
             this.TaiKhoan_TB_Email = new ReaLTaiizor.Controls.SmallTextBox();
@@ -1471,9 +1471,9 @@
             this.TaiKhoan_GBThongTin.ColorLighting = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(200)))), ((int)(((byte)(238)))));
             this.TaiKhoan_GBThongTin.ColorPen_1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(68)))));
             this.TaiKhoan_GBThongTin.ColorPen_2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(63)))), ((int)(((byte)(86)))));
-            this.TaiKhoan_GBThongTin.Controls.Add(this.crownComboBox2);
-            this.TaiKhoan_GBThongTin.Controls.Add(this.crownComboBox1);
-            this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_TC_DiaChi);
+            this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_CB_GioiTinh);
+            this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_CB_ChucVu);
+            this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_TB_DiaChi);
             this.TaiKhoan_GBThongTin.Controls.Add(this.foxLabel12);
             this.TaiKhoan_GBThongTin.Controls.Add(this.foxLabel11);
             this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_TB_Email);
@@ -1513,47 +1513,47 @@
             this.TaiKhoan_GBThongTin.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.TaiKhoan_GBThongTin.Timer_RGB = 300;
             // 
-            // crownComboBox2
+            // TaiKhoan_CB_GioiTinh
             // 
-            this.crownComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.crownComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.crownComboBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.crownComboBox2.FormattingEnabled = true;
-            this.crownComboBox2.Location = new System.Drawing.Point(106, 327);
-            this.crownComboBox2.Name = "crownComboBox2";
-            this.crownComboBox2.Size = new System.Drawing.Size(145, 35);
-            this.crownComboBox2.TabIndex = 25;
+            this.TaiKhoan_CB_GioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.TaiKhoan_CB_GioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.TaiKhoan_CB_GioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TaiKhoan_CB_GioiTinh.FormattingEnabled = true;
+            this.TaiKhoan_CB_GioiTinh.Location = new System.Drawing.Point(106, 327);
+            this.TaiKhoan_CB_GioiTinh.Name = "TaiKhoan_CB_GioiTinh";
+            this.TaiKhoan_CB_GioiTinh.Size = new System.Drawing.Size(145, 35);
+            this.TaiKhoan_CB_GioiTinh.TabIndex = 25;
             // 
-            // crownComboBox1
+            // TaiKhoan_CB_ChucVu
             // 
-            this.crownComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.crownComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.crownComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.crownComboBox1.FormattingEnabled = true;
-            this.crownComboBox1.Location = new System.Drawing.Point(165, 281);
-            this.crownComboBox1.Name = "crownComboBox1";
-            this.crownComboBox1.Size = new System.Drawing.Size(327, 35);
-            this.crownComboBox1.TabIndex = 24;
+            this.TaiKhoan_CB_ChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.TaiKhoan_CB_ChucVu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.TaiKhoan_CB_ChucVu.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TaiKhoan_CB_ChucVu.FormattingEnabled = true;
+            this.TaiKhoan_CB_ChucVu.Location = new System.Drawing.Point(165, 281);
+            this.TaiKhoan_CB_ChucVu.Name = "TaiKhoan_CB_ChucVu";
+            this.TaiKhoan_CB_ChucVu.Size = new System.Drawing.Size(327, 35);
+            this.TaiKhoan_CB_ChucVu.TabIndex = 24;
             // 
-            // TaiKhoan_TC_DiaChi
+            // TaiKhoan_TB_DiaChi
             // 
-            this.TaiKhoan_TC_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.TaiKhoan_TC_DiaChi.BackColor = System.Drawing.Color.Transparent;
-            this.TaiKhoan_TC_DiaChi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.TaiKhoan_TC_DiaChi.CustomBGColor = System.Drawing.Color.White;
-            this.TaiKhoan_TC_DiaChi.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaiKhoan_TC_DiaChi.ForeColor = System.Drawing.Color.DimGray;
-            this.TaiKhoan_TC_DiaChi.Location = new System.Drawing.Point(107, 476);
-            this.TaiKhoan_TC_DiaChi.MaxLength = 32767;
-            this.TaiKhoan_TC_DiaChi.Multiline = true;
-            this.TaiKhoan_TC_DiaChi.Name = "TaiKhoan_TC_DiaChi";
-            this.TaiKhoan_TC_DiaChi.ReadOnly = false;
-            this.TaiKhoan_TC_DiaChi.Size = new System.Drawing.Size(446, 64);
-            this.TaiKhoan_TC_DiaChi.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.TaiKhoan_TC_DiaChi.TabIndex = 23;
-            this.TaiKhoan_TC_DiaChi.Text = "Đường số 223 / 32 , Sóc Trăng , Sài Gòn fffffffffffffffffffffffffff";
-            this.TaiKhoan_TC_DiaChi.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TaiKhoan_TC_DiaChi.UseSystemPasswordChar = false;
+            this.TaiKhoan_TB_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.TaiKhoan_TB_DiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.TaiKhoan_TB_DiaChi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.TaiKhoan_TB_DiaChi.CustomBGColor = System.Drawing.Color.White;
+            this.TaiKhoan_TB_DiaChi.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaiKhoan_TB_DiaChi.ForeColor = System.Drawing.Color.DimGray;
+            this.TaiKhoan_TB_DiaChi.Location = new System.Drawing.Point(107, 476);
+            this.TaiKhoan_TB_DiaChi.MaxLength = 32767;
+            this.TaiKhoan_TB_DiaChi.Multiline = true;
+            this.TaiKhoan_TB_DiaChi.Name = "TaiKhoan_TB_DiaChi";
+            this.TaiKhoan_TB_DiaChi.ReadOnly = false;
+            this.TaiKhoan_TB_DiaChi.Size = new System.Drawing.Size(446, 64);
+            this.TaiKhoan_TB_DiaChi.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.TaiKhoan_TB_DiaChi.TabIndex = 23;
+            this.TaiKhoan_TB_DiaChi.Text = "Đường số 223 / 32 , Sóc Trăng , Sài Gòn fffffffffffffffffffffffffff";
+            this.TaiKhoan_TB_DiaChi.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TaiKhoan_TB_DiaChi.UseSystemPasswordChar = false;
             // 
             // foxLabel12
             // 
@@ -2405,6 +2405,7 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
+            this.parrotGroupBox1.PerformLayout();
             this.tab_TaiKhoan.ResumeLayout(false);
             this.TaiKhoan_GB_Tool.ResumeLayout(false);
             this.TaiKhoan_GBLoading.ResumeLayout(false);
@@ -2542,8 +2543,8 @@
         private ReaLTaiizor.Controls.SmallTextBox TaiKhoan_TB_Email;
         private ReaLTaiizor.Controls.FoxLabel foxLabel10;
         private ReaLTaiizor.Controls.SmallTextBox TaiKhoan_TB_SDT;
-        private ReaLTaiizor.Controls.SmallTextBox TaiKhoan_TC_DiaChi;
-        private ReaLTaiizor.Controls.CrownComboBox crownComboBox1;
-        private ReaLTaiizor.Controls.CrownComboBox crownComboBox2;
+        private ReaLTaiizor.Controls.SmallTextBox TaiKhoan_TB_DiaChi;
+        private ReaLTaiizor.Controls.CrownComboBox TaiKhoan_CB_ChucVu;
+        private ReaLTaiizor.Controls.CrownComboBox TaiKhoan_CB_GioiTinh;
     }
 }
