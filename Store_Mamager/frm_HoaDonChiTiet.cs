@@ -26,6 +26,8 @@ namespace Store_Manager
         BLL_ChiTietHoaDon bll_ChiTietHoaDon = new BLL_ChiTietHoaDon();
         string cTHD_MaKhuyenMai = "";
         string cTHD_MaHoaDon = "";
+
+        public event EventHandler HoaDonChiTietClosed;
         #endregion
         public frm_HoaDonChiTiet(KhachHang khachHang , NhanVien nhanVien , HoaDon hoaDon ,  List<KhoHang> listKhoHang , List<ChiTietHoaDon> listChiTietHoaDon , string maKhuyenMai , string maHoaDon)
         {
@@ -112,6 +114,7 @@ namespace Store_Manager
         private void B_Luu_Click(object sender, EventArgs e)
         {
             ThemHoaDon(cTHD_KhachHang, cTHD_NhanVien, cTHD_HoaDon, cTHD_ListKhoHang, cTHD_ListChiTietHoDon, cTHD_MaKhuyenMai);
+            HoaDonChiTietClosed?.Invoke(this, EventArgs.Empty);
             this.Close();
         }
     }
