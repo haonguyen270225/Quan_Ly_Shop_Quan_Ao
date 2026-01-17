@@ -11,10 +11,9 @@ namespace DTO
 {
     public class TaiKhoan
     {
+        public int ID { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
-
-        public int ID { get; set; }
 
         public int IDNhanVien { get; set; }
 
