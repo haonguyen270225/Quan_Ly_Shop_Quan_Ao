@@ -361,12 +361,43 @@ namespace Store_Manager
         private void XoaChiTietSanPham(UC_ChiTietSanPham uc)
         {
             FLP_ChiTietSanPham.Controls.Remove(uc);
-            
+            // CapNhat_SanPham(khoHang);
+            CapNhat_SanPham();
             CapNhat_ListChiTietSanPham();
             CapNhat_TongThu();
             uc.Dispose();
         }
 
+        private void CapNhat_SanPham()
+        {
+            if(FLP_ChiTietSanPham.Controls.Count == 0 )
+            {
+                foreach (UC_SanPham item in FLP_SanPham.Controls)
+                {
+                    item.sL_SanPham = 0;
+                }
+            }
+            else
+            {
+                foreach(UC_SanPham sP in FLP_SanPham.Controls)
+                {
+                    foreach(UC_ChiTietSanPham cTSP in FLP_ChiTietSanPham.Controls)
+                    {
+                        if (sP.sanPham.ID == cTSP.chiTietSanPham.ID)
+                        {
+                            sP.sL_SanPham = cTSP.soLuong;
+                            break;
+                        }
+                        else
+                        {
+                            sP.sL_SanPham = 0;
+                        }
+                    }
+                }
+            }
+
+            
+        }
         private void CapNhat_TongThu()
         {
             tongThu = 0;

@@ -68,6 +68,7 @@ namespace Store_Manager
                 }
                 else
                 {
+                    SanPham_PB_HetHang.SendToBack();
                     //MessageBox.Show("Double click sản phẩm");
                     sL_SanPham++;
                     OnAddToHoaDon?.Invoke(this, sanPham);
