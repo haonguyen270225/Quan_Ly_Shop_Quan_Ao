@@ -31,12 +31,14 @@ namespace Store_Manager
           
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
+            TB_TenDangNhap.Text = "an.nguyen";
+            TB_PassWord.Text = "123456haonguye";
             TB_TenDangNhap.TabIndex = 0;
-            TB_MatKhau.TabIndex = 1;
+            TB_PassWord.TabIndex = 1;
             B_DangNhap.TabIndex = 2;
             B_Thoat.TabIndex = 3;
 
-            TB_MatKhau.UseSystemPasswordChar = true;
+            TB_PassWord.UseSystemPasswordChar = true;
             FCB_HienThiMatKhau.Checked = false;
             FCB_HienThiMatKhau.Text = "Hiển thị mật khẩu !";
 
@@ -49,7 +51,7 @@ namespace Store_Manager
         {
            
             taiKhoan.UserName = TB_TenDangNhap.Text;
-            taiKhoan.PassWord = TB_MatKhau.Text;
+            taiKhoan.PassWord = TB_PassWord.Text;
 
             if (bll_TaiKhoan.BLL_CheckLogin(taiKhoan) == -1)
             {
@@ -84,11 +86,11 @@ namespace Store_Manager
         {
             if(FCB_HienThiMatKhau.Checked == true)
             {
-                TB_MatKhau.UseSystemPasswordChar = false;
+                TB_PassWord.UseSystemPasswordChar = false;
             }
             else
             {
-                TB_MatKhau.UseSystemPasswordChar = true;
+                TB_PassWord.UseSystemPasswordChar = true;
             }
         }
 

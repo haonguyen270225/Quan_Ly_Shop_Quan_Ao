@@ -1,7 +1,7 @@
 ﻿CREATE OR ALTER PROCEDURE sp_CapNhatHinhAnhTaiKhoan
     @ID          INT,
     @IDNhanVien INT,
-    @UserName    NVARCHAR(50),          -- Điều chỉnh kích thước nếu cần
+    @UserName    NVARCHAR(50),          
     @PassWord    NVARCHAR(50),         -- Nên dùng hashed password trong thực tế
     @HinhAnh     VARBINARY(MAX)
 AS

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DangNhapReaLTaiizor));
             this.hopePictureBox1 = new ReaLTaiizor.Controls.HopePictureBox();
             this.nightPanel1 = new ReaLTaiizor.Controls.NightPanel();
-            this.TB_MatKhau = new ReaLTaiizor.Controls.ForeverTextBox();
+            this.TB_PassWord = new ReaLTaiizor.Controls.ForeverTextBox();
             this.TB_TenDangNhap = new ReaLTaiizor.Controls.ForeverTextBox();
             this.dungeonLinkLabel1 = new ReaLTaiizor.Controls.DungeonLinkLabel();
             this.FCB_HienThiMatKhau = new ReaLTaiizor.Controls.FoxCheckBox();
@@ -63,7 +63,7 @@
             // 
             // nightPanel1
             // 
-            this.nightPanel1.Controls.Add(this.TB_MatKhau);
+            this.nightPanel1.Controls.Add(this.TB_PassWord);
             this.nightPanel1.Controls.Add(this.TB_TenDangNhap);
             this.nightPanel1.Controls.Add(this.dungeonLinkLabel1);
             this.nightPanel1.Controls.Add(this.FCB_HienThiMatKhau);
@@ -83,23 +83,23 @@
             this.nightPanel1.Size = new System.Drawing.Size(520, 610);
             this.nightPanel1.TabIndex = 0;
             // 
-            // TB_MatKhau
+            // TB_PassWord
             // 
-            this.TB_MatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.TB_MatKhau.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.TB_MatKhau.BorderColor = System.Drawing.Color.Gray;
-            this.TB_MatKhau.FocusOnHover = false;
-            this.TB_MatKhau.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.TB_MatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.TB_MatKhau.Location = new System.Drawing.Point(30, 352);
-            this.TB_MatKhau.MaxLength = 32767;
-            this.TB_MatKhau.Multiline = false;
-            this.TB_MatKhau.Name = "TB_MatKhau";
-            this.TB_MatKhau.ReadOnly = false;
-            this.TB_MatKhau.Size = new System.Drawing.Size(411, 45);
-            this.TB_MatKhau.TabIndex = 1;
-            this.TB_MatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TB_MatKhau.UseSystemPasswordChar = false;
+            this.TB_PassWord.BackColor = System.Drawing.Color.Transparent;
+            this.TB_PassWord.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.TB_PassWord.BorderColor = System.Drawing.Color.Gray;
+            this.TB_PassWord.FocusOnHover = false;
+            this.TB_PassWord.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.TB_PassWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TB_PassWord.Location = new System.Drawing.Point(30, 352);
+            this.TB_PassWord.MaxLength = 32767;
+            this.TB_PassWord.Multiline = false;
+            this.TB_PassWord.Name = "TB_PassWord";
+            this.TB_PassWord.ReadOnly = false;
+            this.TB_PassWord.Size = new System.Drawing.Size(411, 45);
+            this.TB_PassWord.TabIndex = 1;
+            this.TB_PassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TB_PassWord.UseSystemPasswordChar = false;
             // 
             // TB_TenDangNhap
             // 
@@ -292,6 +292,6 @@
         private ReaLTaiizor.Controls.FoxCheckBox FCB_HienThiMatKhau;
         private ReaLTaiizor.Controls.DungeonLinkLabel dungeonLinkLabel1;
         private ReaLTaiizor.Controls.ForeverTextBox TB_TenDangNhap;
-        private ReaLTaiizor.Controls.ForeverTextBox TB_MatKhau;
+        private ReaLTaiizor.Controls.ForeverTextBox TB_PassWord;
     }
 }

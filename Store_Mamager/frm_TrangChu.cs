@@ -164,10 +164,26 @@ namespace Store_Manager
             }
             else if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_HoaDon)
             {
-                L_TrangChu_TieuDe.Text = ">> Thêm hóa đơn !";
+                L_TrangChu_TieuDe.Text = ">>> Thêm hóa đơn !";
                 listKhoHang = bll_KhoHang.LoadingKhoHang();
                 listKhuyenMai = bll_KhuyenMai.LoadingKhuyenMai();
                 CreateLoading_TrangDonHang();
+            }
+            else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_KhoHang)
+            {
+                L_TrangChu_TieuDe.Text = ">>> Danh sách kho hàng !";
+            }
+            else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_KhuyenMai)
+            {
+                L_TrangChu_TieuDe.Text = ">>> Danh sách khuyến mãi !";
+            }
+            else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_DoanhThu)
+            {
+                L_TrangChu_TieuDe.Text = ">>> Doanh thu !";
+            }
+            else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_TaiKhoan)
+            {
+                L_TrangChu_TieuDe.Text = ">>> Danh sách tài khoản !";
             }
         }
 
@@ -551,11 +567,7 @@ namespace Store_Manager
                     CTTK_PB_AnhDaiDien.Image.Dispose();
                     CTTK_PB_AnhDaiDien.Image = null;
                 }
-
-                // Load ảnh mặc định từ Resources
                 CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-
-                // Tùy chỉnh hiển thị (khuyến nghị)
                 CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
 
                 PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
