@@ -16,10 +16,10 @@ namespace BLL
         
         private DAL_NhanVien dal_NhanVien = new DAL_NhanVien();
         
-        public  List<NhanVien>  LoadingThongTinNhanVien()
+        public  List<NhanVien>  LoadingNhanVien()
         {
            // List<NhanVien> listNhanVien = new List<NhanVien>();          
-            return new List<NhanVien>(dal_NhanVien.NhanVienAccess()); 
+            return new List<NhanVien>(dal_NhanVien.LoadingNhanVien()); 
         }
 
 

@@ -19,6 +19,15 @@ namespace DTO
         public int IDNhanVien { get; set; }
 
         public byte[] HinhAnh { get; set; }
-    }
 
+        public TaiKhoan()
+        {
+            this.UserName = "";
+            this.PassWord = "";
+            this.ID = 0;
+            this.IDNhanVien = 0;
+            this.HinhAnh = null;
+        }
     }
+    
+}

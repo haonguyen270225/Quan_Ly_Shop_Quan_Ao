@@ -37,5 +37,11 @@ namespace BLL
         {
             return dal_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan.UserName, taiKhoan.PassWord);
         }
+
+
+        public List<TaiKhoan> LoadingThongTinTaiKhoan()
+        {
+            return dal_TaiKhoan.LoadingThongTinTaiKhoan();
+        }
     }
 }

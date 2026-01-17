@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_NhanVien 
     {
-        public  List<NhanVien> NhanVienAccess()
+        public  List<NhanVien> LoadingNhanVien()
         {
             List<NhanVien> listNhanVienTmp = new List<NhanVien>();
 

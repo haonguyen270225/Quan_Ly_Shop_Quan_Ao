@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
+using System.Drawing;
+
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
@@ -87,8 +91,42 @@ namespace DAL
         }
 
 
+        public List<TaiKhoan> LoadingThongTinTaiKhoan()
+        {
+           List<TaiKhoan> listTaiKhoan = new List<TaiKhoan>();
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT TOP (1000) [ID]
+                                                    ,[UserName]
+                                                    ,[PassWord]
+                                                    ,[IDNhanVien]
+                                                    ,[HinhAnh]
+                                                  FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[TaiKhoan]", conn);
+           
 
-
-
+            SqlDataReader dataReader = sqlCommand.ExecuteReader();
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
+                {
+                    TaiKhoan tmp = new TaiKhoan();
+                    tmp.ID = Convert.ToInt32(dataReader["ID"]);
+                    tmp.IDNhanVien = Convert.ToInt32(dataReader["IDNhanVien"]);
+                    tmp.UserName = dataReader["UserName"].ToString();
+                    tmp.PassWord = dataReader["PassWord"].ToString();
+                    if (dataReader["HinhAnh"] != DBNull.Value)
+                    {
+                        tmp.HinhAnh = (byte[])dataReader["HinhAnh"];
+                    }
+                    //else
+                    //{
+                    //   // tmp.HinhAnh = 
+                    //}
+                    listTaiKhoan.Add(tmp);
+                }
+            }
+            conn.Close();
+            return listTaiKhoan;
+        }
     }
 }

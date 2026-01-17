@@ -25,6 +25,8 @@ namespace Store_Manager
         private List<SPSize> listSPSize = new List<SPSize>();
         private List<KhachHang> listKhachHang = new List<KhachHang>();
         private List<KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
+        private List<TaiKhoan> listTaiKhoan = new List<TaiKhoan>();
+        private List<NhanVien> listNhanVien = new List<NhanVien>();
 
         private BLL_NhanVien bLL_NhanVien = new BLL_NhanVien();
         private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
@@ -34,6 +36,8 @@ namespace Store_Manager
         private BLL_KhuyenMai bll_KhuyenMai = new BLL_KhuyenMai();
         private BLL_KhachHang bll_KhachHang = new BLL_KhachHang();
         private BLL_HoaDon bll_HoaDon = new BLL_HoaDon();
+        private BLL_ChiTietHoaDon bll_ChiTietHoaDon = new BLL_ChiTietHoaDon();
+
         private UC_SanPham ucSanPham;
         private UC_ChiTietSanPham ucChiTietSanPham;
 
@@ -51,16 +55,35 @@ namespace Store_Manager
         }
 
        
+        private void BLL_LoadingData()
+        {
+            listTaiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan();
+            listKhachHang = bll_KhachHang.LoadingKhachHang();
+            listNhanVien = bLL_NhanVien.LoadingNhanVien();
+            listKhuyenMai = bll_KhuyenMai.LoadingKhuyenMai();
+            listSPSize = bll_SPSize.LoadingSPSize();
+            listLoaiSanPham = bll_LoaiSanPham.LoadingLoaiSanPham();
+            listKhoHang = bll_KhoHang.LoadingKhoHang();
+            listHoaDon = bll_HoaDon.LoadingHoaDon();
+            listChiTietHoaDon = bll_ChiTietHoaDon.LoadingChiTietHoaDon();
+        }
         public void CreateLoading_TrangChu()
         {
             //taiKhoan.UserName = "binh.tran";
             //taiKhoan.PassWord = "123456";
             taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
 
-            listKhachHang = bll_KhachHang.LoadingKhachHang();
-            listHoaDon = bll_HoaDon.LoadingHoaDon();
-            //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
-            //MessageBox.Show("Gọi hàm CreateLoading()");
+            BLL_LoadingData();
+
+            #region demo
+            //listKhachHang = bll_KhachHang.LoadingKhachHang();
+            //listHoaDon = bll_HoaDon.LoadingHoaDon();
+            //listKhachHang = bll_KhachHang.LoadingKhachHang();
+            //listHoaDon = bll_HoaDon.LoadingHoaDon();
+            //listKhoHang = bll_KhoHang.LoadingKhoHang();
+            //listChiTietHoaDon = bll_ChiTietHoaDon.LoadingChiTietHoaDon();
+            #endregion
+           
             nhanVien = bLL_NhanVien.TT_NhanVienDangNhap(taiKhoan);//bll_NhanVien.(taiKhoan);
             L_HoVaTen_MaNhanVien.Text = nhanVien.HoVaTen.ToString() + " - " + nhanVien.MaNhanVien.ToString();
             L_TrangChu_HoVaTen.Text = "Xin chào : " + nhanVien.HoVaTen.ToString();
@@ -184,6 +207,8 @@ namespace Store_Manager
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_TaiKhoan)
             {
                 L_TrangChu_TieuDe.Text = ">>> Danh sách tài khoản !";
+                BLL_LoadingData();
+                DGV_ListTaiKhoan_Loading(listTaiKhoan , listNhanVien);
             }
         }
 
@@ -613,7 +638,45 @@ namespace Store_Manager
 
         #endregion
 
-        
+
+        #region Tab_TaiKhoan
+        private void DGV_ListTaiKhoan_Loading(List<TaiKhoan> listTaiKhoan , List<NhanVien> listNhanVien)
+        {
+            #region demo
+            //DataTable dataTable = new DataTable();
+            //dataTable.Columns.Add("ID");
+            //dataTable.Columns.Add("MaNhanVien");
+            //dataTable.Columns.Add("HoVaTen");
+            //dataTable.Columns.Add("ChucVu");
+            //dataTable.Columns.Add("HinhAnh");
+            #endregion
+            TaiKhoan_DGV_ListTaiKhoan.DataSource = listTaiKhoan;
+
+        }
+        #endregion
+
+        private void TaiKhoan_DGV_ListTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // TaiKhoan
+            DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn();
+            dataGridViewImageColumn = (DataGridViewImageColumn)TaiKhoan_DGV_ListTaiKhoan.Columns[4];
+            dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+            var cellValue = TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells[4].Value;
+            if (cellValue != null && cellValue != DBNull.Value)
+            {
+                byte[] imgBytes = (byte[])cellValue;
+                using (MemoryStream ms = new MemoryStream(imgBytes))
+                {
+                    TaiKhoan_PB_AnhDaiDien.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                TaiKhoan_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+            }
+           
+        }
     }
 }
 #region Demo
