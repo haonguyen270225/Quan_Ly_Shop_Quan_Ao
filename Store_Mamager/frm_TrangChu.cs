@@ -538,8 +538,6 @@ namespace Store_Manager
             frm.ShowDialog();
             
         }
-
-       
         #endregion
 
 

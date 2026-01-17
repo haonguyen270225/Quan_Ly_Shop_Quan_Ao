@@ -34,12 +34,12 @@
             this.foxBigLabel4 = new ReaLTaiizor.Controls.FoxBigLabel();
             this.TB_MaKhachHang = new ReaLTaiizor.Controls.HopeTextBox();
             this.airForm1 = new ReaLTaiizor.Forms.AirForm();
+            this.TB_MaHoaDon = new ReaLTaiizor.Controls.HopeTextBox();
+            this.foxBigLabel5 = new ReaLTaiizor.Controls.FoxBigLabel();
             this.B_Luu = new ReaLTaiizor.Controls.CyberButton();
             this.B_Xoa = new ReaLTaiizor.Controls.CyberButton();
             this.TB_SDT = new ReaLTaiizor.Controls.HopeTextBox();
             this.TB_HoVaTen = new ReaLTaiizor.Controls.HopeTextBox();
-            this.TB_MaHoaDon = new ReaLTaiizor.Controls.HopeTextBox();
-            this.foxBigLabel5 = new ReaLTaiizor.Controls.FoxBigLabel();
             this.airForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,6 +150,42 @@
             this.airForm1.Text = "Thông tin khách hàng !";
             this.airForm1.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.airForm1.Transparent = false;
+            // 
+            // TB_MaHoaDon
+            // 
+            this.TB_MaHoaDon.BackColor = System.Drawing.Color.White;
+            this.TB_MaHoaDon.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
+            this.TB_MaHoaDon.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.TB_MaHoaDon.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.TB_MaHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TB_MaHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.TB_MaHoaDon.Hint = "";
+            this.TB_MaHoaDon.Location = new System.Drawing.Point(263, 362);
+            this.TB_MaHoaDon.MaxLength = 32767;
+            this.TB_MaHoaDon.Multiline = false;
+            this.TB_MaHoaDon.Name = "TB_MaHoaDon";
+            this.TB_MaHoaDon.PasswordChar = '\0';
+            this.TB_MaHoaDon.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TB_MaHoaDon.SelectedText = "";
+            this.TB_MaHoaDon.SelectionLength = 0;
+            this.TB_MaHoaDon.SelectionStart = 0;
+            this.TB_MaHoaDon.Size = new System.Drawing.Size(415, 43);
+            this.TB_MaHoaDon.TabIndex = 9;
+            this.TB_MaHoaDon.TabStop = false;
+            this.TB_MaHoaDon.UseSystemPasswordChar = false;
+            // 
+            // foxBigLabel5
+            // 
+            this.foxBigLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.foxBigLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 14F);
+            this.foxBigLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.foxBigLabel5.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
+            this.foxBigLabel5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.foxBigLabel5.Location = new System.Drawing.Point(11, 362);
+            this.foxBigLabel5.Name = "foxBigLabel5";
+            this.foxBigLabel5.Size = new System.Drawing.Size(186, 39);
+            this.foxBigLabel5.TabIndex = 22;
+            this.foxBigLabel5.Text = "Mã hóa đơn :";
             // 
             // B_Luu
             // 
@@ -277,42 +313,6 @@
             this.TB_HoVaTen.TabIndex = 7;
             this.TB_HoVaTen.TabStop = false;
             this.TB_HoVaTen.UseSystemPasswordChar = false;
-            // 
-            // TB_MaHoaDon
-            // 
-            this.TB_MaHoaDon.BackColor = System.Drawing.Color.White;
-            this.TB_MaHoaDon.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.TB_MaHoaDon.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.TB_MaHoaDon.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.TB_MaHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TB_MaHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.TB_MaHoaDon.Hint = "";
-            this.TB_MaHoaDon.Location = new System.Drawing.Point(263, 362);
-            this.TB_MaHoaDon.MaxLength = 32767;
-            this.TB_MaHoaDon.Multiline = false;
-            this.TB_MaHoaDon.Name = "TB_MaHoaDon";
-            this.TB_MaHoaDon.PasswordChar = '\0';
-            this.TB_MaHoaDon.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TB_MaHoaDon.SelectedText = "";
-            this.TB_MaHoaDon.SelectionLength = 0;
-            this.TB_MaHoaDon.SelectionStart = 0;
-            this.TB_MaHoaDon.Size = new System.Drawing.Size(415, 43);
-            this.TB_MaHoaDon.TabIndex = 23;
-            this.TB_MaHoaDon.TabStop = false;
-            this.TB_MaHoaDon.UseSystemPasswordChar = false;
-            // 
-            // foxBigLabel5
-            // 
-            this.foxBigLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.foxBigLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 14F);
-            this.foxBigLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxBigLabel5.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
-            this.foxBigLabel5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.foxBigLabel5.Location = new System.Drawing.Point(11, 362);
-            this.foxBigLabel5.Name = "foxBigLabel5";
-            this.foxBigLabel5.Size = new System.Drawing.Size(186, 39);
-            this.foxBigLabel5.TabIndex = 22;
-            this.foxBigLabel5.Text = "Mã hóa đơn :";
             // 
             // frm_ThongTinKhachHang
             // 

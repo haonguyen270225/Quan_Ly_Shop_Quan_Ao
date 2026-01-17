@@ -81,7 +81,7 @@
             this.nightPanel1.RightSideColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(61)))));
             this.nightPanel1.Side = ReaLTaiizor.Controls.NightPanel.PanelSide.Left;
             this.nightPanel1.Size = new System.Drawing.Size(520, 610);
-            this.nightPanel1.TabIndex = 1;
+            this.nightPanel1.TabIndex = 0;
             // 
             // TB_MatKhau
             // 
@@ -97,7 +97,7 @@
             this.TB_MatKhau.Name = "TB_MatKhau";
             this.TB_MatKhau.ReadOnly = false;
             this.TB_MatKhau.Size = new System.Drawing.Size(411, 45);
-            this.TB_MatKhau.TabIndex = 12;
+            this.TB_MatKhau.TabIndex = 1;
             this.TB_MatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TB_MatKhau.UseSystemPasswordChar = false;
             // 
@@ -115,7 +115,7 @@
             this.TB_TenDangNhap.Name = "TB_TenDangNhap";
             this.TB_TenDangNhap.ReadOnly = false;
             this.TB_TenDangNhap.Size = new System.Drawing.Size(411, 45);
-            this.TB_TenDangNhap.TabIndex = 11;
+            this.TB_TenDangNhap.TabIndex = 0;
             this.TB_TenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TB_TenDangNhap.UseSystemPasswordChar = false;
             // 
@@ -153,7 +153,7 @@
             this.FCB_HienThiMatKhau.Location = new System.Drawing.Point(30, 406);
             this.FCB_HienThiMatKhau.Name = "FCB_HienThiMatKhau";
             this.FCB_HienThiMatKhau.Size = new System.Drawing.Size(55, 28);
-            this.FCB_HienThiMatKhau.TabIndex = 8;
+            this.FCB_HienThiMatKhau.TabIndex = 5;
             this.FCB_HienThiMatKhau.Text = "foxCheckBox1";
             this.FCB_HienThiMatKhau.UncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.FCB_HienThiMatKhau.UncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(132)))), ((int)(((byte)(0)))));
@@ -194,7 +194,7 @@
             this.B_DangNhap.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.B_DangNhap.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.B_DangNhap.Size = new System.Drawing.Size(164, 55);
-            this.B_DangNhap.TabIndex = 6;
+            this.B_DangNhap.TabIndex = 2;
             this.B_DangNhap.Text = "Đăng nhập !";
             this.B_DangNhap.TextAlignment = System.Drawing.StringAlignment.Center;
             this.B_DangNhap.Click += new System.EventHandler(this.B_DangNhap_Click);
@@ -215,7 +215,7 @@
             this.B_Thoat.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.B_Thoat.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.B_Thoat.Size = new System.Drawing.Size(164, 55);
-            this.B_Thoat.TabIndex = 5;
+            this.B_Thoat.TabIndex = 3;
             this.B_Thoat.Text = "Thoát !";
             this.B_Thoat.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
@@ -240,7 +240,7 @@
             this.headerLabel1.Location = new System.Drawing.Point(23, 219);
             this.headerLabel1.Name = "headerLabel1";
             this.headerLabel1.Size = new System.Drawing.Size(247, 36);
-            this.headerLabel1.TabIndex = 1;
+            this.headerLabel1.TabIndex = 6;
             this.headerLabel1.Text = "Tên đăng nhập :";
             // 
             // hopePictureBox2
