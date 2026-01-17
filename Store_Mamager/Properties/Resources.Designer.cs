@@ -393,6 +393,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap rotate_9714195 {
+            get {
+                object obj = ResourceManager.GetObject("rotate_9714195", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap SanPham {
             get {
                 object obj = ResourceManager.GetObject("SanPham", resourceCulture);
@@ -465,6 +475,16 @@ namespace Store_Manager.Properties {
         public static System.Drawing.Bitmap trang_tri_shop_quan_ao_1 {
             get {
                 object obj = ResourceManager.GetObject("trang-tri-shop-quan-ao-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap trash_2881442 {
+            get {
+                object obj = ResourceManager.GetObject("trash_2881442", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
