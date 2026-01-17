@@ -353,6 +353,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap pc_2291988 {
+            get {
+                object obj = ResourceManager.GetObject("pc_2291988", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap revenue_2175584 {
             get {
                 object obj = ResourceManager.GetObject("revenue_2175584", resourceCulture);

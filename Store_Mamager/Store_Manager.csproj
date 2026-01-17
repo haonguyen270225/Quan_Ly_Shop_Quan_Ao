@@ -407,6 +407,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CTTK_MacDinh.jpg" />
+    <None Include="Resources\pc_2291988.png" />
     <None Include="Resources\trash_2881442.png" />
     <None Include="Resources\rotate_9714195.png" />
   </ItemGroup>
