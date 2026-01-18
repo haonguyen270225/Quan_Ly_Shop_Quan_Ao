@@ -897,9 +897,13 @@ namespace Store_Manager
             BLL_LoadingData();
             ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
         }
-        
-        
-        
+
+        // TaiKhoan Cập nhật thông tin nhân viên !;
+        private void TaiKhoan_B_CapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #region Tab_TaiKhoan_Demo
         //private void LoadingKhuyenMai()
         //{
@@ -922,6 +926,7 @@ namespace Store_Manager
         #endregion
 
         #endregion
+
 
 
     }

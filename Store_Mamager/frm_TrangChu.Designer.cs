@@ -228,7 +228,7 @@
             this.foreverForm1.Name = "foreverForm1";
             this.foreverForm1.Padding = new System.Windows.Forms.Padding(2, 99, 2, 2);
             this.foreverForm1.Sizable = true;
-            this.foreverForm1.Size = new System.Drawing.Size(1540, 789);
+            this.foreverForm1.Size = new System.Drawing.Size(1540, 867);
             this.foreverForm1.TabIndex = 0;
             this.foreverForm1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.foreverForm1.TextLight = System.Drawing.Color.SeaGreen;
@@ -360,7 +360,7 @@
             this.HoaDon_CB_LoaiSanPham.PageColor = System.Drawing.Color.White;
             this.HoaDon_CB_LoaiSanPham.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.HoaDon_CB_LoaiSanPham.SelectedIndex = 0;
-            this.HoaDon_CB_LoaiSanPham.Size = new System.Drawing.Size(1536, 688);
+            this.HoaDon_CB_LoaiSanPham.Size = new System.Drawing.Size(1536, 766);
             this.HoaDon_CB_LoaiSanPham.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.HoaDon_CB_LoaiSanPham.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.HoaDon_CB_LoaiSanPham.StringType = System.Drawing.StringAlignment.Near;
@@ -847,7 +847,7 @@
             this.tab_HoaDon.Margin = new System.Windows.Forms.Padding(6);
             this.tab_HoaDon.Name = "tab_HoaDon";
             this.tab_HoaDon.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_HoaDon.Size = new System.Drawing.Size(1328, 820);
+            this.tab_HoaDon.Size = new System.Drawing.Size(1328, 758);
             this.tab_HoaDon.TabIndex = 1;
             this.tab_HoaDon.Text = "Hóa Đơn";
             // 
@@ -865,7 +865,7 @@
             this.HoaDon_CB_MaKhuyenMai.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.HoaDon_CB_MaKhuyenMai.IntegralHeight = false;
             this.HoaDon_CB_MaKhuyenMai.ItemHeight = 20;
-            this.HoaDon_CB_MaKhuyenMai.Location = new System.Drawing.Point(8, 565);
+            this.HoaDon_CB_MaKhuyenMai.Location = new System.Drawing.Point(8, 631);
             this.HoaDon_CB_MaKhuyenMai.Name = "HoaDon_CB_MaKhuyenMai";
             this.HoaDon_CB_MaKhuyenMai.Size = new System.Drawing.Size(233, 26);
             this.HoaDon_CB_MaKhuyenMai.StartIndex = 0;
@@ -886,7 +886,7 @@
             this.TB_TongThu.Image = null;
             this.TB_TongThu.IsDerivedStyle = true;
             this.TB_TongThu.Lines = null;
-            this.TB_TongThu.Location = new System.Drawing.Point(362, 561);
+            this.TB_TongThu.Location = new System.Drawing.Point(362, 627);
             this.TB_TongThu.MaxLength = 32767;
             this.TB_TongThu.Multiline = false;
             this.TB_TongThu.Name = "TB_TongThu";
@@ -906,7 +906,7 @@
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroLabel1.IsDerivedStyle = true;
-            this.metroLabel1.Location = new System.Drawing.Point(246, 565);
+            this.metroLabel1.Location = new System.Drawing.Point(246, 631);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(110, 26);
             this.metroLabel1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
@@ -989,7 +989,7 @@
             this.FLP_ChiTietSanPham.Location = new System.Drawing.Point(7, 128);
             this.FLP_ChiTietSanPham.Margin = new System.Windows.Forms.Padding(0);
             this.FLP_ChiTietSanPham.Name = "FLP_ChiTietSanPham";
-            this.FLP_ChiTietSanPham.Size = new System.Drawing.Size(547, 421);
+            this.FLP_ChiTietSanPham.Size = new System.Drawing.Size(547, 479);
             this.FLP_ChiTietSanPham.TabIndex = 5;
             // 
             // crownLabel1
@@ -1133,7 +1133,7 @@
             this.FLP_SanPham.Location = new System.Drawing.Point(557, 77);
             this.FLP_SanPham.Margin = new System.Windows.Forms.Padding(1);
             this.FLP_SanPham.Name = "FLP_SanPham";
-            this.FLP_SanPham.Size = new System.Drawing.Size(764, 653);
+            this.FLP_SanPham.Size = new System.Drawing.Size(764, 663);
             this.FLP_SanPham.TabIndex = 0;
             // 
             // HoaDon_ThanhToan
@@ -1152,7 +1152,7 @@
             this.HoaDon_ThanhToan.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.HoaDon_ThanhToan.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.HoaDon_ThanhToan.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.HoaDon_ThanhToan.Location = new System.Drawing.Point(287, 622);
+            this.HoaDon_ThanhToan.Location = new System.Drawing.Point(279, 688);
             this.HoaDon_ThanhToan.Name = "HoaDon_ThanhToan";
             this.HoaDon_ThanhToan.Size = new System.Drawing.Size(127, 52);
             this.HoaDon_ThanhToan.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -1178,7 +1178,7 @@
             this.HoaDon_Xoa.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.HoaDon_Xoa.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.HoaDon_Xoa.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.HoaDon_Xoa.Location = new System.Drawing.Point(419, 622);
+            this.HoaDon_Xoa.Location = new System.Drawing.Point(411, 688);
             this.HoaDon_Xoa.Name = "HoaDon_Xoa";
             this.HoaDon_Xoa.Size = new System.Drawing.Size(135, 53);
             this.HoaDon_Xoa.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -1196,7 +1196,7 @@
             this.tab_KhoHang.Margin = new System.Windows.Forms.Padding(6);
             this.tab_KhoHang.Name = "tab_KhoHang";
             this.tab_KhoHang.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_KhoHang.Size = new System.Drawing.Size(1328, 820);
+            this.tab_KhoHang.Size = new System.Drawing.Size(1328, 758);
             this.tab_KhoHang.TabIndex = 2;
             this.tab_KhoHang.Text = "Kho Hàng";
             // 
@@ -1208,7 +1208,7 @@
             this.tab_KhuyenMai.Margin = new System.Windows.Forms.Padding(6);
             this.tab_KhuyenMai.Name = "tab_KhuyenMai";
             this.tab_KhuyenMai.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_KhuyenMai.Size = new System.Drawing.Size(1328, 820);
+            this.tab_KhuyenMai.Size = new System.Drawing.Size(1328, 758);
             this.tab_KhuyenMai.TabIndex = 3;
             this.tab_KhuyenMai.Text = "Khuyến Mãi";
             // 
@@ -1219,7 +1219,7 @@
             this.tab_DoanhThu.Location = new System.Drawing.Point(204, 4);
             this.tab_DoanhThu.Margin = new System.Windows.Forms.Padding(6);
             this.tab_DoanhThu.Name = "tab_DoanhThu";
-            this.tab_DoanhThu.Size = new System.Drawing.Size(1328, 820);
+            this.tab_DoanhThu.Size = new System.Drawing.Size(1328, 758);
             this.tab_DoanhThu.TabIndex = 5;
             this.tab_DoanhThu.Text = "Doanh Thu";
             // 
@@ -1232,7 +1232,7 @@
             this.tab_TaiKhoan.ImageIndex = 5;
             this.tab_TaiKhoan.Location = new System.Drawing.Point(204, 4);
             this.tab_TaiKhoan.Name = "tab_TaiKhoan";
-            this.tab_TaiKhoan.Size = new System.Drawing.Size(1328, 680);
+            this.tab_TaiKhoan.Size = new System.Drawing.Size(1328, 758);
             this.tab_TaiKhoan.TabIndex = 6;
             this.tab_TaiKhoan.Text = "Tài Khoản";
             // 
@@ -1397,7 +1397,7 @@
             this.TaiKhoan_GBLoading.RGB = false;
             this.TaiKhoan_GBLoading.Rounding = true;
             this.TaiKhoan_GBLoading.RoundingInt = 1;
-            this.TaiKhoan_GBLoading.Size = new System.Drawing.Size(744, 607);
+            this.TaiKhoan_GBLoading.Size = new System.Drawing.Size(744, 685);
             this.TaiKhoan_GBLoading.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.TaiKhoan_GBLoading.TabIndex = 2;
             this.TaiKhoan_GBLoading.Tag = "Cyber";
@@ -1454,7 +1454,7 @@
             this.TaiKhoan_DGV_ListTaiKhoan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.TaiKhoan_DGV_ListTaiKhoan.RowTemplate.Height = 50;
             this.TaiKhoan_DGV_ListTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TaiKhoan_DGV_ListTaiKhoan.Size = new System.Drawing.Size(717, 574);
+            this.TaiKhoan_DGV_ListTaiKhoan.Size = new System.Drawing.Size(717, 663);
             this.TaiKhoan_DGV_ListTaiKhoan.TabIndex = 0;
             this.TaiKhoan_DGV_ListTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TaiKhoan_DGV_ListTaiKhoan_CellClick);
             // 
@@ -1508,7 +1508,7 @@
             this.TaiKhoan_GBThongTin.RGB = false;
             this.TaiKhoan_GBThongTin.Rounding = true;
             this.TaiKhoan_GBThongTin.RoundingInt = 5;
-            this.TaiKhoan_GBThongTin.Size = new System.Drawing.Size(571, 660);
+            this.TaiKhoan_GBThongTin.Size = new System.Drawing.Size(571, 738);
             this.TaiKhoan_GBThongTin.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.TaiKhoan_GBThongTin.TabIndex = 1;
             this.TaiKhoan_GBThongTin.Tag = "Cyber";
@@ -1825,7 +1825,7 @@
             this.TaiKhoan_B_Xoa.ForeColor = System.Drawing.Color.White;
             this.TaiKhoan_B_Xoa.HoverColor = System.Drawing.Color.SlateGray;
             this.TaiKhoan_B_Xoa.Image = null;
-            this.TaiKhoan_B_Xoa.Location = new System.Drawing.Point(433, 600);
+            this.TaiKhoan_B_Xoa.Location = new System.Drawing.Point(433, 663);
             this.TaiKhoan_B_Xoa.Name = "TaiKhoan_B_Xoa";
             this.TaiKhoan_B_Xoa.Size = new System.Drawing.Size(120, 46);
             this.TaiKhoan_B_Xoa.TabIndex = 2;
@@ -1840,11 +1840,12 @@
             this.TaiKhoan_B_CapNhat.ForeColor = System.Drawing.Color.White;
             this.TaiKhoan_B_CapNhat.HoverColor = System.Drawing.Color.SlateGray;
             this.TaiKhoan_B_CapNhat.Image = null;
-            this.TaiKhoan_B_CapNhat.Location = new System.Drawing.Point(34, 603);
+            this.TaiKhoan_B_CapNhat.Location = new System.Drawing.Point(34, 666);
             this.TaiKhoan_B_CapNhat.Name = "TaiKhoan_B_CapNhat";
             this.TaiKhoan_B_CapNhat.Size = new System.Drawing.Size(120, 46);
             this.TaiKhoan_B_CapNhat.TabIndex = 1;
             this.TaiKhoan_B_CapNhat.Text = "Cập nhật !";
+            this.TaiKhoan_B_CapNhat.Click += new System.EventHandler(this.TaiKhoan_B_CapNhat_Click);
             // 
             // TaiKhoan_B_Them
             // 
@@ -1855,7 +1856,7 @@
             this.TaiKhoan_B_Them.ForeColor = System.Drawing.Color.White;
             this.TaiKhoan_B_Them.HoverColor = System.Drawing.Color.SlateGray;
             this.TaiKhoan_B_Them.Image = null;
-            this.TaiKhoan_B_Them.Location = new System.Drawing.Point(225, 600);
+            this.TaiKhoan_B_Them.Location = new System.Drawing.Point(225, 663);
             this.TaiKhoan_B_Them.Name = "TaiKhoan_B_Them";
             this.TaiKhoan_B_Them.Size = new System.Drawing.Size(120, 46);
             this.TaiKhoan_B_Them.TabIndex = 0;
@@ -2374,7 +2375,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 789);
+            this.ClientSize = new System.Drawing.Size(1540, 867);
             this.Controls.Add(this.foreverForm1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
