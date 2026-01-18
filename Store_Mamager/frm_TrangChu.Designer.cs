@@ -210,13 +210,13 @@
             this.foreverForm1.BackColor = System.Drawing.Color.White;
             this.foreverForm1.BaseColor = System.Drawing.Color.White;
             this.foreverForm1.BorderColor = System.Drawing.Color.PowderBlue;
-            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Controls.Add(this.controlBox1);
             this.foreverForm1.Controls.Add(this.crownGroupBox1);
             this.foreverForm1.Controls.Add(this.nightLabel1);
             this.foreverForm1.Controls.Add(this.hopePictureBox1);
             this.foreverForm1.Controls.Add(this.headerLabel1);
             this.foreverForm1.Controls.Add(this.HoaDon_CB_LoaiSanPham);
+            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.foreverForm1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.foreverForm1.ForeverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
@@ -611,7 +611,7 @@
             this.B_TrangChu_ChiTiet.TextColor = System.Drawing.Color.Black;
             this.B_TrangChu_ChiTiet.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.B_TrangChu_ChiTiet.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.B_TrangChu_ChiTiet.Click += new System.EventHandler(this.parrotButton1_Click);
+            this.B_TrangChu_ChiTiet.Click += new System.EventHandler(this.TrangChu_B_ChiTietTaiKhoan_Click);
             // 
             // L_TrangChu_ChuVu
             // 

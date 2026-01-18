@@ -32,7 +32,7 @@ namespace Store_Manager
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
             TB_TenDangNhap.Text = "an.nguyen";
-            TB_PassWord.Text = "12345678901";
+            TB_PassWord.Text = "1234567890";
             TB_TenDangNhap.TabIndex = 0;
             TB_PassWord.TabIndex = 1;
             B_DangNhap.TabIndex = 2;
