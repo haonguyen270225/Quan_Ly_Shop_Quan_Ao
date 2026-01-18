@@ -813,6 +813,13 @@ namespace Store_Manager
 
         private void TaiKhoan_TB_Loading(TaiKhoan taiKhoan, NhanVien nhanVien)
         {
+           
+            SetTextBoxReadOnlyAll(TaiKhoan_GBThongTin, true);
+            TaiKhoan_CB_ChucVu.Enabled = false;
+            TaiKhoan_CB_GioiTinh.Enabled = false;
+            TaiKhoan_CB_HinhThucLamViec.Enabled = false;
+
+           
             if (taiKhoan == null || nhanVien == null)
             {
                 TaiKhoan_TB_HoVaTen.Text = "";
@@ -936,13 +943,48 @@ namespace Store_Manager
         // TaiKhoan Cập nhật thông tin nhân viên !;
         private void TaiKhoan_B_CapNhat_Click(object sender, EventArgs e)
         {
-            GB_CTTK_Co = 1;
-            MessageBox.Show(" Cập nhật nhân viên !");
-            GB_ChiTietTaiKhoan.BringToFront();
-            GB_ChiTietTaiKhoan.Visible = true;
-            NhanVien nhanVienCapNhat;
-            TaiKhoan taiKhoanCapNhat;
-            TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien);
+            if(TaiKhoan_TB_HoVaTen.Text == "" || TaiKhoan_TB_MaNhanVien.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                GB_CTTK_Co = 1;
+               // MessageBox.Show(" Cập nhật nhân viên !");
+                GB_ChiTietTaiKhoan.BringToFront();
+                GB_ChiTietTaiKhoan.Visible = true;
+
+                NhanVien nhanVienGB = new NhanVien();
+                nhanVienGB.MaNhanVien = TaiKhoan_TB_MaNhanVien.Text.Trim();
+                nhanVienGB.HoVaTen = TaiKhoan_TB_HoVaTen.Text.Trim();
+                nhanVienGB.Email = TaiKhoan_TB_Email.Text.Trim();
+                nhanVienGB.CCCD = TaiKhoan_TB_CCCD.Text.Trim();
+                nhanVienGB.SDT = TaiKhoan_TB_SDT.Text.Trim();
+                nhanVienGB.DiaChi = TaiKhoan_TB_DiaChi.Text.Trim();
+                // ChucVu
+                nhanVienGB.ChucVu = TaiKhoan_CB_ChucVu.Text.Trim();
+                //GioiTinh
+                if (TaiKhoan_CB_GioiTinh.SelectedIndex == 0)
+                {
+                    nhanVienGB.GioiTinh = 0;
+                }
+                else
+                {
+                    nhanVienGB.GioiTinh = 1;
+                }
+                //HinhThucLamViec
+                if (TaiKhoan_CB_HinhThucLamViec.SelectedIndex == 0)
+                {
+                    nhanVienGB.HinhThucLamViec = 0;
+                }
+                else
+                {
+                    nhanVienGB.HinhThucLamViec = 1;
+                }
+                TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVienGB);
+            }
+           
+            
         }
 
         // TaiKhoan Thêm nhân viên !;
@@ -1117,7 +1159,7 @@ namespace Store_Manager
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
             CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
-            
+            CTTK_TB_Email.Text = nhanVien.Email.ToString();
             CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
             CTTK_TB_NgaySinh.Text = "12/07/2003";
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
@@ -1220,7 +1262,7 @@ namespace Store_Manager
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
             CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
-
+            CTTK_TB_Email.Text = nhanVien.Email.ToString();
             CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
             CTTK_TB_NgaySinh.Text = "12/07/2003";
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
@@ -1276,7 +1318,7 @@ namespace Store_Manager
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = "";
             CTTK_TB_MaNhanVien.Text = "";
-
+            CTTK_TB_Email.Text = "";
             CTTK_TB_DiaChi.Text = "";
             CTTK_TB_NgaySinh.Text = "";
             CTTK_TB_CCCD.Text = "";
@@ -1387,6 +1429,46 @@ namespace Store_Manager
             {
                 // gọi hàm cập nhật tài khoản
                 MessageBox.Show("Gọi hàm cập nhật nhân viên !");
+                NhanVien nhanVienCapNhat = new NhanVien();
+                nhanVienCapNhat.MaNhanVien = CTTK_TB_MaNhanVien.Text.Trim();
+                nhanVienCapNhat.HoVaTen = CTTK_TB_HoVaTen.Text.Trim();
+                nhanVienCapNhat.Email = CTTK_TB_Email.Text.Trim();
+                nhanVienCapNhat.CCCD = CTTK_TB_CCCD.Text.Trim();
+                nhanVienCapNhat.SDT = CTTK_TB_SDT.Text.Trim();
+                nhanVienCapNhat.DiaChi = CTTK_TB_DiaChi.Text.Trim();
+                // ChucVu
+                nhanVienCapNhat.ChucVu = CTTK_CB_ChucVu.Text.Trim();
+                //GioiTinh
+                if(CTTK_CB_GioiTinh.SelectedIndex == 0)
+                {
+                    nhanVienCapNhat.GioiTinh = 0;
+                }
+                else
+                {
+                    nhanVienCapNhat.GioiTinh = 1;
+                }
+                //HinhThucLamViec
+                if (CTTK_CB_HinhThucLamViec.SelectedIndex == 0) 
+                {
+                    nhanVienCapNhat.HinhThucLamViec = 0;
+                }
+                else
+                {
+                    nhanVienCapNhat.HinhThucLamViec = 1;
+                }
+                //
+                string thongBao;
+                if(bLL_NhanVien.CapNhat_NhanVien(nhanVienCapNhat , listNhanVien , out thongBao) == false)
+                {
+                    MessageBox.Show(thongBao, "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(thongBao, "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //bLL_NhanVien.CapNhat_NhanVien()
+                
             }
             else if (GB_CTTK_Co == 2) // GB_CTTK_ThemNhanVien
             {

@@ -66,9 +66,6 @@ namespace BLL
         //    List<TaiKhoan> listTmp = new List<TaiKhoan>();
         //    if (string.IsNullOrWhiteSpace(str))
         //        return listTmp;
-
-
-
         //}
 
         public static  List<KhoHang> TimKiem_DanhSach(List<KhoHang> khoHang , string str) 

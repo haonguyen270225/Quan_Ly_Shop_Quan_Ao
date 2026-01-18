@@ -139,5 +139,111 @@ namespace BLL
         {
             return dal_NhanVien.Loading_NhanVienDangNhap(taiKhoan);
         }
+
+        public bool CapNhat_NhanVien(NhanVien nhanVien , List<NhanVien> listNhanVien , out string thongBao)
+        {
+            thongBao = "Cập nhật thất bại ! \n Vui lòng thử lại !";
+           
+            if (Check_CapNhat_NhanVien(nhanVien, listNhanVien, out thongBao) == false || dal_NhanVien.CapNhat_NhanVien(nhanVien) == 1)
+            {
+                return false;
+            }
+            else
+            {
+                thongBao = "Cập nhật thành công !";
+                return true;
+            }
+
+        }
+        public bool Check_CapNhat_NhanVien(NhanVien nhanVien ,List<NhanVien> listNhanVien, out string thongBao)
+        {
+            thongBao = "";
+            if (nhanVien.HoVaTen.Length < 5 || nhanVien.HoVaTen.Length > 50)
+            {
+                thongBao = "Họ và tên : \n Tối đa : 50 ký tự . \n Tối thiểu : 5 ký tự .";
+                return false;
+            } 
+            else if (nhanVien.MaNhanVien.Length < 5 || nhanVien.MaNhanVien.Length > 10)
+            {
+                thongBao = "Mã nhân viên : \n Tối đa : 10 ký tự . \n Tối thiểu : 5 ký tự !";
+                return false;
+            }
+            else if (nhanVien.SDT.Length != 10)
+            {
+                thongBao = "Số điện thoại phải 10 chữ số !";
+                return false;
+            }
+            else if (nhanVien.CCCD.Length != 12)
+            {
+                thongBao = "CCCD phải 10 chữ số !";
+                return false;
+            }
+            else if (nhanVien.HoVaTen == "")
+            {
+                
+                thongBao = "Họ và tên không được để trống !";
+                return false;
+            }
+            else if (nhanVien.MaNhanVien == "")
+            {
+                thongBao = "Mã nhân viên không được để trống !";
+                return false;
+                
+            }
+            else if (nhanVien.ChucVu == "")
+            {
+                thongBao = " Chức vụ không được để trống !";
+                return false;
+            }
+            else if (nhanVien.DiaChi == "")
+            {
+                thongBao = "Địa chỉ nhân viên không được để trống !";
+                return false;
+            }
+            else if (nhanVien.SDT == "")
+            {
+                thongBao = "Số điện thoại không được để trống !";
+                return false;
+               
+            }
+            else if (nhanVien.CCCD == "")
+            {
+                thongBao = "CCCD không được để trống !";
+                return false;
+            }
+            else if (nhanVien.Email == "")
+            {
+                thongBao = "Email không được để trống !";
+                return false;
+            }
+            else if (XuLy_Chuoi.KiemTra_HoVaTen(nhanVien.HoVaTen))
+            {
+                thongBao = "Họ và tên không chứa các ký tự đặc biệt !";
+                return false;
+            }
+            else if (XuLy_Chuoi.KiemTra_Ma(nhanVien.MaNhanVien) == false)
+            {
+                thongBao = "Mã nhân viên chỉ chứa chứ cái không dấu và số!";
+                return false;
+            }
+            else if (XuLy_Chuoi.KiemTra_STD(nhanVien.SDT))
+            {
+                thongBao = "Số điện thoại chỉ chứa  chữ số !";
+                return false;
+            }
+            else
+            {
+                foreach (NhanVien item in listNhanVien)
+                {
+                    if (item.ID != nhanVien.ID && item.MaNhanVien == nhanVien.MaNhanVien)
+                    {
+                        thongBao = "Mã nhân viên đã bị trùng !";
+                        return false;
+                    }
+                }
+                return true;
+            }
+           
+        }
     }
 }

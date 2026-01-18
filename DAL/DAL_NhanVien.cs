@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -75,6 +76,32 @@ namespace DAL
 
             conn.Close();
             return nhanVien;
+        }
+
+        public int CapNhat_NhanVien(NhanVien nhanVien)
+        {
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            int kQ = 1;
+            SqlCommand sqlCommand = new SqlCommand(@"sp_UpdateNhanVien", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@MaNhanVien", nhanVien.MaNhanVien);
+            sqlCommand.Parameters.AddWithValue("@HoVaTen", nhanVien.HoVaTen);
+            sqlCommand.Parameters.AddWithValue("@SDT", nhanVien.SDT);
+            sqlCommand.Parameters.AddWithValue("@CCCD", nhanVien.CCCD);
+            sqlCommand.Parameters.AddWithValue("@Email", nhanVien.Email);
+            sqlCommand.Parameters.AddWithValue("@ChucVu", nhanVien.ChucVu);
+            sqlCommand.Parameters.AddWithValue("@GioiTinh", nhanVien.GioiTinh);
+            sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
         }
     }
 }
