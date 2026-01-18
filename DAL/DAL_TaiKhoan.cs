@@ -1,14 +1,14 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 using System.Drawing;
-
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 namespace DAL
 {
     public  class DAL_TaiKhoan : DAL_DataAccess 
@@ -47,6 +47,26 @@ namespace DAL
             int kq = (int)sqlCommand.ExecuteScalar();
             conn.Close();
             return kq;
+        }
+
+        public int TaiKhoan_Reset(int iDNhanVien)
+        {
+            int kQ = 1; // 1-> Reset taiKhoan không thành công !;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"sp_ResetTaiKhoan", conn);
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@IDNhanVien", iDNhanVien);
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            // kQ = (int)sqlCommand.ExecuteScalar();
+            conn.Close();
+            return kQ;
         }
 
 

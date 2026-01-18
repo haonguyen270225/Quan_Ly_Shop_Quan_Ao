@@ -48,7 +48,7 @@ namespace Store_Manager
         private List<HoaDon> listHoaDon = new List<HoaDon>();
         #endregion
 
-        #region TrangChu
+        #region Tab_TrangChu
         public frm_TrangChu()
         {
             InitializeComponent();
@@ -521,14 +521,14 @@ namespace Store_Manager
             else
             {
                 List<KhoHang> listTmp = bll_KhoHang.LoadingKhoHang();
-                if (XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0)
+                if (XuLy_Chuoi.TimKiem_DanhSach(listTmp, HoaDon_TB_TenSanPham.Text).Count == 0)
                 {
                     MessageBox.Show("Không có sản phẩm phù hợp !");
                 }
                 else
                 {
                     FLP_SanPham.Controls.Clear();
-                    listTmp = XuLy_Chuoi.TimKiem_DanhSanhKhoHang(listTmp, HoaDon_TB_TenSanPham.Text);
+                    listTmp = XuLy_Chuoi.TimKiem_DanhSach(listTmp, HoaDon_TB_TenSanPham.Text);
                     AddSanPham(listTmp);
                 }
             }
@@ -657,6 +657,38 @@ namespace Store_Manager
 
 
         #region Tab_TaiKhoan
+
+
+        private void ShowData_DGVListTaiKhoan(List<TaiKhoan>listTaiKhoan , List<NhanVien> listNhanVien)
+        {
+            if (listTaiKhoan.Count <= 0 || listNhanVien.Count <= 0)
+            {
+                MessageBox.Show("Lỗi : Không có dữ liệu tài khoản và nhân viên ứng dụng !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            {
+                TaiKhoan_DGV_ListTaiKhoan.DataSource = null;
+                TaiKhoan_DGV_ListTaiKhoan.Rows.Clear();
+             
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("IDNhanVien", typeof(int));
+                dataTable.Columns.Add("UserName", typeof(string));
+                dataTable.Columns.Add("PassWord", typeof(string));
+                dataTable.Columns.Add("HinhAnh", typeof(byte[]));
+                foreach (TaiKhoan item in listTaiKhoan)
+                {
+                    DataRow dataRow = dataTable.NewRow();
+                    dataRow["IDNhanVien"] = item.IDNhanVien;
+                    dataRow["UserName"] = item.UserName;
+                    dataRow["PassWord"] = item.PassWord;
+                    dataRow["HinhAnh"] = item.HinhAnh;
+
+                    dataTable.Rows.Add(dataRow);
+                }
+                TaiKhoan_DGV_ListTaiKhoan.AutoGenerateColumns = true;
+                TaiKhoan_DGV_ListTaiKhoan.DataSource = dataTable;
+            }
+        }
         private void DGV_ListTaiKhoan_Loading(List<TaiKhoan> listTaiKhoan , List<NhanVien> listNhanVien)
         {
             #region demo
@@ -667,30 +699,24 @@ namespace Store_Manager
             //dataTable.Columns.Add("ChucVu");
             //dataTable.Columns.Add("HinhAnh");
             #endregion
-            //TaiKhoan_DGV_ListTaiKhoan.AutoGenerateColumns = true;
-            //TaiKhoan_DGV_ListTaiKhoan.DataSource = listTaiKhoan;
-
-            //DataGridViewButtonColumn btnReset = new DataGridViewButtonColumn();
-            //btnReset.Name = "ResetMatKhau";
-            //btnReset.HeaderText = "Mật khẩu";
-            //btnReset.Text = "Reset";
-            //btnReset.UseColumnTextForButtonValue = true;
-
-            //TaiKhoan_DGV_ListTaiKhoan.Columns.Add(btnReset);
-
-            //if (TaiKhoan_DGV_ListTaiKhoan.Columns["HinhAnh"] != null)
-            //{
-            //    TaiKhoan_DGV_ListTaiKhoan.Columns.Remove("HinhAnh");
-            //}
-
-            // TaiKhoan_DGV_ListTaiKhoan.AutoGenerateColumns = false;
-
+            
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("IDNhanVien", typeof(int));
             dataTable.Columns.Add("UserName", typeof(string));
             dataTable.Columns.Add("PassWord", typeof(string));
             dataTable.Columns.Add("HinhAnh", typeof(byte[]));
 
+            TaiKhoan_DGV_ListTaiKhoan.AutoGenerateColumns = true;
+            // Tạo cột Button Reset
+            DataGridViewButtonColumn btnReset = new DataGridViewButtonColumn();
+            btnReset.Name = "Reset";
+            btnReset.HeaderText = "Mật khẩu";
+            btnReset.Text = "Reset";
+            btnReset.UseColumnTextForButtonValue = true;
+
+            TaiKhoan_DGV_ListTaiKhoan.Columns.Add(btnReset);
+
+            TaiKhoan_DGV_ListTaiKhoan.CellContentClick += TaiKhoan_DGV_ListTaiKhoan_CellContentClick; // sán sự kiện !
 
             foreach (TaiKhoan item in listTaiKhoan)
             {
@@ -702,20 +728,7 @@ namespace Store_Manager
 
                 dataTable.Rows.Add(dataRow);
             }
-
-            TaiKhoan_DGV_ListTaiKhoan.AutoGenerateColumns = true;
             TaiKhoan_DGV_ListTaiKhoan.DataSource = dataTable;
-
-            // Tạo cột Button Reset
-            DataGridViewButtonColumn btnReset = new DataGridViewButtonColumn();
-            btnReset.Name = "Reset";
-            btnReset.HeaderText = "Mật khẩu";
-            btnReset.Text = "Reset";
-            btnReset.UseColumnTextForButtonValue = true;
-
-            TaiKhoan_DGV_ListTaiKhoan.Columns.Add(btnReset);
-
-            TaiKhoan_DGV_ListTaiKhoan.CellContentClick += TaiKhoan_DGV_ListTaiKhoan_CellContentClick; // sán sự kiện !
         }
 
         private void TaiKhoan_DGV_ListTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -723,9 +736,25 @@ namespace Store_Manager
             if (e.RowIndex >= 0 && TaiKhoan_DGV_ListTaiKhoan.Columns[e.ColumnIndex].Name == "Reset")
             {
                int id = Convert.ToInt32(TaiKhoan_DGV_ListTaiKhoan.Rows[e.RowIndex].Cells["IDNhanVien"].Value);
-
-                MessageBox.Show($"Reset mật khẩu cho tài khoản ID = {id}");
+                
+                //MessageBox.Show($"Reset mật khẩu cho tài khoản ID = {id}");
                 // TODO: gọi hàm reset ở đây
+
+                var kq = MessageBox.Show("Bán có muốn reset  tài khoản ! \n Có IDNhanVien : "   + id, "Reset Tài Khoản !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(kq == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    bool kQ = false;
+                    string thongBao = "";
+
+                    bll_TaiKhoan.TaiKhoan_Reset(id, out thongBao, out kQ);
+                    MessageBox.Show(thongBao , "Reset Tài Khoản !" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+                    BLL_LoadingData();
+                    ShowData_DGVListTaiKhoan(listTaiKhoan , listNhanVien);
+                }
             }
         }
 
@@ -853,6 +882,25 @@ namespace Store_Manager
             TaiKhoan_CB_GioiTinh.SelectedIndex = 0;
         }
 
+        private void TaiKhoan_B_Loading_Click(object sender, EventArgs e)
+        {
+            TaiKhoan_TB_TimKiem.Text = "";
+            TaiKhoan_TB_Loading(null, null);
+            BLL_LoadingData();
+            ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
+            
+        }
+
+        private void TaiKhoan_B_XoaTimKiem_Click(object sender, EventArgs e)
+        {
+            TaiKhoan_TB_TimKiem.Text = "";
+            BLL_LoadingData();
+            ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
+        }
+        
+        
+        
+        #region Tab_TaiKhoan_Demo
         //private void LoadingKhuyenMai()
         //{
         //    HoaDon_CB_MaKhuyenMai.Items.Clear();
@@ -871,7 +919,7 @@ namespace Store_Manager
         //    TaiKhoan_DGV_ListTaiKhoan.Rows.Clear();
         //    TaiKhoan_DGV_ListTaiKhoan.Columns.Clear();
         //}
-
+        #endregion
 
         #endregion
 

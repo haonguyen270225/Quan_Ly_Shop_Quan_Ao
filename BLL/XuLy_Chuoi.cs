@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,17 @@ namespace BLL
 
 
 
-        public static  List<KhoHang> TimKiem_DanhSanhKhoHang(List<KhoHang> khoHang , string str) 
+        //public static List<TaiKhoan> TimKiem_DanhSach(List<TaiKhoan> listTaiKhoan , string str)
+        //{
+        //    List<TaiKhoan> listTmp = new List<TaiKhoan>();
+        //    if (string.IsNullOrWhiteSpace(str))
+        //        return listTmp;
+
+
+
+        //}
+
+        public static  List<KhoHang> TimKiem_DanhSach(List<KhoHang> khoHang , string str) 
         {
             List<KhoHang> listTmp = new List<KhoHang>();
 
