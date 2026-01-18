@@ -213,10 +213,11 @@ namespace Store_Manager
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_TaiKhoan)
             {
                 L_TrangChu_TieuDe.Text = ">>> Danh sách tài khoản !";
-                
                 if (TaiKhoan_DGV_ListTaiKhoan.Columns.Count > 0 )
                 {
+                    BLL_LoadingData();
                     TaiKhoan_TB_Loading(null, null);
+                    ShowData_DGVListTaiKhoan(listTaiKhoan , listNhanVien);
                     return;
                 }
                 else

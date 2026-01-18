@@ -2408,6 +2408,7 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
+            this.parrotGroupBox1.PerformLayout();
             this.tab_TaiKhoan.ResumeLayout(false);
             this.TaiKhoan_GB_Tool.ResumeLayout(false);
             this.TaiKhoan_GBLoading.ResumeLayout(false);
