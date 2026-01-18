@@ -278,7 +278,7 @@ namespace Store_Manager
 
         private void FCB_HienThiMatKhau_CTTK_CheckedChanged(object sender, EventArgs e)
         {
-            if (FCB_HienThiMatKhau_CTTK.Checked == true)
+            if (CTTK_FCB_HienThiMatKhau.Checked == true)
             {
                 CTTK_TB_PassWord.UseSystemPasswordChar = false;
             }
@@ -932,14 +932,23 @@ namespace Store_Manager
             ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
         }
 
+
+
         // TaiKhoan Cập nhật thông tin nhân viên !;
         private void TaiKhoan_B_CapNhat_Click(object sender, EventArgs e)
         {
             MessageBox.Show(" Cập nhật nhân viên !");
             GB_ChiTietTaiKhoan.BringToFront();
             GB_ChiTietTaiKhoan.Visible = true;
+            NhanVien nhanVienCapNhat;
+            TaiKhoan taiKhoanCapNhat;
+
+           
+
+            
         }
 
+        // TaiKhoan Thêm nhân viên !;
         private void TaiKhoan_B_Them_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thêm nhân viên !");
@@ -948,105 +957,105 @@ namespace Store_Manager
             SetTextBoxReadOnlyAll(GB_ChiTietTaiKhoan, false);
         }
 
-        private void TaiKhoan_GB_CapNhatNhanVien(NhanVien nhanVien)
-        {
-            
-        }
+       
 
 
         private void CapNhat_TaiKhoan_GBChiTieTaiKhoan(NhanVien nhanVien, TaiKhoan taiKhoan)
         {
             CTTK_B_Thoat.Text = "Cập Nhật !";
-            if (nhanVien == null || taiKhoan == null)
+            if (nhanVien == null || taiKhoan == null || nhanVien.MaNhanVien == "" || nhanVien.HoVaTen == "" || nhanVien.SDT == ""
+                || nhanVien.ChucVu == "" || taiKhoan.PassWord == "" || taiKhoan.UserName == "")
+                
             {
                 MessageBox.Show("Vui lòng thử lại !", "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 CTTK_B_Thoat.Text = "Cập Nhật !";
-                TaiKhoan_Loading_GBGBChiTieTaiKhoan(nhanVien, taiKhoan);
+                // TaiKhoan_Loading_GBGBChiTieTaiKhoan(nhanVien, taiKhoan);
+                //TrangChu_GB_LoadingData(nhanVien, taiKhoan);
             }
         }
 
 
-        private void TaiKhoan_Loading_GBGBChiTieTaiKhoan(NhanVien nhanVien, TaiKhoan taiKhoan)
-        {
-            CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
-            CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
-            CTTK_TB_ChucVu.Text = nhanVien.ChucVu.ToString();
-            CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
-            CTTK_TB_NgaySinh.Text = "12/07/2003";
-            CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
-            CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
-            CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
-            CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
-            CTTK_TB_PassWord.UseSystemPasswordChar = true;
-            FCB_HienThiMatKhau_CTTK.Checked = true;
-            CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
-            if (nhanVien.GioiTinh == 1)
-            {
-                CTTK_TB_GioiTinh.Text = "Nam";
-            }
-            else
-            {
-                CTTK_TB_GioiTinh.Text = "Nu";
-            }
+        //private void TaiKhoan_Loading_GBGBChiTieTaiKhoan(NhanVien nhanVien, TaiKhoan taiKhoan)
+        //{
+        //    CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
+        //    CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
+        //    CTTK_TB_ChucVu.Text = nhanVien.ChucVu.ToString();
+        //    CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
+        //    CTTK_TB_NgaySinh.Text = "12/07/2003";
+        //    CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
+        //    CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
+        //    CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
+        //    CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
+        //    CTTK_TB_PassWord.UseSystemPasswordChar = true;
+        //    FCB_HienThiMatKhau_CTTK.Checked = true;
+        //    CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
+        //    if (nhanVien.GioiTinh == 1)
+        //    {
+        //        CTTK_TB_GioiTinh.Text = "Nam";
+        //    }
+        //    else
+        //    {
+        //        CTTK_TB_GioiTinh.Text = "Nu";
+        //    }
 
-            if (nhanVien.HinhThucLamViec == 0)
-            {
-                CTTK_TB_HinhThucLamViec.Text = "Full Time !";
-            }
-            else
-            {
-                CTTK_TB_HinhThucLamViec.Text = "Pass Time !";
-            }
+        //    if (nhanVien.HinhThucLamViec == 0)
+        //    {
+        //        CTTK_TB_HinhThucLamViec.Text = "Full Time !";
+        //    }
+        //    else
+        //    {
+        //        CTTK_TB_HinhThucLamViec.Text = "Pass Time !";
+        //    }
 
 
 
-            // Loading PB_HinhAnh
-            PB_TrangChu_ThongTinTaiKhoan.Image.Dispose();
-            PB_TrangChu_ThongTinTaiKhoan.Image = null;
-            CTTK_PB_AnhDaiDien.Image.Dispose();
-            CTTK_PB_AnhDaiDien.Image = null;
-            if (taiKhoan?.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
-            {
-                try
-                {
-                    using (MemoryStream ms = new MemoryStream(taiKhoan.HinhAnh))
-                    {
-                        PB_TrangChu_ThongTinTaiKhoan.Image = Image.FromStream(ms);
-                        PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
+        //    // Loading PB_HinhAnh
+        //    PB_TrangChu_ThongTinTaiKhoan.Image.Dispose();
+        //    PB_TrangChu_ThongTinTaiKhoan.Image = null;
+        //    CTTK_PB_AnhDaiDien.Image.Dispose();
+        //    CTTK_PB_AnhDaiDien.Image = null;
+        //    if (taiKhoan?.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
+        //    {
+        //        try
+        //        {
+        //            using (MemoryStream ms = new MemoryStream(taiKhoan.HinhAnh))
+        //            {
+        //                PB_TrangChu_ThongTinTaiKhoan.Image = Image.FromStream(ms);
+        //                PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
 
-                        CTTK_PB_AnhDaiDien.Image = Image.FromStream(ms);
-                        CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi load ảnh từ database: " + ex.Message);
-                    // Fallback về ảnh mặc định
-                    PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
-                    PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
-                    CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-                    CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
-                }
-            }
-            else
-            {
-                if (CTTK_PB_AnhDaiDien.Image != null)
-                {
-                    CTTK_PB_AnhDaiDien.Image.Dispose();
-                    CTTK_PB_AnhDaiDien.Image = null;
-                }
+        //                CTTK_PB_AnhDaiDien.Image = Image.FromStream(ms);
+        //                CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("Lỗi load ảnh từ database: " + ex.Message);
+        //            // Fallback về ảnh mặc định
+        //            PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
+        //            PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
+        //            CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+        //            CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (CTTK_PB_AnhDaiDien.Image != null)
+        //        {
+        //            CTTK_PB_AnhDaiDien.Image.Dispose();
+        //            CTTK_PB_AnhDaiDien.Image = null;
+        //        }
 
-                CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-                CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
+        //        CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+        //        CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
 
-                PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
-                PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
-            }
+        //        PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
+        //        PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
+        //    }
 
-        }
+        //}
         #region Tab_TaiKhoan_Demo
         //private void LoadingKhuyenMai()
         //{
@@ -1095,37 +1104,57 @@ namespace Store_Manager
 
        private void TrangChu_GB_LoadingData(NhanVien nhanVien , TaiKhoan taiKhoan)
         {
+            CTTK_TB_PassWord.Visible = true;
+            CTTK_TB_UserName.Visible = true;
+            CTTK_L_HienThiMatKhau.Visible = true;
+            CTTK_L_PassWord.Visible = true;
+            CTTK_L_UserName.Visible = true;
+            CTTK_FCB_HienThiMatKhau.Visible = true;
+            CTTK_B_ThayDoiTaiKhoan.Visible = true;
             //Loading G_ChiTietTaiKhoan
             CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
             CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
-            CTTK_TB_ChucVu.Text = nhanVien.ChucVu.ToString();
+            
             CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
             CTTK_TB_NgaySinh.Text = "12/07/2003";
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
             CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
-            CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
+
             CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
             CTTK_TB_PassWord.UseSystemPasswordChar = true;
             CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
-            if (nhanVien.GioiTinh == 1)
+
+            GB_CTTK_CB_Loading();
+            
+            // GioiTinh
+            // 0 -> Nu , 1 -> Nam ;
+            if (nhanVien.GioiTinh == 0)
             {
-                CTTK_TB_GioiTinh.Text = "Nam";
+                CTTK_CB_GioiTinh.SelectedIndex = 0;
             }
             else
             {
-                CTTK_TB_GioiTinh.Text = "Nu";
+                CTTK_CB_GioiTinh.SelectedIndex = 1;
             }
 
+            // HinhThucLamViec
             if (nhanVien.HinhThucLamViec == 0)
             {
-                CTTK_TB_HinhThucLamViec.Text = "Full Time !";
+                CTTK_CB_HinhThucLamViec.SelectedIndex = 0; // 0 -> full time
             }
             else
             {
-                CTTK_TB_HinhThucLamViec.Text = "Pass Time !";
+                CTTK_CB_HinhThucLamViec.SelectedIndex = 1; // pass -> time;
             }
 
-
+            // ChucVu
+            foreach (var item in TaiKhoan_CB_ChucVu.Items)
+            {
+                if (item.ToString().Trim() == nhanVien.ChucVu.Trim())
+                {
+                    TaiKhoan_CB_ChucVu.SelectedItem = item;
+                }
+            }
 
             // Loading PB_HinhAnh
             PB_TrangChu_ThongTinTaiKhoan.Image.Dispose();
@@ -1169,10 +1198,91 @@ namespace Store_Manager
                 PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
                 PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
             }
+        }
 
+       private void TaiKhoan_GB_LoadingData(NhanVien nhanVien)
+        {
+            CTTK_TB_PassWord.Visible = false;
+            CTTK_TB_UserName.Visible = false;
+            CTTK_L_HienThiMatKhau.Visible = false;
+            CTTK_L_PassWord.Visible = false;
+            CTTK_L_UserName.Visible = false;
+            CTTK_FCB_HienThiMatKhau.Visible = false;
+            CTTK_B_ThayDoiTaiKhoan.Visible = false;
+
+            CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
+            CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
+            //CTTK_TB_ChucVu.Text = nhanVien.ChucVu.ToString();
+            CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
+            CTTK_TB_NgaySinh.Text = "12/07/2003";
+            CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
+            CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
+           
+        }
+
+        private void GB_CTTK_CB_Loading()
+        {
+            List<NhanVien> listNV = bLL_NhanVien.LoadingNhanVien();
+
+            CTTK_CB_ChucVu.Items.Clear();
+
+            if (listNV == null || listNV.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu nhân viên!");
+                return;
+            }
+
+            // Dùng HashSet để lọc trùng
+            HashSet<string> chucVuSet = new HashSet<string>();
+
+            foreach (var nv in listNV)
+            {
+                if (!string.IsNullOrWhiteSpace(nv.ChucVu))
+                {
+                    chucVuSet.Add(nv.ChucVu);
+                }
+            }
+
+            foreach (var chucVu in chucVuSet)
+            {
+                CTTK_CB_ChucVu.Items.Add(chucVu);
+            }
+
+            if (CTTK_CB_ChucVu.Items.Count > 0)
+            {
+                CTTK_CB_ChucVu.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("Lỗi chức vụ!");
+            }
+
+
+            // loading CB_GioiTinh;
+            CTTK_CB_GioiTinh.Items.Clear();
+            CTTK_CB_GioiTinh.Items.Add("Nữ");
+            CTTK_CB_GioiTinh.Items.Add("Nam");
+            CTTK_CB_GioiTinh.SelectedIndex = 0;
+
+
+            //loading CB_hinhThucLamViec
+            CTTK_CB_HinhThucLamViec.Items.Clear();
+            CTTK_CB_HinhThucLamViec.Items.Add("Full Time !");
+            CTTK_CB_HinhThucLamViec.Items.Add("Pass Time !");
+            CTTK_CB_HinhThucLamViec.SelectedIndex = 0;
 
         }
+
+
+
+        private void CTTK_B_Loading_Click(object sender, EventArgs e)
+        {
+            TrangChu_GB_LoadingData(nhanVien, taiKhoan);
+        }
+
         #endregion
+
+
     }
 }
 #region Demo

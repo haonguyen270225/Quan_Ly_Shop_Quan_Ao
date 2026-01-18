@@ -137,23 +137,20 @@
             this.CTTK_PB_AnhDaiDien = new ReaLTaiizor.Controls.HopePictureBox();
             this.CTTK_TB_PassWord = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_UserName = new ReaLTaiizor.Controls.AloneTextBox();
-            this.CTTK_TB_HinhThucLamViec = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_CCCD = new ReaLTaiizor.Controls.AloneTextBox();
-            this.CTTK_TB_GioiTinh = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_NgaySinh = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_SDT = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_DiaChi = new ReaLTaiizor.Controls.AloneTextBox();
-            this.CTTK_TB_ChucVu = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_MaNhanVien = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_HoVaTen = new ReaLTaiizor.Controls.AloneTextBox();
             this.labelEdit12 = new ReaLTaiizor.Controls.LabelEdit();
-            this.dungeonLinkLabel1 = new ReaLTaiizor.Controls.DungeonLinkLabel();
-            this.FCB_HienThiMatKhau_CTTK = new ReaLTaiizor.Controls.FoxCheckBox();
+            this.CTTK_L_HienThiMatKhau = new ReaLTaiizor.Controls.DungeonLinkLabel();
+            this.CTTK_FCB_HienThiMatKhau = new ReaLTaiizor.Controls.FoxCheckBox();
             this.CTTK_B_ThayDoiTaiKhoan = new ReaLTaiizor.Controls.SpaceButton();
             this.labelEdit11 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit10 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit9 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit8 = new ReaLTaiizor.Controls.LabelEdit();
+            this.CTTK_L_PassWord = new ReaLTaiizor.Controls.LabelEdit();
+            this.CTTK_L_UserName = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit7 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit6 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit5 = new ReaLTaiizor.Controls.LabelEdit();
@@ -167,6 +164,10 @@
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
+            this.CTTK_CB_GioiTinh = new ReaLTaiizor.Controls.CrownComboBox();
+            this.CTTK_CB_ChucVu = new ReaLTaiizor.Controls.CrownComboBox();
+            this.CTTK_CB_HinhThucLamViec = new ReaLTaiizor.Controls.CrownComboBox();
+            this.CTTK_B_Loading = new ReaLTaiizor.Controls.DreamButton();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
@@ -210,13 +211,13 @@
             this.foreverForm1.BackColor = System.Drawing.Color.White;
             this.foreverForm1.BaseColor = System.Drawing.Color.White;
             this.foreverForm1.BorderColor = System.Drawing.Color.PowderBlue;
+            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Controls.Add(this.controlBox1);
             this.foreverForm1.Controls.Add(this.crownGroupBox1);
             this.foreverForm1.Controls.Add(this.nightLabel1);
             this.foreverForm1.Controls.Add(this.hopePictureBox1);
             this.foreverForm1.Controls.Add(this.headerLabel1);
             this.foreverForm1.Controls.Add(this.HoaDon_CB_LoaiSanPham);
-            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.foreverForm1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.foreverForm1.ForeverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
@@ -1907,26 +1908,27 @@
             this.GB_ChiTietTaiKhoan.BodyColorB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.GB_ChiTietTaiKhoan.BodyColorC = System.Drawing.Color.DimGray;
             this.GB_ChiTietTaiKhoan.BodyColorD = System.Drawing.Color.Gray;
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_Loading);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_CB_HinhThucLamViec);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_CB_ChucVu);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_CB_GioiTinh);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_PB_AnhDaiDien);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_PassWord);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_UserName);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_HinhThucLamViec);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_CCCD);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_GioiTinh);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_NgaySinh);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_SDT);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_DiaChi);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_ChucVu);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_MaNhanVien);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_HoVaTen);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit12);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.dungeonLinkLabel1);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.FCB_HienThiMatKhau_CTTK);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_L_HienThiMatKhau);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_FCB_HienThiMatKhau);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_ThayDoiTaiKhoan);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit11);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit10);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit9);
-            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit8);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_L_PassWord);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_L_UserName);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit7);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit6);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit5);
@@ -1994,23 +1996,6 @@
             this.CTTK_TB_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CTTK_TB_UserName.UseSystemPasswordChar = false;
             // 
-            // CTTK_TB_HinhThucLamViec
-            // 
-            this.CTTK_TB_HinhThucLamViec.BackColor = System.Drawing.Color.Transparent;
-            this.CTTK_TB_HinhThucLamViec.EnabledCalc = true;
-            this.CTTK_TB_HinhThucLamViec.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CTTK_TB_HinhThucLamViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.CTTK_TB_HinhThucLamViec.Location = new System.Drawing.Point(530, 450);
-            this.CTTK_TB_HinhThucLamViec.MaxLength = 32767;
-            this.CTTK_TB_HinhThucLamViec.MultiLine = false;
-            this.CTTK_TB_HinhThucLamViec.Name = "CTTK_TB_HinhThucLamViec";
-            this.CTTK_TB_HinhThucLamViec.ReadOnly = true;
-            this.CTTK_TB_HinhThucLamViec.Size = new System.Drawing.Size(323, 29);
-            this.CTTK_TB_HinhThucLamViec.TabIndex = 49;
-            this.CTTK_TB_HinhThucLamViec.Text = "aloneTextBox9";
-            this.CTTK_TB_HinhThucLamViec.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CTTK_TB_HinhThucLamViec.UseSystemPasswordChar = false;
-            // 
             // CTTK_TB_CCCD
             // 
             this.CTTK_TB_CCCD.BackColor = System.Drawing.Color.Transparent;
@@ -2027,23 +2012,6 @@
             this.CTTK_TB_CCCD.Text = "aloneTextBox8";
             this.CTTK_TB_CCCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CTTK_TB_CCCD.UseSystemPasswordChar = false;
-            // 
-            // CTTK_TB_GioiTinh
-            // 
-            this.CTTK_TB_GioiTinh.BackColor = System.Drawing.Color.Transparent;
-            this.CTTK_TB_GioiTinh.EnabledCalc = true;
-            this.CTTK_TB_GioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CTTK_TB_GioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.CTTK_TB_GioiTinh.Location = new System.Drawing.Point(718, 334);
-            this.CTTK_TB_GioiTinh.MaxLength = 32767;
-            this.CTTK_TB_GioiTinh.MultiLine = false;
-            this.CTTK_TB_GioiTinh.Name = "CTTK_TB_GioiTinh";
-            this.CTTK_TB_GioiTinh.ReadOnly = true;
-            this.CTTK_TB_GioiTinh.Size = new System.Drawing.Size(140, 29);
-            this.CTTK_TB_GioiTinh.TabIndex = 47;
-            this.CTTK_TB_GioiTinh.Text = "aloneTextBox7";
-            this.CTTK_TB_GioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CTTK_TB_GioiTinh.UseSystemPasswordChar = false;
             // 
             // CTTK_TB_NgaySinh
             // 
@@ -2096,23 +2064,6 @@
             this.CTTK_TB_DiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CTTK_TB_DiaChi.UseSystemPasswordChar = false;
             // 
-            // CTTK_TB_ChucVu
-            // 
-            this.CTTK_TB_ChucVu.BackColor = System.Drawing.Color.Transparent;
-            this.CTTK_TB_ChucVu.EnabledCalc = true;
-            this.CTTK_TB_ChucVu.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CTTK_TB_ChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.CTTK_TB_ChucVu.Location = new System.Drawing.Point(480, 157);
-            this.CTTK_TB_ChucVu.MaxLength = 32767;
-            this.CTTK_TB_ChucVu.MultiLine = false;
-            this.CTTK_TB_ChucVu.Name = "CTTK_TB_ChucVu";
-            this.CTTK_TB_ChucVu.ReadOnly = true;
-            this.CTTK_TB_ChucVu.Size = new System.Drawing.Size(374, 29);
-            this.CTTK_TB_ChucVu.TabIndex = 43;
-            this.CTTK_TB_ChucVu.Text = "aloneTextBox3";
-            this.CTTK_TB_ChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CTTK_TB_ChucVu.UseSystemPasswordChar = false;
-            // 
             // CTTK_TB_MaNhanVien
             // 
             this.CTTK_TB_MaNhanVien.BackColor = System.Drawing.Color.Transparent;
@@ -2159,46 +2110,46 @@
             this.labelEdit12.TabIndex = 39;
             this.labelEdit12.Text = "CCCD :";
             // 
-            // dungeonLinkLabel1
+            // CTTK_L_HienThiMatKhau
             // 
-            this.dungeonLinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(72)))), ((int)(((byte)(20)))));
-            this.dungeonLinkLabel1.AutoSize = true;
-            this.dungeonLinkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dungeonLinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.dungeonLinkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(119)))), ((int)(((byte)(70)))));
-            this.dungeonLinkLabel1.Location = new System.Drawing.Point(389, 658);
-            this.dungeonLinkLabel1.Name = "dungeonLinkLabel1";
-            this.dungeonLinkLabel1.Size = new System.Drawing.Size(171, 25);
-            this.dungeonLinkLabel1.TabIndex = 38;
-            this.dungeonLinkLabel1.TabStop = true;
-            this.dungeonLinkLabel1.Text = "Hiển thị mật khẩu !\r\n";
-            this.dungeonLinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(119)))), ((int)(((byte)(70)))));
+            this.CTTK_L_HienThiMatKhau.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(72)))), ((int)(((byte)(20)))));
+            this.CTTK_L_HienThiMatKhau.AutoSize = true;
+            this.CTTK_L_HienThiMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.CTTK_L_HienThiMatKhau.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CTTK_L_HienThiMatKhau.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.CTTK_L_HienThiMatKhau.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(119)))), ((int)(((byte)(70)))));
+            this.CTTK_L_HienThiMatKhau.Location = new System.Drawing.Point(389, 658);
+            this.CTTK_L_HienThiMatKhau.Name = "CTTK_L_HienThiMatKhau";
+            this.CTTK_L_HienThiMatKhau.Size = new System.Drawing.Size(171, 25);
+            this.CTTK_L_HienThiMatKhau.TabIndex = 38;
+            this.CTTK_L_HienThiMatKhau.TabStop = true;
+            this.CTTK_L_HienThiMatKhau.Text = "Hiển thị mật khẩu !\r\n";
+            this.CTTK_L_HienThiMatKhau.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(119)))), ((int)(((byte)(70)))));
             // 
-            // FCB_HienThiMatKhau_CTTK
+            // CTTK_FCB_HienThiMatKhau
             // 
-            this.FCB_HienThiMatKhau_CTTK.BackColor = System.Drawing.Color.Transparent;
-            this.FCB_HienThiMatKhau_CTTK.Checked = false;
-            this.FCB_HienThiMatKhau_CTTK.CheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.FCB_HienThiMatKhau_CTTK.CheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
-            this.FCB_HienThiMatKhau_CTTK.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
-            this.FCB_HienThiMatKhau_CTTK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FCB_HienThiMatKhau_CTTK.DisabledCheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.FCB_HienThiMatKhau_CTTK.DisabledCheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(166)))), ((int)(((byte)(191)))));
-            this.FCB_HienThiMatKhau_CTTK.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(183)))), ((int)(((byte)(216)))));
-            this.FCB_HienThiMatKhau_CTTK.DisabledUncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.FCB_HienThiMatKhau_CTTK.DisabledUncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(189)))), ((int)(((byte)(133)))));
-            this.FCB_HienThiMatKhau_CTTK.DisabledUncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(124)))));
-            this.FCB_HienThiMatKhau_CTTK.EnabledCalc = true;
-            this.FCB_HienThiMatKhau_CTTK.Location = new System.Drawing.Point(328, 655);
-            this.FCB_HienThiMatKhau_CTTK.Name = "FCB_HienThiMatKhau_CTTK";
-            this.FCB_HienThiMatKhau_CTTK.Size = new System.Drawing.Size(55, 28);
-            this.FCB_HienThiMatKhau_CTTK.TabIndex = 37;
-            this.FCB_HienThiMatKhau_CTTK.Text = "foxCheckBox1";
-            this.FCB_HienThiMatKhau_CTTK.UncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.FCB_HienThiMatKhau_CTTK.UncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(132)))), ((int)(((byte)(0)))));
-            this.FCB_HienThiMatKhau_CTTK.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
-            this.FCB_HienThiMatKhau_CTTK.CheckedChanged += new ReaLTaiizor.Util.FoxBase.CheckControlBox.CheckedChangedEventHandler(this.FCB_HienThiMatKhau_CTTK_CheckedChanged);
+            this.CTTK_FCB_HienThiMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.CTTK_FCB_HienThiMatKhau.Checked = false;
+            this.CTTK_FCB_HienThiMatKhau.CheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.CTTK_FCB_HienThiMatKhau.CheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
+            this.CTTK_FCB_HienThiMatKhau.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.CTTK_FCB_HienThiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_FCB_HienThiMatKhau.DisabledCheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.CTTK_FCB_HienThiMatKhau.DisabledCheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(166)))), ((int)(((byte)(191)))));
+            this.CTTK_FCB_HienThiMatKhau.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(183)))), ((int)(((byte)(216)))));
+            this.CTTK_FCB_HienThiMatKhau.DisabledUncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.CTTK_FCB_HienThiMatKhau.DisabledUncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(189)))), ((int)(((byte)(133)))));
+            this.CTTK_FCB_HienThiMatKhau.DisabledUncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(124)))));
+            this.CTTK_FCB_HienThiMatKhau.EnabledCalc = true;
+            this.CTTK_FCB_HienThiMatKhau.Location = new System.Drawing.Point(328, 655);
+            this.CTTK_FCB_HienThiMatKhau.Name = "CTTK_FCB_HienThiMatKhau";
+            this.CTTK_FCB_HienThiMatKhau.Size = new System.Drawing.Size(55, 28);
+            this.CTTK_FCB_HienThiMatKhau.TabIndex = 37;
+            this.CTTK_FCB_HienThiMatKhau.Text = "foxCheckBox1";
+            this.CTTK_FCB_HienThiMatKhau.UncheckedBorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.CTTK_FCB_HienThiMatKhau.UncheckedBorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(132)))), ((int)(((byte)(0)))));
+            this.CTTK_FCB_HienThiMatKhau.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.CTTK_FCB_HienThiMatKhau.CheckedChanged += new ReaLTaiizor.Util.FoxBase.CheckControlBox.CheckedChangedEventHandler(this.FCB_HienThiMatKhau_CTTK_CheckedChanged);
             // 
             // CTTK_B_ThayDoiTaiKhoan
             // 
@@ -2240,29 +2191,29 @@
             this.labelEdit10.TabIndex = 24;
             this.labelEdit10.Text = "Hình thức làm việc :";
             // 
-            // labelEdit9
+            // CTTK_L_PassWord
             // 
-            this.labelEdit9.AutoSize = true;
-            this.labelEdit9.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEdit9.ForeColor = System.Drawing.Color.Black;
-            this.labelEdit9.Location = new System.Drawing.Point(184, 617);
-            this.labelEdit9.Name = "labelEdit9";
-            this.labelEdit9.Size = new System.Drawing.Size(146, 29);
-            this.labelEdit9.TabIndex = 23;
-            this.labelEdit9.Text = "PassWord :";
+            this.CTTK_L_PassWord.AutoSize = true;
+            this.CTTK_L_PassWord.BackColor = System.Drawing.Color.Transparent;
+            this.CTTK_L_PassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTTK_L_PassWord.ForeColor = System.Drawing.Color.Black;
+            this.CTTK_L_PassWord.Location = new System.Drawing.Point(184, 617);
+            this.CTTK_L_PassWord.Name = "CTTK_L_PassWord";
+            this.CTTK_L_PassWord.Size = new System.Drawing.Size(146, 29);
+            this.CTTK_L_PassWord.TabIndex = 23;
+            this.CTTK_L_PassWord.Text = "PassWord :";
             // 
-            // labelEdit8
+            // CTTK_L_UserName
             // 
-            this.labelEdit8.AutoSize = true;
-            this.labelEdit8.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEdit8.ForeColor = System.Drawing.Color.Black;
-            this.labelEdit8.Location = new System.Drawing.Point(182, 569);
-            this.labelEdit8.Name = "labelEdit8";
-            this.labelEdit8.Size = new System.Drawing.Size(151, 29);
-            this.labelEdit8.TabIndex = 22;
-            this.labelEdit8.Text = "UserName :";
+            this.CTTK_L_UserName.AutoSize = true;
+            this.CTTK_L_UserName.BackColor = System.Drawing.Color.Transparent;
+            this.CTTK_L_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTTK_L_UserName.ForeColor = System.Drawing.Color.Black;
+            this.CTTK_L_UserName.Location = new System.Drawing.Point(182, 569);
+            this.CTTK_L_UserName.Name = "CTTK_L_UserName";
+            this.CTTK_L_UserName.Size = new System.Drawing.Size(151, 29);
+            this.CTTK_L_UserName.TabIndex = 22;
+            this.CTTK_L_UserName.Text = "UserName :";
             // 
             // labelEdit7
             // 
@@ -2399,6 +2350,56 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
+            // CTTK_CB_GioiTinh
+            // 
+            this.CTTK_CB_GioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.CTTK_CB_GioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CTTK_CB_GioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_CB_GioiTinh.FormattingEnabled = true;
+            this.CTTK_CB_GioiTinh.Location = new System.Drawing.Point(711, 328);
+            this.CTTK_CB_GioiTinh.Name = "CTTK_CB_GioiTinh";
+            this.CTTK_CB_GioiTinh.Size = new System.Drawing.Size(145, 35);
+            this.CTTK_CB_GioiTinh.TabIndex = 52;
+            // 
+            // CTTK_CB_ChucVu
+            // 
+            this.CTTK_CB_ChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.CTTK_CB_ChucVu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CTTK_CB_ChucVu.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_CB_ChucVu.FormattingEnabled = true;
+            this.CTTK_CB_ChucVu.Location = new System.Drawing.Point(481, 166);
+            this.CTTK_CB_ChucVu.Name = "CTTK_CB_ChucVu";
+            this.CTTK_CB_ChucVu.Size = new System.Drawing.Size(372, 35);
+            this.CTTK_CB_ChucVu.TabIndex = 53;
+            // 
+            // CTTK_CB_HinhThucLamViec
+            // 
+            this.CTTK_CB_HinhThucLamViec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.CTTK_CB_HinhThucLamViec.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CTTK_CB_HinhThucLamViec.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_CB_HinhThucLamViec.FormattingEnabled = true;
+            this.CTTK_CB_HinhThucLamViec.Location = new System.Drawing.Point(543, 450);
+            this.CTTK_CB_HinhThucLamViec.Name = "CTTK_CB_HinhThucLamViec";
+            this.CTTK_CB_HinhThucLamViec.Size = new System.Drawing.Size(310, 35);
+            this.CTTK_CB_HinhThucLamViec.TabIndex = 54;
+            // 
+            // CTTK_B_Loading
+            // 
+            this.CTTK_B_Loading.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CTTK_B_Loading.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.CTTK_B_Loading.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.CTTK_B_Loading.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CTTK_B_Loading.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CTTK_B_Loading.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_Loading.ForeColor = System.Drawing.Color.Teal;
+            this.CTTK_B_Loading.Location = new System.Drawing.Point(604, 669);
+            this.CTTK_B_Loading.Name = "CTTK_B_Loading";
+            this.CTTK_B_Loading.Size = new System.Drawing.Size(120, 41);
+            this.CTTK_B_Loading.TabIndex = 55;
+            this.CTTK_B_Loading.Text = "Loading";
+            this.CTTK_B_Loading.UseVisualStyleBackColor = true;
+            this.CTTK_B_Loading.Click += new System.EventHandler(this.CTTK_B_Loading_Click);
+            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -2475,12 +2476,12 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit2;
         private ReaLTaiizor.Controls.LabelEdit labelEdit1;
         private ReaLTaiizor.Controls.LabelEdit labelEdit10;
-        private ReaLTaiizor.Controls.LabelEdit labelEdit9;
-        private ReaLTaiizor.Controls.LabelEdit labelEdit8;
+        private ReaLTaiizor.Controls.LabelEdit CTTK_L_PassWord;
+        private ReaLTaiizor.Controls.LabelEdit CTTK_L_UserName;
         private ReaLTaiizor.Controls.LabelEdit labelEdit11;
         private ReaLTaiizor.Controls.SpaceButton CTTK_B_ThayDoiTaiKhoan;
-        private ReaLTaiizor.Controls.DungeonLinkLabel dungeonLinkLabel1;
-        private ReaLTaiizor.Controls.FoxCheckBox FCB_HienThiMatKhau_CTTK;
+        private ReaLTaiizor.Controls.DungeonLinkLabel CTTK_L_HienThiMatKhau;
+        private ReaLTaiizor.Controls.FoxCheckBox CTTK_FCB_HienThiMatKhau;
         private ReaLTaiizor.Controls.LabelEdit labelEdit12;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
         private ReaLTaiizor.Controls.TabPage HoaDon_CB_LoaiSanPham;
@@ -2538,12 +2539,9 @@
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_NgaySinh;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_SDT;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_DiaChi;
-        private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_ChucVu;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_MaNhanVien;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_HoVaTen;
-        private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_HinhThucLamViec;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_CCCD;
-        private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_GioiTinh;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_UserName;
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_PassWord;
         private ReaLTaiizor.Controls.CyberGroupBox TaiKhoan_GBThongTin;
@@ -2578,5 +2576,9 @@
         private ReaLTaiizor.Controls.CrownComboBox TaiKhoan_CB_GioiTinh;
         private ReaLTaiizor.Controls.CrownComboBox TaiKhoan_CB_HinhThucLamViec;
         private ReaLTaiizor.Controls.FoxLabel foxLabel13;
+        private ReaLTaiizor.Controls.CrownComboBox CTTK_CB_GioiTinh;
+        private ReaLTaiizor.Controls.CrownComboBox CTTK_CB_HinhThucLamViec;
+        private ReaLTaiizor.Controls.CrownComboBox CTTK_CB_ChucVu;
+        private ReaLTaiizor.Controls.DreamButton CTTK_B_Loading;
     }
 }
