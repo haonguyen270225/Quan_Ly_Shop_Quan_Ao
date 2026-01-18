@@ -817,6 +817,7 @@ namespace Store_Manager
                 TaiKhoan_TB_SDT.Text = nhanVien.SDT;
                 TaiKhoan_TB_Email.Text = nhanVien.Email;
                 TaiKhoan_TB_DiaChi.Text = nhanVien.DiaChi;
+                // GioiTinh
                 if(nhanVien.GioiTinh == 1)
                 {
                     TaiKhoan_CB_GioiTinh.SelectedIndex = 1;
@@ -825,12 +826,22 @@ namespace Store_Manager
                 {
                     TaiKhoan_CB_GioiTinh.SelectedIndex = 0;
                 }
+                // ChucVu
                 foreach(var item in TaiKhoan_CB_ChucVu.Items)
                 {
                     if(item.ToString().Trim() == nhanVien.ChucVu.Trim())
                     {
                         TaiKhoan_CB_ChucVu.SelectedItem = item;
                     }
+                }
+                //HinhThucLamViec
+                if(nhanVien.HinhThucLamViec == 0)
+                {
+                    TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 0;
+                }
+                else
+                {
+                    TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 1;
                 }
             }
         }
@@ -881,6 +892,13 @@ namespace Store_Manager
             TaiKhoan_CB_GioiTinh.Items.Add("Nữ");
             TaiKhoan_CB_GioiTinh.Items.Add("Nam");
             TaiKhoan_CB_GioiTinh.SelectedIndex = 0;
+
+
+            //loading CB_hinhThucLamViec
+            TaiKhoan_CB_HinhThucLamViec.Items.Clear();
+            TaiKhoan_CB_HinhThucLamViec.Items.Add("Full Time !");
+            TaiKhoan_CB_HinhThucLamViec.Items.Add("Pass Time !");
+            TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 0;
         }
 
         private void TaiKhoan_B_Loading_Click(object sender, EventArgs e)
