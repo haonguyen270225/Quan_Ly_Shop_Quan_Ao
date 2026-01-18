@@ -385,7 +385,7 @@
             this.tab_TrangChu.Margin = new System.Windows.Forms.Padding(6);
             this.tab_TrangChu.Name = "tab_TrangChu";
             this.tab_TrangChu.Padding = new System.Windows.Forms.Padding(6);
-            this.tab_TrangChu.Size = new System.Drawing.Size(1328, 820);
+            this.tab_TrangChu.Size = new System.Drawing.Size(1328, 758);
             this.tab_TrangChu.TabIndex = 0;
             this.tab_TrangChu.Text = "Trang Chủ";
             // 
@@ -719,7 +719,7 @@
             this.DG_TrangChu.EnableHeadersVisualStyles = false;
             this.DG_TrangChu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DG_TrangChu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DG_TrangChu.Location = new System.Drawing.Point(6, 342);
+            this.DG_TrangChu.Location = new System.Drawing.Point(6, 406);
             this.DG_TrangChu.Name = "DG_TrangChu";
             this.DG_TrangChu.ReadOnly = true;
             this.DG_TrangChu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -1868,7 +1868,7 @@
             this.tab_DangXuat.Location = new System.Drawing.Point(204, 4);
             this.tab_DangXuat.Margin = new System.Windows.Forms.Padding(6);
             this.tab_DangXuat.Name = "tab_DangXuat";
-            this.tab_DangXuat.Size = new System.Drawing.Size(1328, 680);
+            this.tab_DangXuat.Size = new System.Drawing.Size(1328, 758);
             this.tab_DangXuat.TabIndex = 4;
             this.tab_DangXuat.Text = "Đăng Xuất !";
             // 
@@ -2408,7 +2408,6 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
-            this.parrotGroupBox1.PerformLayout();
             this.tab_TaiKhoan.ResumeLayout(false);
             this.TaiKhoan_GB_Tool.ResumeLayout(false);
             this.TaiKhoan_GBLoading.ResumeLayout(false);
