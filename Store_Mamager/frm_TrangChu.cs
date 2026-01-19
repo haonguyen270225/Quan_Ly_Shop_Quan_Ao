@@ -506,8 +506,6 @@ namespace Store_Manager
             }
         }
 
-
-
         private void HoaDon_TB_TenSanPham_MouseLeave(object sender, EventArgs e)
         {
 
@@ -520,8 +518,6 @@ namespace Store_Manager
                 return;
             }
         }
-
-
 
         private void parrotButton1_Click_1(object sender, EventArgs e)
         {
@@ -670,7 +666,6 @@ namespace Store_Manager
 
         #endregion
 
-
         #region Tab_TaiKhoan
 
         private NhanVien FunTaiKhoan_NhanVien_GB_ThonTin() // Trả về NhanVien trên GB_ThongTin
@@ -811,7 +806,6 @@ namespace Store_Manager
             }
         }
 
-
         private void TaiKhoan_DGV_ListTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BLL_LoadingData();
@@ -906,7 +900,6 @@ namespace Store_Manager
                 }
             }
         }
-
 
         private void TaiKhoan_CB_Loading()
         {
@@ -1012,12 +1005,32 @@ namespace Store_Manager
             TaiKhoan_GB_CTTK_LoadingData_Them();
         }
 
-       
+        // TaiKhoan  Xóa Nhân viên !;
+        private void TaiKhoan_B_Xoa_Click(object sender, EventArgs e)
+        {
+           var kQ =  MessageBox.Show("Bạn có muốn xóa nhân viên ! \n Họ và tên : " + TaiKhoan_TB_HoVaTen.Text + "\n Mã nhân viên : " + TaiKhoan_TB_MaNhanVien.Text, "Thông báo !" , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           if(kQ == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                NhanVien nvXoa = new NhanVien();
+                nvXoa = FunTaiKhoan_NhanVien_GB_ThonTin();
+                if(bLL_NhanVien.Xoa_NhanVienVaTaiKhoan(nvXoa) == false)
+                {
+                    MessageBox.Show("Lỗi xóa thông tin nhân viên ! \n Vui lòng thử lại !" , "Lỗi !" , MessageBoxButtons.OK , MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    BLL_LoadingData();
+                    MessageBox.Show("Đã xóa thông tin nhân viên thành công !", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowData_DGVListTaiKhoan(listTaiKhoan  , listNhanVien);
+                }
+            }
 
-
-
-
-
+        }
         //private void TaiKhoan_Loading_GBGBChiTieTaiKhoan(NhanVien nhanVien, TaiKhoan taiKhoan)
         //{
         //    CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
@@ -1118,8 +1131,6 @@ namespace Store_Manager
         #endregion
 
         #endregion
-
-
         #region GB_ChiTietTaiKhoan
 
         private void SetTextBoxReadOnlyAll(Control parent, bool isReadOnly)
@@ -1404,8 +1415,6 @@ namespace Store_Manager
             
         }
 
-
-
         private void CTTK_B_Thoat_Click(object sender, EventArgs e)
         {
             if (GB_CTTK_Co == 0) // GB_CTTK_TrangChu
@@ -1475,8 +1484,8 @@ namespace Store_Manager
             }
 
         }
-        #endregion
 
+        #endregion
 
     }
 }

@@ -9,6 +9,7 @@ using System.IO;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
+using System.Runtime.InteropServices.WindowsRuntime;
 namespace BLL
 {
     public class BLL_NhanVien
@@ -247,6 +248,19 @@ namespace BLL
                 return true;
             }
            
+        }
+
+        public bool Xoa_NhanVienVaTaiKhoan(NhanVien nhanVien)
+        {
+            if(dal_NhanVien.Xoa_NhanVienVaTaiKhoan(nhanVien.ID) == 1 || nhanVien == null || nhanVien.ID == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
         }
     }
 }

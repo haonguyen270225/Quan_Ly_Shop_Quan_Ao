@@ -85,6 +85,7 @@ namespace DAL
             int kQ = 1;
             SqlCommand sqlCommand = new SqlCommand(@"sp_UpdateNhanVien", conn);
             sqlCommand.CommandType = CommandType.StoredProcedure;
+
             sqlCommand.Parameters.AddWithValue("@ID", nhanVien.ID);
             sqlCommand.Parameters.AddWithValue("@MaNhanVien", nhanVien.MaNhanVien);
             sqlCommand.Parameters.AddWithValue("@HoVaTen", nhanVien.HoVaTen);
@@ -96,6 +97,27 @@ namespace DAL
             sqlCommand.Parameters.AddWithValue("@GioiTinh", nhanVien.GioiTinh);
             sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
             
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+        }
+
+
+        public int Xoa_NhanVienVaTaiKhoan(int idNhanVien)
+        {
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            int kQ = 1;
+            SqlCommand sqlCommand = new SqlCommand(@"sp_Xoa_NhanVienVaTaiKhoan", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            sqlCommand.Parameters.AddWithValue("@IDNhanVien" ,  idNhanVien);
             // Tham số nhận RETURN
             SqlParameter returnParam = new SqlParameter();
             returnParam.Direction = ParameterDirection.ReturnValue;
