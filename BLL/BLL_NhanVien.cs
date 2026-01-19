@@ -142,10 +142,14 @@ namespace BLL
 
         public bool CapNhat_NhanVien(NhanVien nhanVien , List<NhanVien> listNhanVien , out string thongBao)
         {
-            thongBao = "Cập nhật thất bại ! \n Vui lòng thử lại !";
            
-            if (Check_CapNhat_NhanVien(nhanVien, listNhanVien, out thongBao) == false || dal_NhanVien.CapNhat_NhanVien(nhanVien) == 1)
+            if(Check_CapNhat_NhanVien(nhanVien, listNhanVien, out thongBao) == false)
             {
+                return false;
+            }
+            else if ( dal_NhanVien.CapNhat_NhanVien(nhanVien) == 1)
+            {
+                thongBao = "DAL : Cập nhật thất bại ! \n Vui lòng thử lại !";
                 return false;
             }
             else
@@ -175,12 +179,11 @@ namespace BLL
             }
             else if (nhanVien.CCCD.Length != 12)
             {
-                thongBao = "CCCD phải 10 chữ số !";
+                thongBao = "CCCD phải 12 chữ số !";
                 return false;
             }
             else if (nhanVien.HoVaTen == "")
             {
-                
                 thongBao = "Họ và tên không được để trống !";
                 return false;
             }
@@ -216,7 +219,7 @@ namespace BLL
                 thongBao = "Email không được để trống !";
                 return false;
             }
-            else if (XuLy_Chuoi.KiemTra_HoVaTen(nhanVien.HoVaTen))
+            else if (XuLy_Chuoi.KiemTra_HoVaTen(nhanVien.HoVaTen) == false)
             {
                 thongBao = "Họ và tên không chứa các ký tự đặc biệt !";
                 return false;
@@ -226,7 +229,7 @@ namespace BLL
                 thongBao = "Mã nhân viên chỉ chứa chứ cái không dấu và số!";
                 return false;
             }
-            else if (XuLy_Chuoi.KiemTra_STD(nhanVien.SDT))
+            else if (XuLy_Chuoi.KiemTra_STD(nhanVien.SDT) == false)
             {
                 thongBao = "Số điện thoại chỉ chứa  chữ số !";
                 return false;

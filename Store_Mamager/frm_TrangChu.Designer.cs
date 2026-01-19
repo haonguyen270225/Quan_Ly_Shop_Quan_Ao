@@ -108,6 +108,7 @@
             this.TaiKhoan_GBLoading = new ReaLTaiizor.Controls.CyberGroupBox();
             this.TaiKhoan_DGV_ListTaiKhoan = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.TaiKhoan_GBThongTin = new ReaLTaiizor.Controls.CyberGroupBox();
+            this.TaiKhoan_L_IDNhanVien = new ReaLTaiizor.Controls.ForeverLabel();
             this.TaiKhoan_CB_HinhThucLamViec = new ReaLTaiizor.Controls.CrownComboBox();
             this.foxLabel13 = new ReaLTaiizor.Controls.FoxLabel();
             this.TaiKhoan_CB_GioiTinh = new ReaLTaiizor.Controls.CrownComboBox();
@@ -134,6 +135,12 @@
             this.TaiKhoan_B_Them = new ReaLTaiizor.Controls.LostButton();
             this.tab_DangXuat = new System.Windows.Forms.TabPage();
             this.GB_ChiTietTaiKhoan = new ReaLTaiizor.Controls.ThunderGroupBox();
+            this.CTTK_TB_Email = new ReaLTaiizor.Controls.AloneTextBox();
+            this.labelEdit8 = new ReaLTaiizor.Controls.LabelEdit();
+            this.CTTK_B_Loading = new ReaLTaiizor.Controls.DreamButton();
+            this.CTTK_CB_HinhThucLamViec = new ReaLTaiizor.Controls.CrownComboBox();
+            this.CTTK_CB_ChucVu = new ReaLTaiizor.Controls.CrownComboBox();
+            this.CTTK_CB_GioiTinh = new ReaLTaiizor.Controls.CrownComboBox();
             this.CTTK_PB_AnhDaiDien = new ReaLTaiizor.Controls.HopePictureBox();
             this.CTTK_TB_PassWord = new ReaLTaiizor.Controls.AloneTextBox();
             this.CTTK_TB_UserName = new ReaLTaiizor.Controls.AloneTextBox();
@@ -164,10 +171,6 @@
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
-            this.CTTK_CB_GioiTinh = new ReaLTaiizor.Controls.CrownComboBox();
-            this.CTTK_CB_ChucVu = new ReaLTaiizor.Controls.CrownComboBox();
-            this.CTTK_CB_HinhThucLamViec = new ReaLTaiizor.Controls.CrownComboBox();
-            this.CTTK_B_Loading = new ReaLTaiizor.Controls.DreamButton();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
@@ -211,13 +214,13 @@
             this.foreverForm1.BackColor = System.Drawing.Color.White;
             this.foreverForm1.BaseColor = System.Drawing.Color.White;
             this.foreverForm1.BorderColor = System.Drawing.Color.PowderBlue;
-            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Controls.Add(this.controlBox1);
             this.foreverForm1.Controls.Add(this.crownGroupBox1);
             this.foreverForm1.Controls.Add(this.nightLabel1);
             this.foreverForm1.Controls.Add(this.hopePictureBox1);
             this.foreverForm1.Controls.Add(this.headerLabel1);
             this.foreverForm1.Controls.Add(this.HoaDon_CB_LoaiSanPham);
+            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.foreverForm1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.foreverForm1.ForeverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
@@ -1476,6 +1479,7 @@
             this.TaiKhoan_GBThongTin.ColorLighting = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(200)))), ((int)(((byte)(238)))));
             this.TaiKhoan_GBThongTin.ColorPen_1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(68)))));
             this.TaiKhoan_GBThongTin.ColorPen_2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(63)))), ((int)(((byte)(86)))));
+            this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_L_IDNhanVien);
             this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_CB_HinhThucLamViec);
             this.TaiKhoan_GBThongTin.Controls.Add(this.foxLabel13);
             this.TaiKhoan_GBThongTin.Controls.Add(this.TaiKhoan_CB_GioiTinh);
@@ -1519,6 +1523,19 @@
             this.TaiKhoan_GBThongTin.Tag = "Cyber";
             this.TaiKhoan_GBThongTin.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.TaiKhoan_GBThongTin.Timer_RGB = 300;
+            // 
+            // TaiKhoan_L_IDNhanVien
+            // 
+            this.TaiKhoan_L_IDNhanVien.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TaiKhoan_L_IDNhanVien.AutoSize = true;
+            this.TaiKhoan_L_IDNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.TaiKhoan_L_IDNhanVien.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TaiKhoan_L_IDNhanVien.ForeColor = System.Drawing.Color.LightGray;
+            this.TaiKhoan_L_IDNhanVien.Location = new System.Drawing.Point(533, 12);
+            this.TaiKhoan_L_IDNhanVien.Name = "TaiKhoan_L_IDNhanVien";
+            this.TaiKhoan_L_IDNhanVien.Size = new System.Drawing.Size(19, 23);
+            this.TaiKhoan_L_IDNhanVien.TabIndex = 28;
+            this.TaiKhoan_L_IDNhanVien.Text = "0";
             // 
             // TaiKhoan_CB_HinhThucLamViec
             // 
@@ -1908,6 +1925,8 @@
             this.GB_ChiTietTaiKhoan.BodyColorB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.GB_ChiTietTaiKhoan.BodyColorC = System.Drawing.Color.DimGray;
             this.GB_ChiTietTaiKhoan.BodyColorD = System.Drawing.Color.Gray;
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_Email);
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit8);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_Loading);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_CB_HinhThucLamViec);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_CB_ChucVu);
@@ -1947,6 +1966,85 @@
             this.GB_ChiTietTaiKhoan.TabIndex = 9;
             this.GB_ChiTietTaiKhoan.Text = "    Chi tiết tài khoản !";
             this.GB_ChiTietTaiKhoan.Visible = false;
+            // 
+            // CTTK_TB_Email
+            // 
+            this.CTTK_TB_Email.BackColor = System.Drawing.Color.Transparent;
+            this.CTTK_TB_Email.EnabledCalc = true;
+            this.CTTK_TB_Email.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_TB_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.CTTK_TB_Email.Location = new System.Drawing.Point(482, 472);
+            this.CTTK_TB_Email.MaxLength = 32767;
+            this.CTTK_TB_Email.MultiLine = false;
+            this.CTTK_TB_Email.Name = "CTTK_TB_Email";
+            this.CTTK_TB_Email.ReadOnly = true;
+            this.CTTK_TB_Email.Size = new System.Drawing.Size(374, 29);
+            this.CTTK_TB_Email.TabIndex = 57;
+            this.CTTK_TB_Email.Text = "aloneTextBox8";
+            this.CTTK_TB_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CTTK_TB_Email.UseSystemPasswordChar = false;
+            // 
+            // labelEdit8
+            // 
+            this.labelEdit8.AutoSize = true;
+            this.labelEdit8.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEdit8.ForeColor = System.Drawing.Color.Black;
+            this.labelEdit8.Location = new System.Drawing.Point(302, 472);
+            this.labelEdit8.Name = "labelEdit8";
+            this.labelEdit8.Size = new System.Drawing.Size(93, 29);
+            this.labelEdit8.TabIndex = 56;
+            this.labelEdit8.Text = "Email :";
+            // 
+            // CTTK_B_Loading
+            // 
+            this.CTTK_B_Loading.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CTTK_B_Loading.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.CTTK_B_Loading.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.CTTK_B_Loading.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CTTK_B_Loading.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CTTK_B_Loading.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_Loading.ForeColor = System.Drawing.Color.Teal;
+            this.CTTK_B_Loading.Location = new System.Drawing.Point(604, 669);
+            this.CTTK_B_Loading.Name = "CTTK_B_Loading";
+            this.CTTK_B_Loading.Size = new System.Drawing.Size(120, 41);
+            this.CTTK_B_Loading.TabIndex = 55;
+            this.CTTK_B_Loading.Text = "Loading";
+            this.CTTK_B_Loading.UseVisualStyleBackColor = true;
+            this.CTTK_B_Loading.Click += new System.EventHandler(this.CTTK_B_Loading_Click);
+            // 
+            // CTTK_CB_HinhThucLamViec
+            // 
+            this.CTTK_CB_HinhThucLamViec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.CTTK_CB_HinhThucLamViec.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CTTK_CB_HinhThucLamViec.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_CB_HinhThucLamViec.FormattingEnabled = true;
+            this.CTTK_CB_HinhThucLamViec.Location = new System.Drawing.Point(543, 422);
+            this.CTTK_CB_HinhThucLamViec.Name = "CTTK_CB_HinhThucLamViec";
+            this.CTTK_CB_HinhThucLamViec.Size = new System.Drawing.Size(310, 35);
+            this.CTTK_CB_HinhThucLamViec.TabIndex = 54;
+            // 
+            // CTTK_CB_ChucVu
+            // 
+            this.CTTK_CB_ChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.CTTK_CB_ChucVu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CTTK_CB_ChucVu.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_CB_ChucVu.FormattingEnabled = true;
+            this.CTTK_CB_ChucVu.Location = new System.Drawing.Point(481, 166);
+            this.CTTK_CB_ChucVu.Name = "CTTK_CB_ChucVu";
+            this.CTTK_CB_ChucVu.Size = new System.Drawing.Size(372, 35);
+            this.CTTK_CB_ChucVu.TabIndex = 53;
+            // 
+            // CTTK_CB_GioiTinh
+            // 
+            this.CTTK_CB_GioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.CTTK_CB_GioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CTTK_CB_GioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CTTK_CB_GioiTinh.FormattingEnabled = true;
+            this.CTTK_CB_GioiTinh.Location = new System.Drawing.Point(711, 328);
+            this.CTTK_CB_GioiTinh.Name = "CTTK_CB_GioiTinh";
+            this.CTTK_CB_GioiTinh.Size = new System.Drawing.Size(145, 35);
+            this.CTTK_CB_GioiTinh.TabIndex = 52;
             // 
             // CTTK_PB_AnhDaiDien
             // 
@@ -2185,7 +2283,7 @@
             this.labelEdit10.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEdit10.ForeColor = System.Drawing.Color.Black;
-            this.labelEdit10.Location = new System.Drawing.Point(299, 450);
+            this.labelEdit10.Location = new System.Drawing.Point(299, 422);
             this.labelEdit10.Name = "labelEdit10";
             this.labelEdit10.Size = new System.Drawing.Size(238, 29);
             this.labelEdit10.TabIndex = 24;
@@ -2350,56 +2448,6 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
-            // CTTK_CB_GioiTinh
-            // 
-            this.CTTK_CB_GioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.CTTK_CB_GioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.CTTK_CB_GioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CTTK_CB_GioiTinh.FormattingEnabled = true;
-            this.CTTK_CB_GioiTinh.Location = new System.Drawing.Point(711, 328);
-            this.CTTK_CB_GioiTinh.Name = "CTTK_CB_GioiTinh";
-            this.CTTK_CB_GioiTinh.Size = new System.Drawing.Size(145, 35);
-            this.CTTK_CB_GioiTinh.TabIndex = 52;
-            // 
-            // CTTK_CB_ChucVu
-            // 
-            this.CTTK_CB_ChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.CTTK_CB_ChucVu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.CTTK_CB_ChucVu.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CTTK_CB_ChucVu.FormattingEnabled = true;
-            this.CTTK_CB_ChucVu.Location = new System.Drawing.Point(481, 166);
-            this.CTTK_CB_ChucVu.Name = "CTTK_CB_ChucVu";
-            this.CTTK_CB_ChucVu.Size = new System.Drawing.Size(372, 35);
-            this.CTTK_CB_ChucVu.TabIndex = 53;
-            // 
-            // CTTK_CB_HinhThucLamViec
-            // 
-            this.CTTK_CB_HinhThucLamViec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.CTTK_CB_HinhThucLamViec.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.CTTK_CB_HinhThucLamViec.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CTTK_CB_HinhThucLamViec.FormattingEnabled = true;
-            this.CTTK_CB_HinhThucLamViec.Location = new System.Drawing.Point(543, 450);
-            this.CTTK_CB_HinhThucLamViec.Name = "CTTK_CB_HinhThucLamViec";
-            this.CTTK_CB_HinhThucLamViec.Size = new System.Drawing.Size(310, 35);
-            this.CTTK_CB_HinhThucLamViec.TabIndex = 54;
-            // 
-            // CTTK_B_Loading
-            // 
-            this.CTTK_B_Loading.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CTTK_B_Loading.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.CTTK_B_Loading.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.CTTK_B_Loading.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CTTK_B_Loading.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CTTK_B_Loading.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CTTK_B_Loading.ForeColor = System.Drawing.Color.Teal;
-            this.CTTK_B_Loading.Location = new System.Drawing.Point(604, 669);
-            this.CTTK_B_Loading.Name = "CTTK_B_Loading";
-            this.CTTK_B_Loading.Size = new System.Drawing.Size(120, 41);
-            this.CTTK_B_Loading.TabIndex = 55;
-            this.CTTK_B_Loading.Text = "Loading";
-            this.CTTK_B_Loading.UseVisualStyleBackColor = true;
-            this.CTTK_B_Loading.Click += new System.EventHandler(this.CTTK_B_Loading_Click);
-            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -2442,6 +2490,7 @@
             this.TaiKhoan_GBLoading.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TaiKhoan_DGV_ListTaiKhoan)).EndInit();
             this.TaiKhoan_GBThongTin.ResumeLayout(false);
+            this.TaiKhoan_GBThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TaiKhoan_PB_AnhDaiDien)).EndInit();
             this.GB_ChiTietTaiKhoan.ResumeLayout(false);
             this.GB_ChiTietTaiKhoan.PerformLayout();
@@ -2580,5 +2629,8 @@
         private ReaLTaiizor.Controls.CrownComboBox CTTK_CB_HinhThucLamViec;
         private ReaLTaiizor.Controls.CrownComboBox CTTK_CB_ChucVu;
         private ReaLTaiizor.Controls.DreamButton CTTK_B_Loading;
+        private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_Email;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit8;
+        private ReaLTaiizor.Controls.ForeverLabel TaiKhoan_L_IDNhanVien;
     }
 }

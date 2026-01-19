@@ -673,7 +673,39 @@ namespace Store_Manager
 
         #region Tab_TaiKhoan
 
-
+        private NhanVien FunTaiKhoan_NhanVien_GB_ThonTin() // Trả về NhanVien trên GB_ThongTin
+        {
+            //NhanVien tmp = new NhanVien();
+            NhanVien tmp = new NhanVien();
+            tmp.MaNhanVien = TaiKhoan_TB_MaNhanVien.Text.Trim();
+            tmp.HoVaTen = TaiKhoan_TB_HoVaTen.Text.Trim();
+            tmp.Email = TaiKhoan_TB_Email.Text.Trim();
+            tmp.CCCD = TaiKhoan_TB_CCCD.Text.Trim();
+            tmp.SDT = TaiKhoan_TB_SDT.Text.Trim();
+            tmp.DiaChi = TaiKhoan_TB_DiaChi.Text.Trim();
+            tmp.ID = Convert.ToInt32(TaiKhoan_L_IDNhanVien.Text);
+            // ChucVu
+            tmp.ChucVu = TaiKhoan_CB_ChucVu.Text.Trim();
+            //GioiTinh
+            if (TaiKhoan_CB_GioiTinh.SelectedIndex == 0)
+            {
+                tmp.GioiTinh = 0;
+            }
+            else
+            {
+                tmp.GioiTinh = 1;
+            }
+            //HinhThucLamViec
+            if (TaiKhoan_CB_HinhThucLamViec.SelectedIndex == 0)
+            {
+                tmp.HinhThucLamViec = 0;
+            }
+            else
+            {
+                tmp.HinhThucLamViec = 1;
+            }
+            return tmp;
+        }
         private void ShowData_DGVListTaiKhoan(List<TaiKhoan>listTaiKhoan , List<NhanVien> listNhanVien)
         {
             if (listTaiKhoan.Count <= 0 || listNhanVien.Count <= 0)
@@ -702,6 +734,9 @@ namespace Store_Manager
                 }
                 TaiKhoan_DGV_ListTaiKhoan.AutoGenerateColumns = true;
                 TaiKhoan_DGV_ListTaiKhoan.DataSource = dataTable;
+                DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn(); //------
+                dataGridViewImageColumn = (DataGridViewImageColumn)TaiKhoan_DGV_ListTaiKhoan.Columns[4];
+                dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
             }
         }
         private void DGV_ListTaiKhoan_Loading(List<TaiKhoan> listTaiKhoan , List<NhanVien> listNhanVien)
@@ -744,6 +779,9 @@ namespace Store_Manager
                 dataTable.Rows.Add(dataRow);
             }
             TaiKhoan_DGV_ListTaiKhoan.DataSource = dataTable;
+            DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn(); //-----
+            dataGridViewImageColumn = (DataGridViewImageColumn)TaiKhoan_DGV_ListTaiKhoan.Columns[4];
+            dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
         private void TaiKhoan_DGV_ListTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -778,9 +816,9 @@ namespace Store_Manager
         {
             BLL_LoadingData();
             // TaiKhoan
-            DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn();
-            dataGridViewImageColumn = (DataGridViewImageColumn)TaiKhoan_DGV_ListTaiKhoan.Columns[4];
-            dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            //DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn();
+            //dataGridViewImageColumn = (DataGridViewImageColumn)TaiKhoan_DGV_ListTaiKhoan.Columns[4];
+            //dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
             var cellValue = TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells["HinhAnh"].Value;
             int iDNhanVien = Convert.ToInt32(TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells["IDNhanVien"].Value);
@@ -828,6 +866,7 @@ namespace Store_Manager
                 TaiKhoan_TB_SDT.Text = "";
                 TaiKhoan_TB_Email.Text = "";
                 TaiKhoan_TB_DiaChi.Text = "";
+                TaiKhoan_L_IDNhanVien.Text = "0";
                 TaiKhoan_CB_Loading();
             }
             else
@@ -838,6 +877,7 @@ namespace Store_Manager
                 TaiKhoan_TB_SDT.Text = nhanVien.SDT;
                 TaiKhoan_TB_Email.Text = nhanVien.Email;
                 TaiKhoan_TB_DiaChi.Text = nhanVien.DiaChi;
+                TaiKhoan_L_IDNhanVien.Text = nhanVien.ID.ToString();
                 // GioiTinh
                 if(nhanVien.GioiTinh == 1)
                 {
@@ -949,38 +989,12 @@ namespace Store_Manager
             }
             else
             {
+                SetTextBoxReadOnlyAll(GB_ChiTietTaiKhoan, false);
                 GB_CTTK_Co = 1;
-               // MessageBox.Show(" Cập nhật nhân viên !");
                 GB_ChiTietTaiKhoan.BringToFront();
                 GB_ChiTietTaiKhoan.Visible = true;
 
-                NhanVien nhanVienGB = new NhanVien();
-                nhanVienGB.MaNhanVien = TaiKhoan_TB_MaNhanVien.Text.Trim();
-                nhanVienGB.HoVaTen = TaiKhoan_TB_HoVaTen.Text.Trim();
-                nhanVienGB.Email = TaiKhoan_TB_Email.Text.Trim();
-                nhanVienGB.CCCD = TaiKhoan_TB_CCCD.Text.Trim();
-                nhanVienGB.SDT = TaiKhoan_TB_SDT.Text.Trim();
-                nhanVienGB.DiaChi = TaiKhoan_TB_DiaChi.Text.Trim();
-                // ChucVu
-                nhanVienGB.ChucVu = TaiKhoan_CB_ChucVu.Text.Trim();
-                //GioiTinh
-                if (TaiKhoan_CB_GioiTinh.SelectedIndex == 0)
-                {
-                    nhanVienGB.GioiTinh = 0;
-                }
-                else
-                {
-                    nhanVienGB.GioiTinh = 1;
-                }
-                //HinhThucLamViec
-                if (TaiKhoan_CB_HinhThucLamViec.SelectedIndex == 0)
-                {
-                    nhanVienGB.HinhThucLamViec = 0;
-                }
-                else
-                {
-                    nhanVienGB.HinhThucLamViec = 1;
-                }
+                NhanVien nhanVienGB = FunTaiKhoan_NhanVien_GB_ThonTin();
                 TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVienGB);
             }
            
@@ -990,34 +1004,18 @@ namespace Store_Manager
         // TaiKhoan Thêm nhân viên !;
         private void TaiKhoan_B_Them_Click(object sender, EventArgs e)
         {
+            SetTextBoxReadOnlyAll(GB_ChiTietTaiKhoan, false);
             GB_CTTK_Co = 2;
             MessageBox.Show("Thêm nhân viên !");
             GB_ChiTietTaiKhoan.BringToFront();
             GB_ChiTietTaiKhoan.Visible = true;
-            SetTextBoxReadOnlyAll(GB_ChiTietTaiKhoan, false);
-
             TaiKhoan_GB_CTTK_LoadingData_Them();
         }
 
        
 
 
-        private void CapNhat_TaiKhoan_GBChiTieTaiKhoan(NhanVien nhanVien, TaiKhoan taiKhoan)
-        {
-            CTTK_B_Thoat.Text = "Cập Nhật !";
-            if (nhanVien == null || taiKhoan == null || nhanVien.MaNhanVien == "" || nhanVien.HoVaTen == "" || nhanVien.SDT == ""
-                || nhanVien.ChucVu == "" || taiKhoan.PassWord == "" || taiKhoan.UserName == "")
-                
-            {
-                MessageBox.Show("Vui lòng thử lại !", "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                CTTK_B_Thoat.Text = "Cập Nhật !";
-                // TaiKhoan_Loading_GBGBChiTieTaiKhoan(nhanVien, taiKhoan);
-                //TrangChu_GB_LoadingData(nhanVien, taiKhoan);
-            }
-        }
+
 
 
         //private void TaiKhoan_Loading_GBGBChiTieTaiKhoan(NhanVien nhanVien, TaiKhoan taiKhoan)
@@ -1123,16 +1121,7 @@ namespace Store_Manager
 
 
         #region GB_ChiTietTaiKhoan
-        //void SetTextBoxReadOnly(Control parent, bool isReadOnly = true)
-        //{
-        //    foreach (Control ctrl in parent.Controls)
-        //    {
-        //        if (ctrl is TextBox txt)
-        //            txt.ReadOnly = isReadOnly;
-        //        else
-        //            SetTextBoxReadOnlyAll(ctrl, isReadOnly);
-        //    }
-        //}
+
         private void SetTextBoxReadOnlyAll(Control parent, bool isReadOnly)
         {
             foreach (Control ctrl in parent.Controls)
@@ -1399,7 +1388,7 @@ namespace Store_Manager
             {
                 // Lấy thông tin nhân viên;
                 MessageBox.Show("Gọi hàm cập nhật nhân viên !");
-                TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien);
+                TaiKhoan_GB_CTTK_LoadingData_CapNhat(FunTaiKhoan_NhanVien_GB_ThonTin());
             }
             else if(GB_CTTK_Co == 2)
             {
@@ -1436,6 +1425,7 @@ namespace Store_Manager
                 nhanVienCapNhat.CCCD = CTTK_TB_CCCD.Text.Trim();
                 nhanVienCapNhat.SDT = CTTK_TB_SDT.Text.Trim();
                 nhanVienCapNhat.DiaChi = CTTK_TB_DiaChi.Text.Trim();
+                nhanVienCapNhat.ID = Convert.ToInt32(TaiKhoan_L_IDNhanVien.Text);
                 // ChucVu
                 nhanVienCapNhat.ChucVu = CTTK_CB_ChucVu.Text.Trim();
                 //GioiTinh
@@ -1457,15 +1447,18 @@ namespace Store_Manager
                     nhanVienCapNhat.HinhThucLamViec = 1;
                 }
                 //
-                string thongBao;
+                string thongBao = "";
+                BLL_LoadingData();
                 if(bLL_NhanVien.CapNhat_NhanVien(nhanVienCapNhat , listNhanVien , out thongBao) == false)
                 {
                     MessageBox.Show(thongBao, "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else
+                else 
                 {
-                    MessageBox.Show(thongBao, "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(thongBao, "Cập nhật thành công !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GB_ChiTietTaiKhoan.SendToBack();
+                    TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien = new NhanVien());
                 }
                 //bLL_NhanVien.CapNhat_NhanVien()
                 

@@ -85,14 +85,17 @@ namespace DAL
             int kQ = 1;
             SqlCommand sqlCommand = new SqlCommand(@"sp_UpdateNhanVien", conn);
             sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@ID", nhanVien.ID);
             sqlCommand.Parameters.AddWithValue("@MaNhanVien", nhanVien.MaNhanVien);
             sqlCommand.Parameters.AddWithValue("@HoVaTen", nhanVien.HoVaTen);
             sqlCommand.Parameters.AddWithValue("@SDT", nhanVien.SDT);
-            sqlCommand.Parameters.AddWithValue("@CCCD", nhanVien.CCCD);
             sqlCommand.Parameters.AddWithValue("@Email", nhanVien.Email);
+            sqlCommand.Parameters.AddWithValue("@CCCD", nhanVien.CCCD);
+            sqlCommand.Parameters.AddWithValue("@DiaChi", nhanVien.DiaChi);
             sqlCommand.Parameters.AddWithValue("@ChucVu", nhanVien.ChucVu);
             sqlCommand.Parameters.AddWithValue("@GioiTinh", nhanVien.GioiTinh);
             sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
+            
             // Tham số nhận RETURN
             SqlParameter returnParam = new SqlParameter();
             returnParam.Direction = ParameterDirection.ReturnValue;

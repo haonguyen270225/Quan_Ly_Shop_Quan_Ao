@@ -1,5 +1,6 @@
 ﻿
   CREATE PROCEDURE sp_UpdateNhanVien
+    @ID INT,
     @MaNhanVien NVARCHAR(10),
     @HoVaTen NVARCHAR(50),
     @SDT NVARCHAR(15),
@@ -15,6 +16,7 @@ BEGIN
 
     UPDATE [dbo].[NhanVien]
     SET 
+        MaNhanVien = @MaNhanVien,
         HoVaTen = @HoVaTen,
         SDT = @SDT,
         Email = @Email,
@@ -23,7 +25,7 @@ BEGIN
         ChucVu = @ChucVu,
         GioiTinh = @GioiTinh,
         HinhThucLamViec = @HinhThucLamViec
-    WHERE MaNhanVien = @MaNhanVien;
+    WHERE ID = @ID;
 
     IF @@ROWCOUNT > 0
         RETURN 0;   -- Cập nhật thành công
