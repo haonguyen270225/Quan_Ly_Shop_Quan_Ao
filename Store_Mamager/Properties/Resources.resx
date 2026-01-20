@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="trash-bin_50552471" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash-bin_50552471.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="revenue_21755842" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revenue_21755842.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +142,12 @@
   <data name="line_10096963" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\line_10096963.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="magnifying-glass_10275878" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifying-glass_10275878.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="setting_9376694" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting_9376694.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,9 +163,6 @@
   <data name="group_7791461" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group_7791461.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trash-bin_5055247" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash-bin_5055247.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="group_779146" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group_779146.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +175,11 @@
   <data name="arrow_menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_menu_open_24dp_000000_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="magnifying-glass_10275878" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magnifying-glass_10275878.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo-shop-quan-ao-nam-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-shop-quan-ao-nam-9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_2921226" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_2921226.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="important_56324111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\important_56324111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,20 +193,26 @@
   <data name="business_136065741" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business_136065741.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="revenue_2175584" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\revenue_2175584.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="man_6251202" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\man_62512021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trang-tri-shop-quan-ao-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trang-tri-shop-quan-ao-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="padlock_9821260" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\padlock_9821260.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo-shop-quan-ao-nam-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-shop-quan-ao-nam-9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="investment_3459461" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\investment_3459461.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow_menu_close_24dp_000000_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_menu_close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="padlock_9821260" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\padlock_9821260.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash-bag_11327846" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash-bag_11327846.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash-bin_5055247" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash-bin_5055247.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Trang_Chu_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trang_Chu_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -210,6 +222,9 @@
   </data>
   <data name="passkey_24dp_FFE0B7_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\passkey_24dp_FFE0B7_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pc_2291988" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pc_2291988.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,11 +241,11 @@
   <data name="login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz242" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz241" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
-  <data name="investment_3459461" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\investment_3459461.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="revenue_2175584" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\revenue_2175584.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rotate_9714195" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rotate_9714195.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,8 +256,8 @@
   <data name="line10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\line10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="man_6251202" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\man_62512021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sync_10256187" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sync_10256187.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="business_136065742" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business_136065742.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +265,7 @@
   <data name="login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pc_2291988" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pc_2291988.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list_1289280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_1289280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

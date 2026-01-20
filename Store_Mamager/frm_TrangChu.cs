@@ -82,9 +82,8 @@ namespace Store_Manager
 
         private void CreateLoading_TrangChu()
         {
+            BLL_LoadingData();
             taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
-
-
             // Cập nhật hình ảnh đại diện ! 
             if (taiKhoan.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
             {
@@ -1549,9 +1548,11 @@ namespace Store_Manager
                 return ms.ToArray();
             }
         }
+
+
         #endregion
 
-        
+      
     }
 }
 #region Demo

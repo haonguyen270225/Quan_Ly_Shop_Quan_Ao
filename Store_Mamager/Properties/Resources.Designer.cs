@@ -63,6 +63,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap add_2921226 {
+            get {
+                object obj = ResourceManager.GetObject("add_2921226", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap arrow_menu_close_24dp_000000_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("arrow_menu_close_24dp_000000_FILL0_wght400_GRAD0_opsz24", resourceCulture);
@@ -236,6 +246,16 @@ namespace Store_Manager.Properties {
         public static System.Drawing.Bitmap line2 {
             get {
                 object obj = ResourceManager.GetObject("line2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap list_1289280 {
+            get {
+                object obj = ResourceManager.GetObject("list_1289280", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -452,6 +472,16 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap sync_10256187 {
+            get {
+                object obj = ResourceManager.GetObject("sync_10256187", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Trang_Chu_03 {
             get {
                 object obj = ResourceManager.GetObject("Trang_Chu_03", resourceCulture);
@@ -502,9 +532,29 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap trash_bag_11327846 {
+            get {
+                object obj = ResourceManager.GetObject("trash-bag_11327846", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap trash_bin_5055247 {
             get {
                 object obj = ResourceManager.GetObject("trash-bin_5055247", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap trash_bin_50552471 {
+            get {
+                object obj = ResourceManager.GetObject("trash-bin_50552471", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
