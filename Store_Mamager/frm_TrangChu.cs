@@ -9,6 +9,7 @@ using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
@@ -97,7 +98,10 @@ namespace Store_Manager
                 PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh; // hoặc ảnh mặc định
             }
 
-          
+            // SLHoaDon = bll_HoaDon.DemHoaDOn_ByIDNhanVien(taiKhoan.IDNhanVien);
+            L_SLHoaDon.Text = bll_HoaDon.DemHoaDOn_ByIDNhanVien(taiKhoan.IDNhanVien).ToString();
+            DateTime ngayCanThongKe = DateTime.Today;
+            L_TongDoanhThuTheoNgay.Text = bll_HoaDon.TongDoanhThu_TheoNgay(ngayCanThongKe).ToString("N0") + "$";
             BLL_LoadingData();
             TrangChu_GB_CTTK_LoadingData_TrangChu(nhanVien, taiKhoan);
             L_HoVaTen_MaNhanVien.Text = nhanVien.HoVaTen.ToString() + " - " + nhanVien.MaNhanVien.ToString();
@@ -228,9 +232,8 @@ namespace Store_Manager
         }
 
         #region GB_TrangChu_DanhSachKhachHang
-
-
-
+        private int SLHoaDon = 0; 
+        
         #endregion
 
 

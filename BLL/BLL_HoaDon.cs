@@ -20,5 +20,16 @@ namespace BLL
         {
             dal_HoaDon.ThemHoaDon(hoaDon);
         }
+
+
+        public  int DemHoaDOn_ByIDNhanVien(int iDNhanVien)
+        {
+            return dal_HoaDon.DemHoaDon_ByNhanVien(iDNhanVien);
+        }
+
+        public decimal TongDoanhThu_TheoNgay(DateTime ngay)
+        {
+            return dal_HoaDon.TongDoangThu_TheoNgay(ngay);
+        }
     }
 }

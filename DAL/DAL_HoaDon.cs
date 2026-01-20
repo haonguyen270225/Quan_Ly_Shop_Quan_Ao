@@ -67,5 +67,33 @@ namespace DAL
             sqlCommand.ExecuteNonQuery();
             conn.Close();
         }
+
+        public int DemHoaDon_ByNhanVien(int iDNhanVien)
+        {
+            int kQ = 0;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT dbo.DemHoaDon_ByIDNhanVien(@IDNhanVien) AS SoLuongHoaDon;", conn );
+            sqlCommand.Parameters.AddWithValue("@IDNhanVien" , iDNhanVien);
+
+            kQ = (int)sqlCommand.ExecuteScalar(); // sử dụng hàm tính toán;
+            conn.Close();
+            return kQ;
+        }
+
+
+
+        public decimal TongDoangThu_TheoNgay(DateTime ngay)
+        {
+            decimal tong = 0;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT dbo.fn_TongDoanhThu_TheoNgay(@Ngay);", conn);
+            sqlCommand.Parameters.AddWithValue("@Ngay", ngay.Date);
+            
+            tong = (decimal)sqlCommand.ExecuteScalar();
+            conn.Close();
+            return tong;
+        }
     }
 }
