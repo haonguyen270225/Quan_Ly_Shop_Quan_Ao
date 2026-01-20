@@ -75,9 +75,9 @@ namespace DAL
             TaiKhoan taiKhoan = new TaiKhoan();
             SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
-            SqlCommand sqlCommand = new SqlCommand(@"SELECT * FROM  dbo.LoadingTaiKhoan(@userName , @passWord );", conn);
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT * FROM  dbo.LayThongTinTaiKhoan(@userName , @passWord );", conn);
             sqlCommand.Parameters.AddWithValue("@userName", userName);
-            sqlCommand.Parameters.AddWithValue("Password", passWord);
+            sqlCommand.Parameters.AddWithValue("password", passWord);
 
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
             if (dataReader.HasRows)
@@ -88,21 +88,22 @@ namespace DAL
                     taiKhoan.UserName = dataReader["UserName"].ToString();
                     taiKhoan.PassWord = dataReader["Password"].ToString();
                     taiKhoan.IDNhanVien = Convert.ToInt32(dataReader["IDNhanVien"]);
-                    try
-                    {
-                        if (!dataReader.IsDBNull(dataReader.GetOrdinal("HinhAnh")))
-                        {
-                            taiKhoan.HinhAnh = (byte[])dataReader["HinhAnh"];
-                        }
-                        else
-                        {
-                            taiKhoan.HinhAnh = null;
-                        }
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        taiKhoan.HinhAnh = null;
-                    }
+                    taiKhoan.HinhAnh = (byte[])dataReader["HinhAnh"];
+                    //try
+                    //{
+                    //    if (!dataReader.IsDBNull(dataReader.GetOrdinal("HinhAnh")))
+                    //    {
+                    //        taiKhoan.HinhAnh = (byte[])dataReader["HinhAnh"];
+                    //    }
+                    //    else
+                    //    {
+                    //        taiKhoan.HinhAnh = null;
+                    //    }
+                    //}
+                    //catch (IndexOutOfRangeException)
+                    //{
+                    //    taiKhoan.HinhAnh = null;
+                    //}
 
                 }
             }

@@ -50,7 +50,7 @@ namespace BLL
             if(dal_TaiKhoan.TaiKhoan_Reset(iDNhanVien) == 0)
             {
                 kQ = true;
-                thongBao = "Đã Reset tai khoản có IDNhanVien  : " + iDNhanVien + "\n" + "UserName : UserName123456 \n" + "PassWord : PassWord123456 ";
+                thongBao = "Đã Reset tai khoản có IDNhanVien  : " + iDNhanVien;
             }
             else
             {

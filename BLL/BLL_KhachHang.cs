@@ -79,7 +79,6 @@ namespace BLL
                 if (item.MaKhachHang == kh.MaKhachHang)
                 {
                     throw new Exception("Mã khách hàng đã bị trùng !");
-
                 }
                 if (item.SDT == kh.SDT)
                 {
