@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,7 @@ namespace DTO
         public int IDSize { get; set; }
         public int IDLoaiSanPham {  get; set; }
 
+        public byte[] HinhAnh {  get; set; }
         public KhoHang()
         {
             this.ID = -1;
@@ -28,6 +30,7 @@ namespace DTO
             this.Gia = -1;
             this.IDSize = -1;
             this.IDLoaiSanPham = -1;
+            this.HinhAnh = null;
         }
     }
 }

@@ -17,5 +17,33 @@ namespace BLL
             listKhoHang = dal_KhoHang.LoadingKhoHang();
             return listKhoHang;
         }
+
+        public bool Xoa_KhoHangByID(int iD , out string thongBao)
+        {
+            if(dal_KhoHang.Xoa_KhoHangByID(iD) == 0)
+            {
+                thongBao = "Đã xóa hàng thành công !";
+                return true;
+            }
+            else
+            {
+                thongBao = "Lỗi không timg thấy hàng để xóa \n Vui lòng thử lại !";
+                return false;
+            }
+        }
+
+        public bool Xoa_KhoHangByMaHang(string maHang, out string thongBao)
+        {
+            if (dal_KhoHang.Xoa_KhoHangByID(maHang) == 0)
+            {
+                thongBao = "Đã xóa hàng thành công !";
+                return true;
+            }
+            else
+            {
+                thongBao = "Lỗi không timg thấy hàng để xóa \n Vui lòng thử lại !";
+                return false;
+            }
+        }
     }
 }

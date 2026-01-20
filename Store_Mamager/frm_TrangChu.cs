@@ -114,7 +114,9 @@ namespace Store_Manager
         {
             // TODO: This line of code loads data into the 'quan_Ly_Shop_Quan_AoDataSet.HoaDon' table. You can move, or remove it, as needed.
             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
+            
             CreateLoading_TrangChu();
+            KhoiTao_DGV_TabKhoHang(listKhoHang);
         }
 
 
@@ -141,7 +143,8 @@ namespace Store_Manager
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_KhoHang)
             {
-                
+                BLL_LoadingData();
+                KhoiTao_CB_TabKhoHang(listSPSize, listLoaiSanPham);
                 L_TrangChu_TieuDe.Text = ">>> Danh sách kho hàng !";
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_KhuyenMai)
@@ -1074,6 +1077,178 @@ namespace Store_Manager
         #endregion
 
         #endregion
+
+        #region Tab_KhoHang
+
+        private void KhoiTao_CB_TabKhoHang(List<SPSize> listSPSize , List<LoaiSanPham> listLoaiSanPham)
+        {
+            if(listSPSize.Count <= 0 || listSPSize == null)
+            {
+                MessageBox.Show("Lỗi không thể truy cập dữ liệu sản phẩm !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (listLoaiSanPham.Count <= 0 || listLoaiSanPham == null)
+            {
+                MessageBox.Show("Lỗi không thể truy cập dữ liệu sản phẩm !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            KhoHang_CB_Loai.Items.Clear();
+            KhoHang_CB_GioiTinh.Items.Clear();
+            KhoHang_CB_Size.Items.Clear();
+            KhoHang_CB_TimKiem.Items.Clear();
+            // Tìm kiếm :
+            KhoHang_CB_TimKiem.Items.Add("Tìm kiếm !");
+            KhoHang_CB_TimKiem.Items.Add("Giá : 100.000 đ -> 200.000 đ");
+            KhoHang_CB_TimKiem.Items.Add("Giá : 300.000 đ -> 500.000 đ");
+            KhoHang_CB_TimKiem.Items.Add("Giá : Trên 500.000 đ");
+            KhoHang_CB_TimKiem.Items.Add("Đồ Nam");
+            KhoHang_CB_TimKiem.Items.Add("Đồ Nữ");
+
+            HashSet<string> hashSetListSPSize = new HashSet<string>();
+            foreach(SPSize item in listSPSize)
+            {
+                hashSetListSPSize.Add(item.MaSize);
+            }
+            HashSet<string> hashSetListLoaiSanPham = new HashSet<string>();
+            foreach (LoaiSanPham item in listLoaiSanPham)
+            {
+                hashSetListLoaiSanPham.Add(item.MaLoaiSanPham + "-" + item.TenLoai);
+                KhoHang_CB_TimKiem.Items.Add(item.MaLoaiSanPham + "-" + item.TenLoai);
+            }
+
+            foreach(string item in hashSetListSPSize)
+            {
+                KhoHang_CB_Size.Items.Add(item);
+                KhoHang_CB_TimKiem.Items.Add(item);
+
+            }
+
+            foreach(string item in hashSetListLoaiSanPham)
+            {
+                KhoHang_CB_Loai.Items.Add(item);
+            }
+            //Giới Tính;
+            KhoHang_CB_GioiTinh.Items.Add("Nữ");
+            KhoHang_CB_GioiTinh.Items.Add("Nam");
+
+
+            KhoHang_CB_TimKiem.SelectedIndex = 0;
+            KhoHang_CB_GioiTinh.SelectedIndex = 0;
+            KhoHang_CB_Size.SelectedIndex = 0;
+            KhoHang_CB_Loai.SelectedIndex = 0;
+        }
+        private void KhoiTao_DGV_TabKhoHang(List<KhoHang> listKhoHang)
+        {
+            if (listKhoHang.Count <= 0 || listKhoHang == null)
+            {
+                MessageBox.Show("Lỗi không thể truy cập dữ liệu kho hàng !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("STT", typeof(int));
+                dataTable.Columns.Add("Mã Hàng", typeof(string));
+                dataTable.Columns.Add("Tên Hàng", typeof(string));
+                dataTable.Columns.Add("Số Lượng Tồn", typeof(int));
+                dataTable.Columns.Add("Giá", typeof(string));
+                dataTable.Columns.Add("Size", typeof(int));
+                dataTable.Columns.Add("HinhAnh", typeof(byte[]));
+
+                KhoHang_DGV_ListSanPham.AutoGenerateColumns = true;
+
+                // Tạo cột Button Reset
+                DataGridViewButtonColumn bTNXoa = new DataGridViewButtonColumn();
+                bTNXoa.Name = "Delete";
+                bTNXoa.HeaderText = "";
+                bTNXoa.Text = "Delete";
+                bTNXoa.UseColumnTextForButtonValue = true;
+
+                KhoHang_DGV_ListSanPham.Columns.Add(bTNXoa);
+
+                
+
+                KhoHang_DGV_ListSanPham.CellContentClick += KhoHang_DGV_ListKhoHang_CellContentClick; // sán sự kiện !
+
+                int i = 1;
+                foreach (KhoHang item in listKhoHang)
+                {
+                    DataRow dataRow = dataTable.NewRow();
+                    dataRow[0] = i++;
+                    dataRow[1] = item.MaHang;
+                    dataRow[2] = item.TenHang;
+                    dataRow[3] = item.SoLuongTon;
+                    dataRow[4] = item.Gia.ToString("N0") + "đ";
+                    dataRow[5] = item.IDSize;
+                    dataRow[6] = item.HinhAnh;
+                    dataTable.Rows.Add(dataRow);
+                }
+                KhoHang_DGV_ListSanPham.DataSource = dataTable;
+                //DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn(); //-----
+                //dataGridViewImageColumn = (DataGridViewImageColumn)KhoHang_DGV_ListSanPham.Columns[6];
+                //dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+                KhoHang_DGV_ListSanPham.DataSource = dataTable;
+            }
+           
+        }
+
+
+        //private void TaiKhoan_DGV_ListTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.RowIndex >= 0 && TaiKhoan_DGV_ListTaiKhoan.Columns[e.ColumnIndex].Name == "Reset")
+        //    {
+        //        int id = Convert.ToInt32(TaiKhoan_DGV_ListTaiKhoan.Rows[e.RowIndex].Cells["IDNhanVien"].Value);
+
+        //        //MessageBox.Show($"Reset mật khẩu cho tài khoản ID = {id}");
+        //        // TODO: gọi hàm reset ở đây
+
+        //        var kq = MessageBox.Show("Bán có muốn reset  tài khoản ! \n Có IDNhanVien : " + id, "Reset Tài Khoản !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        //        if (kq == DialogResult.No)
+        //        {
+        //            return;
+        //        }
+        //        else
+        //        {
+        //            bool kQ = false;
+        //            string thongBao = "";
+
+        //            bll_TaiKhoan.TaiKhoan_Reset(id, out thongBao, out kQ);
+        //            MessageBox.Show(thongBao, "Reset Tài Khoản !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            BLL_LoadingData();
+        //            ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
+        //        }
+        //    }
+        //}
+        private void KhoHang_DGV_ListKhoHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && KhoHang_DGV_ListSanPham.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                string maHang = KhoHang_DGV_ListSanPham.Rows[e.RowIndex].Cells["Mã Hàng"].Value.ToString();
+                var kQ = MessageBox.Show("Bán có muốn Xóa ! \n Có Mã Hàng  : " + maHang , "Xóa kho hàng !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(kQ == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    string thongBao = "";
+                    if(bll_KhoHang.Xoa_KhoHangByMaHang(maHang , out thongBao ) == true)
+                    {
+                        MessageBox.Show("Đã xóa  hàng hóa !\n Có Mã Hàng  : " + maHang, thongBao , MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(thongBao , "Lỗi !", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+
+        #endregion
+
+
         #region GB_ChiTietTaiKhoan
 
         private void SetTextBoxReadOnlyAll(Control parent, bool isReadOnly)

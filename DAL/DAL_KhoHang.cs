@@ -1,10 +1,13 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
+using static System.Net.Mime.MediaTypeNames;
 namespace DAL
 {
     public  class DAL_KhoHang : DAL_DataAccess
@@ -15,7 +18,7 @@ namespace DAL
             
             SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
-            SqlCommand sqlCommand = new SqlCommand(@"SELECT [ID],[MaHang],[TenHang],[SoLuongTon],[Gia],[IDSize],[IDLoaiSanPham] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[KhoHang]", conn);
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT [ID],[MaHang],[TenHang],[SoLuongTon],[Gia],[IDSize],[IDLoaiSanPham] , [HinhAnh] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[KhoHang]", conn);
 
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
 
@@ -31,6 +34,17 @@ namespace DAL
                     tmp.Gia = Convert.ToDouble(dataReader["Gia"]);
                     tmp.IDSize = Convert.ToInt32(dataReader["IDSize"]);
                     tmp.IDLoaiSanPham = Convert.ToInt32(dataReader["IDLoaiSanPham"]);
+
+                    if(dataReader["HinhAnh"] == DBNull.Value)
+                    {
+                        tmp.HinhAnh = null;
+                    }
+                    else
+                    {
+                        tmp.HinhAnh = (Byte[])dataReader["HinhAnh"];
+                    }
+                    //object obj = (Byte[])dataReader["HinhAnh"];
+                    //tmp.HinhAnh = obj == DBNull.Value ? null : (byte[])obj;
                     listKhoHang.Add(tmp);
                 }
             }
@@ -38,5 +52,46 @@ namespace DAL
             return listKhoHang;
 
         } 
+
+        public int Xoa_KhoHangByID(int iD)
+        {
+            int kQ = 1; // Xóa không thành công;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand( @"sp_XoaKhoHang" ,conn);
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@ID", iD);
+
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+        }
+
+        public int Xoa_KhoHangByID(string maHang)
+        {
+            int kQ = 1; // Xóa không thành công;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"sp_XoaKhoHangByMaHang", conn);
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@MaHang" ,maHang);
+
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+        }
+
     }
 }
