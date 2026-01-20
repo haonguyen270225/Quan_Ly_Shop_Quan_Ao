@@ -148,5 +148,32 @@ namespace DAL
             conn.Close();
             return listTaiKhoan;
         }
+
+
+        public int CapNhatHinhAnh_TaiKhoan(int iDNhanVien , byte[] hinhAnh)
+        {
+
+            int kQ = 1; // 1-> Reset taiKhoan không thành công !;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"sp_CapNhatHinhAnh_TaiKhoan", conn);
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@IDNhanVien", iDNhanVien);
+
+            SqlParameter imgParam = new SqlParameter("@HinhAnh", SqlDbType.VarBinary);
+            imgParam.Value = (object)hinhAnh ?? DBNull.Value; // Nếu hình ảnh == null thì truyền vào DBNull.Value;
+            sqlCommand.Parameters.Add(imgParam);
+
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            // kQ = (int)sqlCommand.ExecuteScalar();
+            conn.Close();
+            return kQ;
+        }
     }
 }

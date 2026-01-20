@@ -80,10 +80,11 @@ namespace Store_Manager
         }
         public void CreateLoading_TrangChu()
         {
-            //taiKhoan.UserName = "binh.tran";
-            //taiKhoan.PassWord = "123456";
-            taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
 
+            taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
+            
+            // HinhAnh;
+            
             BLL_LoadingData();
             TrangChu_GB_CTTK_LoadingData_TrangChu(nhanVien, taiKhoan);
             #region demo
@@ -100,83 +101,7 @@ namespace Store_Manager
             L_TrangChu_HoVaTen.Text = "Xin chào : " + nhanVien.HoVaTen.ToString();
             L_TrangChu_ChuVu.Text = "Chức vụ : " + nhanVien.ChucVu.ToString();
             L_TrangChu_TieuDe.Text = ">>> Thông tin trang chủ !";
-            //Loading G_ChiTietTaiKhoan
-            //CTTK_TB_HoVaTen.Text = nhanVien.HoVaTen.ToString();
-            //CTTK_TB_MaNhanVien.Text = nhanVien.ChucVu.ToString();
-            //CTTK_TB_ChucVu.Text = nhanVien.ChucVu.ToString();
-            //CTTK_TB_DiaChi.Text = nhanVien.DiaChi.ToString();
-            //CTTK_TB_NgaySinh.Text = "12/07/2003";
-            //CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
-            //CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
-            //CTTK_TB_MaNhanVien.Text = nhanVien.MaNhanVien.ToString();
-            //CTTK_TB_UserName.Text = taiKhoan.UserName.ToString();
-            //CTTK_TB_PassWord.UseSystemPasswordChar = true;
-            //CTTK_TB_PassWord.Text = taiKhoan.PassWord.ToString();
-            //if (nhanVien.GioiTinh == 1)
-            //{
-            //    CTTK_TB_GioiTinh.Text = "Nam";
-            //}
-            //else
-            //{
-            //    CTTK_TB_GioiTinh.Text = "Nu";
-            //}
-
-            //if (nhanVien.HinhThucLamViec == 0)
-            //{
-            //    CTTK_TB_HinhThucLamViec.Text = "Full Time !";
-            //}
-            //else
-            //{
-            //    CTTK_TB_HinhThucLamViec.Text = "Pass Time !";
-            //}
-
-
-
-            //// Loading PB_HinhAnh
-            //PB_TrangChu_ThongTinTaiKhoan.Image.Dispose();
-            //PB_TrangChu_ThongTinTaiKhoan.Image = null;
-            //CTTK_PB_AnhDaiDien.Image.Dispose();
-            //CTTK_PB_AnhDaiDien.Image = null;
-            //if (taiKhoan?.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
-            //{
-            //    try
-            //    {
-            //        using (MemoryStream ms = new MemoryStream(taiKhoan.HinhAnh))
-            //        {
-            //            PB_TrangChu_ThongTinTaiKhoan.Image = Image.FromStream(ms);
-            //            PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
-
-            //            CTTK_PB_AnhDaiDien.Image = Image.FromStream(ms);
-            //            CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Lỗi load ảnh từ database: " + ex.Message);
-            //        // Fallback về ảnh mặc định
-            //        PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
-            //        PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
-            //        CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-            //        CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
-            //    }
-            //}
-            //else
-            //{
-            //    if (CTTK_PB_AnhDaiDien.Image != null)
-            //    {
-            //        CTTK_PB_AnhDaiDien.Image.Dispose();
-            //        CTTK_PB_AnhDaiDien.Image = null;
-            //    }
-
-            //    CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-            //    CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
-
-            //    PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
-            //    PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
-            //}
-
-
-            //GB_ChiTietTaiKhoan;
+         
             
         }
 
@@ -547,8 +472,6 @@ namespace Store_Manager
 
         }
 
-
-
         #region frm_ThongTinKhachHang
         private void HoaDon_ThanhToan_Click(object sender, EventArgs e)
         {
@@ -573,7 +496,6 @@ namespace Store_Manager
             LoadingChiTietHoaDon(khachHang , maHoaDon);
         }
         #endregion
-
 
         #region frm_HoaDonChiTiet
         private void LoadingChiTietHoaDon(KhachHang khachHang , string maHoaDon)
@@ -609,7 +531,6 @@ namespace Store_Manager
             
         }
         #endregion
-
 
         #region Chi_Tiet_Tai_Khoan
         private void CTTK_B_AnhMacDinh_Click(object sender, EventArgs e)
@@ -1009,7 +930,7 @@ namespace Store_Manager
 
         }
 
-        // TaiKhoan  Xóa Nhân viên !;
+        // TaiKhoan  Xóa nhân viên !;
         private void TaiKhoan_B_Xoa_Click(object sender, EventArgs e)
         {
            var kQ =  MessageBox.Show("Bạn có muốn xóa nhân viên ! \n Họ và tên : " + TaiKhoan_TB_HoVaTen.Text + "\n Mã nhân viên : " + TaiKhoan_TB_MaNhanVien.Text, "Thông báo !" , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1275,6 +1196,15 @@ namespace Store_Manager
             CTTK_TB_CCCD.Text = nhanVien.CCCD.ToString();
             CTTK_TB_SDT.Text = nhanVien.SDT.ToString();
 
+
+            if (TaiKhoan_PB_AnhDaiDien.Image != null)
+            {
+                CTTK_PB_AnhDaiDien.Image = new Bitmap(TaiKhoan_PB_AnhDaiDien.Image);
+            }
+            else
+            {
+                CTTK_PB_AnhDaiDien.Image = null;
+            }
             GB_CTTK_CB_Loading();
 
             // GioiTinh
@@ -1464,10 +1394,14 @@ namespace Store_Manager
                 {
                     nhanVienCapNhat.HinhThucLamViec = 1;
                 }
+
+                
+                // hinhAnh;
+                byte[] hinhAnh = GetBytesFromPictureBox(CTTK_PB_AnhDaiDien);
                 //
                 string thongBao = "";
                 
-                if(bLL_NhanVien.CapNhat_NhanVien(nhanVienCapNhat , listNhanVien , out thongBao) == false)
+                if(bLL_NhanVien.CapNhat_NhanVien(nhanVienCapNhat , listNhanVien , hinhAnh ,out thongBao) == false)
                 {
                     MessageBox.Show(thongBao, "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -1476,9 +1410,13 @@ namespace Store_Manager
                 {
                     MessageBox.Show(thongBao, "Cập nhật thành công !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GB_ChiTietTaiKhoan.SendToBack();
+                    BLL_LoadingData();
+                    TaiKhoan_PB_AnhDaiDien.Image = CTTK_PB_AnhDaiDien.Image;
                     TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien = new NhanVien());
+                    ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
+                    
                 }
-                BLL_LoadingData();
+                
                 //bLL_NhanVien.CapNhat_NhanVien()
 
             }
@@ -1551,10 +1489,11 @@ namespace Store_Manager
         {
             if (pB.Image == null) return null;
 
-            using (MemoryStream memoryStream = new MemoryStream())
+            using (MemoryStream ms = new MemoryStream())
+            using (Bitmap bmp = new Bitmap(pB.Image))   // clone ảnh để tránh bị lock
             {
-                pB.Image.Save(memoryStream, pB.Image.RawFormat);
-                return memoryStream.ToArray();
+                bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // ép format
+                return ms.ToArray();
             }
         }
 

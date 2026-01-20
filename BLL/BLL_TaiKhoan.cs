@@ -58,5 +58,21 @@ namespace BLL
                 thongBao = "Lỗi : Reset thất bại ! \n" + " Vui lòng thử lại sau ! ";
             }
         }
+
+
+        public bool CapNhatHinhAnh_TaoKhoan(int iDNhanVien, byte[] hinhAnh, out string thongBao)
+        {
+            if (dal_TaiKhoan.CapNhatHinhAnh_TaiKhoan(iDNhanVien, hinhAnh) == 1)
+            {
+                thongBao = "Lỗi cập nhật hình ảnh !";
+                return false;
+            }
+            else
+            {
+                thongBao = "Cập nhật hình ảnh thành công !";
+                return true;
+            }
+        }
     }
 }
+

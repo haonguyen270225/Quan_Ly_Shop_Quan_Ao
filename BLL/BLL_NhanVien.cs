@@ -10,6 +10,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Web.UI.Design;
 namespace BLL
 {
     public class BLL_NhanVien
@@ -141,9 +142,14 @@ namespace BLL
             return dal_NhanVien.Loading_NhanVienDangNhap(taiKhoan);
         }
 
-        public bool CapNhat_NhanVien(NhanVien nhanVien , List<NhanVien> listNhanVien , out string thongBao)
+        public bool CapNhat_NhanVien(NhanVien nhanVien , List<NhanVien> listNhanVien , byte[] hinhAnh ,out string thongBao)
         {
-           
+            BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
+
+            if (bll_TaiKhoan.CapNhatHinhAnh_TaoKhoan(nhanVien.ID , hinhAnh , out thongBao) == false)
+            {
+                return false;
+            }
             if(Check_CapNhat_NhanVien(nhanVien, listNhanVien, out thongBao) == false)
             {
                 return false;

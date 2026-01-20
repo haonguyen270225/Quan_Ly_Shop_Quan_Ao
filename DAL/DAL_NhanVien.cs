@@ -130,7 +130,7 @@ namespace DAL
         }
 
 
-        public int Them_NhanVienVaTaiKhoan(NhanVien nhanVien , Byte[] HinhAnh)
+        public int Them_NhanVienVaTaiKhoan(NhanVien nhanVien , Byte[] hinhAnh)
         {
             SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
@@ -150,7 +150,7 @@ namespace DAL
             sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
 
             SqlParameter imgParam = new SqlParameter("@HinhAnh", SqlDbType.VarBinary);
-            imgParam.Value = (object)HinhAnh ?? DBNull.Value; // Nếu hình ảnh == null thì truyền vào DBNull.Value;
+            imgParam.Value = (object)hinhAnh ?? DBNull.Value; // Nếu hình ảnh == null thì truyền vào DBNull.Value;
             sqlCommand.Parameters.Add(imgParam);
 
 
