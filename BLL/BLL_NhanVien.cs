@@ -237,11 +237,29 @@ namespace BLL
             }
             else
             {
+              
+                for(int i = 0; i < listNhanVien.Count; i++)
+                {
+                    if (listNhanVien[i].ID == nhanVien.ID)
+                    {
+                        listNhanVien.RemoveAt(i);
+                    }
+                }
                 foreach (NhanVien item in listNhanVien)
                 {
-                    if (item.ID != nhanVien.ID && item.MaNhanVien == nhanVien.MaNhanVien)
+                    if(item.CCCD == nhanVien.CCCD)
+                    {
+                        thongBao = "CCCD đã bị trùng !";
+                        return false;
+                    }
+                    if(item.MaNhanVien == nhanVien.MaNhanVien) 
                     {
                         thongBao = "Mã nhân viên đã bị trùng !";
+                        return false;
+                    }
+                    if(item.SDT == nhanVien.SDT)
+                    {
+                        thongBao = "SĐT đã bị trùng !";
                         return false;
                     }
                 }
@@ -262,5 +280,33 @@ namespace BLL
             }
             
         }
+
+        public bool Them_NhanVienvaTaiKhoan(NhanVien nhanVien , List<NhanVien> listNhanVien , byte[] hinhAnh , out string thongBao)
+        {
+            thongBao = "";
+            if(Check_CapNhat_NhanVien(nhanVien, listNhanVien, out thongBao) == false)
+            {
+                return false;
+            }
+            //byte[] hinhAnh = ConvertImagePathToBytes(imagePath);
+            if (dal_NhanVien.Them_NhanVienVaTaiKhoan(nhanVien , hinhAnh) == 1)
+            {
+                thongBao = "Lỗi cơ sở dữ liệu ! \n Vui lòng thử lại !";
+                return false;
+            }
+            else
+            {
+                thongBao = "Đã thêm nhân viên : \n Họ và tên : " + nhanVien.HoVaTen + "\n Mã nhân  viên : " + nhanVien.MaNhanVien;
+                return true;
+            }
+        }
+
+
+        //public static byte[] ConvertImagePathToBytes(string imagePath)
+        //{
+        //    if (string.IsNullOrEmpty(imagePath) || !File.Exists(imagePath)) //!File.Exists(imagePath) -> file không tồn tại tại đường dẫn đó ?
+        //        return null;
+        //    return File.ReadAllBytes(imagePath);
+        //}
     }
 }

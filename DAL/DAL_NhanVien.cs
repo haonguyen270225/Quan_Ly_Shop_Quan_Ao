@@ -128,5 +128,42 @@ namespace DAL
             conn.Close();
             return kQ;
         }
+
+
+        public int Them_NhanVienVaTaiKhoan(NhanVien nhanVien , Byte[] HinhAnh)
+        {
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            int kQ = 1;
+            SqlCommand sqlCommand = new SqlCommand(@"sp_Them_NhanVienVaTaiKhoan", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+
+            sqlCommand.Parameters.AddWithValue("@MaNhanVien", nhanVien.MaNhanVien );
+            sqlCommand.Parameters.AddWithValue("@HoVaTen", nhanVien.HoVaTen);
+            sqlCommand.Parameters.AddWithValue("@SDT", nhanVien.SDT);
+            sqlCommand.Parameters.AddWithValue("@Email", nhanVien.Email);
+            sqlCommand.Parameters.AddWithValue("@CCCD", nhanVien.CCCD);
+            sqlCommand.Parameters.AddWithValue("@DiaChi", nhanVien.DiaChi);
+            sqlCommand.Parameters.AddWithValue("@ChucVu", nhanVien.ChucVu);
+            sqlCommand.Parameters.AddWithValue("@GioiTinh", nhanVien.GioiTinh);
+            sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
+
+            SqlParameter imgParam = new SqlParameter("@HinhAnh", SqlDbType.VarBinary);
+            imgParam.Value = (object)HinhAnh ?? DBNull.Value; // Nếu hình ảnh == null thì truyền vào DBNull.Value;
+            sqlCommand.Parameters.Add(imgParam);
+
+
+            // Tham số nhận RETURN
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+
+        }
     }
 }

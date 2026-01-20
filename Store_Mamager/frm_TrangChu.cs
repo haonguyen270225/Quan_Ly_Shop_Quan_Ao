@@ -1005,7 +1005,7 @@ namespace Store_Manager
             GB_ChiTietTaiKhoan.BringToFront();
             GB_ChiTietTaiKhoan.Visible = true;
             TaiKhoan_GB_CTTK_LoadingData_Them();
-            
+             
 
         }
 
@@ -1466,7 +1466,7 @@ namespace Store_Manager
                 }
                 //
                 string thongBao = "";
-                BLL_LoadingData();
+                
                 if(bLL_NhanVien.CapNhat_NhanVien(nhanVienCapNhat , listNhanVien , out thongBao) == false)
                 {
                     MessageBox.Show(thongBao, "Lỗi cập nhật nhân viên !", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1478,13 +1478,66 @@ namespace Store_Manager
                     GB_ChiTietTaiKhoan.SendToBack();
                     TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien = new NhanVien());
                 }
+                BLL_LoadingData();
                 //bLL_NhanVien.CapNhat_NhanVien()
-                
+
             }
             else if (GB_CTTK_Co == 2) // GB_CTTK_ThemNhanVien
             {
                 // gọi hàm thêm nhân viên !
                 MessageBox.Show("Gọi hàm thêm nhân viên !");
+                NhanVien nhanVienThem = new NhanVien();
+                nhanVienThem.MaNhanVien = CTTK_TB_MaNhanVien.Text.Trim();
+                nhanVienThem.HoVaTen = CTTK_TB_HoVaTen.Text.Trim();
+                nhanVienThem.Email = CTTK_TB_Email.Text.Trim();
+                nhanVienThem.CCCD = CTTK_TB_CCCD.Text.Trim();
+                nhanVienThem.SDT = CTTK_TB_SDT.Text.Trim();
+                nhanVienThem.DiaChi = CTTK_TB_DiaChi.Text.Trim();
+                nhanVienThem.ID = Convert.ToInt32(TaiKhoan_L_IDNhanVien.Text);
+                // ChucVu
+                nhanVienThem.ChucVu = CTTK_CB_ChucVu.Text.Trim();
+                //GioiTinh
+                if (CTTK_CB_GioiTinh.SelectedIndex == 0)
+                {
+                    nhanVienThem.GioiTinh = 0;
+                }
+                else
+                {
+                    nhanVienThem.GioiTinh = 1;
+                }
+                //HinhThucLamViec
+                if (CTTK_CB_HinhThucLamViec.SelectedIndex == 0)
+                {
+                    nhanVienThem.HinhThucLamViec = 0;
+                }
+                else
+                {
+                    nhanVienThem.HinhThucLamViec = 1;
+                }
+                // HinhAnh:
+                byte[] hinhAnh = GetBytesFromPictureBox(CTTK_PB_AnhDaiDien);
+                //
+                string thongBao = "";
+                BLL_LoadingData();
+                if (bLL_NhanVien.Them_NhanVienvaTaiKhoan(nhanVienThem, listNhanVien, hinhAnh,out thongBao) == false)
+                {
+                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    BLL_LoadingData();
+                    MessageBox.Show(thongBao, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   // GB_ChiTietTaiKhoan.SendToBack();
+                    TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien = new NhanVien());
+                    ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
+
+                    //restet CTTK_PB_AnhDaiDien.Image 
+                    CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+                    CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; //CTTK_B_AnhMacDinh_Click(this , EventArgs.Empty);
+                    
+                    
+                }
+
             }
             else
             {
@@ -1494,6 +1547,18 @@ namespace Store_Manager
 
         }
 
+        byte[] GetBytesFromPictureBox(PictureBox pB)
+        {
+            if (pB.Image == null) return null;
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                pB.Image.Save(memoryStream, pB.Image.RawFormat);
+                return memoryStream.ToArray();
+            }
+        }
+
+
         private void CTTK_B_QuayLai_Click(object sender, EventArgs e)
         {
             var kQ = MessageBox.Show("Bạn có muốn thoát !" , "Thông báo !" , MessageBoxButtons.YesNo , MessageBoxIcon.Error);
@@ -1501,6 +1566,9 @@ namespace Store_Manager
             {
                 GB_ChiTietTaiKhoan.SendToBack();
                 TaiKhoan_GB_CTTK_LoadingData_Them();
+                //restet CTTK_PB_AnhDaiDien.Image 
+                CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+                CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
             }
             else
             {
@@ -1509,7 +1577,7 @@ namespace Store_Manager
         }
         #endregion
 
-
+        
     }
 }
 #region Demo
