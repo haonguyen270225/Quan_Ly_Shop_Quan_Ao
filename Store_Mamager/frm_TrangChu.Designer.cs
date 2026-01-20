@@ -171,6 +171,7 @@
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
+            this.CTTK_B_QuayLai = new ReaLTaiizor.Controls.DreamButton();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
@@ -214,13 +215,13 @@
             this.foreverForm1.BackColor = System.Drawing.Color.White;
             this.foreverForm1.BaseColor = System.Drawing.Color.White;
             this.foreverForm1.BorderColor = System.Drawing.Color.PowderBlue;
+            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Controls.Add(this.controlBox1);
             this.foreverForm1.Controls.Add(this.crownGroupBox1);
             this.foreverForm1.Controls.Add(this.nightLabel1);
             this.foreverForm1.Controls.Add(this.hopePictureBox1);
             this.foreverForm1.Controls.Add(this.headerLabel1);
             this.foreverForm1.Controls.Add(this.HoaDon_CB_LoaiSanPham);
-            this.foreverForm1.Controls.Add(this.GB_ChiTietTaiKhoan);
             this.foreverForm1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.foreverForm1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.foreverForm1.ForeverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
@@ -1926,6 +1927,7 @@
             this.GB_ChiTietTaiKhoan.BodyColorB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.GB_ChiTietTaiKhoan.BodyColorC = System.Drawing.Color.DimGray;
             this.GB_ChiTietTaiKhoan.BodyColorD = System.Drawing.Color.Gray;
+            this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_QuayLai);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_TB_Email);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.labelEdit8);
             this.GB_ChiTietTaiKhoan.Controls.Add(this.CTTK_B_Loading);
@@ -2449,6 +2451,23 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
+            // CTTK_B_QuayLai
+            // 
+            this.CTTK_B_QuayLai.ColorA = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CTTK_B_QuayLai.ColorB = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.CTTK_B_QuayLai.ColorC = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.CTTK_B_QuayLai.ColorD = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CTTK_B_QuayLai.ColorE = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CTTK_B_QuayLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CTTK_B_QuayLai.ForeColor = System.Drawing.Color.Red;
+            this.CTTK_B_QuayLai.Location = new System.Drawing.Point(42, 663);
+            this.CTTK_B_QuayLai.Name = "CTTK_B_QuayLai";
+            this.CTTK_B_QuayLai.Size = new System.Drawing.Size(120, 41);
+            this.CTTK_B_QuayLai.TabIndex = 58;
+            this.CTTK_B_QuayLai.Text = "Thoát!";
+            this.CTTK_B_QuayLai.UseVisualStyleBackColor = true;
+            this.CTTK_B_QuayLai.Click += new System.EventHandler(this.CTTK_B_QuayLai_Click);
+            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -2486,7 +2505,6 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
-            this.parrotGroupBox1.PerformLayout();
             this.tab_TaiKhoan.ResumeLayout(false);
             this.TaiKhoan_GB_Tool.ResumeLayout(false);
             this.TaiKhoan_GBLoading.ResumeLayout(false);
@@ -2634,5 +2652,6 @@
         private ReaLTaiizor.Controls.AloneTextBox CTTK_TB_Email;
         private ReaLTaiizor.Controls.LabelEdit labelEdit8;
         private ReaLTaiizor.Controls.ForeverLabel TaiKhoan_L_IDNhanVien;
+        private ReaLTaiizor.Controls.DreamButton CTTK_B_QuayLai;
     }
 }

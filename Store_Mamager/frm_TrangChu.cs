@@ -9,6 +9,7 @@ using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
 using System.Text;
@@ -666,6 +667,7 @@ namespace Store_Manager
 
         #endregion
 
+
         #region Tab_TaiKhoan
 
         private NhanVien FunTaiKhoan_NhanVien_GB_ThonTin() // Trả về NhanVien trên GB_ThongTin
@@ -1003,6 +1005,8 @@ namespace Store_Manager
             GB_ChiTietTaiKhoan.BringToFront();
             GB_ChiTietTaiKhoan.Visible = true;
             TaiKhoan_GB_CTTK_LoadingData_Them();
+            
+
         }
 
         // TaiKhoan  Xóa Nhân viên !;
@@ -1149,6 +1153,7 @@ namespace Store_Manager
             CTTK_B_Thoat.Text = "Thoát !";
             CTTK_B_Thoat.ForeColor = Color.Red;
 
+            CTTK_B_QuayLai.Visible = false;
             CTTK_TB_PassWord.Visible = true;
             CTTK_TB_UserName.Visible = true;
             CTTK_L_HienThiMatKhau.Visible = true;
@@ -1249,7 +1254,9 @@ namespace Store_Manager
         {
             CTTK_B_Thoat.Text = "Cập nhật !";
             CTTK_B_Thoat.ForeColor = Color.Green;
-            
+
+            CTTK_B_QuayLai.Visible = true;
+            CTTK_B_QuayLai.Text = "Exit !";
             CTTK_TB_PassWord.Visible = false;
             CTTK_TB_UserName.Visible = false;
             CTTK_L_HienThiMatKhau.Visible = false;
@@ -1306,6 +1313,8 @@ namespace Store_Manager
             CTTK_B_Thoat.Text = "Thêm mới!";
             CTTK_B_Thoat.ForeColor = Color.Green;
 
+            CTTK_B_QuayLai.Visible = true;
+            CTTK_B_QuayLai.Text = "Exit !";
             CTTK_TB_PassWord.Visible = false;
             CTTK_TB_UserName.Visible = false;
             CTTK_L_HienThiMatKhau.Visible = false;
@@ -1485,7 +1494,21 @@ namespace Store_Manager
 
         }
 
+        private void CTTK_B_QuayLai_Click(object sender, EventArgs e)
+        {
+            var kQ = MessageBox.Show("Bạn có muốn thoát !" , "Thông báo !" , MessageBoxButtons.YesNo , MessageBoxIcon.Error);
+            if(kQ == DialogResult.Yes)
+            {
+                GB_ChiTietTaiKhoan.SendToBack();
+                TaiKhoan_GB_CTTK_LoadingData_Them();
+            }
+            else
+            {
+                return;
+            }
+        }
         #endregion
+
 
     }
 }
