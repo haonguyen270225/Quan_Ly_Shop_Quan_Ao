@@ -18,7 +18,7 @@ namespace DTO
             this.ID = -1;
             this.MaLoaiSanPham= "";
             this.TenLoai = "";
-            this.GioiTinh = -1; //Giới Tính : 1- đồ cho nam , 2 -- đồ  cho cả nam và nữ , 0 0 đồ cho nữ ; 
+            this.GioiTinh = -1; // Giới Tính : 1- đồ cho nam , 2 -- đồ  cho cả nam và nữ , 0 0 đồ cho nữ ; 
         }
     }
 }

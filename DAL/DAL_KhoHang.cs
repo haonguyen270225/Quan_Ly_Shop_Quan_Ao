@@ -141,5 +141,33 @@ namespace DAL
             conn.Close();
             return kQ;
         }
+
+
+        public int Insert_KhoHang(KhoHang khoHang)
+        {
+
+            int kQ = 1; //-- không thể delete sản phẩm có maHang;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand("sp_InsertKhoHang", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@MaHang",khoHang.MaHang);
+            sqlCommand.Parameters.AddWithValue("@TenHang",khoHang.TenHang);
+            sqlCommand.Parameters.AddWithValue("@SoLuongTon", khoHang.SoLuongTon);
+            sqlCommand.Parameters.AddWithValue("@Gia", khoHang.Gia);
+            sqlCommand.Parameters.AddWithValue("@IDSize", khoHang.IDSize);
+            sqlCommand.Parameters.AddWithValue("@IDLoaiSanPham", khoHang.IDLoaiSanPham);
+            sqlCommand.Parameters.Add("@HinhAnh", SqlDbType.VarBinary).Value =
+                  khoHang.HinhAnh != null ? (object)khoHang.HinhAnh : DBNull.Value;
+            // trả về int;
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+        }
     }
 }

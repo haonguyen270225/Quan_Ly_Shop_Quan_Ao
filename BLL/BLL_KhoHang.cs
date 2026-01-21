@@ -98,5 +98,20 @@ namespace BLL
                 }
             }
         }
+
+        public bool Insert_KhoHang(KhoHang khoHang ,  out string thongBao)
+        {
+            thongBao = "";
+            if(dal_KhoHang.Insert_KhoHang(khoHang) == 1)
+            {
+                thongBao = "Thêm sản phẩm không thành công ! \n Vui lòng thử lại !";
+                return false;
+            }
+            else
+            {
+                thongBao = "Thêm sản phẩm vào kho hàng thành công !";
+                return true;
+            }
+        }
     }
 }
