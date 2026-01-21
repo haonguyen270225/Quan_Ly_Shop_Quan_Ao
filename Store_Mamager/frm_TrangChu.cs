@@ -1192,8 +1192,6 @@ namespace Store_Manager
             }
            
         }
-
-
         //private void TaiKhoan_DGV_ListTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{
         //    if (e.RowIndex >= 0 && TaiKhoan_DGV_ListTaiKhoan.Columns[e.ColumnIndex].Name == "Reset")
@@ -1249,6 +1247,52 @@ namespace Store_Manager
         }
 
 
+//        var cellValue = TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells["HinhAnh"].Value;
+//        int iDNhanVien = Convert.ToInt32(TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells["IDNhanVien"].Value);
+//            foreach (TaiKhoan tK in listTaiKhoan)
+//            {
+//                foreach(NhanVien nV in listNhanVien)
+//                {
+//                    if(iDNhanVien == nV.ID && tK.IDNhanVien == iDNhanVien)
+//                    {
+//                        TaiKhoan_TB_Loading(tK , nV);
+//    }
+//}
+//            }
+            
+//            if (cellValue != null && cellValue != DBNull.Value)
+//{
+//    byte[] imgBytes = (byte[])cellValue;
+//    using (MemoryStream ms = new MemoryStream(imgBytes))
+//    {
+//        TaiKhoan_PB_AnhDaiDien.Image = Image.FromStream(ms);
+//    }
+//}
+//else
+//{
+//    TaiKhoan_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
+//}
+private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //BLL_LoadingData();
+            string cellValue = KhoHang_DGV_ListSanPham.SelectedRows[0].Cells["Mã Hàng"].Value.ToString();
+            if(cellValue.ToString() == null || cellValue.ToString() == "")
+            {
+                MessageBox.Show("Thông tin sản phẩm lỗi ! \n Vui lòng thử lại ! ", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           // bool res = false;
+            foreach (KhoHang item in listKhoHang)
+            {
+                if(item.MaHang == cellValue)
+                {
+
+                    KhoHang_LoadingThongTinSanPham(item);
+                    return;
+                }
+            }
+            MessageBox.Show("Thông tin sản phẩm lỗi ! \n Vui lòng thử lại ! ", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
         private void Show_DGVLoading(List<KhoHang> listKhoHang) 
         {
             if (listKhoHang == null)
@@ -1295,6 +1339,8 @@ namespace Store_Manager
                 //dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
                 KhoHang_DGV_ListSanPham.DataSource = dataTable;
+
+
             }
         
         
@@ -1318,7 +1364,7 @@ namespace Store_Manager
                 KhoHang_TB_MaHang.Text = khoHang.MaHang;
                 KhoHang_TB_TenHang.Text = khoHang.TenHang;
                 KhoHang_TB_SoLuongTon.Text = khoHang.SoLuongTon.ToString();
-
+                KhoHang_TB_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
                 LoaiSanPham tmpLoai = new LoaiSanPham();
                 bool kQLoai = false;
                 foreach(LoaiSanPham item in listLoaiSanPham)
@@ -1366,6 +1412,22 @@ namespace Store_Manager
                     string s = tmpSPSize.MaSize.ToString();
                     KhoHang_CB_Size.SelectedIndex = KhoHang_CB_Size.FindStringExact(s);
                 }
+
+                // Hinh ảnh;
+                if( khoHang.HinhAnh == null || khoHang.HinhAnh.Length <= 0 )
+                {
+                    KhoHang_PB_SanPham.Image = Properties.Resources.SPDefult;
+                    
+                }
+                else
+                {
+                    byte[] imgBytes = (byte[])khoHang.HinhAnh;
+                    using (MemoryStream ms = new MemoryStream(imgBytes))
+                    {
+                        KhoHang_PB_SanPham.Image = Image.FromStream(ms);
+                    }
+                }
+                KhoHang_PB_SanPham.SizeMode = PictureBoxSizeMode.Zoom;
 
             }
         }
@@ -1849,12 +1911,7 @@ namespace Store_Manager
         }
 
 
-        private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-             //BLL_LoadingData();
-             
-        }
-
+     
         #endregion
 
     }

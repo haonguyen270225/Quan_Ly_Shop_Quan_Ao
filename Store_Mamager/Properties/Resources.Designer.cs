@@ -213,46 +213,6 @@ namespace Store_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap line {
-            get {
-                object obj = ResourceManager.GetObject("line", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap line_10096963 {
-            get {
-                object obj = ResourceManager.GetObject("line_10096963", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap line10 {
-            get {
-                object obj = ResourceManager.GetObject("line10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap line2 {
-            get {
-                object obj = ResourceManager.GetObject("line2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap list_1289280 {
             get {
                 object obj = ResourceManager.GetObject("list_1289280", resourceCulture);
@@ -461,11 +421,12 @@ namespace Store_Manager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static string String1 {
+        public static System.Drawing.Bitmap SPDefult {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                object obj = ResourceManager.GetObject("SPDefult", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -139,9 +139,6 @@
   <data name="p_10819135" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p_10819135.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line_10096963" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line_10096963.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="magnifying-glass_10275878" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\magnifying-glass_10275878.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,9 +147,6 @@
   </data>
   <data name="setting_9376694" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting_9376694.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="line2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Trang_Chu_051" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trang_Chu_051.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,9 +223,6 @@
   <data name="cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_24dp_EA3323_FILL1_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo-shop-quan-ao-nam-14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-shop-quan-ao-nam-14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,9 +232,6 @@
   <data name="login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz242" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="revenue_2175584" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revenue_2175584.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -252,9 +240,6 @@
   </data>
   <data name="shopping-cart_791967" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping-cart_791967.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="line10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sync_10256187" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sync_10256187.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,5 +252,8 @@
   </data>
   <data name="list_1289280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list_1289280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SPDefult" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SPDefult.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
