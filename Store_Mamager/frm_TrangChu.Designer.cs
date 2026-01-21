@@ -210,6 +210,24 @@
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.objectAnimator1 = new ReaLTaiizor.Animate.Parrot.ObjectAnimator();
             this.hoaDonTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.HoaDonTableAdapter();
+            this.KhoHang_GB_SanPham = new ReaLTaiizor.Controls.ForeverGroupBox();
+            this.KhoHang_B_GBSanPam_XacNhan = new ReaLTaiizor.Controls.LostButton();
+            this.KhoHang_B_GBSanPam_Thoat = new ReaLTaiizor.Controls.LostButton();
+            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.KhoHang_TB_GBSP_MaHang = new ReaLTaiizor.Controls.SmallTextBox();
+            this.KhoHang_TB_GBSP_TenHang = new ReaLTaiizor.Controls.SmallTextBox();
+            this.KhoHang_TB_GBSP_GiaBan = new ReaLTaiizor.Controls.SmallTextBox();
+            this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.KhoHang_CB_GBSP_Loai = new ReaLTaiizor.Controls.CrownComboBox();
+            this.KhoHang_CB_GBSP_Size = new ReaLTaiizor.Controls.CrownComboBox();
+            this.KhoHang_TB_GBSP_SoLuong = new ReaLTaiizor.Controls.SmallTextBox();
+            this.KhoHang_RB_GBSP_Nam = new ReaLTaiizor.Controls.FoxRadioButton();
+            this.KhoHang_RB_GBSP_Nu = new ReaLTaiizor.Controls.FoxRadioButton();
+            this.KhoHang_RB_GBSP_NamVaNu = new ReaLTaiizor.Controls.FoxRadioButton();
             this.foreverForm1.SuspendLayout();
             this.crownGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hopePictureBox1)).BeginInit();
@@ -245,6 +263,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TaiKhoan_PB_AnhDaiDien)).BeginInit();
             this.GB_ChiTietTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).BeginInit();
+            this.KhoHang_GB_SanPham.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -1462,6 +1481,7 @@
             // 
             this.parrotGroupBox2.BorderColor = System.Drawing.Color.SlateGray;
             this.parrotGroupBox2.BorderWidth = 4;
+            this.parrotGroupBox2.Controls.Add(this.KhoHang_GB_SanPham);
             this.parrotGroupBox2.Controls.Add(this.KhoHang_CB_GioiTinh);
             this.parrotGroupBox2.Controls.Add(this.foxLabel19);
             this.parrotGroupBox2.Controls.Add(this.KhoHang_CB_Size);
@@ -1482,6 +1502,7 @@
             this.parrotGroupBox2.Controls.Add(this.foxLabel16);
             this.parrotGroupBox2.Controls.Add(this.foxLabel15);
             this.parrotGroupBox2.Controls.Add(this.foxLabel14);
+            this.parrotGroupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parrotGroupBox2.Location = new System.Drawing.Point(3, 3);
             this.parrotGroupBox2.Name = "parrotGroupBox2";
             this.parrotGroupBox2.ShowText = true;
@@ -1501,9 +1522,9 @@
             this.KhoHang_CB_GioiTinh.FormattingEnabled = true;
             this.KhoHang_CB_GioiTinh.Items.AddRange(new object[] {
             "Mã quần áo !"});
-            this.KhoHang_CB_GioiTinh.Location = new System.Drawing.Point(1185, 20);
+            this.KhoHang_CB_GioiTinh.Location = new System.Drawing.Point(1158, 35);
             this.KhoHang_CB_GioiTinh.Name = "KhoHang_CB_GioiTinh";
-            this.KhoHang_CB_GioiTinh.Size = new System.Drawing.Size(120, 35);
+            this.KhoHang_CB_GioiTinh.Size = new System.Drawing.Size(147, 35);
             this.KhoHang_CB_GioiTinh.TabIndex = 25;
             // 
             // foxLabel19
@@ -1512,7 +1533,7 @@
             this.foxLabel19.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel19.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.foxLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel19.Location = new System.Drawing.Point(1109, 24);
+            this.foxLabel19.Location = new System.Drawing.Point(1099, 39);
             this.foxLabel19.Name = "foxLabel19";
             this.foxLabel19.Size = new System.Drawing.Size(53, 40);
             this.foxLabel19.TabIndex = 24;
@@ -1528,7 +1549,7 @@
             this.KhoHang_CB_Size.FormattingEnabled = true;
             this.KhoHang_CB_Size.Items.AddRange(new object[] {
             "Mã quần áo !"});
-            this.KhoHang_CB_Size.Location = new System.Drawing.Point(942, 20);
+            this.KhoHang_CB_Size.Location = new System.Drawing.Point(942, 35);
             this.KhoHang_CB_Size.Name = "KhoHang_CB_Size";
             this.KhoHang_CB_Size.Size = new System.Drawing.Size(120, 35);
             this.KhoHang_CB_Size.TabIndex = 23;
@@ -1581,6 +1602,7 @@
             this.KhoHang_B_Them.TextColor = System.Drawing.Color.DarkOliveGreen;
             this.KhoHang_B_Them.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.KhoHang_B_Them.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.KhoHang_B_Them.Click += new System.EventHandler(this.KhoHang_B_Them_Click);
             // 
             // KhoHang_CB_Loai
             // 
@@ -1636,7 +1658,7 @@
             this.KhoHang_TB_Gia.Image = null;
             this.KhoHang_TB_Gia.IsDerivedStyle = true;
             this.KhoHang_TB_Gia.Lines = null;
-            this.KhoHang_TB_Gia.Location = new System.Drawing.Point(595, 160);
+            this.KhoHang_TB_Gia.Location = new System.Drawing.Point(595, 174);
             this.KhoHang_TB_Gia.MaxLength = 32767;
             this.KhoHang_TB_Gia.Multiline = false;
             this.KhoHang_TB_Gia.Name = "KhoHang_TB_Gia";
@@ -1666,7 +1688,7 @@
             this.KhoHang_TB_SoLuongTon.Image = null;
             this.KhoHang_TB_SoLuongTon.IsDerivedStyle = true;
             this.KhoHang_TB_SoLuongTon.Lines = null;
-            this.KhoHang_TB_SoLuongTon.Location = new System.Drawing.Point(595, 116);
+            this.KhoHang_TB_SoLuongTon.Location = new System.Drawing.Point(595, 130);
             this.KhoHang_TB_SoLuongTon.MaxLength = 32767;
             this.KhoHang_TB_SoLuongTon.Multiline = false;
             this.KhoHang_TB_SoLuongTon.Name = "KhoHang_TB_SoLuongTon";
@@ -1696,7 +1718,7 @@
             this.KhoHang_TB_TenHang.Image = null;
             this.KhoHang_TB_TenHang.IsDerivedStyle = true;
             this.KhoHang_TB_TenHang.Lines = null;
-            this.KhoHang_TB_TenHang.Location = new System.Drawing.Point(595, 71);
+            this.KhoHang_TB_TenHang.Location = new System.Drawing.Point(595, 85);
             this.KhoHang_TB_TenHang.MaxLength = 32767;
             this.KhoHang_TB_TenHang.Multiline = false;
             this.KhoHang_TB_TenHang.Name = "KhoHang_TB_TenHang";
@@ -1726,7 +1748,7 @@
             this.KhoHang_TB_MaHang.Image = null;
             this.KhoHang_TB_MaHang.IsDerivedStyle = true;
             this.KhoHang_TB_MaHang.Lines = null;
-            this.KhoHang_TB_MaHang.Location = new System.Drawing.Point(595, 20);
+            this.KhoHang_TB_MaHang.Location = new System.Drawing.Point(595, 44);
             this.KhoHang_TB_MaHang.MaxLength = 32767;
             this.KhoHang_TB_MaHang.Multiline = false;
             this.KhoHang_TB_MaHang.Name = "KhoHang_TB_MaHang";
@@ -1824,7 +1846,7 @@
             this.foxLabel18.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel18.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.foxLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel18.Location = new System.Drawing.Point(871, 24);
+            this.foxLabel18.Location = new System.Drawing.Point(871, 39);
             this.foxLabel18.Name = "foxLabel18";
             this.foxLabel18.Size = new System.Drawing.Size(53, 40);
             this.foxLabel18.TabIndex = 15;
@@ -1836,7 +1858,7 @@
             this.foxLabel17.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.foxLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel17.Location = new System.Drawing.Point(440, 160);
+            this.foxLabel17.Location = new System.Drawing.Point(440, 174);
             this.foxLabel17.Name = "foxLabel17";
             this.foxLabel17.Size = new System.Drawing.Size(53, 40);
             this.foxLabel17.TabIndex = 13;
@@ -1848,7 +1870,7 @@
             this.foxLabel16.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.foxLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel16.Location = new System.Drawing.Point(439, 121);
+            this.foxLabel16.Location = new System.Drawing.Point(439, 135);
             this.foxLabel16.Name = "foxLabel16";
             this.foxLabel16.Size = new System.Drawing.Size(131, 40);
             this.foxLabel16.TabIndex = 12;
@@ -1860,7 +1882,7 @@
             this.foxLabel15.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel15.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.foxLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel15.Location = new System.Drawing.Point(439, 68);
+            this.foxLabel15.Location = new System.Drawing.Point(439, 82);
             this.foxLabel15.Name = "foxLabel15";
             this.foxLabel15.Size = new System.Drawing.Size(131, 40);
             this.foxLabel15.TabIndex = 11;
@@ -1872,7 +1894,7 @@
             this.foxLabel14.BackColor = System.Drawing.Color.Transparent;
             this.foxLabel14.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.foxLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.foxLabel14.Location = new System.Drawing.Point(439, 24);
+            this.foxLabel14.Location = new System.Drawing.Point(439, 38);
             this.foxLabel14.Name = "foxLabel14";
             this.foxLabel14.Size = new System.Drawing.Size(94, 40);
             this.foxLabel14.TabIndex = 10;
@@ -3214,6 +3236,319 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
+            // KhoHang_GB_SanPham
+            // 
+            this.KhoHang_GB_SanPham.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.KhoHang_GB_SanPham.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.KhoHang_GB_SanPham.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_GB_SanPham.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_RB_GBSP_NamVaNu);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_RB_GBSP_Nu);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_RB_GBSP_Nam);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_TB_GBSP_SoLuong);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_CB_GBSP_Size);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_CB_GBSP_Loai);
+            this.KhoHang_GB_SanPham.Controls.Add(this.dungeonLabel4);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_TB_GBSP_GiaBan);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_TB_GBSP_TenHang);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_TB_GBSP_MaHang);
+            this.KhoHang_GB_SanPham.Controls.Add(this.dungeonLabel6);
+            this.KhoHang_GB_SanPham.Controls.Add(this.dungeonLabel5);
+            this.KhoHang_GB_SanPham.Controls.Add(this.dungeonLabel3);
+            this.KhoHang_GB_SanPham.Controls.Add(this.dungeonLabel2);
+            this.KhoHang_GB_SanPham.Controls.Add(this.dungeonLabel1);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_B_GBSanPam_Thoat);
+            this.KhoHang_GB_SanPham.Controls.Add(this.KhoHang_B_GBSanPam_XacNhan);
+            this.KhoHang_GB_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KhoHang_GB_SanPham.Enabled = false;
+            this.KhoHang_GB_SanPham.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.KhoHang_GB_SanPham.Location = new System.Drawing.Point(3, 30);
+            this.KhoHang_GB_SanPham.Name = "KhoHang_GB_SanPham";
+            this.KhoHang_GB_SanPham.ShowArrow = true;
+            this.KhoHang_GB_SanPham.ShowText = true;
+            this.KhoHang_GB_SanPham.Size = new System.Drawing.Size(1316, 216);
+            this.KhoHang_GB_SanPham.TabIndex = 26;
+            this.KhoHang_GB_SanPham.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.KhoHang_GB_SanPham.Visible = false;
+            // 
+            // KhoHang_B_GBSanPam_XacNhan
+            // 
+            this.KhoHang_B_GBSanPam_XacNhan.BackColor = System.Drawing.Color.Green;
+            this.KhoHang_B_GBSanPam_XacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KhoHang_B_GBSanPam_XacNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_B_GBSanPam_XacNhan.ForeColor = System.Drawing.Color.White;
+            this.KhoHang_B_GBSanPam_XacNhan.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.KhoHang_B_GBSanPam_XacNhan.Image = null;
+            this.KhoHang_B_GBSanPam_XacNhan.Location = new System.Drawing.Point(1182, 157);
+            this.KhoHang_B_GBSanPam_XacNhan.Name = "KhoHang_B_GBSanPam_XacNhan";
+            this.KhoHang_B_GBSanPam_XacNhan.Size = new System.Drawing.Size(120, 40);
+            this.KhoHang_B_GBSanPam_XacNhan.TabIndex = 4;
+            this.KhoHang_B_GBSanPam_XacNhan.Text = "Xác nhận !";
+            this.KhoHang_B_GBSanPam_XacNhan.Click += new System.EventHandler(this.KhoHang_B_GBSanPam_XacNhan_Click);
+            // 
+            // KhoHang_B_GBSanPam_Thoat
+            // 
+            this.KhoHang_B_GBSanPam_Thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.KhoHang_B_GBSanPam_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KhoHang_B_GBSanPam_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_B_GBSanPam_Thoat.ForeColor = System.Drawing.Color.DimGray;
+            this.KhoHang_B_GBSanPam_Thoat.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.KhoHang_B_GBSanPam_Thoat.Image = null;
+            this.KhoHang_B_GBSanPam_Thoat.Location = new System.Drawing.Point(1044, 157);
+            this.KhoHang_B_GBSanPam_Thoat.Name = "KhoHang_B_GBSanPam_Thoat";
+            this.KhoHang_B_GBSanPam_Thoat.Size = new System.Drawing.Size(120, 40);
+            this.KhoHang_B_GBSanPam_Thoat.TabIndex = 6;
+            this.KhoHang_B_GBSanPam_Thoat.Text = "Thoát !";
+            this.KhoHang_B_GBSanPam_Thoat.Click += new System.EventHandler(this.KhoHang_B_GBSanPam_Thoat_Click);
+            // 
+            // dungeonLabel1
+            // 
+            this.dungeonLabel1.AutoSize = true;
+            this.dungeonLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel1.ForeColor = System.Drawing.Color.White;
+            this.dungeonLabel1.Location = new System.Drawing.Point(18, 25);
+            this.dungeonLabel1.Name = "dungeonLabel1";
+            this.dungeonLabel1.Size = new System.Drawing.Size(106, 28);
+            this.dungeonLabel1.TabIndex = 7;
+            this.dungeonLabel1.Text = "Mã hàng :";
+            // 
+            // dungeonLabel2
+            // 
+            this.dungeonLabel2.AutoSize = true;
+            this.dungeonLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel2.ForeColor = System.Drawing.Color.White;
+            this.dungeonLabel2.Location = new System.Drawing.Point(18, 79);
+            this.dungeonLabel2.Name = "dungeonLabel2";
+            this.dungeonLabel2.Size = new System.Drawing.Size(136, 35);
+            this.dungeonLabel2.TabIndex = 8;
+            this.dungeonLabel2.Text = "Tên hàng :";
+            // 
+            // dungeonLabel3
+            // 
+            this.dungeonLabel3.AutoSize = true;
+            this.dungeonLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel3.ForeColor = System.Drawing.Color.White;
+            this.dungeonLabel3.Location = new System.Drawing.Point(18, 145);
+            this.dungeonLabel3.Name = "dungeonLabel3";
+            this.dungeonLabel3.Size = new System.Drawing.Size(119, 35);
+            this.dungeonLabel3.TabIndex = 9;
+            this.dungeonLabel3.Text = "Giá bán :";
+            // 
+            // dungeonLabel5
+            // 
+            this.dungeonLabel5.AutoSize = true;
+            this.dungeonLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel5.ForeColor = System.Drawing.Color.White;
+            this.dungeonLabel5.Location = new System.Drawing.Point(554, 70);
+            this.dungeonLabel5.Name = "dungeonLabel5";
+            this.dungeonLabel5.Size = new System.Drawing.Size(61, 28);
+            this.dungeonLabel5.TabIndex = 11;
+            this.dungeonLabel5.Text = "Size :";
+            // 
+            // dungeonLabel6
+            // 
+            this.dungeonLabel6.AutoSize = true;
+            this.dungeonLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel6.ForeColor = System.Drawing.Color.White;
+            this.dungeonLabel6.Location = new System.Drawing.Point(554, 21);
+            this.dungeonLabel6.Name = "dungeonLabel6";
+            this.dungeonLabel6.Size = new System.Drawing.Size(94, 28);
+            this.dungeonLabel6.TabIndex = 12;
+            this.dungeonLabel6.Text = "Mã loại :";
+            // 
+            // KhoHang_TB_GBSP_MaHang
+            // 
+            this.KhoHang_TB_GBSP_MaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KhoHang_TB_GBSP_MaHang.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_TB_GBSP_MaHang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_TB_GBSP_MaHang.CustomBGColor = System.Drawing.Color.White;
+            this.KhoHang_TB_GBSP_MaHang.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_TB_GBSP_MaHang.ForeColor = System.Drawing.Color.DimGray;
+            this.KhoHang_TB_GBSP_MaHang.Location = new System.Drawing.Point(134, 15);
+            this.KhoHang_TB_GBSP_MaHang.MaxLength = 32767;
+            this.KhoHang_TB_GBSP_MaHang.Multiline = false;
+            this.KhoHang_TB_GBSP_MaHang.Name = "KhoHang_TB_GBSP_MaHang";
+            this.KhoHang_TB_GBSP_MaHang.ReadOnly = false;
+            this.KhoHang_TB_GBSP_MaHang.Size = new System.Drawing.Size(316, 43);
+            this.KhoHang_TB_GBSP_MaHang.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.KhoHang_TB_GBSP_MaHang.TabIndex = 28;
+            this.KhoHang_TB_GBSP_MaHang.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.KhoHang_TB_GBSP_MaHang.UseSystemPasswordChar = false;
+            // 
+            // KhoHang_TB_GBSP_TenHang
+            // 
+            this.KhoHang_TB_GBSP_TenHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KhoHang_TB_GBSP_TenHang.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_TB_GBSP_TenHang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_TB_GBSP_TenHang.CustomBGColor = System.Drawing.Color.White;
+            this.KhoHang_TB_GBSP_TenHang.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_TB_GBSP_TenHang.ForeColor = System.Drawing.Color.DimGray;
+            this.KhoHang_TB_GBSP_TenHang.Location = new System.Drawing.Point(130, 74);
+            this.KhoHang_TB_GBSP_TenHang.MaxLength = 32767;
+            this.KhoHang_TB_GBSP_TenHang.Multiline = false;
+            this.KhoHang_TB_GBSP_TenHang.Name = "KhoHang_TB_GBSP_TenHang";
+            this.KhoHang_TB_GBSP_TenHang.ReadOnly = false;
+            this.KhoHang_TB_GBSP_TenHang.Size = new System.Drawing.Size(372, 43);
+            this.KhoHang_TB_GBSP_TenHang.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.KhoHang_TB_GBSP_TenHang.TabIndex = 29;
+            this.KhoHang_TB_GBSP_TenHang.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.KhoHang_TB_GBSP_TenHang.UseSystemPasswordChar = false;
+            // 
+            // KhoHang_TB_GBSP_GiaBan
+            // 
+            this.KhoHang_TB_GBSP_GiaBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KhoHang_TB_GBSP_GiaBan.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_TB_GBSP_GiaBan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_TB_GBSP_GiaBan.CustomBGColor = System.Drawing.Color.White;
+            this.KhoHang_TB_GBSP_GiaBan.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_TB_GBSP_GiaBan.ForeColor = System.Drawing.Color.DimGray;
+            this.KhoHang_TB_GBSP_GiaBan.Location = new System.Drawing.Point(130, 136);
+            this.KhoHang_TB_GBSP_GiaBan.MaxLength = 32767;
+            this.KhoHang_TB_GBSP_GiaBan.Multiline = false;
+            this.KhoHang_TB_GBSP_GiaBan.Name = "KhoHang_TB_GBSP_GiaBan";
+            this.KhoHang_TB_GBSP_GiaBan.ReadOnly = false;
+            this.KhoHang_TB_GBSP_GiaBan.Size = new System.Drawing.Size(372, 43);
+            this.KhoHang_TB_GBSP_GiaBan.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.KhoHang_TB_GBSP_GiaBan.TabIndex = 30;
+            this.KhoHang_TB_GBSP_GiaBan.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.KhoHang_TB_GBSP_GiaBan.UseSystemPasswordChar = false;
+           
+            // 
+            // dungeonLabel4
+            // 
+            this.dungeonLabel4.AutoSize = true;
+            this.dungeonLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel4.ForeColor = System.Drawing.Color.White;
+            this.dungeonLabel4.Location = new System.Drawing.Point(554, 126);
+            this.dungeonLabel4.Name = "dungeonLabel4";
+            this.dungeonLabel4.Size = new System.Drawing.Size(146, 28);
+            this.dungeonLabel4.TabIndex = 31;
+            this.dungeonLabel4.Text = "Số lượng tồn :";
+            // 
+            // KhoHang_CB_GBSP_Loai
+            // 
+            this.KhoHang_CB_GBSP_Loai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KhoHang_CB_GBSP_Loai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.KhoHang_CB_GBSP_Loai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_CB_GBSP_Loai.FormattingEnabled = true;
+            this.KhoHang_CB_GBSP_Loai.Items.AddRange(new object[] {
+            "Mã quần áo !"});
+            this.KhoHang_CB_GBSP_Loai.Location = new System.Drawing.Point(678, 21);
+            this.KhoHang_CB_GBSP_Loai.Name = "KhoHang_CB_GBSP_Loai";
+            this.KhoHang_CB_GBSP_Loai.Size = new System.Drawing.Size(356, 35);
+            this.KhoHang_CB_GBSP_Loai.TabIndex = 32;
+            // 
+            // KhoHang_CB_GBSP_Size
+            // 
+            this.KhoHang_CB_GBSP_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KhoHang_CB_GBSP_Size.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.KhoHang_CB_GBSP_Size.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_CB_GBSP_Size.FormattingEnabled = true;
+            this.KhoHang_CB_GBSP_Size.Items.AddRange(new object[] {
+            "Mã quần áo !"});
+            this.KhoHang_CB_GBSP_Size.Location = new System.Drawing.Point(678, 72);
+            this.KhoHang_CB_GBSP_Size.Name = "KhoHang_CB_GBSP_Size";
+            this.KhoHang_CB_GBSP_Size.Size = new System.Drawing.Size(267, 35);
+            this.KhoHang_CB_GBSP_Size.TabIndex = 33;
+            // 
+            // KhoHang_TB_GBSP_SoLuong
+            // 
+            this.KhoHang_TB_GBSP_SoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KhoHang_TB_GBSP_SoLuong.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_TB_GBSP_SoLuong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_TB_GBSP_SoLuong.CustomBGColor = System.Drawing.Color.White;
+            this.KhoHang_TB_GBSP_SoLuong.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHang_TB_GBSP_SoLuong.ForeColor = System.Drawing.Color.DimGray;
+            this.KhoHang_TB_GBSP_SoLuong.Location = new System.Drawing.Point(713, 120);
+            this.KhoHang_TB_GBSP_SoLuong.MaxLength = 32767;
+            this.KhoHang_TB_GBSP_SoLuong.Multiline = false;
+            this.KhoHang_TB_GBSP_SoLuong.Name = "KhoHang_TB_GBSP_SoLuong";
+            this.KhoHang_TB_GBSP_SoLuong.ReadOnly = false;
+            this.KhoHang_TB_GBSP_SoLuong.Size = new System.Drawing.Size(86, 43);
+            this.KhoHang_TB_GBSP_SoLuong.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.KhoHang_TB_GBSP_SoLuong.TabIndex = 34;
+            this.KhoHang_TB_GBSP_SoLuong.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.KhoHang_TB_GBSP_SoLuong.UseSystemPasswordChar = false;
+
+            // 
+            // KhoHang_RB_GBSP_Nam
+            // 
+            this.KhoHang_RB_GBSP_Nam.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_RB_GBSP_Nam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.KhoHang_RB_GBSP_Nam.Checked = true;
+            this.KhoHang_RB_GBSP_Nam.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.KhoHang_RB_GBSP_Nam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KhoHang_RB_GBSP_Nam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.KhoHang_RB_GBSP_Nam.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_RB_GBSP_Nam.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.KhoHang_RB_GBSP_Nam.EnabledCalc = true;
+            this.KhoHang_RB_GBSP_Nam.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.KhoHang_RB_GBSP_Nam.ForeColor = System.Drawing.Color.White;
+            this.KhoHang_RB_GBSP_Nam.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.KhoHang_RB_GBSP_Nam.Location = new System.Drawing.Point(562, 174);
+            this.KhoHang_RB_GBSP_Nam.Name = "KhoHang_RB_GBSP_Nam";
+            this.KhoHang_RB_GBSP_Nam.Size = new System.Drawing.Size(97, 21);
+            this.KhoHang_RB_GBSP_Nam.TabIndex = 35;
+            this.KhoHang_RB_GBSP_Nam.Text = "Nam";
+            // 
+            // KhoHang_RB_GBSP_Nu
+            // 
+            this.KhoHang_RB_GBSP_Nu.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_RB_GBSP_Nu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.KhoHang_RB_GBSP_Nu.Checked = false;
+            this.KhoHang_RB_GBSP_Nu.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.KhoHang_RB_GBSP_Nu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KhoHang_RB_GBSP_Nu.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.KhoHang_RB_GBSP_Nu.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_RB_GBSP_Nu.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.KhoHang_RB_GBSP_Nu.EnabledCalc = true;
+            this.KhoHang_RB_GBSP_Nu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.KhoHang_RB_GBSP_Nu.ForeColor = System.Drawing.Color.White;
+            this.KhoHang_RB_GBSP_Nu.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.KhoHang_RB_GBSP_Nu.Location = new System.Drawing.Point(699, 177);
+            this.KhoHang_RB_GBSP_Nu.Name = "KhoHang_RB_GBSP_Nu";
+            this.KhoHang_RB_GBSP_Nu.Size = new System.Drawing.Size(90, 21);
+            this.KhoHang_RB_GBSP_Nu.TabIndex = 36;
+            this.KhoHang_RB_GBSP_Nu.Text = "Nữ";
+            // 
+            // KhoHang_RB_GBSP_NamVaNu
+            // 
+            this.KhoHang_RB_GBSP_NamVaNu.BackColor = System.Drawing.Color.Transparent;
+            this.KhoHang_RB_GBSP_NamVaNu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.KhoHang_RB_GBSP_NamVaNu.Checked = false;
+            this.KhoHang_RB_GBSP_NamVaNu.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.KhoHang_RB_GBSP_NamVaNu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KhoHang_RB_GBSP_NamVaNu.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.KhoHang_RB_GBSP_NamVaNu.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.KhoHang_RB_GBSP_NamVaNu.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.KhoHang_RB_GBSP_NamVaNu.EnabledCalc = true;
+            this.KhoHang_RB_GBSP_NamVaNu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.KhoHang_RB_GBSP_NamVaNu.ForeColor = System.Drawing.Color.White;
+            this.KhoHang_RB_GBSP_NamVaNu.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
+            this.KhoHang_RB_GBSP_NamVaNu.Location = new System.Drawing.Point(790, 177);
+            this.KhoHang_RB_GBSP_NamVaNu.Name = "KhoHang_RB_GBSP_NamVaNu";
+            this.KhoHang_RB_GBSP_NamVaNu.Size = new System.Drawing.Size(155, 21);
+            this.KhoHang_RB_GBSP_NamVaNu.TabIndex = 37;
+            this.KhoHang_RB_GBSP_NamVaNu.Text = "Cả Nam và Nữ";
+            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -3251,7 +3586,6 @@
             this.tab_HoaDon.PerformLayout();
             this.lostPanel1.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
-            this.parrotGroupBox1.PerformLayout();
             this.tab_KhoHang.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KhoHang_DGV_ListSanPham)).EndInit();
@@ -3274,6 +3608,8 @@
             this.GB_ChiTietTaiKhoan.ResumeLayout(false);
             this.GB_ChiTietTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTTK_PB_AnhDaiDien)).EndInit();
+            this.KhoHang_GB_SanPham.ResumeLayout(false);
+            this.KhoHang_GB_SanPham.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3447,5 +3783,23 @@
         private System.Windows.Forms.DataGridView KhoHang_DGV_ListSanPham;
         private ReaLTaiizor.Controls.ParrotButton KhoHang_B_InDanhSach;
         private ReaLTaiizor.Controls.ParrotButton KhoHang_B_Loading;
+        private ReaLTaiizor.Controls.ForeverGroupBox KhoHang_GB_SanPham;
+        private ReaLTaiizor.Controls.LostButton KhoHang_B_GBSanPam_XacNhan;
+        private ReaLTaiizor.Controls.LostButton KhoHang_B_GBSanPam_Thoat;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
+        private ReaLTaiizor.Controls.SmallTextBox KhoHang_TB_GBSP_GiaBan;
+        private ReaLTaiizor.Controls.SmallTextBox KhoHang_TB_GBSP_TenHang;
+        private ReaLTaiizor.Controls.SmallTextBox KhoHang_TB_GBSP_MaHang;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel6;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel5;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
+        private ReaLTaiizor.Controls.FoxRadioButton KhoHang_RB_GBSP_NamVaNu;
+        private ReaLTaiizor.Controls.FoxRadioButton KhoHang_RB_GBSP_Nu;
+        private ReaLTaiizor.Controls.FoxRadioButton KhoHang_RB_GBSP_Nam;
+        private ReaLTaiizor.Controls.SmallTextBox KhoHang_TB_GBSP_SoLuong;
+        private ReaLTaiizor.Controls.CrownComboBox KhoHang_CB_GBSP_Size;
+        private ReaLTaiizor.Controls.CrownComboBox KhoHang_CB_GBSP_Loai;
     }
 }

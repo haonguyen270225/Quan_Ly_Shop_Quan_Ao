@@ -1131,7 +1131,7 @@ namespace Store_Manager
             //Giới Tính;
             KhoHang_CB_GioiTinh.Items.Add("Nữ");
             KhoHang_CB_GioiTinh.Items.Add("Nam");
-
+            KhoHang_CB_GioiTinh.Items.Add("Cả Nam và Nữ");
 
             KhoHang_CB_TimKiem.SelectedIndex = 0;
             KhoHang_CB_GioiTinh.SelectedIndex = 0;
@@ -1385,8 +1385,9 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 }
                 else
                 {
-                    if(tmpLoai.GioiTinh == 0) KhoHang_CB_GioiTinh.SelectedIndex = 0;
-                    else KhoHang_CB_GioiTinh.SelectedIndex = 1;
+                    if (tmpLoai.GioiTinh == 0) KhoHang_CB_GioiTinh.SelectedIndex = 0;
+                    else if (tmpLoai.GioiTinh == 0) KhoHang_CB_GioiTinh.SelectedIndex = 1;
+                    else KhoHang_CB_GioiTinh.SelectedIndex = 2;
                     string s = tmpLoai.MaLoaiSanPham + "-" +  tmpLoai.TenLoai;
                     KhoHang_CB_Loai.SelectedIndex = KhoHang_CB_Loai.FindStringExact(s);
                     
@@ -2034,9 +2035,103 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         }
 
+
+
+
         #endregion
 
-        
+
+        private void KhoHang_B_Them_Click(object sender, EventArgs e)
+        {
+            KhoHang_GB_SanPham.Visible = true;
+            KhoHang_GB_SanPham.Enabled = true;
+            KhoHang_GB_SanPham.BringToFront();
+            KhoHang_TB_GBSP_MaHang.Text = "";
+            KhoHang_TB_GBSP_TenHang.Text = "";
+            KhoHang_TB_GBSP_GiaBan.Text = "0";
+            KhoHang_TB_GBSP_SoLuong.Text = "0";
+
+            KhoHang_CB_GBSP_Loai.Items.Clear();
+            KhoHang_CB_GBSP_Size.Items.Clear();
+            BLL_LoadingData();
+            foreach(LoaiSanPham item in listLoaiSanPham)
+            {
+                KhoHang_CB_GBSP_Loai.Items.Add(item.MaLoaiSanPham + "-" + item.TenLoai);
+            }
+            foreach(SPSize item in listSPSize)
+            {
+                KhoHang_CB_GBSP_Size.Items.Add(item.MaSize);
+            }
+            KhoHang_CB_GBSP_Size.SelectedIndex = 0;
+            KhoHang_CB_GBSP_Loai.SelectedIndex = 0;
+
+            KhoHang_RB_GBSP_Nam.Checked = true;
+            KhoHang_RB_GBSP_Nu.Checked = false;
+            KhoHang_RB_GBSP_NamVaNu.Checked = false;
+        }
+
+        private void KhoHang_B_GBSanPam_Thoat_Click(object sender, EventArgs e)
+        {
+            var qes = MessageBox.Show("Bạn có muốn thoát !", "Thông báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (qes == DialogResult.Yes)
+            {
+                KhoHang_GB_SanPham.Visible = false;
+                KhoHang_GB_SanPham.Enabled = false;
+                KhoHang_GB_SanPham.SendToBack();
+                KhoHang_TB_GBSP_MaHang.Text = "";
+                KhoHang_TB_GBSP_TenHang.Text = "";
+                KhoHang_TB_GBSP_GiaBan.Text = "0";
+                KhoHang_TB_GBSP_SoLuong.Text = "0";
+
+                KhoHang_CB_GBSP_Loai.Items.Clear();
+                KhoHang_CB_GBSP_Size.Items.Clear();
+            }
+            else
+            {
+                return;
+            }
+           
+        }
+
+        private void KhoHang_B_GBSanPam_XacNhan_Click(object sender, EventArgs e)
+        {
+            KhoHang khoHangAdd = new KhoHang();
+            khoHangAdd.MaHang = KhoHang_TB_MaHang.Text;
+            khoHangAdd.TenHang = KhoHang_TB_GBSP_TenHang.Text;
+            khoHangAdd.Gia = Convert.ToDouble(KhoHang_TB_GBSP_GiaBan.Text);
+            khoHangAdd.SoLuongTon = Convert.ToInt16(KhoHang_TB_GBSP_SoLuong.Text);
+            //foreach(SPSize item in listSPSize)
+            //{
+            //    if()
+            //}
+        }
+
+      
+
+        //private void KhoHang_B_Them_Click(object sender, EventArgs e)
+        //{
+        //    KhoHang_GB_SanPham.Visible = true;
+        //    KhoHang_GB_SanPham.Enabled = true;
+        //    KhoHang_GB_SanPham.BringToFront();
+
+
+
+        //}
+
+        //private void TaiKhoan_B_ThoatGBSanPham_Click(object sender, EventArgs e)
+        //{
+        //    var qes = MessageBox.Show("Bạn có muốn thoát !", "Xác nhận !", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //    if(qes == DialogResult.Yes)
+        //    {
+        //        KhoHang_GB_SanPham.Visible = false;
+        //        KhoHang_GB_SanPham.Enabled = false;
+        //        KhoHang_GB_SanPham.SendToBack();
+        //    }
+        //    else
+        //    {
+        //        return;
+        //    }
+        //}
     }
 }
 #region Demo
