@@ -93,5 +93,34 @@ namespace DAL
             return kQ;
         }
 
+
+        public int UpdateHinhAnh(string maHang , byte[] hinhAnh)
+        {
+            int kQ = 1; // cập nhật không thành công;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand(@"sp_UpdateHinhAnhKhoHang", conn);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            sqlCommand.Parameters.AddWithValue("@MaHang", maHang);
+            
+            if(hinhAnh == null || hinhAnh.Length <= 0)
+            {
+                sqlCommand.Parameters.AddWithValue("@HinhAnh", DBNull.Value);
+            }
+            else
+            {
+                sqlCommand.Parameters.AddWithValue("@HinhAnh" , hinhAnh);
+            }
+
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+        }
     }
 }

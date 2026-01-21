@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.SanPham_GB = new ReaLTaiizor.Controls.ParrotGroupBox();
             this.SanPham_PB_HetHang = new ReaLTaiizor.Controls.HopePictureBox();
+            this.SanPham_PB_Anh = new System.Windows.Forms.PictureBox();
             this.SanPham_L = new ReaLTaiizor.Controls.BigLabel();
             this.SanPham_L_Gia = new ReaLTaiizor.Controls.BigLabel();
-            this.UC_PB_2 = new System.Windows.Forms.PictureBox();
             this.quan_Ly_Shop_Quan_AoDataSet = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSet();
             this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sizeTableAdapter = new Store_Manager.Quan_Ly_Shop_Quan_AoDataSetTableAdapters.SizeTableAdapter();
             this.SanPham_GB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SanPham_PB_HetHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UC_PB_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SanPham_PB_Anh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.SanPham_GB.BorderColor = System.Drawing.Color.LightCyan;
             this.SanPham_GB.BorderWidth = 3;
             this.SanPham_GB.Controls.Add(this.SanPham_PB_HetHang);
-            this.SanPham_GB.Controls.Add(this.UC_PB_2);
+            this.SanPham_GB.Controls.Add(this.SanPham_PB_Anh);
             this.SanPham_GB.Controls.Add(this.SanPham_L);
             this.SanPham_GB.Controls.Add(this.SanPham_L_Gia);
             this.SanPham_GB.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,6 +77,21 @@
             this.SanPham_PB_HetHang.TabIndex = 7;
             this.SanPham_PB_HetHang.TabStop = false;
             this.SanPham_PB_HetHang.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // SanPham_PB_Anh
+            // 
+            this.SanPham_PB_Anh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SanPham_PB_Anh.Image = global::Store_Manager.Properties.Resources.padlock_9821260;
+            this.SanPham_PB_Anh.Location = new System.Drawing.Point(4, -12);
+            this.SanPham_PB_Anh.Margin = new System.Windows.Forms.Padding(1);
+            this.SanPham_PB_Anh.Name = "SanPham_PB_Anh";
+            this.SanPham_PB_Anh.Size = new System.Drawing.Size(236, 256);
+            this.SanPham_PB_Anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SanPham_PB_Anh.TabIndex = 4;
+            this.SanPham_PB_Anh.TabStop = false;
+            this.SanPham_PB_Anh.Click += new System.EventHandler(this.UC_PB_2_Click);
             // 
             // SanPham_L
             // 
@@ -107,21 +122,6 @@
             this.SanPham_L_Gia.Text = "120.010.000 đ";
             this.SanPham_L_Gia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // UC_PB_2
-            // 
-            this.UC_PB_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.UC_PB_2.Image = global::Store_Manager.Properties.Resources.padlock_9821260;
-            this.UC_PB_2.Location = new System.Drawing.Point(4, -12);
-            this.UC_PB_2.Margin = new System.Windows.Forms.Padding(1);
-            this.UC_PB_2.Name = "UC_PB_2";
-            this.UC_PB_2.Size = new System.Drawing.Size(236, 256);
-            this.UC_PB_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.UC_PB_2.TabIndex = 4;
-            this.UC_PB_2.TabStop = false;
-            this.UC_PB_2.Click += new System.EventHandler(this.UC_PB_2_Click);
-            // 
             // quan_Ly_Shop_Quan_AoDataSet
             // 
             this.quan_Ly_Shop_Quan_AoDataSet.DataSetName = "Quan_Ly_Shop_Quan_AoDataSet";
@@ -147,7 +147,7 @@
             this.SanPham_GB.ResumeLayout(false);
             this.SanPham_GB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SanPham_PB_HetHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UC_PB_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SanPham_PB_Anh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Shop_Quan_AoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -157,7 +157,7 @@
         #endregion
 
         private ReaLTaiizor.Controls.ParrotGroupBox SanPham_GB;
-        private System.Windows.Forms.PictureBox UC_PB_2;
+        private System.Windows.Forms.PictureBox SanPham_PB_Anh;
         private ReaLTaiizor.Controls.BigLabel SanPham_L;
         private System.Windows.Forms.BindingSource sizeBindingSource;
         private Quan_Ly_Shop_Quan_AoDataSet quan_Ly_Shop_Quan_AoDataSet;

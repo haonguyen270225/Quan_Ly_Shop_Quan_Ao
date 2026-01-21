@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using DTO;
 using System.Runtime.Remoting.Messaging;
+using System.IO;
 namespace Store_Manager
 {
     public partial class UC_SanPham : UserControl
@@ -36,9 +37,16 @@ namespace Store_Manager
             SanPham_L.Text = khoHang.TenHang + "\n Mã : " + khoHang.MaHang + "\n SL Kho : " + (khoHang.SoLuongTon - sL_SanPham);
             SanPham_L_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
             SanPham_GB.Text = sTT.ToString();
-            if(khoHang.SoLuongTon == 0 || sL_SanPham == khoHang.SoLuongTon)
+            // Gán ảnh;
+            byte[] imageByte = (byte[])sanPham.HinhAnh;
+            using (MemoryStream memoruStream = new MemoryStream(imageByte))
             {
-               SanPham_PB_HetHang.BringToFront();
+                SanPham_PB_Anh.Image = Image.FromStream(memoruStream);
+                SanPham_PB_Anh.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            if (khoHang.SoLuongTon == 0 || sL_SanPham == khoHang.SoLuongTon)
+            {
+                SanPham_PB_HetHang.BringToFront();
             }
             else
             {
