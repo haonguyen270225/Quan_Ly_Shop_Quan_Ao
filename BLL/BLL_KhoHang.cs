@@ -75,5 +75,28 @@ namespace BLL
                 return true;
             }
         }
+
+
+        public bool DeleteKhoHang_ByMaHang(string maHang , out string thongBao)
+        {
+            if(maHang == null || maHang.Length == 0)
+            {
+                thongBao = "Delete kho hàng không thành công ! \n Vui lòng thử lại !";
+                return false;
+            }
+            else
+            {
+                if(dal_KhoHang.DleteKhoHang_ByMaHang(maHang) == 1)
+                {
+                    thongBao = "Trong kho hàng không có mã hàng :" + maHang + "\n Vui lòng nhấn Loading và thử lại !";
+                    return false;
+                }
+                else
+                {
+                    thongBao = "Đã xóa mã hàng : " + maHang;
+                    return true;
+                }
+            }
+        }
     }
 }

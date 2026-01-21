@@ -553,6 +553,7 @@ namespace Store_Manager
         #endregion
 
         #region Chi_Tiet_Tai_Khoan
+       
         private void CTTK_B_AnhMacDinh_Click(object sender, EventArgs e)
         {
            try
@@ -1178,7 +1179,7 @@ namespace Store_Manager
                     dataRow[1] = item.MaHang;
                     dataRow[2] = item.TenHang;
                     dataRow[3] = item.SoLuongTon;
-                    dataRow[4] = item.Gia.ToString("N0") + "đ";
+                    dataRow[4] = item.Gia.ToString("N0") + "  đ";
                     dataRow[5] = item.IDSize;
                     dataRow[6] = item.HinhAnh;
                     dataTable.Rows.Add(dataRow);
@@ -1236,7 +1237,7 @@ namespace Store_Manager
                         MessageBox.Show("Đã xóa  hàng hóa !\n Có Mã Hàng  : " + maHang, thongBao , MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         // Gọi hàm loading lai danh sách khoHang;
                         BLL_LoadingData();
-                        Show_DGVLoading(listKhoHang);
+                        Show_DGVListKhoHangLoading(listKhoHang);
                     }
                     else
                     {
@@ -1293,7 +1294,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             MessageBox.Show("Thông tin sản phẩm lỗi ! \n Vui lòng thử lại ! ", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void Show_DGVLoading(List<KhoHang> listKhoHang) 
+        private void Show_DGVListKhoHangLoading(List<KhoHang> listKhoHang) 
         {
             if (listKhoHang == null)
             {
@@ -1328,7 +1329,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                     dataRow[1] = item.MaHang;
                     dataRow[2] = item.TenHang;
                     dataRow[3] = item.SoLuongTon;
-                    dataRow[4] = item.Gia.ToString("N0") + "đ";
+                    dataRow[4] = item.Gia.ToString("N0") + "  đ";
                     dataRow[5] = item.IDSize;
                     dataRow[6] = item.HinhAnh;
                     dataTable.Rows.Add(dataRow);
@@ -1352,6 +1353,11 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 KhoHang_TB_TenHang.Text = "";
                 KhoHang_TB_Gia.Text = "";
                 KhoHang_TB_SoLuongTon.Text = "0";
+                KhoHang_CB_Size.SelectedIndex = 0;
+                KhoHang_CB_TimKiem.SelectedIndex = 0;
+                KhoHang_CB_GioiTinh.SelectedIndex = 0;
+                KhoHang_CB_Loai.SelectedIndex = 0;
+                
                 return;
             }
             else
@@ -1360,7 +1366,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 KhoHang_TB_MaHang.Text = khoHang.MaHang;
                 KhoHang_TB_TenHang.Text = khoHang.TenHang;
                 KhoHang_TB_SoLuongTon.Text = khoHang.SoLuongTon.ToString();
-                KhoHang_TB_Gia.Text = khoHang.Gia.ToString("N0") + "đ";
+                KhoHang_TB_Gia.Text = khoHang.Gia.ToString("N0") + " đ";
                 LoaiSanPham tmpLoai = new LoaiSanPham();
                 bool kQLoai = false;
                 foreach(LoaiSanPham item in listLoaiSanPham)
@@ -1427,7 +1433,121 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             }
         }
 
+        private void KhoHang_B_AnhMacDinh_Click(object sender, EventArgs e)
+        {
+            if (KhoHang_TB_MaHang.Text == "")
+            {
+                MessageBox.Show("Chọn sản phẩm để cập nhật hình ảnh !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                KhoHang_PB_SanPham.Image = Properties.Resources.SPDefult;
+                byte[] hinhAnh = GetBytesFromPictureBox(KhoHang_PB_SanPham);
+                string thongBao = "";
+
+                if (bll_KhoHang.UpdateHinhAnh(KhoHang_TB_MaHang.Text, hinhAnh, out thongBao, listKhoHang) == false)
+                {
+                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(thongBao, "Cập nhật !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BLL_LoadingData();
+                    Show_DGVListKhoHangLoading(listKhoHang);
+                    return;
+                }
+            }
+        }
+
+        private void KhoHang_B_TrenMay_Click(object sender, EventArgs e)
+        {
+            if (KhoHang_TB_MaHang.Text == "")
+            {
+                MessageBox.Show("Chọn sản phẩm để cập nhật hình ảnh !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                using (OpenFileDialog oFD = new OpenFileDialog())
+                {
+                    oFD.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All files (*.*)|*.*";
+                    oFD.Title = "Chọn ảnh cho hồ sơ";
+
+                    if (oFD.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            KhoHang_PB_SanPham.Image = Image.FromFile(oFD.FileName);
+
+                            // Tùy chọn: Căn chỉnh ảnh đẹp hơn
+                            KhoHang_PB_SanPham.SizeMode = PictureBoxSizeMode.Zoom;
+
+
+                            KhoHang_PB_SanPham.Image = Image.FromFile(oFD.FileName);
+
+                            KhoHang_PB_SanPham.SizeMode = PictureBoxSizeMode.Zoom;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Không thể load ảnh!\nLỗi: " + ex.Message);
+                        }
+
+                    }
+                }
+                byte[] hinhAnh = GetBytesFromPictureBox(KhoHang_PB_SanPham);
+                string thongBao = "";
+
+                if (bll_KhoHang.UpdateHinhAnh(KhoHang_TB_MaHang.Text, hinhAnh, out thongBao, listKhoHang) == false)
+                {
+                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(thongBao, "Cập nhật !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BLL_LoadingData();
+                    Show_DGVListKhoHangLoading(listKhoHang);
+                    return;
+                }
+            }
+        }
+
+        private void KhoHang_B_Loading_Click(object sender, EventArgs e)
+        {
+            BLL_LoadingData();
+            Show_DGVListKhoHangLoading(listKhoHang);
+            //KhoHang_TB_TimKiem.Text = "";
+            KhoHang_LoadingThongTinSanPham(null);
+
+        }
         #endregion
+        private void KhoHang_B_Xoa_Click(object sender, EventArgs e)
+        {
+            var qes = MessageBox.Show("Bạn có muốn xóa sản phẩm trong kho hàng !", "Cảnh báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (qes == DialogResult.Yes)
+            {
+                string thongBao = "";
+                if (bll_KhoHang.DeleteKhoHang_ByMaHang(KhoHang_TB_MaHang.Text, out thongBao) == false)
+                {
+                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(thongBao, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BLL_LoadingData();
+                    Show_DGVListKhoHangLoading(listKhoHang);
+                    KhoHang_LoadingThongTinSanPham(null);
+                }
+            }
+            else
+            {
+                return;
+            }
+
+        }
 
 
         #region GB_ChiTietTaiKhoan
@@ -1905,93 +2025,18 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             }
         }
 
+        private void TaiKhoan_BT_AnhMacDinh_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void TaiKhoan_BT_AnhTrenMay_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 
-        private void KhoHang_B_AnhMacDinh_Click(object sender, EventArgs e)
-        {
-            if(KhoHang_TB_MaHang.Text == "")
-            {
-                MessageBox.Show("Chọn sản phẩm để cập nhật hình ảnh !", "Lỗi !",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                KhoHang_PB_SanPham.Image = Properties.Resources.SPDefult;
-                byte[] hinhAnh = GetBytesFromPictureBox(KhoHang_PB_SanPham);
-                string thongBao = "";
-
-               if (bll_KhoHang.UpdateHinhAnh(KhoHang_TB_MaHang.Text, hinhAnh , out thongBao, listKhoHang) == false)
-               {
-                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-               }
-                else
-                {
-                    MessageBox.Show(thongBao, "Cập nhật !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    BLL_LoadingData();
-                    Show_DGVLoading(listKhoHang);
-                    return;
-                }
-            }
-        }
-
-        private void KhoHang_B_TrenMay_Click(object sender, EventArgs e)
-        {
-            if (KhoHang_TB_MaHang.Text == "")
-            {
-                MessageBox.Show("Chọn sản phẩm để cập nhật hình ảnh !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                using (OpenFileDialog oFD = new OpenFileDialog())
-                {
-                    oFD.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All files (*.*)|*.*";
-                    oFD.Title = "Chọn ảnh cho hồ sơ";
-
-                    if (oFD.ShowDialog() == DialogResult.OK)
-                    {
-                        try
-                        {
-                            KhoHang_PB_SanPham.Image = Image.FromFile(oFD.FileName);
-
-                            // Tùy chọn: Căn chỉnh ảnh đẹp hơn
-                            KhoHang_PB_SanPham.SizeMode = PictureBoxSizeMode.Zoom;
-
-
-                            KhoHang_PB_SanPham.Image = Image.FromFile(oFD.FileName);
-
-                            KhoHang_PB_SanPham.SizeMode = PictureBoxSizeMode.Zoom;
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Không thể load ảnh!\nLỗi: " + ex.Message);
-                        }
-
-                    }
-                }
-                byte[] hinhAnh = GetBytesFromPictureBox(KhoHang_PB_SanPham);
-                string thongBao = "";
-
-                if (bll_KhoHang.UpdateHinhAnh(KhoHang_TB_MaHang.Text, hinhAnh, out thongBao, listKhoHang) == false)
-                {
-                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show(thongBao, "Cập nhật !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    BLL_LoadingData();
-                    Show_DGVLoading(listKhoHang);
-                    return;
-                }
-            }
-        }
-
-      
+        
     }
 }
 #region Demo

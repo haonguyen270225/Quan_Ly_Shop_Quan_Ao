@@ -122,5 +122,24 @@ namespace DAL
             conn.Close();
             return kQ;
         }
+        public int DleteKhoHang_ByMaHang(string maHang)
+        {
+            int kQ = 1; //-- không thể delete sản phẩm có maHang;
+            SqlConnection conn = DAL_DataAccess.Conn();
+            conn.Open();
+            SqlCommand sqlCommand = new SqlCommand("sp_DeleteKhoHang_ByMaHang", conn);
+            sqlCommand.CommandType= CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@MaHang", maHang);
+
+            // trả về int;
+            SqlParameter returnParam = new SqlParameter();
+            returnParam.Direction = ParameterDirection.ReturnValue;
+            sqlCommand.Parameters.Add(returnParam);
+
+            sqlCommand.ExecuteNonQuery();
+            kQ = (int)returnParam.Value;
+            conn.Close();
+            return kQ;
+        }
     }
 }
