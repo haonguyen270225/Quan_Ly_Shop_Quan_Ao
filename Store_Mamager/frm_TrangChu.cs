@@ -1236,6 +1236,9 @@ namespace Store_Manager
                     if(bll_KhoHang.Xoa_KhoHangByMaHang(maHang , out thongBao ) == true)
                     {
                         MessageBox.Show("Đã xóa  hàng hóa !\n Có Mã Hàng  : " + maHang, thongBao , MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        // Gọi hàm loading lai danh sách khoHang;
+                        BLL_LoadingData();
+                        Show_DGVLoading(listKhoHang);
                     }
                     else
                     {
@@ -1245,6 +1248,127 @@ namespace Store_Manager
             }
         }
 
+
+        private void Show_DGVLoading(List<KhoHang> listKhoHang) 
+        {
+            if (listKhoHang == null)
+            {
+                MessageBox.Show("Lỗi truy cập danh sách kho hàng ! \n Vui lòng thử lại !" , "Lỗi !" , MessageBoxButtons.OK , MessageBoxIcon.Error);
+                return;
+
+            }
+            else if(listKhoHang.Count <= 0)
+            {
+                MessageBox.Show("Lỗi truy cập danh sách kho hàng rỗng  ! \n Vui lòng thử lại !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                KhoHang_DGV_ListSanPham.DataSource = null;
+                KhoHang_DGV_ListSanPham.Rows.Clear();
+
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("STT", typeof(int));
+                dataTable.Columns.Add("Mã Hàng", typeof(string));
+                dataTable.Columns.Add("Tên Hàng", typeof(string));
+                dataTable.Columns.Add("Số Lượng Tồn", typeof(int));
+                dataTable.Columns.Add("Giá", typeof(string));
+                dataTable.Columns.Add("Size", typeof(int));
+                dataTable.Columns.Add("HinhAnh", typeof(byte[]));
+
+                int i = 1;
+                foreach (KhoHang item in listKhoHang)
+                {
+                    DataRow dataRow = dataTable.NewRow();
+                    dataRow[0] = i++;
+                    dataRow[1] = item.MaHang;
+                    dataRow[2] = item.TenHang;
+                    dataRow[3] = item.SoLuongTon;
+                    dataRow[4] = item.Gia.ToString("N0") + "đ";
+                    dataRow[5] = item.IDSize;
+                    dataRow[6] = item.HinhAnh;
+                    dataTable.Rows.Add(dataRow);
+                }
+                KhoHang_DGV_ListSanPham.DataSource = dataTable;
+                //DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn(); //-----
+                //dataGridViewImageColumn = (DataGridViewImageColumn)KhoHang_DGV_ListSanPham.Columns[6];
+                //dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+                KhoHang_DGV_ListSanPham.DataSource = dataTable;
+            }
+        
+        
+        
+        }
+
+
+        private void KhoHang_LoadingThongTinSanPham(KhoHang khoHang)
+        {
+            if(khoHang == null)
+            {
+                KhoHang_TB_MaHang.Text = "";
+                KhoHang_TB_TenHang.Text = "";
+                KhoHang_TB_Gia.Text = "";
+                KhoHang_TB_SoLuongTon.Text = "0";
+                return;
+            }
+            else
+            {
+                BLL_LoadingData();
+                KhoHang_TB_MaHang.Text = khoHang.MaHang;
+                KhoHang_TB_TenHang.Text = khoHang.TenHang;
+                KhoHang_TB_SoLuongTon.Text = khoHang.SoLuongTon.ToString();
+
+                LoaiSanPham tmpLoai = new LoaiSanPham();
+                bool kQLoai = false;
+                foreach(LoaiSanPham item in listLoaiSanPham)
+                {
+                    if(khoHang.IDLoaiSanPham == item.ID)
+                    {
+                        tmpLoai = item;
+                        kQLoai = true;
+                        break;
+                    }
+                }
+               if(kQLoai == false)
+                {
+                    MessageBox.Show("Loading Sản phẩm không thành công ! + \n Vui lòng thử lại !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    if(tmpLoai.GioiTinh == 0) KhoHang_CB_GioiTinh.SelectedIndex = 0;
+                    else KhoHang_CB_GioiTinh.SelectedIndex = 1;
+                    string s = tmpLoai.MaLoaiSanPham + "-" +  tmpLoai.TenLoai;
+                    KhoHang_CB_Loai.SelectedIndex = KhoHang_CB_Loai.FindStringExact(s);
+                    
+                }
+
+                bool kQSize = false; 
+                SPSize tmpSPSize = new SPSize();
+                foreach (SPSize item in  listSPSize)
+                {
+                    if(khoHang.IDSize == item.ID)
+                    {
+                        tmpSPSize = item;
+                        kQSize = true;
+                        break; 
+                    }
+                }
+
+                if (kQSize == false)
+                {
+                    MessageBox.Show("Loading Sản phẩm không thành công ! + \n Vui lòng thử lại !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    string s = tmpSPSize.MaSize.ToString();
+                    KhoHang_CB_Size.SelectedIndex = KhoHang_CB_Size.FindStringExact(s);
+                }
+
+            }
+        }
 
         #endregion
 
@@ -1725,9 +1849,14 @@ namespace Store_Manager
         }
 
 
+        private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+             //BLL_LoadingData();
+             
+        }
+
         #endregion
 
-      
     }
 }
 #region Demo
