@@ -31,8 +31,8 @@ namespace Store_Manager
           
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
-            TB_TenDangNhap.Text = "an.nguyen";
-            TB_PassWord.Text = "1234567890";
+            TB_TenDangNhap.Text = "24_UserName";
+            TB_PassWord.Text = "Qua lý Trung";
             TB_TenDangNhap.TabIndex = 0;
             TB_PassWord.TabIndex = 1;
             B_DangNhap.TabIndex = 2;
@@ -68,12 +68,10 @@ namespace Store_Manager
                 // Store_Manager.frm_TrangChu frm = new Store_Manager.frm_TrangChu();
                 //frm.ShowDialog();
                 taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan); 
-                //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString()  );
                 frm_TrangChu  frm_TrangChu = new frm_TrangChu();
                 frm_TrangChu.taiKhoan = taiKhoan;
-               // MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
                 frm_TrangChu.ShowDialog();
-                 Application.Exit();
+               // Application.Exit();
             }
             else
             {

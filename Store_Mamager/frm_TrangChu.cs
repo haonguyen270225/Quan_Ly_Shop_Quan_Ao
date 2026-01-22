@@ -63,6 +63,7 @@ namespace Store_Manager
         public frm_TrangChu()
         {
             InitializeComponent();
+
         }
 
        
@@ -78,13 +79,15 @@ namespace Store_Manager
             listHoaDon = bll_HoaDon.LoadingHoaDon();
             listChiTietHoaDon = bll_ChiTietHoaDon.LoadingChiTietHoaDon();
 
-            nhanVien = bLL_NhanVien.TT_NhanVienDangNhap(taiKhoan);//bll_NhanVien.(taiKhoan);
+            
         }
 
         private void CreateLoading_TrangChu()
         {
             BLL_LoadingData();
             taiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan(taiKhoan);
+            nhanVien = bLL_NhanVien.TT_NhanVienDangNhap(taiKhoan);//bll_NhanVien.(taiKhoan);
+            
             // Cập nhật hình ảnh đại diện ! 
             if (taiKhoan.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
             {
@@ -115,7 +118,6 @@ namespace Store_Manager
         {
             // TODO: This line of code loads data into the 'quan_Ly_Shop_Quan_AoDataSet.HoaDon' table. You can move, or remove it, as needed.
             this.hoaDonTableAdapter.Fill(this.quan_Ly_Shop_Quan_AoDataSet.HoaDon);
-            
             CreateLoading_TrangChu();
             KhoiTao_DGV_TabKhoHang(listKhoHang);
         }
@@ -125,6 +127,8 @@ namespace Store_Manager
         {
             if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_DangXuat)
             {
+                frm_DangNhapReaLTaiizor frm = new frm_DangNhapReaLTaiizor();
+                frm.Show();
                 this.Close();
             }
             if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_TrangChu)
@@ -150,16 +154,17 @@ namespace Store_Manager
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_KhuyenMai)
             {
-             
+               
                 L_TrangChu_TieuDe.Text = ">>> Danh sách khuyến mãi !";
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_DoanhThu)
             {
-                
+               
                 L_TrangChu_TieuDe.Text = ">>> Doanh thu !";
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_TaiKhoan)
             {
+                
                 L_TrangChu_TieuDe.Text = ">>> Danh sách tài khoản !";
                 if (TaiKhoan_DGV_ListTaiKhoan.Columns.Count > 0 )
                 {
@@ -2524,8 +2529,36 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         }
 
-        #endregion
+        private void HoaDon_CB_LoaiSanPham_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if(nhanVien.ChucVu != "Quản lý" && (e.TabPage == tab_DoanhThu || e.TabPage == tab_KhuyenMai || e.TabPage == tab_KhoHang || e.TabPage == tab_TaiKhoan) )
+            {
+                MessageBox.Show("Bạn không có quyền truy cập tab này!");
+                e.Cancel = true;
+            }
+        }
 
+
+
+
+        #endregion
+        private void B_TrangChu_KhachHang_Click(object sender, EventArgs e)
+        {
+            Report_KhachHang report_KhachHang = new Report_KhachHang();
+            report_KhachHang.ShowDialog();
+
+        }
+
+        private void B_TrangChu_DoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_TrangChu_HoaDon_Click(object sender, EventArgs e)
+        {
+            Report_HoaDon report_HoaDon = new Report_HoaDon();
+            report_HoaDon.ShowDialog();
+        }
 
         //private void KhoHang_B_Them_Click(object sender, EventArgs e)
         //{

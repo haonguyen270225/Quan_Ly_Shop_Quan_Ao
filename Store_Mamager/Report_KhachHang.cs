@@ -14,11 +14,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Store_Manager
 {
-    public partial class BaoCao : Form
+    public partial class Report_KhachHang : Form
     {
         BLL_KhachHang bll_KhachHang = new BLL_KhachHang();
         List<KhachHang> listKhachHang = new List<KhachHang>();
-        public BaoCao()
+        public Report_KhachHang()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace Store_Manager
         {
 
            listKhachHang = bll_KhachHang.LoadingKhachHang();
-           reportViewer1.LocalReport.ReportPath = @"Report1.rdlc";
+           reportViewer1.LocalReport.ReportPath = @"R_KhachHang.rdlc";
 
             ReportDataSource rds = new ReportDataSource("KhachHangSet", listKhachHang);
 

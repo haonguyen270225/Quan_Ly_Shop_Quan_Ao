@@ -1,6 +1,6 @@
 ﻿namespace Store_Manager
 {
-    partial class BaoCao
+    partial class Report_HoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -33,22 +33,22 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Store_Manager.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 140);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 310);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 474);
             this.reportViewer1.TabIndex = 0;
             // 
-            // BaoCao
+            // Report_HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 501);
+            this.ClientSize = new System.Drawing.Size(800, 474);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "BaoCao";
-            this.Text = "BaoCao";
-            this.Load += new System.EventHandler(this.BaoCao_Load);
+            this.Name = "Report_HoaDon";
+            this.Text = "Preport_HoaDon";
+            this.Load += new System.EventHandler(this.Preport_HoaDon_Load);
             this.ResumeLayout(false);
 
         }
