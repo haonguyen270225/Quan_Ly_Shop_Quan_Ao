@@ -1551,8 +1551,119 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         }
 
+        int suaVaThem = -1;// 0 - sua , 1 - them;
+    
+        private void KhoHang_B_Sua_Click(object sender, EventArgs e )
+        {
+            // Lấy thông tin san phẩm:
+
+            if(KhoHang_TB_MaHang.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm để cập nhật !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                KhoHang khoHangUpdate = new KhoHang();
+                bool kT = false;
+                foreach(KhoHang item in listKhoHang)
+                {
+                    if(item.MaHang == KhoHang_TB_MaHang.Text)
+                    {
+                        khoHangUpdate = item;
+                        kT = true;
+                        break;
+                    }
+                }
+                if(kT == false)
+                {
+                    BLL_LoadingData();
+                    Show_DGVListKhoHangLoading(listKhoHang);
+                    KhoHang_LoadingThongTinSanPham(null);
+                    MessageBox.Show("Lỗi không tồn tại sản phẩm trong kho hàng !", "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    
+                    KhoHang_B_Them_Click(sender, e);
+                    suaVaThem = 0;
+                    KhoHang_TB_GBSP_MaHang.Text = khoHangUpdate.MaHang;
+                    KhoHang_TB_GBSP_TenHang.Text = khoHangUpdate.TenHang;
+                    KhoHang_TB_GBSP_GiaBan.Text = khoHangUpdate.Gia.ToString("N0");
+                    KhoHang_TB_GBSP_SoLuong.Text = khoHangUpdate.SoLuongTon.ToString();
+                    KhoHang_CB_GBSP_Loai.Text = KhoHang_CB_Loai.Text;
+                    KhoHang_CB_GBSP_Size.Text = KhoHang_CB_Size.Text;
+
+                    if(KhoHang_CB_GioiTinh.Text == "Nam")
+                    {
+                        KhoHang_RB_GBSP_Nam.Checked = true;
+                        KhoHang_RB_GBSP_NamVaNu.Checked = false;
+                        KhoHang_RB_GBSP_Nu.Checked = false;
+                    }
+                    else if(KhoHang_CB_GioiTinh.Text == "Nữ")
+                    {
+                        KhoHang_RB_GBSP_Nam.Checked = false;
+                        KhoHang_RB_GBSP_NamVaNu.Checked = false;
+                        KhoHang_RB_GBSP_Nu.Checked = true;
+                    }
+                    else
+                    {
+                        KhoHang_RB_GBSP_Nam.Checked = false;
+                        KhoHang_RB_GBSP_NamVaNu.Checked = true;
+                        KhoHang_RB_GBSP_Nu.Checked = false;
+                    }
+                    MessageBox.Show("Goi ham cap nhat !");
+                }
+            }
+        }
+
+        //private void KhoHang_B_Sua_Click(object sender, EventArgs e)
+        //{
+
+        //}
         private void KhoHang_B_GBSanPam_XacNhan_Click(object sender, EventArgs e)
         {
+
+            if (suaVaThem == 0) //update;
+            {
+                
+                MessageBox.Show("Goi ham cap nhat !");
+                KhoHang khoHangUpdate = new KhoHang();
+                BLL_LoadingData();
+
+                for (int i = 0; i < listKhoHang.Count; i++)
+                {
+                    if (listKhoHang[i].MaHang == KhoHang_TB_MaHang.Text)
+                    {
+                        khoHangUpdate = listKhoHang[i];
+                        break;
+                    }
+                }
+                
+                string thongBaos;
+              //  KhoHang_B_Sua_Click(sender, e, khoHangUpdate);
+                if (bll_KhoHang.Upadte_KhoHang(khoHangUpdate, out thongBaos) == false)
+                {
+                    MessageBox.Show(thongBaos, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(thongBaos, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                KhoHang_GB_SanPham.Visible = false;
+                KhoHang_GB_SanPham.Enabled = false;
+                KhoHang_GB_SanPham.SendToBack();
+                KhoHang_TB_GBSP_MaHang.Text = "";
+                KhoHang_TB_GBSP_TenHang.Text = "";
+                KhoHang_TB_GBSP_GiaBan.Text = "0";
+                KhoHang_TB_GBSP_SoLuong.Text = "0";
+
+                KhoHang_CB_GBSP_Loai.Items.Clear();
+                KhoHang_CB_GBSP_Size.Items.Clear();
+                suaVaThem = -1;
+
+            }
 
             if (KhoHang_TB_GBSP_MaHang.Text == "")
             {
@@ -1690,6 +1801,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
         }
         private void KhoHang_B_Them_Click(object sender, EventArgs e)
         {
+            suaVaThem = 1;
             KhoHang_GB_SanPham.Visible = true;
             KhoHang_GB_SanPham.Enabled = true;
             KhoHang_GB_SanPham.BringToFront();
@@ -1732,6 +1844,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
                 KhoHang_CB_GBSP_Loai.Items.Clear();
                 KhoHang_CB_GBSP_Size.Items.Clear();
+                suaVaThem = -1;
             }
             else
             {
@@ -2218,7 +2331,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                     CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
                     CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; //CTTK_B_AnhMacDinh_Click(this , EventArgs.Empty);
                     
-                    
                 }
 
             }
@@ -2274,7 +2386,12 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         }
 
+        private void KhoHang_B_InDanhSach_Click(object sender, EventArgs e)
+        {
 
+        }
+
+       
 
 
         #endregion

@@ -113,5 +113,21 @@ namespace BLL
                 return true;
             }
         }
+
+
+        public bool Upadte_KhoHang(KhoHang khoHang , out string thongBao)
+        {
+            thongBao = "";
+            if (dal_KhoHang.Update_KhoHang(khoHang) == 1)
+            {
+                thongBao = "Cập nhật sản phẩm có mã : " + khoHang.MaHang + "không thành công ! \n Vui lòng thử lại !";
+                return false;
+            }
+            else
+            {
+                thongBao = "Cập nhật sản phẩm có mã : " + khoHang.MaHang + "thành công ! ";
+                return true;
+            }
+        }
     }
 }
