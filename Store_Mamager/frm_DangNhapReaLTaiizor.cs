@@ -71,7 +71,7 @@ namespace Store_Manager
                 //MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString()  );
                 frm_TrangChu  frm_TrangChu = new frm_TrangChu();
                 frm_TrangChu.taiKhoan = taiKhoan;
-                MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
+               // MessageBox.Show(taiKhoan.ID.ToString() + "   " + taiKhoan.IDNhanVien.ToString());
                 frm_TrangChu.ShowDialog();
                  Application.Exit();
             }

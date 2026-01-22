@@ -1585,8 +1585,34 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 }
                 else
                 {
-                    
-                    KhoHang_B_Them_Click(sender, e);
+
+                    //KhoHang_B_Them_Click(sender, e);
+                    KhoHang_GB_SanPham.Visible = true;
+                    KhoHang_GB_SanPham.Enabled = true;
+                    KhoHang_GB_SanPham.BringToFront();
+                    KhoHang_TB_GBSP_MaHang.Text = "";
+                    KhoHang_TB_GBSP_TenHang.Text = "";
+                    KhoHang_TB_GBSP_GiaBan.Text = "0";
+                    KhoHang_TB_GBSP_SoLuong.Text = "0";
+
+                    KhoHang_CB_GBSP_Loai.Items.Clear();
+                    KhoHang_CB_GBSP_Size.Items.Clear();
+                    BLL_LoadingData();
+                    foreach (LoaiSanPham item in listLoaiSanPham)
+                    {
+                        KhoHang_CB_GBSP_Loai.Items.Add(item.MaLoaiSanPham + "-" + item.TenLoai);
+                    }
+                    foreach (SPSize item in listSPSize)
+                    {
+                        KhoHang_CB_GBSP_Size.Items.Add(item.MaSize);
+                    }
+                    KhoHang_CB_GBSP_Size.SelectedIndex = 0;
+                    KhoHang_CB_GBSP_Loai.SelectedIndex = 0;
+
+                    KhoHang_RB_GBSP_Nam.Checked = true;
+                    KhoHang_RB_GBSP_Nu.Checked = false;
+                    KhoHang_RB_GBSP_NamVaNu.Checked = false;
+
                     suaVaThem = 0;
                     KhoHang_TB_GBSP_MaHang.Text = khoHangUpdate.MaHang;
                     KhoHang_TB_GBSP_TenHang.Text = khoHangUpdate.TenHang;
@@ -1613,7 +1639,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                         KhoHang_RB_GBSP_NamVaNu.Checked = true;
                         KhoHang_RB_GBSP_Nu.Checked = false;
                     }
-                    MessageBox.Show("Goi ham cap nhat !");
                 }
             }
         }
@@ -1634,12 +1659,117 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
                 for (int i = 0; i < listKhoHang.Count; i++)
                 {
-                    if (listKhoHang[i].MaHang == KhoHang_TB_MaHang.Text)
+                    if (listKhoHang[i].MaHang == KhoHang_TB_GBSP_MaHang.Text)
                     {
                         khoHangUpdate = listKhoHang[i];
                         break;
                     }
                 }
+
+                if (KhoHang_TB_GBSP_MaHang.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng không được để trống !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_MaHang.Text.Length > 10)
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng tối đa 10 ký tự !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_MaHang.Text.Length < 5)
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng tối thiểu 5 ký tự !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_TenHang.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_TenHang, "Tên hàng không được để trống !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_TenHang.Text.Length > 50)
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_TenHang, "Tên hàng không được quá 50 ký tự !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_GiaBan.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_GiaBan, "Gía bán không được để trống !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_SoLuong.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_SoLuong, "Số lượng không được để trống !");
+                    return;
+                }
+
+                foreach(KhoHang item in listKhoHang){
+                    if(item.ID != khoHangUpdate.ID && item.MaHang == khoHangUpdate.MaHang)
+                    {
+                        KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang , "Mã sản phẩm đã bị trùng !");
+                        return;
+                    }
+                }
+
+                // Kiểm tra số nguyên 
+                //khoHangAdd.SoLuongTon = Convert.ToInt16(KhoHang_TB_GBSP_SoLuong.Text);
+                string tmpstr1 = KhoHang_TB_GBSP_SoLuong.Text.ToString().Trim();
+                int soLuongTon = -1;
+                bool isInterger = int.TryParse(tmpstr1, out soLuongTon);
+                if (isInterger == true && soLuongTon >= 0)
+                {
+                    khoHangUpdate.SoLuongTon = soLuongTon;
+                }
+                else
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_SoLuong, "Số lượng phải là số nguyên lớn hơn hoặc bằng 0 !");
+                    return;
+                }
+
+                // kiểm tra số thực !;
+                string tmpstr2 = KhoHang_TB_GBSP_GiaBan.Text;
+                double giaBan = 0;
+                bool isDouble = double.TryParse(tmpstr2, out giaBan);
+                if (isDouble == true && giaBan > 10.000)
+                {
+                    khoHangUpdate.Gia = giaBan;
+                    //MessageBox.Show(giaBan.ToString());
+                }
+                else
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_GiaBan, "Gía bán phải là phân số và lớn hơn 10.000 đ !");
+                    return;
+                }
+
+                //Loại Sản phẩm !
+                LoaiSanPham sPLoai = new LoaiSanPham();
+                string str = KhoHang_CB_GBSP_Loai.SelectedItem.ToString();
+                foreach (LoaiSanPham item in listLoaiSanPham)
+                {
+                    string strTmp = item.MaLoaiSanPham + "-" + item.TenLoai;
+                    if (str == strTmp)
+                    {
+                        sPLoai = item;
+                        break;
+                    }
+                }
+                khoHangUpdate.IDLoaiSanPham = sPLoai.ID;
+
+                // Gioi tính
+                SPSize sPSize = new SPSize();
+                string strSize = KhoHang_CB_GBSP_Size.SelectedItem.ToString();
+                foreach (SPSize item in listSPSize)
+                {
+                    if (item.MaSize == strSize)
+                    {
+                        sPSize = item;
+                    }
+                }
+                khoHangUpdate.IDSize = sPSize.ID;
+
+                khoHangUpdate.MaHang = KhoHang_TB_GBSP_MaHang.Text;
+                khoHangUpdate.TenHang = KhoHang_TB_GBSP_TenHang.Text;
+                khoHangUpdate.SoLuongTon = Convert.ToInt32(KhoHang_TB_GBSP_SoLuong.Text);
+                khoHangUpdate.Gia = Convert.ToDouble(KhoHang_TB_GBSP_GiaBan.Text);
                 
                 string thongBaos;
               //  KhoHang_B_Sua_Click(sender, e, khoHangUpdate);
@@ -1664,140 +1794,143 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 suaVaThem = -1;
 
             }
+            if(suaVaThem == 1)
+            {
 
-            if (KhoHang_TB_GBSP_MaHang.Text == "")
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng không được để trống !");
-                return;
-            }
-            else if (KhoHang_TB_GBSP_MaHang.Text.Length > 10)
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng tối đa 10 ký tự !");
-                return;
-            }
-            else if (KhoHang_TB_GBSP_MaHang.Text.Length < 5)
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng tối thiểu 5 ký tự !");
-                return;
-            }
-            else if (KhoHang_TB_GBSP_TenHang.Text == "")
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_TenHang, "Tên hàng không được để trống !");
-                return;
-            }
-            else if (KhoHang_TB_GBSP_TenHang.Text.Length > 50)
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_TenHang, "Tên hàng không được quá 50 ký tự !");
-                return;
-            }
-            else if (KhoHang_TB_GBSP_GiaBan.Text == "")
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_GiaBan, "Gía bán không được để trống !");
-                return;
-            }
-            else if (KhoHang_TB_GBSP_SoLuong.Text == "")
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_SoLuong, "Số lượng không được để trống !");
-                return;
-            }
-
-            foreach (KhoHang item in listKhoHang)
-            {
-                if (item.MaHang == KhoHang_TB_GBSP_MaHang.Text)
+                if (KhoHang_TB_GBSP_MaHang.Text == "")
                 {
-                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng đa có trong kho ! \n Nhập lại mã hàng !");
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng không được để trống !");
+                    return;
                 }
-            }
-
-
-            KhoHang khoHangAdd = new KhoHang();
-            khoHangAdd.MaHang = KhoHang_TB_GBSP_MaHang.Text;
-            khoHangAdd.TenHang = KhoHang_TB_GBSP_TenHang.Text;
-
-            //khoHangAdd.SoLuongTon = Convert.ToInt16(KhoHang_TB_GBSP_SoLuong.Text);
-            string tmpstr1 = KhoHang_TB_GBSP_SoLuong.Text.ToString().Trim();
-            int soLuongTon = -1;
-            bool isInterger = int.TryParse(tmpstr1, out soLuongTon);
-            if (isInterger == true && soLuongTon >= 0)
-            {
-                khoHangAdd.SoLuongTon = soLuongTon;
-            }
-            else
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_SoLuong, "Số lượng phải là số nguyên lớn hơn hoặc bằng 0 !");
-                return;
-            }
-
-            string tmpstr2 = KhoHang_TB_GBSP_GiaBan.Text;
-            double giaBan = 0;
-            bool isDouble = double.TryParse(tmpstr2, out giaBan);
-            if (isDouble == true && giaBan > 10.000)
-            {
-                khoHangAdd.Gia = giaBan;
-                //MessageBox.Show(giaBan.ToString());
-            }
-            else
-            {
-                KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_GiaBan, "Gía bán phải là phân số và lớn hơn 10.000 đ !");
-                return;
-            }
-
-
-            //Loại sản phẩm !;
-            LoaiSanPham sPLoai = new LoaiSanPham();
-            string str = KhoHang_CB_GBSP_Loai.SelectedItem.ToString();
-            foreach (LoaiSanPham item in listLoaiSanPham)
-            {
-                string strTmp = item.MaLoaiSanPham + "-" + item.TenLoai;
-                if (str == strTmp)
+                else if (KhoHang_TB_GBSP_MaHang.Text.Length > 10)
                 {
-                    sPLoai = item;
-                    break;
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng tối đa 10 ký tự !");
+                    return;
                 }
-            }
-            khoHangAdd.IDLoaiSanPham = sPLoai.ID;
-
-            // Gioi tính
-            SPSize sPSize = new SPSize();
-            string strSize = KhoHang_CB_GBSP_Size.SelectedItem.ToString();
-            foreach (SPSize item in listSPSize)
-            {
-                if (item.MaSize == strSize)
+                else if (KhoHang_TB_GBSP_MaHang.Text.Length < 5)
                 {
-                    sPSize = item;
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng tối thiểu 5 ký tự !");
+                    return;
                 }
+                else if (KhoHang_TB_GBSP_TenHang.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_TenHang, "Tên hàng không được để trống !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_TenHang.Text.Length > 50)
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_TenHang, "Tên hàng không được quá 50 ký tự !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_GiaBan.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_GiaBan, "Gía bán không được để trống !");
+                    return;
+                }
+                else if (KhoHang_TB_GBSP_SoLuong.Text == "")
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_SoLuong, "Số lượng không được để trống !");
+                    return;
+                }
+
+                foreach (KhoHang item in listKhoHang)
+                {
+                    if (item.MaHang == KhoHang_TB_GBSP_MaHang.Text)
+                    {
+                        KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_MaHang, "Mã hàng đa có trong kho ! \n Nhập lại mã hàng !");
+                    }
+                }
+
+
+                KhoHang khoHangAdd = new KhoHang();
+                khoHangAdd.MaHang = KhoHang_TB_GBSP_MaHang.Text;
+                khoHangAdd.TenHang = KhoHang_TB_GBSP_TenHang.Text;
+
+                //khoHangAdd.SoLuongTon = Convert.ToInt16(KhoHang_TB_GBSP_SoLuong.Text);
+                string tmpstr1 = KhoHang_TB_GBSP_SoLuong.Text.ToString().Trim();
+                int soLuongTon = -1;
+                bool isInterger = int.TryParse(tmpstr1, out soLuongTon);
+                if (isInterger == true && soLuongTon >= 0)
+                {
+                    khoHangAdd.SoLuongTon = soLuongTon;
+                }
+                else
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_SoLuong, "Số lượng phải là số nguyên lớn hơn hoặc bằng 0 !");
+                    return;
+                }
+
+                string tmpstr2 = KhoHang_TB_GBSP_GiaBan.Text;
+                double giaBan = 0;
+                bool isDouble = double.TryParse(tmpstr2, out giaBan);
+                if (isDouble == true && giaBan > 10.000)
+                {
+                    khoHangAdd.Gia = giaBan;
+                    //MessageBox.Show(giaBan.ToString());
+                }
+                else
+                {
+                    KhoHang_EP_GBSP.SetError(KhoHang_TB_GBSP_GiaBan, "Gía bán phải là phân số và lớn hơn 10.000 đ !");
+                    return;
+                }
+
+
+                //Loại sản phẩm !;
+                LoaiSanPham sPLoai = new LoaiSanPham();
+                string str = KhoHang_CB_GBSP_Loai.SelectedItem.ToString();
+                foreach (LoaiSanPham item in listLoaiSanPham)
+                {
+                    string strTmp = item.MaLoaiSanPham + "-" + item.TenLoai;
+                    if (str == strTmp)
+                    {
+                        sPLoai = item;
+                        break;
+                    }
+                }
+                khoHangAdd.IDLoaiSanPham = sPLoai.ID;
+
+                // Gioi tính
+                SPSize sPSize = new SPSize();
+                string strSize = KhoHang_CB_GBSP_Size.SelectedItem.ToString();
+                foreach (SPSize item in listSPSize)
+                {
+                    if (item.MaSize == strSize)
+                    {
+                        sPSize = item;
+                    }
+                }
+                khoHangAdd.IDSize = sPSize.ID;
+
+                //HinhAnh;
+                khoHangAdd.HinhAnh = ImageToByteArray(Properties.Resources.SPDefult);
+                //MessageBox.Show(khoHangAdd.IDSize.ToString() + "--" + khoHangAdd.IDLoaiSanPham.ToString() + khoHangAdd.TenHang.ToString());
+                string thongBao = "";
+                bool kQ = false;
+                kQ = bll_KhoHang.Insert_KhoHang(khoHangAdd, out thongBao);
+                if (kQ == false)
+                {
+                    MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(thongBao, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                KhoHang_GB_SanPham.Visible = false;
+                KhoHang_GB_SanPham.Enabled = false;
+                KhoHang_GB_SanPham.SendToBack();
+                KhoHang_TB_GBSP_MaHang.Text = "";
+                KhoHang_TB_GBSP_TenHang.Text = "";
+                KhoHang_TB_GBSP_GiaBan.Text = "0";
+                KhoHang_TB_GBSP_SoLuong.Text = "0";
+
+                KhoHang_CB_GBSP_Loai.Items.Clear();
+                KhoHang_CB_GBSP_Size.Items.Clear();
+
+                BLL_LoadingData();
+                Show_DGVListKhoHangLoading(listKhoHang);
+                KhoHang_LoadingThongTinSanPham(null);
+                suaVaThem = -1;
             }
-            khoHangAdd.IDSize = sPSize.ID;
-
-            //HinhAnh;
-            khoHangAdd.HinhAnh = ImageToByteArray(Properties.Resources.SPDefult);
-            //MessageBox.Show(khoHangAdd.IDSize.ToString() + "--" + khoHangAdd.IDLoaiSanPham.ToString() + khoHangAdd.TenHang.ToString());
-            string thongBao = "";
-            bool kQ = false;
-            kQ = bll_KhoHang.Insert_KhoHang(khoHangAdd, out thongBao);
-            if (kQ == false)
-            {
-                MessageBox.Show(thongBao, "Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show(thongBao, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            KhoHang_GB_SanPham.Visible = false;
-            KhoHang_GB_SanPham.Enabled = false;
-            KhoHang_GB_SanPham.SendToBack();
-            KhoHang_TB_GBSP_MaHang.Text = "";
-            KhoHang_TB_GBSP_TenHang.Text = "";
-            KhoHang_TB_GBSP_GiaBan.Text = "0";
-            KhoHang_TB_GBSP_SoLuong.Text = "0";
-
-            KhoHang_CB_GBSP_Loai.Items.Clear();
-            KhoHang_CB_GBSP_Size.Items.Clear();
-
-            BLL_LoadingData();
-            Show_DGVListKhoHangLoading(listKhoHang);
-            KhoHang_LoadingThongTinSanPham(null);
-
         }
         private void KhoHang_B_Them_Click(object sender, EventArgs e)
         {
@@ -2391,18 +2524,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         }
 
-       
-
-
         #endregion
-
-
-
-
-
-
-
-
 
 
         //private void KhoHang_B_Them_Click(object sender, EventArgs e)
@@ -2410,9 +2532,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
         //    KhoHang_GB_SanPham.Visible = true;
         //    KhoHang_GB_SanPham.Enabled = true;
         //    KhoHang_GB_SanPham.BringToFront();
-
-
-
         //}
 
         //private void TaiKhoan_B_ThoatGBSanPham_Click(object sender, EventArgs e)

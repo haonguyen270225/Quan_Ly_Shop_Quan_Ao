@@ -1,4 +1,5 @@
 ﻿CREATE PROCEDURE dbo.sp_UpdateKhoHang
+    @ID INT,
     @MaHang VARCHAR(10),
     @TenHang NVARCHAR(50),
     @SoLuongTon INT,
@@ -16,8 +17,9 @@ BEGIN
             SoLuongTon = @SoLuongTon,
             Gia = @Gia,
             IDSize = @IDSize,
-            IDLoaiSanPham = @IDLoaiSanPham
-        WHERE MaHang = @MaHang;
+            IDLoaiSanPham = @IDLoaiSanPham,
+            MaHang = @MaHang
+            WHERE ID = @ID;
 
         IF @@ROWCOUNT = 0
             RETURN 1; -- Không có dòng nào được cập nhật

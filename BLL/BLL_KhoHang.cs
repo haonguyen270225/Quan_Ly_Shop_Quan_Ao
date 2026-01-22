@@ -120,12 +120,12 @@ namespace BLL
             thongBao = "";
             if (dal_KhoHang.Update_KhoHang(khoHang) == 1)
             {
-                thongBao = "Cập nhật sản phẩm có mã : " + khoHang.MaHang + "không thành công ! \n Vui lòng thử lại !";
+                thongBao = "Cập nhật sản phẩm có mã : " + khoHang.MaHang + "  không thành công ! \n Vui lòng thử lại !";
                 return false;
             }
             else
             {
-                thongBao = "Cập nhật sản phẩm có mã : " + khoHang.MaHang + "thành công ! ";
+                thongBao = "Cập nhật sản phẩm có mã : " + khoHang.MaHang + "  thành công ! ";
                 return true;
             }
         }

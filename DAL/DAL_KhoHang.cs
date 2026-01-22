@@ -171,13 +171,16 @@ namespace DAL
         }
 
 
+
         public int Update_KhoHang(KhoHang khoHang)
         {
             int kQ = 1; //-- không thể update sản phẩm có maHang;
             SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
+            
             SqlCommand sqlCommand = new SqlCommand("sp_UpdateKhoHang", conn);
             sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@ID", khoHang.ID);
             sqlCommand.Parameters.AddWithValue("@MaHang", khoHang.MaHang);
             sqlCommand.Parameters.AddWithValue("@TenHang", khoHang.TenHang);
             sqlCommand.Parameters.AddWithValue("@SoLuongTon", khoHang.SoLuongTon);
