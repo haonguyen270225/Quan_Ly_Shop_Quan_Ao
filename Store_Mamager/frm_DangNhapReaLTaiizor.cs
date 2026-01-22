@@ -38,12 +38,9 @@ namespace Store_Manager
             TB_PassWord.TabIndex = 1;
             B_DangNhap.TabIndex = 2;
             B_Thoat.TabIndex = 3;
-
             TB_PassWord.UseSystemPasswordChar = true;
             FCB_HienThiMatKhau.Checked = false;
             FCB_HienThiMatKhau.Text = "Hiển thị mật khẩu !";
-
-            
         }
 
         
