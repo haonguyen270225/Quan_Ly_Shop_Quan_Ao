@@ -128,8 +128,9 @@ namespace Store_Manager
             if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_DangXuat)
             {
                 frm_DangNhapReaLTaiizor frm = new frm_DangNhapReaLTaiizor();
+                //this.Close();
+                this.Hide();
                 frm.Show();
-                this.Close();
             }
             if (HoaDon_CB_LoaiSanPham.SelectedTab == tab_TrangChu)
             {
@@ -182,6 +183,18 @@ namespace Store_Manager
                
             }
         }
+        //private void frm_TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    var result = MessageBox.Show("Bạn có chắc muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //    if(result == DialogResult.Yes)
+        //    {
+        //        Application.Exit();
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
 
         private void lostButton1_Click(object sender, EventArgs e)
         {
@@ -2559,6 +2572,29 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             Report_HoaDon report_HoaDon = new Report_HoaDon();
             report_HoaDon.ShowDialog();
         }
+
+
+        private void controlBox1_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(
+                    "Bạn có chắc muốn thoát?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                  );
+
+                if (result == DialogResult.Yes)
+                {
+                Application.Exit();
+                }
+            else
+            {
+                return;
+            }
+           
+        }
+
+
 
         //private void KhoHang_B_Them_Click(object sender, EventArgs e)
         //{

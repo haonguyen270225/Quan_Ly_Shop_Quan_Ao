@@ -218,6 +218,7 @@
             this.B_Thoat.TabIndex = 3;
             this.B_Thoat.Text = "Thoát !";
             this.B_Thoat.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.B_Thoat.Click += new System.EventHandler(this.B_Thoat_Click);
             // 
             // headerLabel2
             // 
