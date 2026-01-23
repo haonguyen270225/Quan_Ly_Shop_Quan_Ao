@@ -17,6 +17,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 namespace Store_Manager
 {
     public partial class frm_TrangChu : Form
@@ -160,7 +161,7 @@ namespace Store_Manager
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_DoanhThu)
             {
-               
+                LoadChart_FromHoaDon(listHoaDon);
                 L_TrangChu_TieuDe.Text = ">>> Doanh thu !";
             }
             else if(HoaDon_CB_LoaiSanPham.SelectedTab == tab_TaiKhoan)
@@ -1267,31 +1268,7 @@ namespace Store_Manager
         }
 
 
-//        var cellValue = TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells["HinhAnh"].Value;
-//        int iDNhanVien = Convert.ToInt32(TaiKhoan_DGV_ListTaiKhoan.SelectedRows[0].Cells["IDNhanVien"].Value);
-//            foreach (TaiKhoan tK in listTaiKhoan)
-//            {
-//                foreach(NhanVien nV in listNhanVien)
-//                {
-//                    if(iDNhanVien == nV.ID && tK.IDNhanVien == iDNhanVien)
-//                    {
-//                        TaiKhoan_TB_Loading(tK , nV);
-//    }
-//}
-//            }
-            
-//            if (cellValue != null && cellValue != DBNull.Value)
-//{
-//    byte[] imgBytes = (byte[])cellValue;
-//    using (MemoryStream ms = new MemoryStream(imgBytes))
-//    {
-//        TaiKhoan_PB_AnhDaiDien.Image = Image.FromStream(ms);
-//    }
-//}
-//else
-//{
-//    TaiKhoan_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-//}
+
 private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //BLL_LoadingData();
@@ -1569,7 +1546,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         }
 
-        int suaVaThem = -1;// 0 - sua , 1 - them;
+        int suaVaThemKhoHang = -1;// 0 - sua , 1 - them;
     
         private void KhoHang_B_Sua_Click(object sender, EventArgs e )
         {
@@ -1631,7 +1608,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                     KhoHang_RB_GBSP_Nu.Checked = false;
                     KhoHang_RB_GBSP_NamVaNu.Checked = false;
 
-                    suaVaThem = 0;
+                    suaVaThemKhoHang = 0;
                     KhoHang_TB_GBSP_MaHang.Text = khoHangUpdate.MaHang;
                     KhoHang_TB_GBSP_TenHang.Text = khoHangUpdate.TenHang;
                     KhoHang_TB_GBSP_GiaBan.Text = khoHangUpdate.Gia.ToString("N0");
@@ -1668,7 +1645,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
         private void KhoHang_B_GBSanPam_XacNhan_Click(object sender, EventArgs e)
         {
 
-            if (suaVaThem == 0) //update;
+            if (suaVaThemKhoHang == 0) //update;
             {
                 
                 MessageBox.Show("Goi ham cap nhat !");
@@ -1798,21 +1775,21 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 else
                 {
                     MessageBox.Show(thongBaos, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                KhoHang_GB_SanPham.Visible = false;
-                KhoHang_GB_SanPham.Enabled = false;
-                KhoHang_GB_SanPham.SendToBack();
-                KhoHang_TB_GBSP_MaHang.Text = "";
-                KhoHang_TB_GBSP_TenHang.Text = "";
-                KhoHang_TB_GBSP_GiaBan.Text = "0";
-                KhoHang_TB_GBSP_SoLuong.Text = "0";
+                    KhoHang_GB_SanPham.Visible = false;
+                    KhoHang_GB_SanPham.Enabled = false;
+                    KhoHang_GB_SanPham.SendToBack();
+                    KhoHang_TB_GBSP_MaHang.Text = "";
+                    KhoHang_TB_GBSP_TenHang.Text = "";
+                    KhoHang_TB_GBSP_GiaBan.Text = "0";
+                    KhoHang_TB_GBSP_SoLuong.Text = "0";
 
-                KhoHang_CB_GBSP_Loai.Items.Clear();
-                KhoHang_CB_GBSP_Size.Items.Clear();
-                suaVaThem = -1;
+                    KhoHang_CB_GBSP_Loai.Items.Clear();
+                    KhoHang_CB_GBSP_Size.Items.Clear();
+                    suaVaThemKhoHang = -1;
+                }
 
             }
-            if(suaVaThem == 1)
+            if(suaVaThemKhoHang == 1)
             {
 
                 if (KhoHang_TB_GBSP_MaHang.Text == "")
@@ -1932,27 +1909,27 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 else
                 {
                     MessageBox.Show(thongBao, "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    KhoHang_GB_SanPham.Visible = false;
+                    KhoHang_GB_SanPham.Enabled = false;
+                    KhoHang_GB_SanPham.SendToBack();
+                    KhoHang_TB_GBSP_MaHang.Text = "";
+                    KhoHang_TB_GBSP_TenHang.Text = "";
+                    KhoHang_TB_GBSP_GiaBan.Text = "0";
+                    KhoHang_TB_GBSP_SoLuong.Text = "0";
+
+                    KhoHang_CB_GBSP_Loai.Items.Clear();
+                    KhoHang_CB_GBSP_Size.Items.Clear();
+
+                    BLL_LoadingData();
+                    Show_DGVListKhoHangLoading(listKhoHang);
+                    KhoHang_LoadingThongTinSanPham(null);
+                    suaVaThemKhoHang = -1;
                 }
-                KhoHang_GB_SanPham.Visible = false;
-                KhoHang_GB_SanPham.Enabled = false;
-                KhoHang_GB_SanPham.SendToBack();
-                KhoHang_TB_GBSP_MaHang.Text = "";
-                KhoHang_TB_GBSP_TenHang.Text = "";
-                KhoHang_TB_GBSP_GiaBan.Text = "0";
-                KhoHang_TB_GBSP_SoLuong.Text = "0";
-
-                KhoHang_CB_GBSP_Loai.Items.Clear();
-                KhoHang_CB_GBSP_Size.Items.Clear();
-
-                BLL_LoadingData();
-                Show_DGVListKhoHangLoading(listKhoHang);
-                KhoHang_LoadingThongTinSanPham(null);
-                suaVaThem = -1;
             }
         }
         private void KhoHang_B_Them_Click(object sender, EventArgs e)
         {
-            suaVaThem = 1;
+            suaVaThemKhoHang = 1;
             KhoHang_GB_SanPham.Visible = true;
             KhoHang_GB_SanPham.Enabled = true;
             KhoHang_GB_SanPham.BringToFront();
@@ -1995,7 +1972,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
                 KhoHang_CB_GBSP_Loai.Items.Clear();
                 KhoHang_CB_GBSP_Size.Items.Clear();
-                suaVaThem = -1;
+                suaVaThemKhoHang = -1;
             }
             else
             {
@@ -2003,7 +1980,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             }
 
         }
-
 
 
         private void KhoHang_TB_TextChanged(object sender, EventArgs e)
@@ -2551,9 +2527,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             }
         }
 
-
-
-
         #endregion
         private void B_TrangChu_KhachHang_Click(object sender, EventArgs e)
         {
@@ -2593,6 +2566,44 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             }
            
         }
+
+
+        #region tab_DoanhThu
+
+        //public class HoaDon
+        //{
+        //    public DateTime NgayBan { get; set; }
+        //    public decimal TongTien { get; set; }
+        //}
+        private void LoadChart_FromHoaDon(List<HoaDon> listHoaDon)
+        {
+            // Gom theo tháng
+            var data = listHoaDon
+                .GroupBy(hd => hd.Ngay.Month)
+                .Select(g => new
+                {
+                    Thang = g.Key,
+                    DoanhThu = g.Sum(x => x.TongThu)
+                })
+                .OrderBy(x => x.Thang)
+                .ToList();
+
+            C_DoanhThuThang.Series.Clear();
+
+            Series s = new Series("Doanh Thu");
+            s.ChartType = SeriesChartType.Column;
+            s.XValueType = ChartValueType.Int32;
+            s.IsValueShownAsLabel = true;
+            s.LabelFormat = "#,##0";
+
+            foreach (var item in data)
+            {
+                s.Points.AddXY(item.Thang, item.DoanhThu);
+            }
+
+            C_DoanhThuThang.Series.Add(s);
+        }
+        #endregion
 
 
 
