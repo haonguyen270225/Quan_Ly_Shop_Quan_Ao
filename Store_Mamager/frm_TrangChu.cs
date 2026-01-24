@@ -67,7 +67,6 @@ namespace Store_Manager
 
         }
 
-       
         private void BLL_LoadingData()
         {
             listTaiKhoan = bll_TaiKhoan.LoadingThongTinTaiKhoan();
@@ -184,18 +183,6 @@ namespace Store_Manager
                
             }
         }
-        //private void frm_TrangChu_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    var result = MessageBox.Show("Bạn có chắc muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if(result == DialogResult.Yes)
-        //    {
-        //        Application.Exit();
-        //    }
-        //    else
-        //    {
-        //        e.Cancel = true;
-        //    }
-        //}
 
         private void lostButton1_Click(object sender, EventArgs e)
         {
@@ -1213,32 +1200,7 @@ namespace Store_Manager
             }
            
         }
-        //private void TaiKhoan_DGV_ListTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex >= 0 && TaiKhoan_DGV_ListTaiKhoan.Columns[e.ColumnIndex].Name == "Reset")
-        //    {
-        //        int id = Convert.ToInt32(TaiKhoan_DGV_ListTaiKhoan.Rows[e.RowIndex].Cells["IDNhanVien"].Value);
 
-        //        //MessageBox.Show($"Reset mật khẩu cho tài khoản ID = {id}");
-        //        // TODO: gọi hàm reset ở đây
-
-        //        var kq = MessageBox.Show("Bán có muốn reset  tài khoản ! \n Có IDNhanVien : " + id, "Reset Tài Khoản !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-        //        if (kq == DialogResult.No)
-        //        {
-        //            return;
-        //        }
-        //        else
-        //        {
-        //            bool kQ = false;
-        //            string thongBao = "";
-
-        //            bll_TaiKhoan.TaiKhoan_Reset(id, out thongBao, out kQ);
-        //            MessageBox.Show(thongBao, "Reset Tài Khoản !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            BLL_LoadingData();
-        //            ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
-        //        }
-        //    }
-        //}
         private void KhoHang_DGV_ListKhoHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && KhoHang_DGV_ListSanPham.Columns[e.ColumnIndex].Name == "Delete")
@@ -2093,52 +2055,11 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                     TaiKhoan_CB_ChucVu.SelectedItem = item;
                 }
             }
-
-
             //
             CTTK_PB_AnhDaiDien.Image = PB_TrangChu_ThongTinTaiKhoan.Image;
             CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
             PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
             CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
-            // Loading PB_HinhAnh
-
-            //if (taiKhoan?.HinhAnh != null && taiKhoan.HinhAnh.Length > 0)
-            //{
-            //    try
-            //    {
-            //        using (MemoryStream ms = new MemoryStream(taiKhoan.HinhAnh))
-            //        {
-            //            PB_TrangChu_ThongTinTaiKhoan.Image = Image.FromStream(ms);
-            //            PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
-
-            //            CTTK_PB_AnhDaiDien.Image = Image.FromStream(ms);
-            //            CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom; // Đẹp nhất cho avatar
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Lỗi load ảnh từ database: " + ex.Message);
-            //        // Fallback về ảnh mặc định
-            //        PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
-            //        PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
-            //        CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-            //        CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
-            //    }
-            //}
-            //else
-            //{
-            //    if (CTTK_PB_AnhDaiDien.Image != null)
-            //    {
-            //        CTTK_PB_AnhDaiDien.Image.Dispose();
-            //        CTTK_PB_AnhDaiDien.Image = null;
-            //    }
-
-            //    CTTK_PB_AnhDaiDien.Image = Properties.Resources.CTTK_MacDinh;
-            //    CTTK_PB_AnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
-
-            //    PB_TrangChu_ThongTinTaiKhoan.Image = Properties.Resources.CTTK_MacDinh;
-            //    PB_TrangChu_ThongTinTaiKhoan.SizeMode = PictureBoxSizeMode.Zoom;
-            //}
         }
 
        private void TaiKhoan_GB_CTTK_LoadingData_CapNhat(NhanVien nhanVien)
@@ -2604,8 +2525,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
             C_DoanhThuThang.Series.Add(s);
         }
         #endregion
-
-
 
         //private void KhoHang_B_Them_Click(object sender, EventArgs e)
         //{
