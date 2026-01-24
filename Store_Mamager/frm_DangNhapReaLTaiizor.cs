@@ -32,8 +32,8 @@ namespace Store_Manager
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            TB_TenDangNhap.Text = "24_UserName";
-            TB_PassWord.Text = "Qua lý Trung";
+            //TB_TenDangNhap.Text = "24_UserName";
+            //TB_PassWord.Text = "Qua lý Trung";
             TB_TenDangNhap.TabIndex = 0;
             TB_PassWord.TabIndex = 1;
             B_DangNhap.TabIndex = 2;

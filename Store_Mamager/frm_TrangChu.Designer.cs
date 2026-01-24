@@ -3579,9 +3579,7 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KhoHang_DGV_ListSanPham)).EndInit();
             this.parrotGroupBox3.ResumeLayout(false);
-            this.parrotGroupBox3.PerformLayout();
             this.parrotGroupBox2.ResumeLayout(false);
-            this.parrotGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KhoHang_PB_SanPham)).EndInit();
             this.KhoHang_GB_SanPham.ResumeLayout(false);
             this.KhoHang_GB_SanPham.PerformLayout();
