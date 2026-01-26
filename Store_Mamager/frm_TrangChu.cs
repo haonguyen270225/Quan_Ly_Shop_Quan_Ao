@@ -36,6 +36,7 @@ namespace Store_Manager
         private List<KhuyenMai> listKhuyenMai = new List<KhuyenMai>();
         private List<TaiKhoan> listTaiKhoan = new List<TaiKhoan>();
         private List<NhanVien> listNhanVien = new List<NhanVien>();
+        private List<ChucVu> listChucVu = new List<ChucVu>();
 
         private BLL_NhanVien bLL_NhanVien = new BLL_NhanVien();
         private BLL_TaiKhoan bll_TaiKhoan = new BLL_TaiKhoan();
@@ -46,6 +47,7 @@ namespace Store_Manager
         private BLL_KhachHang bll_KhachHang = new BLL_KhachHang();
         private BLL_HoaDon bll_HoaDon = new BLL_HoaDon();
         private BLL_ChiTietHoaDon bll_ChiTietHoaDon = new BLL_ChiTietHoaDon();
+        private BLL_ChucVu bll_ChucVu = new BLL_ChucVu();
 
         private UC_SanPham ucSanPham;
         private UC_ChiTietSanPham ucChiTietSanPham;
@@ -78,8 +80,7 @@ namespace Store_Manager
             listKhoHang = bll_KhoHang.LoadingKhoHang();
             listHoaDon = bll_HoaDon.LoadingHoaDon();
             listChiTietHoaDon = bll_ChiTietHoaDon.LoadingChiTietHoaDon();
-
-            
+            listChucVu = bll_ChucVu.LoadingChucVu();
         }
 
         private void CreateLoading_TrangChu()
@@ -2167,42 +2168,14 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
         private void GB_CTTK_CB_Loading()
         {
-            List<NhanVien> listNV = bLL_NhanVien.LoadingNhanVien();
-
             CTTK_CB_ChucVu.Items.Clear();
-
-            if (listNV == null || listNV.Count == 0)
+            // Chuc  Vu:
+            List<ChucVu> listTmpChucVu = bll_ChucVu.LoadingChucVu();
+            foreach (var item in listTmpChucVu)
             {
-                MessageBox.Show("Không có dữ liệu nhân viên!");
-                return;
+                CTTK_CB_ChucVu.Items.Add(item.TenChucVu);
             }
-
-            // Dùng HashSet để lọc trùng
-            HashSet<string> chucVuSet = new HashSet<string>();
-
-            foreach (var nv in listNV)
-            {
-                if (!string.IsNullOrWhiteSpace(nv.ChucVu))
-                {
-                    chucVuSet.Add(nv.ChucVu);
-                }
-            }
-
-            foreach (var chucVu in chucVuSet)
-            {
-                CTTK_CB_ChucVu.Items.Add(chucVu);
-            }
-
-            if (CTTK_CB_ChucVu.Items.Count > 0)
-            {
-                CTTK_CB_ChucVu.SelectedIndex = 0;
-            }
-            else
-            {
-                MessageBox.Show("Lỗi chức vụ!");
-            }
-
-
+            
             // loading CB_GioiTinh;
             CTTK_CB_GioiTinh.Items.Clear();
             CTTK_CB_GioiTinh.Items.Add("Nữ");

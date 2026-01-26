@@ -28,12 +28,11 @@ namespace Store_Manager
             InitializeComponent();
             
         }
-          
         private void frm_DangNhapReaLTaiizor_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            //TB_TenDangNhap.Text = "24_UserName";
-            //TB_PassWord.Text = "Qua lý Trung";
+            TB_TenDangNhap.Text = "UserName123456";
+            TB_PassWord.Text = "PassWord123456";
             TB_TenDangNhap.TabIndex = 0;
             TB_PassWord.TabIndex = 1;
             B_DangNhap.TabIndex = 2;
@@ -42,9 +41,6 @@ namespace Store_Manager
             FCB_HienThiMatKhau.Checked = false;
             FCB_HienThiMatKhau.Text = "Hiển thị mật khẩu !";
         }
-
-        
-
         private void B_DangNhap_Click(object sender, EventArgs e)
         {
            
