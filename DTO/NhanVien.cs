@@ -16,7 +16,7 @@ namespace DTO
         public string Email { get; set; }
         public string CCCD { get; set; }
         public string DiaChi { get; set; }
-        public string ChucVu { get; set; }
+        public int IDChucVu { get; set; }
         public int GioiTinh { get; set; }
 
         public int HinhThucLamViec { get; set; }
@@ -29,7 +29,7 @@ namespace DTO
             Email = "";
             CCCD = "";
             DiaChi = "";
-            ChucVu = "";
+            IDChucVu = 0;
             GioiTinh = 0;
             HinhThucLamViec = 0;
         }

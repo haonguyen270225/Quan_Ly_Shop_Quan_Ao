@@ -17,7 +17,7 @@ namespace DAL
             SqlConnection conn = DAL_DataAccess.Conn();
             conn.Open();
 
-            SqlCommand sqlCommand = new SqlCommand("SELECT [ID], [MaNhanVien], [HoVaTen], [SDT], [Email], [CCCD], [DiaChi], [ChucVu], [GioiTinh] , [HinhThucLamViec] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[NhanVien]" , conn);
+            SqlCommand sqlCommand = new SqlCommand("SELECT [ID], [MaNhanVien], [HoVaTen], [SDT], [Email], [CCCD], [DiaChi], [IDChucVu], [GioiTinh] , [HinhThucLamViec] FROM [Quan_Ly_Shop_Quan_Ao].[dbo].[NhanVien]" , conn);
 
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
 
@@ -34,7 +34,7 @@ namespace DAL
                     tmp.Email = dataReader.GetValue(4).ToString();
                     tmp.CCCD = dataReader.GetValue(5).ToString();
                     tmp.DiaChi = dataReader.GetValue(6).ToString();
-                    tmp.ChucVu = dataReader.GetValue(7).ToString();
+                    tmp.IDChucVu = Convert.ToInt32(dataReader.GetValue(7));//dataReader.GetValue(7).ToString();
                     tmp.GioiTinh = dataReader.GetInt32(8);
                     tmp.HinhThucLamViec = dataReader.GetInt32(9);
                     listNhanVienTmp.Add(tmp);
@@ -68,7 +68,7 @@ namespace DAL
                     nhanVien.Email = dataReader.GetValue(4).ToString();
                     nhanVien.CCCD = dataReader.GetValue(5).ToString();
                     nhanVien.DiaChi = dataReader.GetValue(6).ToString();
-                    nhanVien.ChucVu = dataReader.GetValue(7).ToString();
+                    nhanVien.IDChucVu = dataReader.GetInt32(7);//dataReader.GetValue(7).ToString();
                     nhanVien.GioiTinh = dataReader.GetInt32(8);
                     nhanVien.HinhThucLamViec = dataReader.GetInt32(9);
                 }
@@ -93,7 +93,7 @@ namespace DAL
             sqlCommand.Parameters.AddWithValue("@Email", nhanVien.Email);
             sqlCommand.Parameters.AddWithValue("@CCCD", nhanVien.CCCD);
             sqlCommand.Parameters.AddWithValue("@DiaChi", nhanVien.DiaChi);
-            sqlCommand.Parameters.AddWithValue("@ChucVu", nhanVien.ChucVu);
+            sqlCommand.Parameters.AddWithValue("@IDChucVu", nhanVien.IDChucVu);
             sqlCommand.Parameters.AddWithValue("@GioiTinh", nhanVien.GioiTinh);
             sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
             
@@ -145,7 +145,7 @@ namespace DAL
             sqlCommand.Parameters.AddWithValue("@Email", nhanVien.Email);
             sqlCommand.Parameters.AddWithValue("@CCCD", nhanVien.CCCD);
             sqlCommand.Parameters.AddWithValue("@DiaChi", nhanVien.DiaChi);
-            sqlCommand.Parameters.AddWithValue("@ChucVu", nhanVien.ChucVu);
+            sqlCommand.Parameters.AddWithValue("@IDChucVu", nhanVien.IDChucVu);
             sqlCommand.Parameters.AddWithValue("@GioiTinh", nhanVien.GioiTinh);
             sqlCommand.Parameters.AddWithValue("@HinhThucLamViec", nhanVien.HinhThucLamViec);
 

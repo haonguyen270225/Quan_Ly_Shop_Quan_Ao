@@ -7,7 +7,7 @@
     @Email NVARCHAR(50),
     @CCCD NVARCHAR(15),
     @DiaChi NVARCHAR(50),
-    @ChucVu NVARCHAR(50),
+    @IDChucVu INT,
     @GioiTinh INT,
     @HinhThucLamViec INT
 AS
@@ -22,7 +22,7 @@ BEGIN
         Email = @Email,
         CCCD = @CCCD,
         DiaChi = @DiaChi,
-        ChucVu = @ChucVu,
+        IDChucVu = @IDChucVu,
         GioiTinh = @GioiTinh,
         HinhThucLamViec = @HinhThucLamViec
     WHERE ID = @ID;

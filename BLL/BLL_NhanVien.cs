@@ -37,105 +37,105 @@ namespace BLL
             }
         }
 
-        public List<NhanVien> TimKiem(string maNhanVien , string hoVaTen , string chucVu , string hinhThucLamViec , List<NhanVien> listNhanVien)
-        {
-            List<NhanVien> listTK = new List<NhanVien>();
+        //public List<NhanVien> TimKiem(string maNhanVien , string hoVaTen , string chucVu , string hinhThucLamViec , List<NhanVien> listNhanVien)
+        //{
+        //    List<NhanVien> listTK = new List<NhanVien>();
 
-            // for(int i = 0; i < listNhanVien.Count; i++)
-            // {
-            //     if(str == listNhanVien[i].MaNhanVien)
-            //     {
-            //         listTK.Add(listNhanVien[i]);
-            //     }
-            // }
-            //return listTK;
+        //    // for(int i = 0; i < listNhanVien.Count; i++)
+        //    // {
+        //    //     if(str == listNhanVien[i].MaNhanVien)
+        //    //     {
+        //    //         listTK.Add(listNhanVien[i]);
+        //    //     }
+        //    // }
+        //    //return listTK;
 
-            if (maNhanVien != "" && hoVaTen != "" && chucVu == "" && hinhThucLamViec == "")
-            {
-                for (int i = 0; i < listNhanVien.Count; i++)
-                {
-                    if (maNhanVien == listNhanVien[i].MaNhanVien && hoVaTen == listNhanVien[i].HoVaTen)
-                    {
-                        listTK.Add(listNhanVien[i]);
-                    }
-                }
+        //    if (maNhanVien != "" && hoVaTen != "" && chucVu == "" && hinhThucLamViec == "")
+        //    {
+        //        for (int i = 0; i < listNhanVien.Count; i++)
+        //        {
+        //            if (maNhanVien == listNhanVien[i].MaNhanVien && hoVaTen == listNhanVien[i].HoVaTen)
+        //            {
+        //                listTK.Add(listNhanVien[i]);
+        //            }
+        //        }
                
-            }
-            else if (maNhanVien != "" && hoVaTen == "" && chucVu == "" && hinhThucLamViec == "")
-            {
-                for (int i = 0; i < listNhanVien.Count; i++)
-                {
-                    if (maNhanVien == listNhanVien[i].MaNhanVien)
-                    {
-                        listTK.Add(listNhanVien[i]);
-                    }
-                }
+        //    }
+        //    else if (maNhanVien != "" && hoVaTen == "" && chucVu == "" && hinhThucLamViec == "")
+        //    {
+        //        for (int i = 0; i < listNhanVien.Count; i++)
+        //        {
+        //            if (maNhanVien == listNhanVien[i].MaNhanVien)
+        //            {
+        //                listTK.Add(listNhanVien[i]);
+        //            }
+        //        }
                
-            }
-            else if (maNhanVien == "" && hoVaTen != "" && chucVu == "" && hinhThucLamViec == "")
-            {
-                for (int i = 0; i < listNhanVien.Count; i++)
-                {
-                    if (hoVaTen == listNhanVien[i].HoVaTen)
-                    {
-                        listTK.Add(listNhanVien[i]);
-                    }
-                }
+        //    }
+        //    else if (maNhanVien == "" && hoVaTen != "" && chucVu == "" && hinhThucLamViec == "")
+        //    {
+        //        for (int i = 0; i < listNhanVien.Count; i++)
+        //        {
+        //            if (hoVaTen == listNhanVien[i].HoVaTen)
+        //            {
+        //                listTK.Add(listNhanVien[i]);
+        //            }
+        //        }
                 
-            }
-            else if (maNhanVien == "" && hoVaTen == "" && chucVu != ""  && hinhThucLamViec == "")
-            {
-                for (int i = 0; i < listNhanVien.Count; i++)
-                {
-                    if (chucVu == listNhanVien[i].ChucVu)
-                    {
-                        listTK.Add(listNhanVien[i]);
-                    }
-                }
+        //    }
+        //    else if (maNhanVien == "" && hoVaTen == "" && chucVu != ""  && hinhThucLamViec == "")
+        //    {
+        //        for (int i = 0; i < listNhanVien.Count; i++)
+        //        {
+        //            if (chucVu == listNhanVien[i].IDChucVu)
+        //            {
+        //                listTK.Add(listNhanVien[i]);
+        //            }
+        //        }
                
-            }
-            else if(maNhanVien == "" && hoVaTen == "" && chucVu == "" && hinhThucLamViec != "")
-            {
-                int tmp;
-                if(hinhThucLamViec == "Full time")
-                {
-                    tmp = 0;
-                }
-                else
-                {
-                    tmp = 1;
-                }
-                for (int i = 0; i < listNhanVien.Count; i++)
-                {
-                    if (tmp == listNhanVien[i].HinhThucLamViec)
-                    {
-                        listTK.Add(listNhanVien[i]);
-                    }
-                }
+        //    }
+        //    else if(maNhanVien == "" && hoVaTen == "" && chucVu == "" && hinhThucLamViec != "")
+        //    {
+        //        int tmp;
+        //        if(hinhThucLamViec == "Full time")
+        //        {
+        //            tmp = 0;
+        //        }
+        //        else
+        //        {
+        //            tmp = 1;
+        //        }
+        //        for (int i = 0; i < listNhanVien.Count; i++)
+        //        {
+        //            if (tmp == listNhanVien[i].HinhThucLamViec)
+        //            {
+        //                listTK.Add(listNhanVien[i]);
+        //            }
+        //        }
               
-            }
-            else if(maNhanVien == "" && hoVaTen == "" && chucVu != "" && hinhThucLamViec != "")
-            {
-                int tmp;
-                if (hinhThucLamViec == "Full time")
-                {
-                    tmp = 0;
-                }
-                else
-                {
-                    tmp = 1;
-                }
-                for (int i = 0; i < listNhanVien.Count; i++)
-                {
-                    if (tmp == listNhanVien[i].HinhThucLamViec && chucVu == listNhanVien[i].ChucVu)
-                    {
-                        listTK.Add(listNhanVien[i]);
-                    }
-                }
+        //    }
+        //    else if(maNhanVien == "" && hoVaTen == "" && chucVu != "" && hinhThucLamViec != "")
+        //    {
+        //        int tmp;
+        //        if (hinhThucLamViec == "Full time")
+        //        {
+        //            tmp = 0;
+        //        }
+        //        else
+        //        {
+        //            tmp = 1;
+        //        }
+        //        for (int i = 0; i < listNhanVien.Count; i++)
+        //        {
+        //            if (tmp == listNhanVien[i].HinhThucLamViec && chucVu == listNhanVien[i].IDChucVu)
+        //            {
+        //                listTK.Add(listNhanVien[i]);
+        //            }
+        //        }
                
-            }
-            return listTK;
-        }
+        //    }
+        //    return listTK;
+        //}
 
         public NhanVien TT_NhanVienDangNhap(TaiKhoan taiKhoan)
         {
@@ -200,11 +200,11 @@ namespace BLL
                 return false;
                 
             }
-            else if (nhanVien.ChucVu == "")
-            {
-                thongBao = " Chức vụ không được để trống !";
-                return false;
-            }
+            //else if (nhanVien.IDChucVu == "")
+            //{
+            //    thongBao = " Chức vụ không được để trống !";
+            //    return false;
+            //}
             else if (nhanVien.DiaChi == "")
             {
                 thongBao = "Địa chỉ nhân viên không được để trống !";
