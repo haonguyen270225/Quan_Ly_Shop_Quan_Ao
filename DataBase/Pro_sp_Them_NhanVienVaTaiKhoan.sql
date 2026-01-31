@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE sp_Them_NhanVienVaTaiKhoan
     @MaNhanVien   VARCHAR(10),
-    @HoTen        NVARCHAR(50),
+    @HoVaTen        NVARCHAR(50),
     @SDT          VARCHAR(15),
     @Email        VARCHAR(50),
     @CCCD         VARCHAR(15),
@@ -19,7 +19,7 @@ BEGIN
 
         -- 1. Thêm Nhân Viên (IDNhanVien là IDENTITY)
         INSERT INTO NhanVien (MaNhanVien , HoVaTen , SDT , Email , CCCD , DiaCHi , IDChucVu , GioiTinh , HinhThucLamViec)
-        VALUES (@MaNhanVien, @HoTen, @SDT, @Email, @CCCD , @DiaChi , @IDChucVu , @GioiTinh , @HinhThucLamViec);
+        VALUES (@MaNhanVien, @HoVaTen, @SDT, @Email, @CCCD , @DiaChi , @IDChucVu , @GioiTinh , @HinhThucLamViec);
 
         -- 2. Lấy ID tự tăng vừa sinh
         DECLARE @IDNhanVien INT;

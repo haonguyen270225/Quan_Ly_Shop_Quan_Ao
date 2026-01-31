@@ -783,6 +783,7 @@ namespace Store_Manager
             }
         }
 
+      
         private void TaiKhoan_DGV_ListTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BLL_LoadingData();
@@ -828,6 +829,50 @@ namespace Store_Manager
             }
         }
 
+        private void TaiKhoan_Show_NhanVien(NhanVien nhanVien)
+        {
+            
+            TaiKhoan_TB_HoVaTen.Text = nhanVien.HoVaTen;
+            TaiKhoan_TB_MaNhanVien.Text = nhanVien.MaNhanVien;
+            TaiKhoan_TB_CCCD.Text = nhanVien.CCCD;
+            TaiKhoan_TB_SDT.Text = nhanVien.SDT;
+            TaiKhoan_TB_Email.Text = nhanVien.Email;
+            TaiKhoan_TB_DiaChi.Text = nhanVien.DiaChi;
+            TaiKhoan_L_IDNhanVien.Text = nhanVien.ID.ToString();
+            // GioiTinh
+            if (nhanVien.GioiTinh == 1)
+            {
+                TaiKhoan_CB_GioiTinh.SelectedIndex = 1;
+            }
+            else
+            {
+                TaiKhoan_CB_GioiTinh.SelectedIndex = 0;
+            }
+            // ChucVu
+            foreach (ChucVu item in listChucVu)
+            {
+                if (nhanVien.IDChucVu == item.ID)
+                {
+                    TaiKhoan_CB_ChucVu.SelectedItem = item.TenChucVu;
+                }
+            }
+            //foreach(var item in TaiKhoan_CB_ChucVu.Items)
+            //{
+            //    if(item.ToString().Trim() == nhanVien.IDChucVu.Trim())
+            //    {
+            //        TaiKhoan_CB_ChucVu.SelectedItem = item;
+            //    }
+            //}
+            //HinhThucLamViec
+            if (nhanVien.HinhThucLamViec == 0)
+            {
+                TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 0;
+            }
+            else
+            {
+                TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 1;
+            }
+        }
         private void TaiKhoan_TB_Loading(TaiKhoan taiKhoan, NhanVien nhanVien)
         {
            
@@ -852,46 +897,47 @@ namespace Store_Manager
             }
             else
             {
-                TaiKhoan_TB_HoVaTen.Text = nhanVien.HoVaTen;
-                TaiKhoan_TB_MaNhanVien.Text = nhanVien.MaNhanVien;
-                TaiKhoan_TB_CCCD.Text = nhanVien.CCCD;
-                TaiKhoan_TB_SDT.Text = nhanVien.SDT;
-                TaiKhoan_TB_Email.Text = nhanVien.Email;
-                TaiKhoan_TB_DiaChi.Text = nhanVien.DiaChi;
-                TaiKhoan_L_IDNhanVien.Text = nhanVien.ID.ToString();
-                // GioiTinh
-                if(nhanVien.GioiTinh == 1)
-                {
-                    TaiKhoan_CB_GioiTinh.SelectedIndex = 1;
-                }
-                else
-                {
-                    TaiKhoan_CB_GioiTinh.SelectedIndex = 0;
-                }
-                // ChucVu
-                foreach(ChucVu item in listChucVu)
-                {
-                    if(nhanVien.IDChucVu == item.ID)
-                    {
-                        TaiKhoan_CB_ChucVu.SelectedItem = item.TenChucVu;
-                    }
-                }
-                //foreach(var item in TaiKhoan_CB_ChucVu.Items)
+                //TaiKhoan_TB_HoVaTen.Text = nhanVien.HoVaTen;
+                //TaiKhoan_TB_MaNhanVien.Text = nhanVien.MaNhanVien;
+                //TaiKhoan_TB_CCCD.Text = nhanVien.CCCD;
+                //TaiKhoan_TB_SDT.Text = nhanVien.SDT;
+                //TaiKhoan_TB_Email.Text = nhanVien.Email;
+                //TaiKhoan_TB_DiaChi.Text = nhanVien.DiaChi;
+                //TaiKhoan_L_IDNhanVien.Text = nhanVien.ID.ToString();
+                //// GioiTinh
+                //if(nhanVien.GioiTinh == 1)
                 //{
-                //    if(item.ToString().Trim() == nhanVien.IDChucVu.Trim())
+                //    TaiKhoan_CB_GioiTinh.SelectedIndex = 1;
+                //}
+                //else
+                //{
+                //    TaiKhoan_CB_GioiTinh.SelectedIndex = 0;
+                //}
+                //// ChucVu
+                //foreach(ChucVu item in listChucVu)
+                //{
+                //    if(nhanVien.IDChucVu == item.ID)
                 //    {
-                //        TaiKhoan_CB_ChucVu.SelectedItem = item;
+                //        TaiKhoan_CB_ChucVu.SelectedItem = item.TenChucVu;
                 //    }
                 //}
-                //HinhThucLamViec
-                if(nhanVien.HinhThucLamViec == 0)
-                {
-                    TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 0;
-                }
-                else
-                {
-                    TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 1;
-                }
+                ////foreach(var item in TaiKhoan_CB_ChucVu.Items)
+                ////{
+                ////    if(item.ToString().Trim() == nhanVien.IDChucVu.Trim())
+                ////    {
+                ////        TaiKhoan_CB_ChucVu.SelectedItem = item;
+                ////    }
+                ////}
+                ////HinhThucLamViec
+                //if(nhanVien.HinhThucLamViec == 0)
+                //{
+                //    TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 0;
+                //}
+                //else
+                //{
+                //    TaiKhoan_CB_HinhThucLamViec.SelectedIndex = 1;
+                //}
+                TaiKhoan_Show_NhanVien(nhanVien);
             }
         }
 
@@ -958,7 +1004,6 @@ namespace Store_Manager
             TaiKhoan_TB_Loading(null, null);
             BLL_LoadingData();
             ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
-            
         }
 
         private void TaiKhoan_B_XoaTimKiem_Click(object sender, EventArgs e)
@@ -2031,7 +2076,6 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
 
         #region GB_ChiTietTaiKhoan
-
         private void SetTextBoxReadOnlyAll(Control parent, bool isReadOnly)
         {
             foreach (Control ctrl in parent.Controls)
@@ -2307,9 +2351,9 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 //nhanVienCapNhat.IDChucVu = CTTK_CB_ChucVu.Text.Trim();
                 foreach(ChucVu item in listChucVu)
                 {
-                    if(CTTK_CB_ChucVu.Items.ToString() == item.TenChucVu)
+                    if(CTTK_CB_ChucVu.SelectedItem.ToString() == item.TenChucVu)
                     {
-                        nhanVien.IDChucVu = item.ID;
+                        nhanVienCapNhat.IDChucVu = item.ID;
                     }
                 }
                 //GioiTinh
@@ -2350,7 +2394,7 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                     TaiKhoan_PB_AnhDaiDien.Image = CTTK_PB_AnhDaiDien.Image;
                     TaiKhoan_GB_CTTK_LoadingData_CapNhat(nhanVien = new NhanVien());
                     ShowData_DGVListTaiKhoan(listTaiKhoan, listNhanVien);
-                    
+                    TaiKhoan_Show_NhanVien(nhanVienCapNhat);
                 }
                 
                 //bLL_NhanVien.CapNhat_NhanVien()
@@ -2367,11 +2411,11 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
                 nhanVienThem.CCCD = CTTK_TB_CCCD.Text.Trim();
                 nhanVienThem.SDT = CTTK_TB_SDT.Text.Trim();
                 nhanVienThem.DiaChi = CTTK_TB_DiaChi.Text.Trim();
-                nhanVienThem.ID = Convert.ToInt32(TaiKhoan_L_IDNhanVien.Text);
+               // nhanVienThem.ID = Convert.ToInt32(TaiKhoan_L_IDNhanVien.Text);
                 // ChucVu
                 foreach(ChucVu item in listChucVu)
                 {
-                    if(CTTK_CB_ChucVu.Items.ToString() == item.TenChucVu)
+                    if(CTTK_CB_ChucVu.SelectedItem.ToString() == item.TenChucVu)
                     {
                         nhanVienThem.IDChucVu = item.ID;
                     }
