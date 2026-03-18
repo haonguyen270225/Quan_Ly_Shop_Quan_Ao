@@ -122,7 +122,7 @@ namespace DAL
             conn.Close();
             return kQ;
         }
-        public int DleteKhoHang_ByMaHang(string maHang)
+        public int DeleteKhoHang_ByMaHang(string maHang)
         {
             int kQ = 1; //-- không thể delete sản phẩm có maHang;
             SqlConnection conn = DAL_DataAccess.Conn();

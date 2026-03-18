@@ -86,7 +86,7 @@ namespace BLL
             }
             else
             {
-                if(dal_KhoHang.DleteKhoHang_ByMaHang(maHang) == 1)
+                if(dal_KhoHang.DeleteKhoHang_ByMaHang(maHang) == 1)
                 {
                     thongBao = "Trong kho hàng không có mã hàng :" + maHang + "\n Vui lòng nhấn Loading và thử lại !";
                     return false;
