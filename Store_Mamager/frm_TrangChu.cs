@@ -2605,6 +2605,9 @@ private void KhoHang_DGV_ListSanPham_CellClick(object sender, DataGridViewCellEv
 
             C_DoanhThuThang.Series.Add(s);
         }
+
+      
+
         #endregion
 
         //private void KhoHang_B_Them_Click(object sender, EventArgs e)
