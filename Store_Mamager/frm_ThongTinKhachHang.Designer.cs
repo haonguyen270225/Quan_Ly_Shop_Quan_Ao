@@ -34,6 +34,7 @@
             this.foxBigLabel4 = new ReaLTaiizor.Controls.FoxBigLabel();
             this.TB_MaKhachHang = new ReaLTaiizor.Controls.HopeTextBox();
             this.airForm1 = new ReaLTaiizor.Forms.AirForm();
+            this.B_KiemTra = new ReaLTaiizor.Controls.LostButton();
             this.TB_MaHoaDon = new ReaLTaiizor.Controls.HopeTextBox();
             this.foxBigLabel5 = new ReaLTaiizor.Controls.FoxBigLabel();
             this.B_Luu = new ReaLTaiizor.Controls.CyberButton();
@@ -122,6 +123,7 @@
             // 
             this.airForm1.BackColor = System.Drawing.Color.Gainsboro;
             this.airForm1.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.airForm1.Controls.Add(this.B_KiemTra);
             this.airForm1.Controls.Add(this.TB_MaHoaDon);
             this.airForm1.Controls.Add(this.foxBigLabel5);
             this.airForm1.Controls.Add(this.B_Luu);
@@ -150,6 +152,22 @@
             this.airForm1.Text = "Thông tin khách hàng !";
             this.airForm1.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.airForm1.Transparent = false;
+            this.airForm1.Click += new System.EventHandler(this.airForm1_Click);
+            // 
+            // B_KiemTra
+            // 
+            this.B_KiemTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.B_KiemTra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.B_KiemTra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.B_KiemTra.ForeColor = System.Drawing.Color.White;
+            this.B_KiemTra.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.B_KiemTra.Image = null;
+            this.B_KiemTra.Location = new System.Drawing.Point(576, 294);
+            this.B_KiemTra.Name = "B_KiemTra";
+            this.B_KiemTra.Size = new System.Drawing.Size(102, 40);
+            this.B_KiemTra.TabIndex = 23;
+            this.B_KiemTra.Text = "Kiểm tra";
+            this.B_KiemTra.Click += new System.EventHandler(this.B_KiemTra_Click);
             // 
             // TB_MaHoaDon
             // 
@@ -277,7 +295,7 @@
             this.TB_SDT.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.TB_SDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.TB_SDT.Hint = "";
-            this.TB_SDT.Location = new System.Drawing.Point(263, 295);
+            this.TB_SDT.Location = new System.Drawing.Point(263, 291);
             this.TB_SDT.MaxLength = 32767;
             this.TB_SDT.Multiline = false;
             this.TB_SDT.Name = "TB_SDT";
@@ -286,7 +304,7 @@
             this.TB_SDT.SelectedText = "";
             this.TB_SDT.SelectionLength = 0;
             this.TB_SDT.SelectionStart = 0;
-            this.TB_SDT.Size = new System.Drawing.Size(415, 43);
+            this.TB_SDT.Size = new System.Drawing.Size(298, 43);
             this.TB_SDT.TabIndex = 8;
             this.TB_SDT.TabStop = false;
             this.TB_SDT.UseSystemPasswordChar = false;
@@ -348,5 +366,6 @@
         private ReaLTaiizor.Controls.CyberButton B_Luu;
         private ReaLTaiizor.Controls.HopeTextBox TB_MaHoaDon;
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel5;
+        private ReaLTaiizor.Controls.LostButton B_KiemTra;
     }
 }

@@ -18,11 +18,13 @@ namespace Store_Manager
         public event Action<KhachHang , string > DaDongVaThemKachHang;
         KhachHang khachHang = new KhachHang();
         string maHoaDon = "";
+        List<KhachHang> khachHangs = new List<KhachHang>();
         #endregion
 
-        public frm_ThongTinKhachHang()
+        public frm_ThongTinKhachHang(List<KhachHang> listKhachHang)
         {
             InitializeComponent();
+            khachHangs = listKhachHang;
         }
 
         private void frm_ThongTinKhachHang_Load(object sender, EventArgs e)
@@ -128,6 +130,39 @@ namespace Store_Manager
             //    }
             //}
             #endregion
+        }
+
+        private void B_KiemTra_Click(object sender, EventArgs e)
+        {
+            if(TB_SDT.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại để kiểm tra !");
+            }
+            else
+            {
+                bool kT = false;
+                //KhachHang List<KhachHang>
+                foreach (KhachHang i in khachHangs)
+                {
+                    if (TB_SDT.Text.ToString().Trim() == i.SDT.Trim())
+                    {
+                        TB_HoVaTen.Text = i.HoVaTen;
+                        TB_MaHoaDon.Text = "";
+                        TB_MaKhachHang.Text = i.MaKhachHang;
+                        kT = true;
+                        break;
+                    }
+                }
+                if(kT == false)
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng có số điện thoại này !");
+                }
+            }
+        }
+
+        private void airForm1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

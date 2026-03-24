@@ -74,18 +74,7 @@ namespace BLL
                 string.IsNullOrWhiteSpace(kh.SDT) ||
                 string.IsNullOrWhiteSpace(maHoaDon))
                 throw new Exception("Text box không được để trống");
-            foreach (KhachHang item in listKhachHang)
-            {
-                if (item.MaKhachHang == kh.MaKhachHang)
-                {
-                    throw new Exception("Mã khách hàng đã bị trùng !");
-                }
-                if (item.SDT == kh.SDT)
-                {
-                    throw new Exception("Số điện thoại đã bị trùng !");
-
-                }
-            }
+         
             foreach (HoaDon item in listHoDon)
             {
                 if (item.MaHoaDon == maHoaDon)

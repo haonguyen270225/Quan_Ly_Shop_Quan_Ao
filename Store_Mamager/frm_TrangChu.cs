@@ -516,7 +516,7 @@ namespace Store_Manager
             {
                 return;
             }
-            frm_ThongTinKhachHang frm = new frm_ThongTinKhachHang();
+            frm_ThongTinKhachHang frm = new frm_ThongTinKhachHang(listKhachHang);
             frm.DaDongVaThemKachHang += (khachHang , maHoaDon) =>
             {
                 ThemDanhSachKhachHang(khachHang , maHoaDon);
